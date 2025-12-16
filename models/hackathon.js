@@ -15,7 +15,12 @@ const hackathonSchema = new mongoose.Schema({
 
   short_description: String,
 
-  hackathon_type: String,
+  hackathon_type: {
+    type: String,
+    enum: ["internal", "external"],
+    required: true
+  },
+
 
   cover_image_url: String,
   organizer_name: String,
@@ -25,6 +30,13 @@ const hackathonSchema = new mongoose.Schema({
 
   detailed_description: String,
   rules: String,
+
+  participants: [
+    {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "User"
+    }
+  ],
 
   problem_statements: [problemStatementSchema],
 
@@ -43,7 +55,11 @@ const hackathonSchema = new mongoose.Schema({
   start_date: Date,
   end_date: Date,
 
-  status: String,
+  status: {
+    type: String,
+    enum: ["upcoming", "ongoing", "completed", "cancelled"],
+    default: "upcoming"
+  },
 
   created_at: Date,
   updated_at: Date

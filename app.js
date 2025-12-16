@@ -17,11 +17,11 @@ mongoose.connect(process.env.MONGO_URI)
 
 // Import routes
 const userRoutes = require("./routes/user");
-// const hackathonRoutes = require("./routes/hackathon"); // Uncomment when ready
+const hackathonRoutes = require("./routes/hackathon"); // Uncomment when ready
 
 // Use routes
 app.use("/user", userRoutes);
-// app.use("/hackathon", hackathonRoutes); // Uncomment when ready
+app.use("/hackathon", hackathonRoutes); // Uncomment when ready
 
 app.get("/", (req, res) => {
   res.send("Project Started");
