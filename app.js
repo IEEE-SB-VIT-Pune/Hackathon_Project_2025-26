@@ -4,10 +4,9 @@ require("dotenv").config();
 
 const app = express();
 
-// Middleware
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
-// MongoDB Connection
 mongoose.connect(process.env.MONGO_URI)
   .then(() => {
     console.log("MongoDB connected successfully");
@@ -16,7 +15,14 @@ mongoose.connect(process.env.MONGO_URI)
     console.error("MongoDB connection failed:", error.message);
   });
 
-// Test route
+// Import routes
+const userRoutes = require("./routes/user");
+// const hackathonRoutes = require("./routes/hackathon"); // Uncomment when ready
+
+// Use routes
+app.use("/user", userRoutes);
+// app.use("/hackathon", hackathonRoutes); // Uncomment when ready
+
 app.get("/", (req, res) => {
   res.send("Project Started");
 });
