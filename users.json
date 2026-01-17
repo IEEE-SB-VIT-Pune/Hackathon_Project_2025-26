@@ -1,0 +1,1602 @@
+[
+    {
+        "user_id": 12430324,
+        "skills": "{\"Java\": {\"project_count\": 3, \"avg_complexity\": 0.62, \"tool_breadth\": [\"hibernate\"], \"last_used_months\": 24}, \"React\": {\"project_count\": 4, \"avg_complexity\": 0.39, \"tool_breadth\": [\"hooks\", \"redux\"], \"last_used_months\": 18}, \"UI\/UX\": {\"project_count\": 6, \"avg_complexity\": 0.33, \"tool_breadth\": [\"figma\"], \"last_used_months\": 12}, \"Python\": {\"project_count\": 1, \"avg_complexity\": 0.66, \"tool_breadth\": [\"numpy\"], \"last_used_months\": 4}}",
+        "domain": "Web",
+        "year": 1,
+        "branch": "CS(AIML)",
+        "text": "{\"Java\": {\"project_count\": 3, \"avg_complexity\": 0.62, \"tool_breadth\": [\"hibernate\"], \"last_used_months\": 24}, \"React\": {\"project_count\": 4, \"avg_complexity\": 0.39, \"tool_breadth\": [\"hooks\", \"redux\"], \"last_used_months\": 18}, \"UI\/UX\": {\"project_count\": 6, \"avg_complexity\": 0.33, \"tool_breadth\": [\"figma\"], \"last_used_months\": 12}, \"Python\": {\"project_count\": 1, \"avg_complexity\": 0.66, \"tool_breadth\": [\"numpy\"], \"last_used_months\": 4}} Web"
+    },
+    {
+        "user_id": 12428566,
+        "skills": "{\"SQL\": {\"project_count\": 2, \"avg_complexity\": 0.41, \"tool_breadth\": [\"mysql\"], \"last_used_months\": 22}, \"UI\/UX\": {\"project_count\": 3, \"avg_complexity\": 0.38, \"tool_breadth\": [\"figma\"], \"last_used_months\": 8}}",
+        "domain": "Data",
+        "year": 4,
+        "branch": "E&TC",
+        "text": "{\"SQL\": {\"project_count\": 2, \"avg_complexity\": 0.41, \"tool_breadth\": [\"mysql\"], \"last_used_months\": 22}, \"UI\/UX\": {\"project_count\": 3, \"avg_complexity\": 0.38, \"tool_breadth\": [\"figma\"], \"last_used_months\": 8}} Data"
+    },
+    {
+        "user_id": 12412449,
+        "skills": "{\"NLP\": {\"project_count\": 6, \"avg_complexity\": 0.76, \"tool_breadth\": [\"nltk\", \"spacy\"], \"last_used_months\": 13}, \"UI\/UX\": {\"project_count\": 4, \"avg_complexity\": 0.3, \"tool_breadth\": [\"figma\"], \"last_used_months\": 6}, \"Flask\": {\"project_count\": 5, \"avg_complexity\": 0.49, \"tool_breadth\": [\"flask\"], \"last_used_months\": 6}}",
+        "domain": "Data",
+        "year": 1,
+        "branch": "IT",
+        "text": "{\"NLP\": {\"project_count\": 6, \"avg_complexity\": 0.76, \"tool_breadth\": [\"nltk\", \"spacy\"], \"last_used_months\": 13}, \"UI\/UX\": {\"project_count\": 4, \"avg_complexity\": 0.3, \"tool_breadth\": [\"figma\"], \"last_used_months\": 6}, \"Flask\": {\"project_count\": 5, \"avg_complexity\": 0.49, \"tool_breadth\": [\"flask\"], \"last_used_months\": 6}} Data"
+    },
+    {
+        "user_id": 12210158,
+        "skills": "{\"Docker\": {\"project_count\": 1, \"avg_complexity\": 0.56, \"tool_breadth\": [\"docker\"], \"last_used_months\": 5}, \"ML\": {\"project_count\": 2, \"avg_complexity\": 0.73, \"tool_breadth\": [\"sklearn\", \"tensorflow\", \"pytorch\"], \"last_used_months\": 14}, \"Java\": {\"project_count\": 1, \"avg_complexity\": 0.64, \"tool_breadth\": [\"spring\"], \"last_used_months\": 3}, \"UI\/UX\": {\"project_count\": 1, \"avg_complexity\": 0.51, \"tool_breadth\": [\"figma\"], \"last_used_months\": 17}}",
+        "domain": "FinTech",
+        "year": 2,
+        "branch": "IT",
+        "text": "{\"Docker\": {\"project_count\": 1, \"avg_complexity\": 0.56, \"tool_breadth\": [\"docker\"], \"last_used_months\": 5}, \"ML\": {\"project_count\": 2, \"avg_complexity\": 0.73, \"tool_breadth\": [\"sklearn\", \"tensorflow\", \"pytorch\"], \"last_used_months\": 14}, \"Java\": {\"project_count\": 1, \"avg_complexity\": 0.64, \"tool_breadth\": [\"spring\"], \"last_used_months\": 3}, \"UI\/UX\": {\"project_count\": 1, \"avg_complexity\": 0.51, \"tool_breadth\": [\"figma\"], \"last_used_months\": 17}} FinTech"
+    },
+    {
+        "user_id": 12524047,
+        "skills": "{\"Deep Learning\": {\"project_count\": 3, \"avg_complexity\": 0.3, \"tool_breadth\": [\"pytorch\", \"tensorflow\"], \"last_used_months\": 18}, \"UI\/UX\": {\"project_count\": 5, \"avg_complexity\": 0.81, \"tool_breadth\": [\"figma\"], \"last_used_months\": 20}, \"Java\": {\"project_count\": 3, \"avg_complexity\": 0.32, \"tool_breadth\": [\"spring\"], \"last_used_months\": 8}, \"SQL\": {\"project_count\": 4, \"avg_complexity\": 0.92, \"tool_breadth\": [\"postgres\"], \"last_used_months\": 0}}",
+        "domain": "Data",
+        "year": 4,
+        "branch": "CS(AI)",
+        "text": "{\"Deep Learning\": {\"project_count\": 3, \"avg_complexity\": 0.3, \"tool_breadth\": [\"pytorch\", \"tensorflow\"], \"last_used_months\": 18}, \"UI\/UX\": {\"project_count\": 5, \"avg_complexity\": 0.81, \"tool_breadth\": [\"figma\"], \"last_used_months\": 20}, \"Java\": {\"project_count\": 3, \"avg_complexity\": 0.32, \"tool_breadth\": [\"spring\"], \"last_used_months\": 8}, \"SQL\": {\"project_count\": 4, \"avg_complexity\": 0.92, \"tool_breadth\": [\"postgres\"], \"last_used_months\": 0}} Data"
+    },
+    {
+        "user_id": 12374776,
+        "skills": "{\"Django\": {\"project_count\": 4, \"avg_complexity\": 0.64, \"tool_breadth\": [\"django\"], \"last_used_months\": 23}}",
+        "domain": "Security",
+        "year": 1,
+        "branch": "Mech",
+        "text": "{\"Django\": {\"project_count\": 4, \"avg_complexity\": 0.64, \"tool_breadth\": [\"django\"], \"last_used_months\": 23}} Security"
+    },
+    {
+        "user_id": 12522445,
+        "skills": "{\"UI\/UX\": {\"project_count\": 5, \"avg_complexity\": 0.3, \"tool_breadth\": [\"figma\"], \"last_used_months\": 15}}",
+        "domain": "Web",
+        "year": 1,
+        "branch": "CS(AIML)",
+        "text": "{\"UI\/UX\": {\"project_count\": 5, \"avg_complexity\": 0.3, \"tool_breadth\": [\"figma\"], \"last_used_months\": 15}} Web"
+    },
+    {
+        "user_id": 12347037,
+        "skills": "{\"SQL\": {\"project_count\": 2, \"avg_complexity\": 0.48, \"tool_breadth\": [\"mysql\", \"postgres\"], \"last_used_months\": 14}, \"Flask\": {\"project_count\": 1, \"avg_complexity\": 0.83, \"tool_breadth\": [\"flask\"], \"last_used_months\": 5}, \"NLP\": {\"project_count\": 5, \"avg_complexity\": 0.54, \"tool_breadth\": [\"nltk\", \"spacy\"], \"last_used_months\": 22}}",
+        "domain": "Web",
+        "year": 2,
+        "branch": "E&TC",
+        "text": "{\"SQL\": {\"project_count\": 2, \"avg_complexity\": 0.48, \"tool_breadth\": [\"mysql\", \"postgres\"], \"last_used_months\": 14}, \"Flask\": {\"project_count\": 1, \"avg_complexity\": 0.83, \"tool_breadth\": [\"flask\"], \"last_used_months\": 5}, \"NLP\": {\"project_count\": 5, \"avg_complexity\": 0.54, \"tool_breadth\": [\"nltk\", \"spacy\"], \"last_used_months\": 22}} Web"
+    },
+    {
+        "user_id": 12457430,
+        "skills": "{\"NLP\": {\"project_count\": 2, \"avg_complexity\": 0.59, \"tool_breadth\": [\"nltk\"], \"last_used_months\": 23}, \"AWS\": {\"project_count\": 1, \"avg_complexity\": 0.33, \"tool_breadth\": [\"ec2\"], \"last_used_months\": 7}, \"Python\": {\"project_count\": 1, \"avg_complexity\": 0.63, \"tool_breadth\": [\"fastapi\", \"flask\", \"numpy\"], \"last_used_months\": 4}}",
+        "domain": "Security",
+        "year": 4,
+        "branch": "IT",
+        "text": "{\"NLP\": {\"project_count\": 2, \"avg_complexity\": 0.59, \"tool_breadth\": [\"nltk\"], \"last_used_months\": 23}, \"AWS\": {\"project_count\": 1, \"avg_complexity\": 0.33, \"tool_breadth\": [\"ec2\"], \"last_used_months\": 7}, \"Python\": {\"project_count\": 1, \"avg_complexity\": 0.63, \"tool_breadth\": [\"fastapi\", \"flask\", \"numpy\"], \"last_used_months\": 4}} Security"
+    },
+    {
+        "user_id": 12306670,
+        "skills": "{\"Deep Learning\": {\"project_count\": 1, \"avg_complexity\": 0.78, \"tool_breadth\": [\"tensorflow\", \"pytorch\"], \"last_used_months\": 8}, \"NLP\": {\"project_count\": 3, \"avg_complexity\": 0.86, \"tool_breadth\": [\"nltk\"], \"last_used_months\": 23}}",
+        "domain": "Data",
+        "year": 2,
+        "branch": "Civil",
+        "text": "{\"Deep Learning\": {\"project_count\": 1, \"avg_complexity\": 0.78, \"tool_breadth\": [\"tensorflow\", \"pytorch\"], \"last_used_months\": 8}, \"NLP\": {\"project_count\": 3, \"avg_complexity\": 0.86, \"tool_breadth\": [\"nltk\"], \"last_used_months\": 23}} Data"
+    },
+    {
+        "user_id": 12475161,
+        "skills": "{\"Deep Learning\": {\"project_count\": 5, \"avg_complexity\": 0.44, \"tool_breadth\": [\"pytorch\"], \"last_used_months\": 2}, \"UI\/UX\": {\"project_count\": 3, \"avg_complexity\": 0.89, \"tool_breadth\": [\"figma\"], \"last_used_months\": 10}, \"DevOps\": {\"project_count\": 1, \"avg_complexity\": 0.94, \"tool_breadth\": [\"ansible\"], \"last_used_months\": 3}, \"React\": {\"project_count\": 2, \"avg_complexity\": 0.89, \"tool_breadth\": [\"redux\"], \"last_used_months\": 2}}",
+        "domain": "HealthTech",
+        "year": 2,
+        "branch": "CS(AI)",
+        "text": "{\"Deep Learning\": {\"project_count\": 5, \"avg_complexity\": 0.44, \"tool_breadth\": [\"pytorch\"], \"last_used_months\": 2}, \"UI\/UX\": {\"project_count\": 3, \"avg_complexity\": 0.89, \"tool_breadth\": [\"figma\"], \"last_used_months\": 10}, \"DevOps\": {\"project_count\": 1, \"avg_complexity\": 0.94, \"tool_breadth\": [\"ansible\"], \"last_used_months\": 3}, \"React\": {\"project_count\": 2, \"avg_complexity\": 0.89, \"tool_breadth\": [\"redux\"], \"last_used_months\": 2}} HealthTech"
+    },
+    {
+        "user_id": 12297332,
+        "skills": "{\"React\": {\"project_count\": 4, \"avg_complexity\": 0.52, \"tool_breadth\": [\"redux\", \"hooks\"], \"last_used_months\": 2}, \"NLP\": {\"project_count\": 2, \"avg_complexity\": 0.43, \"tool_breadth\": [\"spacy\", \"nltk\"], \"last_used_months\": 11}}",
+        "domain": "Data",
+        "year": 3,
+        "branch": "CS(AI)",
+        "text": "{\"React\": {\"project_count\": 4, \"avg_complexity\": 0.52, \"tool_breadth\": [\"redux\", \"hooks\"], \"last_used_months\": 2}, \"NLP\": {\"project_count\": 2, \"avg_complexity\": 0.43, \"tool_breadth\": [\"spacy\", \"nltk\"], \"last_used_months\": 11}} Data"
+    },
+    {
+        "user_id": 12272762,
+        "skills": "{\"React\": {\"project_count\": 2, \"avg_complexity\": 0.46, \"tool_breadth\": [\"hooks\"], \"last_used_months\": 20}, \"ML\": {\"project_count\": 5, \"avg_complexity\": 0.8, \"tool_breadth\": [\"tensorflow\"], \"last_used_months\": 16}}",
+        "domain": "AI",
+        "year": 4,
+        "branch": "IT",
+        "text": "{\"React\": {\"project_count\": 2, \"avg_complexity\": 0.46, \"tool_breadth\": [\"hooks\"], \"last_used_months\": 20}, \"ML\": {\"project_count\": 5, \"avg_complexity\": 0.8, \"tool_breadth\": [\"tensorflow\"], \"last_used_months\": 16}} AI"
+    },
+    {
+        "user_id": 12239495,
+        "skills": "{\"ML\": {\"project_count\": 5, \"avg_complexity\": 0.68, \"tool_breadth\": [\"pytorch\", \"sklearn\"], \"last_used_months\": 24}, \"Django\": {\"project_count\": 5, \"avg_complexity\": 0.86, \"tool_breadth\": [\"django\"], \"last_used_months\": 23}, \"UI\/UX\": {\"project_count\": 2, \"avg_complexity\": 0.67, \"tool_breadth\": [\"figma\"], \"last_used_months\": 8}}",
+        "domain": "AI",
+        "year": 3,
+        "branch": "Mech",
+        "text": "{\"ML\": {\"project_count\": 5, \"avg_complexity\": 0.68, \"tool_breadth\": [\"pytorch\", \"sklearn\"], \"last_used_months\": 24}, \"Django\": {\"project_count\": 5, \"avg_complexity\": 0.86, \"tool_breadth\": [\"django\"], \"last_used_months\": 23}, \"UI\/UX\": {\"project_count\": 2, \"avg_complexity\": 0.67, \"tool_breadth\": [\"figma\"], \"last_used_months\": 8}} AI"
+    },
+    {
+        "user_id": 12218078,
+        "skills": "{\"Java\": {\"project_count\": 5, \"avg_complexity\": 0.88, \"tool_breadth\": [\"hibernate\"], \"last_used_months\": 13}, \"Deep Learning\": {\"project_count\": 2, \"avg_complexity\": 0.88, \"tool_breadth\": [\"pytorch\", \"tensorflow\"], \"last_used_months\": 14}, \"React\": {\"project_count\": 1, \"avg_complexity\": 0.92, \"tool_breadth\": [\"hooks\"], \"last_used_months\": 23}}",
+        "domain": "Security",
+        "year": 2,
+        "branch": "Instru",
+        "text": "{\"Java\": {\"project_count\": 5, \"avg_complexity\": 0.88, \"tool_breadth\": [\"hibernate\"], \"last_used_months\": 13}, \"Deep Learning\": {\"project_count\": 2, \"avg_complexity\": 0.88, \"tool_breadth\": [\"pytorch\", \"tensorflow\"], \"last_used_months\": 14}, \"React\": {\"project_count\": 1, \"avg_complexity\": 0.92, \"tool_breadth\": [\"hooks\"], \"last_used_months\": 23}} Security"
+    },
+    {
+        "user_id": 12452741,
+        "skills": "{\"ML\": {\"project_count\": 6, \"avg_complexity\": 0.31, \"tool_breadth\": [\"tensorflow\", \"sklearn\"], \"last_used_months\": 7}, \"React\": {\"project_count\": 6, \"avg_complexity\": 0.8, \"tool_breadth\": [\"redux\"], \"last_used_months\": 3}, \"Flask\": {\"project_count\": 2, \"avg_complexity\": 0.2, \"tool_breadth\": [\"flask\"], \"last_used_months\": 12}, \"Django\": {\"project_count\": 3, \"avg_complexity\": 0.53, \"tool_breadth\": [\"django\"], \"last_used_months\": 21}}",
+        "domain": "HealthTech",
+        "year": 3,
+        "branch": "CS(AIML)",
+        "text": "{\"ML\": {\"project_count\": 6, \"avg_complexity\": 0.31, \"tool_breadth\": [\"tensorflow\", \"sklearn\"], \"last_used_months\": 7}, \"React\": {\"project_count\": 6, \"avg_complexity\": 0.8, \"tool_breadth\": [\"redux\"], \"last_used_months\": 3}, \"Flask\": {\"project_count\": 2, \"avg_complexity\": 0.2, \"tool_breadth\": [\"flask\"], \"last_used_months\": 12}, \"Django\": {\"project_count\": 3, \"avg_complexity\": 0.53, \"tool_breadth\": [\"django\"], \"last_used_months\": 21}} HealthTech"
+    },
+    {
+        "user_id": 12453684,
+        "skills": "{\"React\": {\"project_count\": 1, \"avg_complexity\": 0.85, \"tool_breadth\": [\"redux\", \"hooks\"], \"last_used_months\": 17}, \"DevOps\": {\"project_count\": 3, \"avg_complexity\": 0.54, \"tool_breadth\": [\"ansible\", \"jenkins\"], \"last_used_months\": 7}, \"Python\": {\"project_count\": 2, \"avg_complexity\": 0.92, \"tool_breadth\": [\"flask\"], \"last_used_months\": 17}}",
+        "domain": "Security",
+        "year": 2,
+        "branch": "CS(AI)",
+        "text": "{\"React\": {\"project_count\": 1, \"avg_complexity\": 0.85, \"tool_breadth\": [\"redux\", \"hooks\"], \"last_used_months\": 17}, \"DevOps\": {\"project_count\": 3, \"avg_complexity\": 0.54, \"tool_breadth\": [\"ansible\", \"jenkins\"], \"last_used_months\": 7}, \"Python\": {\"project_count\": 2, \"avg_complexity\": 0.92, \"tool_breadth\": [\"flask\"], \"last_used_months\": 17}} Security"
+    },
+    {
+        "user_id": 12261189,
+        "skills": "{\"AWS\": {\"project_count\": 5, \"avg_complexity\": 0.41, \"tool_breadth\": [\"lambda\", \"s3\", \"ec2\"], \"last_used_months\": 13}, \"React\": {\"project_count\": 1, \"avg_complexity\": 0.71, \"tool_breadth\": [\"hooks\"], \"last_used_months\": 9}}",
+        "domain": "HealthTech",
+        "year": 4,
+        "branch": "CS(AI)",
+        "text": "{\"AWS\": {\"project_count\": 5, \"avg_complexity\": 0.41, \"tool_breadth\": [\"lambda\", \"s3\", \"ec2\"], \"last_used_months\": 13}, \"React\": {\"project_count\": 1, \"avg_complexity\": 0.71, \"tool_breadth\": [\"hooks\"], \"last_used_months\": 9}} HealthTech"
+    },
+    {
+        "user_id": 12411522,
+        "skills": "{\"AWS\": {\"project_count\": 2, \"avg_complexity\": 0.33, \"tool_breadth\": [\"s3\"], \"last_used_months\": 3}, \"Django\": {\"project_count\": 1, \"avg_complexity\": 0.27, \"tool_breadth\": [\"django\"], \"last_used_months\": 7}, \"DevOps\": {\"project_count\": 3, \"avg_complexity\": 0.24, \"tool_breadth\": [\"ansible\", \"jenkins\"], \"last_used_months\": 6}}",
+        "domain": "FinTech",
+        "year": 4,
+        "branch": "E&TC",
+        "text": "{\"AWS\": {\"project_count\": 2, \"avg_complexity\": 0.33, \"tool_breadth\": [\"s3\"], \"last_used_months\": 3}, \"Django\": {\"project_count\": 1, \"avg_complexity\": 0.27, \"tool_breadth\": [\"django\"], \"last_used_months\": 7}, \"DevOps\": {\"project_count\": 3, \"avg_complexity\": 0.24, \"tool_breadth\": [\"ansible\", \"jenkins\"], \"last_used_months\": 6}} FinTech"
+    },
+    {
+        "user_id": 12335348,
+        "skills": "{\"Python\": {\"project_count\": 2, \"avg_complexity\": 0.88, \"tool_breadth\": [\"numpy\", \"pandas\", \"flask\"], \"last_used_months\": 8}, \"Django\": {\"project_count\": 3, \"avg_complexity\": 0.63, \"tool_breadth\": [\"django\"], \"last_used_months\": 4}, \"Docker\": {\"project_count\": 4, \"avg_complexity\": 0.81, \"tool_breadth\": [\"docker\"], \"last_used_months\": 7}}",
+        "domain": "Data",
+        "year": 4,
+        "branch": "IT",
+        "text": "{\"Python\": {\"project_count\": 2, \"avg_complexity\": 0.88, \"tool_breadth\": [\"numpy\", \"pandas\", \"flask\"], \"last_used_months\": 8}, \"Django\": {\"project_count\": 3, \"avg_complexity\": 0.63, \"tool_breadth\": [\"django\"], \"last_used_months\": 4}, \"Docker\": {\"project_count\": 4, \"avg_complexity\": 0.81, \"tool_breadth\": [\"docker\"], \"last_used_months\": 7}} Data"
+    },
+    {
+        "user_id": 12505809,
+        "skills": "{\"Java\": {\"project_count\": 4, \"avg_complexity\": 0.29, \"tool_breadth\": [\"hibernate\"], \"last_used_months\": 15}, \"Docker\": {\"project_count\": 1, \"avg_complexity\": 0.27, \"tool_breadth\": [\"docker\"], \"last_used_months\": 2}, \"NLP\": {\"project_count\": 4, \"avg_complexity\": 0.5, \"tool_breadth\": [\"nltk\"], \"last_used_months\": 1}}",
+        "domain": "Security",
+        "year": 3,
+        "branch": "CS(AIML)",
+        "text": "{\"Java\": {\"project_count\": 4, \"avg_complexity\": 0.29, \"tool_breadth\": [\"hibernate\"], \"last_used_months\": 15}, \"Docker\": {\"project_count\": 1, \"avg_complexity\": 0.27, \"tool_breadth\": [\"docker\"], \"last_used_months\": 2}, \"NLP\": {\"project_count\": 4, \"avg_complexity\": 0.5, \"tool_breadth\": [\"nltk\"], \"last_used_months\": 1}} Security"
+    },
+    {
+        "user_id": 12271654,
+        "skills": "{\"Django\": {\"project_count\": 1, \"avg_complexity\": 0.47, \"tool_breadth\": [\"django\"], \"last_used_months\": 20}, \"Java\": {\"project_count\": 5, \"avg_complexity\": 0.62, \"tool_breadth\": [\"hibernate\", \"spring\"], \"last_used_months\": 10}, \"NLP\": {\"project_count\": 5, \"avg_complexity\": 0.65, \"tool_breadth\": [\"nltk\", \"spacy\"], \"last_used_months\": 1}}",
+        "domain": "Data",
+        "year": 4,
+        "branch": "CS",
+        "text": "{\"Django\": {\"project_count\": 1, \"avg_complexity\": 0.47, \"tool_breadth\": [\"django\"], \"last_used_months\": 20}, \"Java\": {\"project_count\": 5, \"avg_complexity\": 0.62, \"tool_breadth\": [\"hibernate\", \"spring\"], \"last_used_months\": 10}, \"NLP\": {\"project_count\": 5, \"avg_complexity\": 0.65, \"tool_breadth\": [\"nltk\", \"spacy\"], \"last_used_months\": 1}} Data"
+    },
+    {
+        "user_id": 12303376,
+        "skills": "{\"Flask\": {\"project_count\": 2, \"avg_complexity\": 0.85, \"tool_breadth\": [\"flask\"], \"last_used_months\": 7}, \"AWS\": {\"project_count\": 2, \"avg_complexity\": 0.71, \"tool_breadth\": [\"lambda\", \"s3\", \"ec2\"], \"last_used_months\": 4}, \"ML\": {\"project_count\": 3, \"avg_complexity\": 0.54, \"tool_breadth\": [\"pytorch\"], \"last_used_months\": 6}}",
+        "domain": "Data",
+        "year": 3,
+        "branch": "Civil",
+        "text": "{\"Flask\": {\"project_count\": 2, \"avg_complexity\": 0.85, \"tool_breadth\": [\"flask\"], \"last_used_months\": 7}, \"AWS\": {\"project_count\": 2, \"avg_complexity\": 0.71, \"tool_breadth\": [\"lambda\", \"s3\", \"ec2\"], \"last_used_months\": 4}, \"ML\": {\"project_count\": 3, \"avg_complexity\": 0.54, \"tool_breadth\": [\"pytorch\"], \"last_used_months\": 6}} Data"
+    },
+    {
+        "user_id": 12435467,
+        "skills": "{\"DevOps\": {\"project_count\": 1, \"avg_complexity\": 0.35, \"tool_breadth\": [\"ansible\"], \"last_used_months\": 6}, \"Django\": {\"project_count\": 2, \"avg_complexity\": 0.32, \"tool_breadth\": [\"django\"], \"last_used_months\": 13}}",
+        "domain": "FinTech",
+        "year": 1,
+        "branch": "E&TC",
+        "text": "{\"DevOps\": {\"project_count\": 1, \"avg_complexity\": 0.35, \"tool_breadth\": [\"ansible\"], \"last_used_months\": 6}, \"Django\": {\"project_count\": 2, \"avg_complexity\": 0.32, \"tool_breadth\": [\"django\"], \"last_used_months\": 13}} FinTech"
+    },
+    {
+        "user_id": 12426643,
+        "skills": "{\"Docker\": {\"project_count\": 5, \"avg_complexity\": 0.44, \"tool_breadth\": [\"docker\"], \"last_used_months\": 22}}",
+        "domain": "Data",
+        "year": 2,
+        "branch": "CS(AIML)",
+        "text": "{\"Docker\": {\"project_count\": 5, \"avg_complexity\": 0.44, \"tool_breadth\": [\"docker\"], \"last_used_months\": 22}} Data"
+    },
+    {
+        "user_id": 12349726,
+        "skills": "{\"ML\": {\"project_count\": 4, \"avg_complexity\": 0.42, \"tool_breadth\": [\"pytorch\"], \"last_used_months\": 2}, \"DevOps\": {\"project_count\": 1, \"avg_complexity\": 0.64, \"tool_breadth\": [\"jenkins\"], \"last_used_months\": 20}}",
+        "domain": "AI",
+        "year": 4,
+        "branch": "CS",
+        "text": "{\"ML\": {\"project_count\": 4, \"avg_complexity\": 0.42, \"tool_breadth\": [\"pytorch\"], \"last_used_months\": 2}, \"DevOps\": {\"project_count\": 1, \"avg_complexity\": 0.64, \"tool_breadth\": [\"jenkins\"], \"last_used_months\": 20}} AI"
+    },
+    {
+        "user_id": 12577046,
+        "skills": "{\"React\": {\"project_count\": 5, \"avg_complexity\": 0.61, \"tool_breadth\": [\"hooks\", \"redux\"], \"last_used_months\": 6}}",
+        "domain": "Data",
+        "year": 4,
+        "branch": "CS(AIML)",
+        "text": "{\"React\": {\"project_count\": 5, \"avg_complexity\": 0.61, \"tool_breadth\": [\"hooks\", \"redux\"], \"last_used_months\": 6}} Data"
+    },
+    {
+        "user_id": 12266581,
+        "skills": "{\"UI\/UX\": {\"project_count\": 4, \"avg_complexity\": 0.4, \"tool_breadth\": [\"figma\"], \"last_used_months\": 1}}",
+        "domain": "FinTech",
+        "year": 4,
+        "branch": "Mech",
+        "text": "{\"UI\/UX\": {\"project_count\": 4, \"avg_complexity\": 0.4, \"tool_breadth\": [\"figma\"], \"last_used_months\": 1}} FinTech"
+    },
+    {
+        "user_id": 12299793,
+        "skills": "{\"Docker\": {\"project_count\": 6, \"avg_complexity\": 0.26, \"tool_breadth\": [\"docker\"], \"last_used_months\": 9}}",
+        "domain": "Web",
+        "year": 3,
+        "branch": "IT",
+        "text": "{\"Docker\": {\"project_count\": 6, \"avg_complexity\": 0.26, \"tool_breadth\": [\"docker\"], \"last_used_months\": 9}} Web"
+    },
+    {
+        "user_id": 12518244,
+        "skills": "{\"UI\/UX\": {\"project_count\": 1, \"avg_complexity\": 0.37, \"tool_breadth\": [\"figma\"], \"last_used_months\": 9}}",
+        "domain": "FinTech",
+        "year": 4,
+        "branch": "CS(AIML)",
+        "text": "{\"UI\/UX\": {\"project_count\": 1, \"avg_complexity\": 0.37, \"tool_breadth\": [\"figma\"], \"last_used_months\": 9}} FinTech"
+    },
+    {
+        "user_id": 12593000,
+        "skills": "{\"ML\": {\"project_count\": 3, \"avg_complexity\": 0.32, \"tool_breadth\": [\"pytorch\", \"sklearn\", \"tensorflow\"], \"last_used_months\": 11}, \"Deep Learning\": {\"project_count\": 5, \"avg_complexity\": 0.63, \"tool_breadth\": [\"pytorch\"], \"last_used_months\": 7}, \"Java\": {\"project_count\": 1, \"avg_complexity\": 0.81, \"tool_breadth\": [\"hibernate\", \"spring\"], \"last_used_months\": 22}, \"Python\": {\"project_count\": 3, \"avg_complexity\": 0.58, \"tool_breadth\": [\"fastapi\", \"pandas\", \"flask\", \"numpy\"], \"last_used_months\": 22}}",
+        "domain": "HealthTech",
+        "year": 3,
+        "branch": "CS",
+        "text": "{\"ML\": {\"project_count\": 3, \"avg_complexity\": 0.32, \"tool_breadth\": [\"pytorch\", \"sklearn\", \"tensorflow\"], \"last_used_months\": 11}, \"Deep Learning\": {\"project_count\": 5, \"avg_complexity\": 0.63, \"tool_breadth\": [\"pytorch\"], \"last_used_months\": 7}, \"Java\": {\"project_count\": 1, \"avg_complexity\": 0.81, \"tool_breadth\": [\"hibernate\", \"spring\"], \"last_used_months\": 22}, \"Python\": {\"project_count\": 3, \"avg_complexity\": 0.58, \"tool_breadth\": [\"fastapi\", \"pandas\", \"flask\", \"numpy\"], \"last_used_months\": 22}} HealthTech"
+    },
+    {
+        "user_id": 12586742,
+        "skills": "{\"Docker\": {\"project_count\": 5, \"avg_complexity\": 0.62, \"tool_breadth\": [\"docker\"], \"last_used_months\": 5}, \"ML\": {\"project_count\": 1, \"avg_complexity\": 0.7, \"tool_breadth\": [\"sklearn\"], \"last_used_months\": 20}}",
+        "domain": "Data",
+        "year": 1,
+        "branch": "Civil",
+        "text": "{\"Docker\": {\"project_count\": 5, \"avg_complexity\": 0.62, \"tool_breadth\": [\"docker\"], \"last_used_months\": 5}, \"ML\": {\"project_count\": 1, \"avg_complexity\": 0.7, \"tool_breadth\": [\"sklearn\"], \"last_used_months\": 20}} Data"
+    },
+    {
+        "user_id": 12474629,
+        "skills": "{\"Django\": {\"project_count\": 1, \"avg_complexity\": 0.85, \"tool_breadth\": [\"django\"], \"last_used_months\": 3}, \"DevOps\": {\"project_count\": 2, \"avg_complexity\": 0.23, \"tool_breadth\": [\"ansible\", \"jenkins\"], \"last_used_months\": 5}, \"UI\/UX\": {\"project_count\": 4, \"avg_complexity\": 0.53, \"tool_breadth\": [\"figma\"], \"last_used_months\": 12}, \"NLP\": {\"project_count\": 6, \"avg_complexity\": 0.24, \"tool_breadth\": [\"spacy\", \"nltk\"], \"last_used_months\": 16}}",
+        "domain": "HealthTech",
+        "year": 3,
+        "branch": "IT",
+        "text": "{\"Django\": {\"project_count\": 1, \"avg_complexity\": 0.85, \"tool_breadth\": [\"django\"], \"last_used_months\": 3}, \"DevOps\": {\"project_count\": 2, \"avg_complexity\": 0.23, \"tool_breadth\": [\"ansible\", \"jenkins\"], \"last_used_months\": 5}, \"UI\/UX\": {\"project_count\": 4, \"avg_complexity\": 0.53, \"tool_breadth\": [\"figma\"], \"last_used_months\": 12}, \"NLP\": {\"project_count\": 6, \"avg_complexity\": 0.24, \"tool_breadth\": [\"spacy\", \"nltk\"], \"last_used_months\": 16}} HealthTech"
+    },
+    {
+        "user_id": 12442088,
+        "skills": "{\"ML\": {\"project_count\": 1, \"avg_complexity\": 0.48, \"tool_breadth\": [\"pytorch\", \"tensorflow\"], \"last_used_months\": 9}, \"Deep Learning\": {\"project_count\": 6, \"avg_complexity\": 0.88, \"tool_breadth\": [\"tensorflow\"], \"last_used_months\": 4}, \"DevOps\": {\"project_count\": 1, \"avg_complexity\": 0.79, \"tool_breadth\": [\"ansible\"], \"last_used_months\": 12}, \"Docker\": {\"project_count\": 4, \"avg_complexity\": 0.73, \"tool_breadth\": [\"docker\"], \"last_used_months\": 11}}",
+        "domain": "Data",
+        "year": 2,
+        "branch": "Civil",
+        "text": "{\"ML\": {\"project_count\": 1, \"avg_complexity\": 0.48, \"tool_breadth\": [\"pytorch\", \"tensorflow\"], \"last_used_months\": 9}, \"Deep Learning\": {\"project_count\": 6, \"avg_complexity\": 0.88, \"tool_breadth\": [\"tensorflow\"], \"last_used_months\": 4}, \"DevOps\": {\"project_count\": 1, \"avg_complexity\": 0.79, \"tool_breadth\": [\"ansible\"], \"last_used_months\": 12}, \"Docker\": {\"project_count\": 4, \"avg_complexity\": 0.73, \"tool_breadth\": [\"docker\"], \"last_used_months\": 11}} Data"
+    },
+    {
+        "user_id": 12275324,
+        "skills": "{\"Flask\": {\"project_count\": 5, \"avg_complexity\": 0.83, \"tool_breadth\": [\"flask\"], \"last_used_months\": 17}, \"NLP\": {\"project_count\": 6, \"avg_complexity\": 0.33, \"tool_breadth\": [\"nltk\", \"spacy\"], \"last_used_months\": 13}, \"Python\": {\"project_count\": 3, \"avg_complexity\": 0.68, \"tool_breadth\": [\"flask\"], \"last_used_months\": 14}}",
+        "domain": "HealthTech",
+        "year": 2,
+        "branch": "CS(AIML)",
+        "text": "{\"Flask\": {\"project_count\": 5, \"avg_complexity\": 0.83, \"tool_breadth\": [\"flask\"], \"last_used_months\": 17}, \"NLP\": {\"project_count\": 6, \"avg_complexity\": 0.33, \"tool_breadth\": [\"nltk\", \"spacy\"], \"last_used_months\": 13}, \"Python\": {\"project_count\": 3, \"avg_complexity\": 0.68, \"tool_breadth\": [\"flask\"], \"last_used_months\": 14}} HealthTech"
+    },
+    {
+        "user_id": 12396328,
+        "skills": "{\"Flask\": {\"project_count\": 2, \"avg_complexity\": 0.4, \"tool_breadth\": [\"flask\"], \"last_used_months\": 22}}",
+        "domain": "FinTech",
+        "year": 2,
+        "branch": "Mech",
+        "text": "{\"Flask\": {\"project_count\": 2, \"avg_complexity\": 0.4, \"tool_breadth\": [\"flask\"], \"last_used_months\": 22}} FinTech"
+    },
+    {
+        "user_id": 12404220,
+        "skills": "{\"Docker\": {\"project_count\": 3, \"avg_complexity\": 0.78, \"tool_breadth\": [\"docker\"], \"last_used_months\": 7}, \"Deep Learning\": {\"project_count\": 2, \"avg_complexity\": 0.29, \"tool_breadth\": [\"pytorch\"], \"last_used_months\": 12}}",
+        "domain": "FinTech",
+        "year": 2,
+        "branch": "CS(AI)",
+        "text": "{\"Docker\": {\"project_count\": 3, \"avg_complexity\": 0.78, \"tool_breadth\": [\"docker\"], \"last_used_months\": 7}, \"Deep Learning\": {\"project_count\": 2, \"avg_complexity\": 0.29, \"tool_breadth\": [\"pytorch\"], \"last_used_months\": 12}} FinTech"
+    },
+    {
+        "user_id": 12314749,
+        "skills": "{\"Flask\": {\"project_count\": 2, \"avg_complexity\": 0.21, \"tool_breadth\": [\"flask\"], \"last_used_months\": 16}}",
+        "domain": "Web",
+        "year": 4,
+        "branch": "Mech",
+        "text": "{\"Flask\": {\"project_count\": 2, \"avg_complexity\": 0.21, \"tool_breadth\": [\"flask\"], \"last_used_months\": 16}} Web"
+    },
+    {
+        "user_id": 12530760,
+        "skills": "{\"Docker\": {\"project_count\": 2, \"avg_complexity\": 0.93, \"tool_breadth\": [\"docker\"], \"last_used_months\": 17}, \"SQL\": {\"project_count\": 4, \"avg_complexity\": 0.55, \"tool_breadth\": [\"mysql\"], \"last_used_months\": 6}, \"DevOps\": {\"project_count\": 1, \"avg_complexity\": 0.54, \"tool_breadth\": [\"ansible\"], \"last_used_months\": 20}}",
+        "domain": "FinTech",
+        "year": 4,
+        "branch": "Civil",
+        "text": "{\"Docker\": {\"project_count\": 2, \"avg_complexity\": 0.93, \"tool_breadth\": [\"docker\"], \"last_used_months\": 17}, \"SQL\": {\"project_count\": 4, \"avg_complexity\": 0.55, \"tool_breadth\": [\"mysql\"], \"last_used_months\": 6}, \"DevOps\": {\"project_count\": 1, \"avg_complexity\": 0.54, \"tool_breadth\": [\"ansible\"], \"last_used_months\": 20}} FinTech"
+    },
+    {
+        "user_id": 12481493,
+        "skills": "{\"Deep Learning\": {\"project_count\": 2, \"avg_complexity\": 0.57, \"tool_breadth\": [\"pytorch\", \"tensorflow\"], \"last_used_months\": 20}, \"Flask\": {\"project_count\": 6, \"avg_complexity\": 0.65, \"tool_breadth\": [\"flask\"], \"last_used_months\": 14}, \"SQL\": {\"project_count\": 5, \"avg_complexity\": 0.27, \"tool_breadth\": [\"postgres\"], \"last_used_months\": 7}}",
+        "domain": "Web",
+        "year": 2,
+        "branch": "IT",
+        "text": "{\"Deep Learning\": {\"project_count\": 2, \"avg_complexity\": 0.57, \"tool_breadth\": [\"pytorch\", \"tensorflow\"], \"last_used_months\": 20}, \"Flask\": {\"project_count\": 6, \"avg_complexity\": 0.65, \"tool_breadth\": [\"flask\"], \"last_used_months\": 14}, \"SQL\": {\"project_count\": 5, \"avg_complexity\": 0.27, \"tool_breadth\": [\"postgres\"], \"last_used_months\": 7}} Web"
+    },
+    {
+        "user_id": 12225065,
+        "skills": "{\"SQL\": {\"project_count\": 4, \"avg_complexity\": 0.49, \"tool_breadth\": [\"postgres\"], \"last_used_months\": 22}, \"Flask\": {\"project_count\": 2, \"avg_complexity\": 0.77, \"tool_breadth\": [\"flask\"], \"last_used_months\": 8}, \"DevOps\": {\"project_count\": 4, \"avg_complexity\": 0.35, \"tool_breadth\": [\"jenkins\"], \"last_used_months\": 2}, \"React\": {\"project_count\": 1, \"avg_complexity\": 0.44, \"tool_breadth\": [\"redux\"], \"last_used_months\": 4}}",
+        "domain": "Data",
+        "year": 2,
+        "branch": "CS",
+        "text": "{\"SQL\": {\"project_count\": 4, \"avg_complexity\": 0.49, \"tool_breadth\": [\"postgres\"], \"last_used_months\": 22}, \"Flask\": {\"project_count\": 2, \"avg_complexity\": 0.77, \"tool_breadth\": [\"flask\"], \"last_used_months\": 8}, \"DevOps\": {\"project_count\": 4, \"avg_complexity\": 0.35, \"tool_breadth\": [\"jenkins\"], \"last_used_months\": 2}, \"React\": {\"project_count\": 1, \"avg_complexity\": 0.44, \"tool_breadth\": [\"redux\"], \"last_used_months\": 4}} Data"
+    },
+    {
+        "user_id": 12466566,
+        "skills": "{\"UI\/UX\": {\"project_count\": 1, \"avg_complexity\": 0.74, \"tool_breadth\": [\"figma\"], \"last_used_months\": 19}, \"ML\": {\"project_count\": 6, \"avg_complexity\": 0.48, \"tool_breadth\": [\"tensorflow\"], \"last_used_months\": 19}}",
+        "domain": "AI",
+        "year": 4,
+        "branch": "Instru",
+        "text": "{\"UI\/UX\": {\"project_count\": 1, \"avg_complexity\": 0.74, \"tool_breadth\": [\"figma\"], \"last_used_months\": 19}, \"ML\": {\"project_count\": 6, \"avg_complexity\": 0.48, \"tool_breadth\": [\"tensorflow\"], \"last_used_months\": 19}} AI"
+    },
+    {
+        "user_id": 12540455,
+        "skills": "{\"Docker\": {\"project_count\": 2, \"avg_complexity\": 0.55, \"tool_breadth\": [\"docker\"], \"last_used_months\": 3}, \"UI\/UX\": {\"project_count\": 2, \"avg_complexity\": 0.62, \"tool_breadth\": [\"figma\"], \"last_used_months\": 6}, \"React\": {\"project_count\": 3, \"avg_complexity\": 0.61, \"tool_breadth\": [\"redux\"], \"last_used_months\": 15}}",
+        "domain": "HealthTech",
+        "year": 4,
+        "branch": "IT",
+        "text": "{\"Docker\": {\"project_count\": 2, \"avg_complexity\": 0.55, \"tool_breadth\": [\"docker\"], \"last_used_months\": 3}, \"UI\/UX\": {\"project_count\": 2, \"avg_complexity\": 0.62, \"tool_breadth\": [\"figma\"], \"last_used_months\": 6}, \"React\": {\"project_count\": 3, \"avg_complexity\": 0.61, \"tool_breadth\": [\"redux\"], \"last_used_months\": 15}} HealthTech"
+    },
+    {
+        "user_id": 12221308,
+        "skills": "{\"Docker\": {\"project_count\": 2, \"avg_complexity\": 0.77, \"tool_breadth\": [\"docker\"], \"last_used_months\": 10}, \"AWS\": {\"project_count\": 4, \"avg_complexity\": 0.84, \"tool_breadth\": [\"s3\"], \"last_used_months\": 15}}",
+        "domain": "Data",
+        "year": 4,
+        "branch": "E&TC",
+        "text": "{\"Docker\": {\"project_count\": 2, \"avg_complexity\": 0.77, \"tool_breadth\": [\"docker\"], \"last_used_months\": 10}, \"AWS\": {\"project_count\": 4, \"avg_complexity\": 0.84, \"tool_breadth\": [\"s3\"], \"last_used_months\": 15}} Data"
+    },
+    {
+        "user_id": 12202862,
+        "skills": "{\"NLP\": {\"project_count\": 5, \"avg_complexity\": 0.56, \"tool_breadth\": [\"spacy\"], \"last_used_months\": 10}, \"Docker\": {\"project_count\": 4, \"avg_complexity\": 0.64, \"tool_breadth\": [\"docker\"], \"last_used_months\": 1}, \"ML\": {\"project_count\": 5, \"avg_complexity\": 0.23, \"tool_breadth\": [\"tensorflow\", \"pytorch\", \"sklearn\"], \"last_used_months\": 18}, \"Python\": {\"project_count\": 2, \"avg_complexity\": 0.92, \"tool_breadth\": [\"numpy\"], \"last_used_months\": 11}}",
+        "domain": "AI",
+        "year": 3,
+        "branch": "IT",
+        "text": "{\"NLP\": {\"project_count\": 5, \"avg_complexity\": 0.56, \"tool_breadth\": [\"spacy\"], \"last_used_months\": 10}, \"Docker\": {\"project_count\": 4, \"avg_complexity\": 0.64, \"tool_breadth\": [\"docker\"], \"last_used_months\": 1}, \"ML\": {\"project_count\": 5, \"avg_complexity\": 0.23, \"tool_breadth\": [\"tensorflow\", \"pytorch\", \"sklearn\"], \"last_used_months\": 18}, \"Python\": {\"project_count\": 2, \"avg_complexity\": 0.92, \"tool_breadth\": [\"numpy\"], \"last_used_months\": 11}} AI"
+    },
+    {
+        "user_id": 12592919,
+        "skills": "{\"ML\": {\"project_count\": 1, \"avg_complexity\": 0.23, \"tool_breadth\": [\"sklearn\", \"pytorch\"], \"last_used_months\": 8}, \"AWS\": {\"project_count\": 2, \"avg_complexity\": 0.67, \"tool_breadth\": [\"lambda\", \"s3\"], \"last_used_months\": 23}, \"Python\": {\"project_count\": 1, \"avg_complexity\": 0.48, \"tool_breadth\": [\"pandas\", \"numpy\"], \"last_used_months\": 21}}",
+        "domain": "AI",
+        "year": 4,
+        "branch": "CS",
+        "text": "{\"ML\": {\"project_count\": 1, \"avg_complexity\": 0.23, \"tool_breadth\": [\"sklearn\", \"pytorch\"], \"last_used_months\": 8}, \"AWS\": {\"project_count\": 2, \"avg_complexity\": 0.67, \"tool_breadth\": [\"lambda\", \"s3\"], \"last_used_months\": 23}, \"Python\": {\"project_count\": 1, \"avg_complexity\": 0.48, \"tool_breadth\": [\"pandas\", \"numpy\"], \"last_used_months\": 21}} AI"
+    },
+    {
+        "user_id": 12268133,
+        "skills": "{\"Flask\": {\"project_count\": 1, \"avg_complexity\": 0.44, \"tool_breadth\": [\"flask\"], \"last_used_months\": 14}, \"Java\": {\"project_count\": 1, \"avg_complexity\": 0.79, \"tool_breadth\": [\"spring\"], \"last_used_months\": 7}, \"Python\": {\"project_count\": 6, \"avg_complexity\": 0.91, \"tool_breadth\": [\"numpy\"], \"last_used_months\": 9}}",
+        "domain": "FinTech",
+        "year": 1,
+        "branch": "IT",
+        "text": "{\"Flask\": {\"project_count\": 1, \"avg_complexity\": 0.44, \"tool_breadth\": [\"flask\"], \"last_used_months\": 14}, \"Java\": {\"project_count\": 1, \"avg_complexity\": 0.79, \"tool_breadth\": [\"spring\"], \"last_used_months\": 7}, \"Python\": {\"project_count\": 6, \"avg_complexity\": 0.91, \"tool_breadth\": [\"numpy\"], \"last_used_months\": 9}} FinTech"
+    },
+    {
+        "user_id": 12490517,
+        "skills": "{\"NLP\": {\"project_count\": 1, \"avg_complexity\": 0.26, \"tool_breadth\": [\"spacy\"], \"last_used_months\": 22}}",
+        "domain": "Data",
+        "year": 4,
+        "branch": "Civil",
+        "text": "{\"NLP\": {\"project_count\": 1, \"avg_complexity\": 0.26, \"tool_breadth\": [\"spacy\"], \"last_used_months\": 22}} Data"
+    },
+    {
+        "user_id": 12584972,
+        "skills": "{\"UI\/UX\": {\"project_count\": 3, \"avg_complexity\": 0.7, \"tool_breadth\": [\"figma\"], \"last_used_months\": 11}}",
+        "domain": "HealthTech",
+        "year": 2,
+        "branch": "CS(AIML)",
+        "text": "{\"UI\/UX\": {\"project_count\": 3, \"avg_complexity\": 0.7, \"tool_breadth\": [\"figma\"], \"last_used_months\": 11}} HealthTech"
+    },
+    {
+        "user_id": 12438856,
+        "skills": "{\"Python\": {\"project_count\": 3, \"avg_complexity\": 0.91, \"tool_breadth\": [\"pandas\", \"numpy\", \"fastapi\"], \"last_used_months\": 4}, \"ML\": {\"project_count\": 2, \"avg_complexity\": 0.32, \"tool_breadth\": [\"pytorch\", \"tensorflow\", \"sklearn\"], \"last_used_months\": 12}}",
+        "domain": "AI",
+        "year": 2,
+        "branch": "Civil",
+        "text": "{\"Python\": {\"project_count\": 3, \"avg_complexity\": 0.91, \"tool_breadth\": [\"pandas\", \"numpy\", \"fastapi\"], \"last_used_months\": 4}, \"ML\": {\"project_count\": 2, \"avg_complexity\": 0.32, \"tool_breadth\": [\"pytorch\", \"tensorflow\", \"sklearn\"], \"last_used_months\": 12}} AI"
+    },
+    {
+        "user_id": 12340191,
+        "skills": "{\"DevOps\": {\"project_count\": 1, \"avg_complexity\": 0.56, \"tool_breadth\": [\"jenkins\"], \"last_used_months\": 16}, \"AWS\": {\"project_count\": 1, \"avg_complexity\": 0.28, \"tool_breadth\": [\"lambda\"], \"last_used_months\": 13}}",
+        "domain": "Data",
+        "year": 3,
+        "branch": "CS(AI)",
+        "text": "{\"DevOps\": {\"project_count\": 1, \"avg_complexity\": 0.56, \"tool_breadth\": [\"jenkins\"], \"last_used_months\": 16}, \"AWS\": {\"project_count\": 1, \"avg_complexity\": 0.28, \"tool_breadth\": [\"lambda\"], \"last_used_months\": 13}} Data"
+    },
+    {
+        "user_id": 12489201,
+        "skills": "{\"Java\": {\"project_count\": 3, \"avg_complexity\": 0.36, \"tool_breadth\": [\"hibernate\", \"spring\"], \"last_used_months\": 18}}",
+        "domain": "Security",
+        "year": 1,
+        "branch": "CS(AIML)",
+        "text": "{\"Java\": {\"project_count\": 3, \"avg_complexity\": 0.36, \"tool_breadth\": [\"hibernate\", \"spring\"], \"last_used_months\": 18}} Security"
+    },
+    {
+        "user_id": 12280690,
+        "skills": "{\"AWS\": {\"project_count\": 1, \"avg_complexity\": 0.91, \"tool_breadth\": [\"ec2\"], \"last_used_months\": 10}, \"ML\": {\"project_count\": 2, \"avg_complexity\": 0.95, \"tool_breadth\": [\"sklearn\", \"tensorflow\", \"pytorch\"], \"last_used_months\": 23}, \"DevOps\": {\"project_count\": 5, \"avg_complexity\": 0.35, \"tool_breadth\": [\"ansible\"], \"last_used_months\": 3}}",
+        "domain": "HealthTech",
+        "year": 1,
+        "branch": "IT",
+        "text": "{\"AWS\": {\"project_count\": 1, \"avg_complexity\": 0.91, \"tool_breadth\": [\"ec2\"], \"last_used_months\": 10}, \"ML\": {\"project_count\": 2, \"avg_complexity\": 0.95, \"tool_breadth\": [\"sklearn\", \"tensorflow\", \"pytorch\"], \"last_used_months\": 23}, \"DevOps\": {\"project_count\": 5, \"avg_complexity\": 0.35, \"tool_breadth\": [\"ansible\"], \"last_used_months\": 3}} HealthTech"
+    },
+    {
+        "user_id": 12381719,
+        "skills": "{\"AWS\": {\"project_count\": 6, \"avg_complexity\": 0.57, \"tool_breadth\": [\"s3\", \"ec2\"], \"last_used_months\": 15}, \"ML\": {\"project_count\": 3, \"avg_complexity\": 0.34, \"tool_breadth\": [\"sklearn\"], \"last_used_months\": 0}, \"UI\/UX\": {\"project_count\": 2, \"avg_complexity\": 0.84, \"tool_breadth\": [\"figma\"], \"last_used_months\": 0}, \"Flask\": {\"project_count\": 6, \"avg_complexity\": 0.53, \"tool_breadth\": [\"flask\"], \"last_used_months\": 8}}",
+        "domain": "AI",
+        "year": 1,
+        "branch": "IT",
+        "text": "{\"AWS\": {\"project_count\": 6, \"avg_complexity\": 0.57, \"tool_breadth\": [\"s3\", \"ec2\"], \"last_used_months\": 15}, \"ML\": {\"project_count\": 3, \"avg_complexity\": 0.34, \"tool_breadth\": [\"sklearn\"], \"last_used_months\": 0}, \"UI\/UX\": {\"project_count\": 2, \"avg_complexity\": 0.84, \"tool_breadth\": [\"figma\"], \"last_used_months\": 0}, \"Flask\": {\"project_count\": 6, \"avg_complexity\": 0.53, \"tool_breadth\": [\"flask\"], \"last_used_months\": 8}} AI"
+    },
+    {
+        "user_id": 12402895,
+        "skills": "{\"React\": {\"project_count\": 3, \"avg_complexity\": 0.75, \"tool_breadth\": [\"hooks\"], \"last_used_months\": 12}, \"AWS\": {\"project_count\": 2, \"avg_complexity\": 0.81, \"tool_breadth\": [\"s3\", \"ec2\", \"lambda\"], \"last_used_months\": 14}, \"UI\/UX\": {\"project_count\": 2, \"avg_complexity\": 0.69, \"tool_breadth\": [\"figma\"], \"last_used_months\": 12}}",
+        "domain": "Security",
+        "year": 3,
+        "branch": "Civil",
+        "text": "{\"React\": {\"project_count\": 3, \"avg_complexity\": 0.75, \"tool_breadth\": [\"hooks\"], \"last_used_months\": 12}, \"AWS\": {\"project_count\": 2, \"avg_complexity\": 0.81, \"tool_breadth\": [\"s3\", \"ec2\", \"lambda\"], \"last_used_months\": 14}, \"UI\/UX\": {\"project_count\": 2, \"avg_complexity\": 0.69, \"tool_breadth\": [\"figma\"], \"last_used_months\": 12}} Security"
+    },
+    {
+        "user_id": 12466506,
+        "skills": "{\"ML\": {\"project_count\": 5, \"avg_complexity\": 0.28, \"tool_breadth\": [\"tensorflow\"], \"last_used_months\": 9}, \"NLP\": {\"project_count\": 5, \"avg_complexity\": 0.77, \"tool_breadth\": [\"spacy\"], \"last_used_months\": 22}, \"React\": {\"project_count\": 1, \"avg_complexity\": 0.37, \"tool_breadth\": [\"redux\"], \"last_used_months\": 2}}",
+        "domain": "Data",
+        "year": 3,
+        "branch": "Instru",
+        "text": "{\"ML\": {\"project_count\": 5, \"avg_complexity\": 0.28, \"tool_breadth\": [\"tensorflow\"], \"last_used_months\": 9}, \"NLP\": {\"project_count\": 5, \"avg_complexity\": 0.77, \"tool_breadth\": [\"spacy\"], \"last_used_months\": 22}, \"React\": {\"project_count\": 1, \"avg_complexity\": 0.37, \"tool_breadth\": [\"redux\"], \"last_used_months\": 2}} Data"
+    },
+    {
+        "user_id": 12580085,
+        "skills": "{\"SQL\": {\"project_count\": 5, \"avg_complexity\": 0.65, \"tool_breadth\": [\"postgres\", \"mysql\"], \"last_used_months\": 19}, \"Flask\": {\"project_count\": 3, \"avg_complexity\": 0.67, \"tool_breadth\": [\"flask\"], \"last_used_months\": 22}, \"React\": {\"project_count\": 2, \"avg_complexity\": 0.43, \"tool_breadth\": [\"hooks\", \"redux\"], \"last_used_months\": 0}, \"Java\": {\"project_count\": 4, \"avg_complexity\": 0.25, \"tool_breadth\": [\"hibernate\"], \"last_used_months\": 14}}",
+        "domain": "FinTech",
+        "year": 1,
+        "branch": "CS(AI)",
+        "text": "{\"SQL\": {\"project_count\": 5, \"avg_complexity\": 0.65, \"tool_breadth\": [\"postgres\", \"mysql\"], \"last_used_months\": 19}, \"Flask\": {\"project_count\": 3, \"avg_complexity\": 0.67, \"tool_breadth\": [\"flask\"], \"last_used_months\": 22}, \"React\": {\"project_count\": 2, \"avg_complexity\": 0.43, \"tool_breadth\": [\"hooks\", \"redux\"], \"last_used_months\": 0}, \"Java\": {\"project_count\": 4, \"avg_complexity\": 0.25, \"tool_breadth\": [\"hibernate\"], \"last_used_months\": 14}} FinTech"
+    },
+    {
+        "user_id": 12442427,
+        "skills": "{\"Deep Learning\": {\"project_count\": 5, \"avg_complexity\": 0.94, \"tool_breadth\": [\"pytorch\", \"tensorflow\"], \"last_used_months\": 15}, \"AWS\": {\"project_count\": 4, \"avg_complexity\": 0.2, \"tool_breadth\": [\"s3\", \"lambda\"], \"last_used_months\": 22}, \"Python\": {\"project_count\": 4, \"avg_complexity\": 0.52, \"tool_breadth\": [\"fastapi\"], \"last_used_months\": 15}, \"React\": {\"project_count\": 3, \"avg_complexity\": 0.61, \"tool_breadth\": [\"redux\", \"hooks\"], \"last_used_months\": 3}}",
+        "domain": "HealthTech",
+        "year": 4,
+        "branch": "IT",
+        "text": "{\"Deep Learning\": {\"project_count\": 5, \"avg_complexity\": 0.94, \"tool_breadth\": [\"pytorch\", \"tensorflow\"], \"last_used_months\": 15}, \"AWS\": {\"project_count\": 4, \"avg_complexity\": 0.2, \"tool_breadth\": [\"s3\", \"lambda\"], \"last_used_months\": 22}, \"Python\": {\"project_count\": 4, \"avg_complexity\": 0.52, \"tool_breadth\": [\"fastapi\"], \"last_used_months\": 15}, \"React\": {\"project_count\": 3, \"avg_complexity\": 0.61, \"tool_breadth\": [\"redux\", \"hooks\"], \"last_used_months\": 3}} HealthTech"
+    },
+    {
+        "user_id": 12360118,
+        "skills": "{\"Python\": {\"project_count\": 1, \"avg_complexity\": 0.79, \"tool_breadth\": [\"fastapi\", \"flask\"], \"last_used_months\": 22}, \"ML\": {\"project_count\": 6, \"avg_complexity\": 0.21, \"tool_breadth\": [\"tensorflow\", \"pytorch\"], \"last_used_months\": 6}, \"SQL\": {\"project_count\": 4, \"avg_complexity\": 0.73, \"tool_breadth\": [\"mysql\"], \"last_used_months\": 19}, \"Flask\": {\"project_count\": 6, \"avg_complexity\": 0.24, \"tool_breadth\": [\"flask\"], \"last_used_months\": 20}}",
+        "domain": "AI",
+        "year": 2,
+        "branch": "Civil",
+        "text": "{\"Python\": {\"project_count\": 1, \"avg_complexity\": 0.79, \"tool_breadth\": [\"fastapi\", \"flask\"], \"last_used_months\": 22}, \"ML\": {\"project_count\": 6, \"avg_complexity\": 0.21, \"tool_breadth\": [\"tensorflow\", \"pytorch\"], \"last_used_months\": 6}, \"SQL\": {\"project_count\": 4, \"avg_complexity\": 0.73, \"tool_breadth\": [\"mysql\"], \"last_used_months\": 19}, \"Flask\": {\"project_count\": 6, \"avg_complexity\": 0.24, \"tool_breadth\": [\"flask\"], \"last_used_months\": 20}} AI"
+    },
+    {
+        "user_id": 12251496,
+        "skills": "{\"AWS\": {\"project_count\": 5, \"avg_complexity\": 0.22, \"tool_breadth\": [\"s3\", \"ec2\"], \"last_used_months\": 12}, \"Flask\": {\"project_count\": 2, \"avg_complexity\": 0.33, \"tool_breadth\": [\"flask\"], \"last_used_months\": 4}}",
+        "domain": "Web",
+        "year": 2,
+        "branch": "CS",
+        "text": "{\"AWS\": {\"project_count\": 5, \"avg_complexity\": 0.22, \"tool_breadth\": [\"s3\", \"ec2\"], \"last_used_months\": 12}, \"Flask\": {\"project_count\": 2, \"avg_complexity\": 0.33, \"tool_breadth\": [\"flask\"], \"last_used_months\": 4}} Web"
+    },
+    {
+        "user_id": 12217810,
+        "skills": "{\"React\": {\"project_count\": 5, \"avg_complexity\": 0.75, \"tool_breadth\": [\"redux\", \"hooks\"], \"last_used_months\": 9}}",
+        "domain": "Security",
+        "year": 1,
+        "branch": "CS(AI)",
+        "text": "{\"React\": {\"project_count\": 5, \"avg_complexity\": 0.75, \"tool_breadth\": [\"redux\", \"hooks\"], \"last_used_months\": 9}} Security"
+    },
+    {
+        "user_id": 12433073,
+        "skills": "{\"ML\": {\"project_count\": 2, \"avg_complexity\": 0.73, \"tool_breadth\": [\"sklearn\", \"tensorflow\"], \"last_used_months\": 19}}",
+        "domain": "Security",
+        "year": 1,
+        "branch": "Civil",
+        "text": "{\"ML\": {\"project_count\": 2, \"avg_complexity\": 0.73, \"tool_breadth\": [\"sklearn\", \"tensorflow\"], \"last_used_months\": 19}} Security"
+    },
+    {
+        "user_id": 12331295,
+        "skills": "{\"UI\/UX\": {\"project_count\": 3, \"avg_complexity\": 0.64, \"tool_breadth\": [\"figma\"], \"last_used_months\": 7}, \"SQL\": {\"project_count\": 2, \"avg_complexity\": 0.27, \"tool_breadth\": [\"mysql\", \"postgres\"], \"last_used_months\": 23}}",
+        "domain": "Web",
+        "year": 2,
+        "branch": "CS",
+        "text": "{\"UI\/UX\": {\"project_count\": 3, \"avg_complexity\": 0.64, \"tool_breadth\": [\"figma\"], \"last_used_months\": 7}, \"SQL\": {\"project_count\": 2, \"avg_complexity\": 0.27, \"tool_breadth\": [\"mysql\", \"postgres\"], \"last_used_months\": 23}} Web"
+    },
+    {
+        "user_id": 12385562,
+        "skills": "{\"Docker\": {\"project_count\": 1, \"avg_complexity\": 0.35, \"tool_breadth\": [\"docker\"], \"last_used_months\": 17}, \"AWS\": {\"project_count\": 5, \"avg_complexity\": 0.82, \"tool_breadth\": [\"ec2\", \"s3\"], \"last_used_months\": 7}, \"NLP\": {\"project_count\": 6, \"avg_complexity\": 0.81, \"tool_breadth\": [\"spacy\", \"nltk\"], \"last_used_months\": 10}, \"DevOps\": {\"project_count\": 4, \"avg_complexity\": 0.59, \"tool_breadth\": [\"ansible\", \"jenkins\"], \"last_used_months\": 15}}",
+        "domain": "HealthTech",
+        "year": 2,
+        "branch": "CS(AI)",
+        "text": "{\"Docker\": {\"project_count\": 1, \"avg_complexity\": 0.35, \"tool_breadth\": [\"docker\"], \"last_used_months\": 17}, \"AWS\": {\"project_count\": 5, \"avg_complexity\": 0.82, \"tool_breadth\": [\"ec2\", \"s3\"], \"last_used_months\": 7}, \"NLP\": {\"project_count\": 6, \"avg_complexity\": 0.81, \"tool_breadth\": [\"spacy\", \"nltk\"], \"last_used_months\": 10}, \"DevOps\": {\"project_count\": 4, \"avg_complexity\": 0.59, \"tool_breadth\": [\"ansible\", \"jenkins\"], \"last_used_months\": 15}} HealthTech"
+    },
+    {
+        "user_id": 12451147,
+        "skills": "{\"Django\": {\"project_count\": 1, \"avg_complexity\": 0.28, \"tool_breadth\": [\"django\"], \"last_used_months\": 1}}",
+        "domain": "Security",
+        "year": 4,
+        "branch": "IT",
+        "text": "{\"Django\": {\"project_count\": 1, \"avg_complexity\": 0.28, \"tool_breadth\": [\"django\"], \"last_used_months\": 1}} Security"
+    },
+    {
+        "user_id": 12585158,
+        "skills": "{\"Docker\": {\"project_count\": 2, \"avg_complexity\": 0.87, \"tool_breadth\": [\"docker\"], \"last_used_months\": 24}, \"Python\": {\"project_count\": 1, \"avg_complexity\": 0.62, \"tool_breadth\": [\"pandas\", \"fastapi\", \"flask\", \"numpy\"], \"last_used_months\": 11}, \"DevOps\": {\"project_count\": 6, \"avg_complexity\": 0.34, \"tool_breadth\": [\"ansible\", \"jenkins\"], \"last_used_months\": 4}}",
+        "domain": "Web",
+        "year": 3,
+        "branch": "Instru",
+        "text": "{\"Docker\": {\"project_count\": 2, \"avg_complexity\": 0.87, \"tool_breadth\": [\"docker\"], \"last_used_months\": 24}, \"Python\": {\"project_count\": 1, \"avg_complexity\": 0.62, \"tool_breadth\": [\"pandas\", \"fastapi\", \"flask\", \"numpy\"], \"last_used_months\": 11}, \"DevOps\": {\"project_count\": 6, \"avg_complexity\": 0.34, \"tool_breadth\": [\"ansible\", \"jenkins\"], \"last_used_months\": 4}} Web"
+    },
+    {
+        "user_id": 12565458,
+        "skills": "{\"DevOps\": {\"project_count\": 1, \"avg_complexity\": 0.24, \"tool_breadth\": [\"jenkins\"], \"last_used_months\": 0}}",
+        "domain": "AI",
+        "year": 3,
+        "branch": "Civil",
+        "text": "{\"DevOps\": {\"project_count\": 1, \"avg_complexity\": 0.24, \"tool_breadth\": [\"jenkins\"], \"last_used_months\": 0}} AI"
+    },
+    {
+        "user_id": 12302618,
+        "skills": "{\"ML\": {\"project_count\": 2, \"avg_complexity\": 0.95, \"tool_breadth\": [\"sklearn\", \"pytorch\", \"tensorflow\"], \"last_used_months\": 7}, \"Flask\": {\"project_count\": 6, \"avg_complexity\": 0.48, \"tool_breadth\": [\"flask\"], \"last_used_months\": 7}, \"Java\": {\"project_count\": 2, \"avg_complexity\": 0.84, \"tool_breadth\": [\"hibernate\", \"spring\"], \"last_used_months\": 10}}",
+        "domain": "Security",
+        "year": 4,
+        "branch": "IT",
+        "text": "{\"ML\": {\"project_count\": 2, \"avg_complexity\": 0.95, \"tool_breadth\": [\"sklearn\", \"pytorch\", \"tensorflow\"], \"last_used_months\": 7}, \"Flask\": {\"project_count\": 6, \"avg_complexity\": 0.48, \"tool_breadth\": [\"flask\"], \"last_used_months\": 7}, \"Java\": {\"project_count\": 2, \"avg_complexity\": 0.84, \"tool_breadth\": [\"hibernate\", \"spring\"], \"last_used_months\": 10}} Security"
+    },
+    {
+        "user_id": 12573195,
+        "skills": "{\"Python\": {\"project_count\": 5, \"avg_complexity\": 0.87, \"tool_breadth\": [\"fastapi\", \"numpy\", \"pandas\"], \"last_used_months\": 16}, \"Deep Learning\": {\"project_count\": 5, \"avg_complexity\": 0.42, \"tool_breadth\": [\"pytorch\"], \"last_used_months\": 22}, \"Docker\": {\"project_count\": 3, \"avg_complexity\": 0.92, \"tool_breadth\": [\"docker\"], \"last_used_months\": 13}, \"SQL\": {\"project_count\": 2, \"avg_complexity\": 0.55, \"tool_breadth\": [\"postgres\"], \"last_used_months\": 3}}",
+        "domain": "HealthTech",
+        "year": 2,
+        "branch": "E&TC",
+        "text": "{\"Python\": {\"project_count\": 5, \"avg_complexity\": 0.87, \"tool_breadth\": [\"fastapi\", \"numpy\", \"pandas\"], \"last_used_months\": 16}, \"Deep Learning\": {\"project_count\": 5, \"avg_complexity\": 0.42, \"tool_breadth\": [\"pytorch\"], \"last_used_months\": 22}, \"Docker\": {\"project_count\": 3, \"avg_complexity\": 0.92, \"tool_breadth\": [\"docker\"], \"last_used_months\": 13}, \"SQL\": {\"project_count\": 2, \"avg_complexity\": 0.55, \"tool_breadth\": [\"postgres\"], \"last_used_months\": 3}} HealthTech"
+    },
+    {
+        "user_id": 12546605,
+        "skills": "{\"Python\": {\"project_count\": 6, \"avg_complexity\": 0.86, \"tool_breadth\": [\"numpy\", \"fastapi\", \"pandas\"], \"last_used_months\": 17}, \"Docker\": {\"project_count\": 6, \"avg_complexity\": 0.53, \"tool_breadth\": [\"docker\"], \"last_used_months\": 9}, \"SQL\": {\"project_count\": 5, \"avg_complexity\": 0.23, \"tool_breadth\": [\"postgres\", \"mysql\"], \"last_used_months\": 17}}",
+        "domain": "FinTech",
+        "year": 2,
+        "branch": "Civil",
+        "text": "{\"Python\": {\"project_count\": 6, \"avg_complexity\": 0.86, \"tool_breadth\": [\"numpy\", \"fastapi\", \"pandas\"], \"last_used_months\": 17}, \"Docker\": {\"project_count\": 6, \"avg_complexity\": 0.53, \"tool_breadth\": [\"docker\"], \"last_used_months\": 9}, \"SQL\": {\"project_count\": 5, \"avg_complexity\": 0.23, \"tool_breadth\": [\"postgres\", \"mysql\"], \"last_used_months\": 17}} FinTech"
+    },
+    {
+        "user_id": 12317209,
+        "skills": "{\"NLP\": {\"project_count\": 4, \"avg_complexity\": 0.83, \"tool_breadth\": [\"nltk\", \"spacy\"], \"last_used_months\": 2}, \"Django\": {\"project_count\": 2, \"avg_complexity\": 0.58, \"tool_breadth\": [\"django\"], \"last_used_months\": 9}, \"UI\/UX\": {\"project_count\": 1, \"avg_complexity\": 0.58, \"tool_breadth\": [\"figma\"], \"last_used_months\": 7}}",
+        "domain": "HealthTech",
+        "year": 2,
+        "branch": "Instru",
+        "text": "{\"NLP\": {\"project_count\": 4, \"avg_complexity\": 0.83, \"tool_breadth\": [\"nltk\", \"spacy\"], \"last_used_months\": 2}, \"Django\": {\"project_count\": 2, \"avg_complexity\": 0.58, \"tool_breadth\": [\"django\"], \"last_used_months\": 9}, \"UI\/UX\": {\"project_count\": 1, \"avg_complexity\": 0.58, \"tool_breadth\": [\"figma\"], \"last_used_months\": 7}} HealthTech"
+    },
+    {
+        "user_id": 12588991,
+        "skills": "{\"React\": {\"project_count\": 4, \"avg_complexity\": 0.58, \"tool_breadth\": [\"redux\"], \"last_used_months\": 17}}",
+        "domain": "Web",
+        "year": 2,
+        "branch": "IT",
+        "text": "{\"React\": {\"project_count\": 4, \"avg_complexity\": 0.58, \"tool_breadth\": [\"redux\"], \"last_used_months\": 17}} Web"
+    },
+    {
+        "user_id": 12285060,
+        "skills": "{\"Django\": {\"project_count\": 5, \"avg_complexity\": 0.93, \"tool_breadth\": [\"django\"], \"last_used_months\": 13}, \"Flask\": {\"project_count\": 2, \"avg_complexity\": 0.57, \"tool_breadth\": [\"flask\"], \"last_used_months\": 24}, \"AWS\": {\"project_count\": 3, \"avg_complexity\": 0.86, \"tool_breadth\": [\"ec2\", \"s3\", \"lambda\"], \"last_used_months\": 1}}",
+        "domain": "AI",
+        "year": 4,
+        "branch": "CS(AI)",
+        "text": "{\"Django\": {\"project_count\": 5, \"avg_complexity\": 0.93, \"tool_breadth\": [\"django\"], \"last_used_months\": 13}, \"Flask\": {\"project_count\": 2, \"avg_complexity\": 0.57, \"tool_breadth\": [\"flask\"], \"last_used_months\": 24}, \"AWS\": {\"project_count\": 3, \"avg_complexity\": 0.86, \"tool_breadth\": [\"ec2\", \"s3\", \"lambda\"], \"last_used_months\": 1}} AI"
+    },
+    {
+        "user_id": 12328502,
+        "skills": "{\"React\": {\"project_count\": 3, \"avg_complexity\": 0.27, \"tool_breadth\": [\"hooks\", \"redux\"], \"last_used_months\": 18}, \"AWS\": {\"project_count\": 4, \"avg_complexity\": 0.61, \"tool_breadth\": [\"ec2\", \"lambda\"], \"last_used_months\": 1}, \"Deep Learning\": {\"project_count\": 3, \"avg_complexity\": 0.33, \"tool_breadth\": [\"tensorflow\"], \"last_used_months\": 0}, \"ML\": {\"project_count\": 6, \"avg_complexity\": 0.57, \"tool_breadth\": [\"sklearn\"], \"last_used_months\": 14}}",
+        "domain": "FinTech",
+        "year": 4,
+        "branch": "Civil",
+        "text": "{\"React\": {\"project_count\": 3, \"avg_complexity\": 0.27, \"tool_breadth\": [\"hooks\", \"redux\"], \"last_used_months\": 18}, \"AWS\": {\"project_count\": 4, \"avg_complexity\": 0.61, \"tool_breadth\": [\"ec2\", \"lambda\"], \"last_used_months\": 1}, \"Deep Learning\": {\"project_count\": 3, \"avg_complexity\": 0.33, \"tool_breadth\": [\"tensorflow\"], \"last_used_months\": 0}, \"ML\": {\"project_count\": 6, \"avg_complexity\": 0.57, \"tool_breadth\": [\"sklearn\"], \"last_used_months\": 14}} FinTech"
+    },
+    {
+        "user_id": 12539125,
+        "skills": "{\"Java\": {\"project_count\": 2, \"avg_complexity\": 0.2, \"tool_breadth\": [\"spring\"], \"last_used_months\": 8}, \"Flask\": {\"project_count\": 4, \"avg_complexity\": 0.7, \"tool_breadth\": [\"flask\"], \"last_used_months\": 19}}",
+        "domain": "Web",
+        "year": 1,
+        "branch": "Instru",
+        "text": "{\"Java\": {\"project_count\": 2, \"avg_complexity\": 0.2, \"tool_breadth\": [\"spring\"], \"last_used_months\": 8}, \"Flask\": {\"project_count\": 4, \"avg_complexity\": 0.7, \"tool_breadth\": [\"flask\"], \"last_used_months\": 19}} Web"
+    },
+    {
+        "user_id": 12497609,
+        "skills": "{\"Deep Learning\": {\"project_count\": 1, \"avg_complexity\": 0.73, \"tool_breadth\": [\"pytorch\"], \"last_used_months\": 7}, \"Docker\": {\"project_count\": 1, \"avg_complexity\": 0.33, \"tool_breadth\": [\"docker\"], \"last_used_months\": 11}}",
+        "domain": "Data",
+        "year": 3,
+        "branch": "CS",
+        "text": "{\"Deep Learning\": {\"project_count\": 1, \"avg_complexity\": 0.73, \"tool_breadth\": [\"pytorch\"], \"last_used_months\": 7}, \"Docker\": {\"project_count\": 1, \"avg_complexity\": 0.33, \"tool_breadth\": [\"docker\"], \"last_used_months\": 11}} Data"
+    },
+    {
+        "user_id": 12434453,
+        "skills": "{\"AWS\": {\"project_count\": 2, \"avg_complexity\": 0.7, \"tool_breadth\": [\"s3\"], \"last_used_months\": 13}, \"Deep Learning\": {\"project_count\": 1, \"avg_complexity\": 0.56, \"tool_breadth\": [\"tensorflow\", \"pytorch\"], \"last_used_months\": 22}}",
+        "domain": "Security",
+        "year": 2,
+        "branch": "Mech",
+        "text": "{\"AWS\": {\"project_count\": 2, \"avg_complexity\": 0.7, \"tool_breadth\": [\"s3\"], \"last_used_months\": 13}, \"Deep Learning\": {\"project_count\": 1, \"avg_complexity\": 0.56, \"tool_breadth\": [\"tensorflow\", \"pytorch\"], \"last_used_months\": 22}} Security"
+    },
+    {
+        "user_id": 12361860,
+        "skills": "{\"Java\": {\"project_count\": 5, \"avg_complexity\": 0.57, \"tool_breadth\": [\"spring\", \"hibernate\"], \"last_used_months\": 24}}",
+        "domain": "Security",
+        "year": 1,
+        "branch": "E&TC",
+        "text": "{\"Java\": {\"project_count\": 5, \"avg_complexity\": 0.57, \"tool_breadth\": [\"spring\", \"hibernate\"], \"last_used_months\": 24}} Security"
+    },
+    {
+        "user_id": 12220203,
+        "skills": "{\"React\": {\"project_count\": 2, \"avg_complexity\": 0.47, \"tool_breadth\": [\"hooks\", \"redux\"], \"last_used_months\": 12}, \"AWS\": {\"project_count\": 2, \"avg_complexity\": 0.36, \"tool_breadth\": [\"lambda\"], \"last_used_months\": 24}, \"UI\/UX\": {\"project_count\": 6, \"avg_complexity\": 0.34, \"tool_breadth\": [\"figma\"], \"last_used_months\": 11}, \"Django\": {\"project_count\": 3, \"avg_complexity\": 0.65, \"tool_breadth\": [\"django\"], \"last_used_months\": 5}}",
+        "domain": "HealthTech",
+        "year": 2,
+        "branch": "IT",
+        "text": "{\"React\": {\"project_count\": 2, \"avg_complexity\": 0.47, \"tool_breadth\": [\"hooks\", \"redux\"], \"last_used_months\": 12}, \"AWS\": {\"project_count\": 2, \"avg_complexity\": 0.36, \"tool_breadth\": [\"lambda\"], \"last_used_months\": 24}, \"UI\/UX\": {\"project_count\": 6, \"avg_complexity\": 0.34, \"tool_breadth\": [\"figma\"], \"last_used_months\": 11}, \"Django\": {\"project_count\": 3, \"avg_complexity\": 0.65, \"tool_breadth\": [\"django\"], \"last_used_months\": 5}} HealthTech"
+    },
+    {
+        "user_id": 12470225,
+        "skills": "{\"Flask\": {\"project_count\": 6, \"avg_complexity\": 0.7, \"tool_breadth\": [\"flask\"], \"last_used_months\": 9}}",
+        "domain": "Web",
+        "year": 1,
+        "branch": "Civil",
+        "text": "{\"Flask\": {\"project_count\": 6, \"avg_complexity\": 0.7, \"tool_breadth\": [\"flask\"], \"last_used_months\": 9}} Web"
+    },
+    {
+        "user_id": 12351016,
+        "skills": "{\"Docker\": {\"project_count\": 3, \"avg_complexity\": 0.3, \"tool_breadth\": [\"docker\"], \"last_used_months\": 3}, \"ML\": {\"project_count\": 3, \"avg_complexity\": 0.82, \"tool_breadth\": [\"sklearn\", \"pytorch\", \"tensorflow\"], \"last_used_months\": 1}}",
+        "domain": "Security",
+        "year": 1,
+        "branch": "Mech",
+        "text": "{\"Docker\": {\"project_count\": 3, \"avg_complexity\": 0.3, \"tool_breadth\": [\"docker\"], \"last_used_months\": 3}, \"ML\": {\"project_count\": 3, \"avg_complexity\": 0.82, \"tool_breadth\": [\"sklearn\", \"pytorch\", \"tensorflow\"], \"last_used_months\": 1}} Security"
+    },
+    {
+        "user_id": 12480314,
+        "skills": "{\"AWS\": {\"project_count\": 4, \"avg_complexity\": 0.29, \"tool_breadth\": [\"ec2\", \"lambda\"], \"last_used_months\": 20}}",
+        "domain": "AI",
+        "year": 2,
+        "branch": "Mech",
+        "text": "{\"AWS\": {\"project_count\": 4, \"avg_complexity\": 0.29, \"tool_breadth\": [\"ec2\", \"lambda\"], \"last_used_months\": 20}} AI"
+    },
+    {
+        "user_id": 12349936,
+        "skills": "{\"DevOps\": {\"project_count\": 3, \"avg_complexity\": 0.41, \"tool_breadth\": [\"ansible\", \"jenkins\"], \"last_used_months\": 13}}",
+        "domain": "HealthTech",
+        "year": 3,
+        "branch": "E&TC",
+        "text": "{\"DevOps\": {\"project_count\": 3, \"avg_complexity\": 0.41, \"tool_breadth\": [\"ansible\", \"jenkins\"], \"last_used_months\": 13}} HealthTech"
+    },
+    {
+        "user_id": 12558770,
+        "skills": "{\"Docker\": {\"project_count\": 1, \"avg_complexity\": 0.63, \"tool_breadth\": [\"docker\"], \"last_used_months\": 24}, \"SQL\": {\"project_count\": 6, \"avg_complexity\": 0.93, \"tool_breadth\": [\"postgres\", \"mysql\"], \"last_used_months\": 12}}",
+        "domain": "FinTech",
+        "year": 3,
+        "branch": "E&TC",
+        "text": "{\"Docker\": {\"project_count\": 1, \"avg_complexity\": 0.63, \"tool_breadth\": [\"docker\"], \"last_used_months\": 24}, \"SQL\": {\"project_count\": 6, \"avg_complexity\": 0.93, \"tool_breadth\": [\"postgres\", \"mysql\"], \"last_used_months\": 12}} FinTech"
+    },
+    {
+        "user_id": 12510309,
+        "skills": "{\"ML\": {\"project_count\": 5, \"avg_complexity\": 0.71, \"tool_breadth\": [\"tensorflow\"], \"last_used_months\": 2}, \"NLP\": {\"project_count\": 1, \"avg_complexity\": 0.23, \"tool_breadth\": [\"spacy\", \"nltk\"], \"last_used_months\": 6}, \"Java\": {\"project_count\": 4, \"avg_complexity\": 0.54, \"tool_breadth\": [\"hibernate\", \"spring\"], \"last_used_months\": 17}, \"UI\/UX\": {\"project_count\": 3, \"avg_complexity\": 0.48, \"tool_breadth\": [\"figma\"], \"last_used_months\": 22}}",
+        "domain": "FinTech",
+        "year": 1,
+        "branch": "Civil",
+        "text": "{\"ML\": {\"project_count\": 5, \"avg_complexity\": 0.71, \"tool_breadth\": [\"tensorflow\"], \"last_used_months\": 2}, \"NLP\": {\"project_count\": 1, \"avg_complexity\": 0.23, \"tool_breadth\": [\"spacy\", \"nltk\"], \"last_used_months\": 6}, \"Java\": {\"project_count\": 4, \"avg_complexity\": 0.54, \"tool_breadth\": [\"hibernate\", \"spring\"], \"last_used_months\": 17}, \"UI\/UX\": {\"project_count\": 3, \"avg_complexity\": 0.48, \"tool_breadth\": [\"figma\"], \"last_used_months\": 22}} FinTech"
+    },
+    {
+        "user_id": 12512035,
+        "skills": "{\"AWS\": {\"project_count\": 4, \"avg_complexity\": 0.74, \"tool_breadth\": [\"lambda\", \"s3\", \"ec2\"], \"last_used_months\": 23}, \"Deep Learning\": {\"project_count\": 1, \"avg_complexity\": 0.84, \"tool_breadth\": [\"tensorflow\"], \"last_used_months\": 20}, \"Python\": {\"project_count\": 1, \"avg_complexity\": 0.67, \"tool_breadth\": [\"flask\", \"numpy\", \"fastapi\"], \"last_used_months\": 23}}",
+        "domain": "Data",
+        "year": 4,
+        "branch": "Civil",
+        "text": "{\"AWS\": {\"project_count\": 4, \"avg_complexity\": 0.74, \"tool_breadth\": [\"lambda\", \"s3\", \"ec2\"], \"last_used_months\": 23}, \"Deep Learning\": {\"project_count\": 1, \"avg_complexity\": 0.84, \"tool_breadth\": [\"tensorflow\"], \"last_used_months\": 20}, \"Python\": {\"project_count\": 1, \"avg_complexity\": 0.67, \"tool_breadth\": [\"flask\", \"numpy\", \"fastapi\"], \"last_used_months\": 23}} Data"
+    },
+    {
+        "user_id": 12589908,
+        "skills": "{\"ML\": {\"project_count\": 6, \"avg_complexity\": 0.32, \"tool_breadth\": [\"tensorflow\"], \"last_used_months\": 6}, \"React\": {\"project_count\": 3, \"avg_complexity\": 0.64, \"tool_breadth\": [\"redux\", \"hooks\"], \"last_used_months\": 24}, \"AWS\": {\"project_count\": 4, \"avg_complexity\": 0.39, \"tool_breadth\": [\"s3\", \"lambda\"], \"last_used_months\": 7}, \"NLP\": {\"project_count\": 2, \"avg_complexity\": 0.35, \"tool_breadth\": [\"spacy\", \"nltk\"], \"last_used_months\": 16}}",
+        "domain": "FinTech",
+        "year": 2,
+        "branch": "IT",
+        "text": "{\"ML\": {\"project_count\": 6, \"avg_complexity\": 0.32, \"tool_breadth\": [\"tensorflow\"], \"last_used_months\": 6}, \"React\": {\"project_count\": 3, \"avg_complexity\": 0.64, \"tool_breadth\": [\"redux\", \"hooks\"], \"last_used_months\": 24}, \"AWS\": {\"project_count\": 4, \"avg_complexity\": 0.39, \"tool_breadth\": [\"s3\", \"lambda\"], \"last_used_months\": 7}, \"NLP\": {\"project_count\": 2, \"avg_complexity\": 0.35, \"tool_breadth\": [\"spacy\", \"nltk\"], \"last_used_months\": 16}} FinTech"
+    },
+    {
+        "user_id": 12436679,
+        "skills": "{\"AWS\": {\"project_count\": 1, \"avg_complexity\": 0.95, \"tool_breadth\": [\"lambda\", \"s3\", \"ec2\"], \"last_used_months\": 15}, \"Deep Learning\": {\"project_count\": 2, \"avg_complexity\": 0.51, \"tool_breadth\": [\"pytorch\"], \"last_used_months\": 19}, \"Python\": {\"project_count\": 1, \"avg_complexity\": 0.37, \"tool_breadth\": [\"fastapi\", \"numpy\", \"pandas\"], \"last_used_months\": 8}, \"Java\": {\"project_count\": 3, \"avg_complexity\": 0.34, \"tool_breadth\": [\"spring\"], \"last_used_months\": 24}}",
+        "domain": "AI",
+        "year": 4,
+        "branch": "CS(AIML)",
+        "text": "{\"AWS\": {\"project_count\": 1, \"avg_complexity\": 0.95, \"tool_breadth\": [\"lambda\", \"s3\", \"ec2\"], \"last_used_months\": 15}, \"Deep Learning\": {\"project_count\": 2, \"avg_complexity\": 0.51, \"tool_breadth\": [\"pytorch\"], \"last_used_months\": 19}, \"Python\": {\"project_count\": 1, \"avg_complexity\": 0.37, \"tool_breadth\": [\"fastapi\", \"numpy\", \"pandas\"], \"last_used_months\": 8}, \"Java\": {\"project_count\": 3, \"avg_complexity\": 0.34, \"tool_breadth\": [\"spring\"], \"last_used_months\": 24}} AI"
+    },
+    {
+        "user_id": 12505378,
+        "skills": "{\"Django\": {\"project_count\": 6, \"avg_complexity\": 0.38, \"tool_breadth\": [\"django\"], \"last_used_months\": 20}, \"DevOps\": {\"project_count\": 3, \"avg_complexity\": 0.42, \"tool_breadth\": [\"ansible\"], \"last_used_months\": 16}, \"React\": {\"project_count\": 4, \"avg_complexity\": 0.8, \"tool_breadth\": [\"redux\", \"hooks\"], \"last_used_months\": 20}, \"UI\/UX\": {\"project_count\": 5, \"avg_complexity\": 0.31, \"tool_breadth\": [\"figma\"], \"last_used_months\": 12}}",
+        "domain": "FinTech",
+        "year": 1,
+        "branch": "Civil",
+        "text": "{\"Django\": {\"project_count\": 6, \"avg_complexity\": 0.38, \"tool_breadth\": [\"django\"], \"last_used_months\": 20}, \"DevOps\": {\"project_count\": 3, \"avg_complexity\": 0.42, \"tool_breadth\": [\"ansible\"], \"last_used_months\": 16}, \"React\": {\"project_count\": 4, \"avg_complexity\": 0.8, \"tool_breadth\": [\"redux\", \"hooks\"], \"last_used_months\": 20}, \"UI\/UX\": {\"project_count\": 5, \"avg_complexity\": 0.31, \"tool_breadth\": [\"figma\"], \"last_used_months\": 12}} FinTech"
+    },
+    {
+        "user_id": 12354323,
+        "skills": "{\"Python\": {\"project_count\": 5, \"avg_complexity\": 0.4, \"tool_breadth\": [\"pandas\", \"numpy\"], \"last_used_months\": 12}, \"NLP\": {\"project_count\": 3, \"avg_complexity\": 0.43, \"tool_breadth\": [\"spacy\", \"nltk\"], \"last_used_months\": 8}, \"Java\": {\"project_count\": 3, \"avg_complexity\": 0.56, \"tool_breadth\": [\"spring\", \"hibernate\"], \"last_used_months\": 1}}",
+        "domain": "Web",
+        "year": 4,
+        "branch": "Instru",
+        "text": "{\"Python\": {\"project_count\": 5, \"avg_complexity\": 0.4, \"tool_breadth\": [\"pandas\", \"numpy\"], \"last_used_months\": 12}, \"NLP\": {\"project_count\": 3, \"avg_complexity\": 0.43, \"tool_breadth\": [\"spacy\", \"nltk\"], \"last_used_months\": 8}, \"Java\": {\"project_count\": 3, \"avg_complexity\": 0.56, \"tool_breadth\": [\"spring\", \"hibernate\"], \"last_used_months\": 1}} Web"
+    },
+    {
+        "user_id": 12475617,
+        "skills": "{\"ML\": {\"project_count\": 4, \"avg_complexity\": 0.93, \"tool_breadth\": [\"tensorflow\", \"sklearn\", \"pytorch\"], \"last_used_months\": 23}}",
+        "domain": "Security",
+        "year": 3,
+        "branch": "CS",
+        "text": "{\"ML\": {\"project_count\": 4, \"avg_complexity\": 0.93, \"tool_breadth\": [\"tensorflow\", \"sklearn\", \"pytorch\"], \"last_used_months\": 23}} Security"
+    },
+    {
+        "user_id": 12266163,
+        "skills": "{\"DevOps\": {\"project_count\": 3, \"avg_complexity\": 0.88, \"tool_breadth\": [\"jenkins\"], \"last_used_months\": 3}}",
+        "domain": "FinTech",
+        "year": 2,
+        "branch": "Mech",
+        "text": "{\"DevOps\": {\"project_count\": 3, \"avg_complexity\": 0.88, \"tool_breadth\": [\"jenkins\"], \"last_used_months\": 3}} FinTech"
+    },
+    {
+        "user_id": 12418467,
+        "skills": "{\"Deep Learning\": {\"project_count\": 2, \"avg_complexity\": 0.68, \"tool_breadth\": [\"tensorflow\"], \"last_used_months\": 9}, \"DevOps\": {\"project_count\": 2, \"avg_complexity\": 0.33, \"tool_breadth\": [\"jenkins\", \"ansible\"], \"last_used_months\": 18}, \"AWS\": {\"project_count\": 1, \"avg_complexity\": 0.45, \"tool_breadth\": [\"lambda\", \"s3\"], \"last_used_months\": 24}, \"UI\/UX\": {\"project_count\": 5, \"avg_complexity\": 0.4, \"tool_breadth\": [\"figma\"], \"last_used_months\": 13}}",
+        "domain": "FinTech",
+        "year": 2,
+        "branch": "Civil",
+        "text": "{\"Deep Learning\": {\"project_count\": 2, \"avg_complexity\": 0.68, \"tool_breadth\": [\"tensorflow\"], \"last_used_months\": 9}, \"DevOps\": {\"project_count\": 2, \"avg_complexity\": 0.33, \"tool_breadth\": [\"jenkins\", \"ansible\"], \"last_used_months\": 18}, \"AWS\": {\"project_count\": 1, \"avg_complexity\": 0.45, \"tool_breadth\": [\"lambda\", \"s3\"], \"last_used_months\": 24}, \"UI\/UX\": {\"project_count\": 5, \"avg_complexity\": 0.4, \"tool_breadth\": [\"figma\"], \"last_used_months\": 13}} FinTech"
+    },
+    {
+        "user_id": 12504121,
+        "skills": "{\"Deep Learning\": {\"project_count\": 6, \"avg_complexity\": 0.3, \"tool_breadth\": [\"pytorch\", \"tensorflow\"], \"last_used_months\": 6}, \"UI\/UX\": {\"project_count\": 5, \"avg_complexity\": 0.67, \"tool_breadth\": [\"figma\"], \"last_used_months\": 2}}",
+        "domain": "Security",
+        "year": 1,
+        "branch": "IT",
+        "text": "{\"Deep Learning\": {\"project_count\": 6, \"avg_complexity\": 0.3, \"tool_breadth\": [\"pytorch\", \"tensorflow\"], \"last_used_months\": 6}, \"UI\/UX\": {\"project_count\": 5, \"avg_complexity\": 0.67, \"tool_breadth\": [\"figma\"], \"last_used_months\": 2}} Security"
+    },
+    {
+        "user_id": 12501146,
+        "skills": "{\"ML\": {\"project_count\": 1, \"avg_complexity\": 0.88, \"tool_breadth\": [\"pytorch\"], \"last_used_months\": 15}, \"SQL\": {\"project_count\": 2, \"avg_complexity\": 0.81, \"tool_breadth\": [\"postgres\"], \"last_used_months\": 12}}",
+        "domain": "AI",
+        "year": 2,
+        "branch": "Instru",
+        "text": "{\"ML\": {\"project_count\": 1, \"avg_complexity\": 0.88, \"tool_breadth\": [\"pytorch\"], \"last_used_months\": 15}, \"SQL\": {\"project_count\": 2, \"avg_complexity\": 0.81, \"tool_breadth\": [\"postgres\"], \"last_used_months\": 12}} AI"
+    },
+    {
+        "user_id": 12286026,
+        "skills": "{\"Django\": {\"project_count\": 1, \"avg_complexity\": 0.25, \"tool_breadth\": [\"django\"], \"last_used_months\": 7}}",
+        "domain": "FinTech",
+        "year": 2,
+        "branch": "Civil",
+        "text": "{\"Django\": {\"project_count\": 1, \"avg_complexity\": 0.25, \"tool_breadth\": [\"django\"], \"last_used_months\": 7}} FinTech"
+    },
+    {
+        "user_id": 12273495,
+        "skills": "{\"ML\": {\"project_count\": 5, \"avg_complexity\": 0.21, \"tool_breadth\": [\"tensorflow\"], \"last_used_months\": 6}, \"Django\": {\"project_count\": 5, \"avg_complexity\": 0.25, \"tool_breadth\": [\"django\"], \"last_used_months\": 22}, \"NLP\": {\"project_count\": 2, \"avg_complexity\": 0.38, \"tool_breadth\": [\"nltk\", \"spacy\"], \"last_used_months\": 14}, \"Deep Learning\": {\"project_count\": 5, \"avg_complexity\": 0.37, \"tool_breadth\": [\"tensorflow\"], \"last_used_months\": 3}}",
+        "domain": "Security",
+        "year": 1,
+        "branch": "Civil",
+        "text": "{\"ML\": {\"project_count\": 5, \"avg_complexity\": 0.21, \"tool_breadth\": [\"tensorflow\"], \"last_used_months\": 6}, \"Django\": {\"project_count\": 5, \"avg_complexity\": 0.25, \"tool_breadth\": [\"django\"], \"last_used_months\": 22}, \"NLP\": {\"project_count\": 2, \"avg_complexity\": 0.38, \"tool_breadth\": [\"nltk\", \"spacy\"], \"last_used_months\": 14}, \"Deep Learning\": {\"project_count\": 5, \"avg_complexity\": 0.37, \"tool_breadth\": [\"tensorflow\"], \"last_used_months\": 3}} Security"
+    },
+    {
+        "user_id": 12474127,
+        "skills": "{\"AWS\": {\"project_count\": 4, \"avg_complexity\": 0.44, \"tool_breadth\": [\"lambda\", \"s3\", \"ec2\"], \"last_used_months\": 19}, \"Flask\": {\"project_count\": 1, \"avg_complexity\": 0.6, \"tool_breadth\": [\"flask\"], \"last_used_months\": 10}, \"Python\": {\"project_count\": 1, \"avg_complexity\": 0.88, \"tool_breadth\": [\"flask\"], \"last_used_months\": 4}}",
+        "domain": "AI",
+        "year": 2,
+        "branch": "CS",
+        "text": "{\"AWS\": {\"project_count\": 4, \"avg_complexity\": 0.44, \"tool_breadth\": [\"lambda\", \"s3\", \"ec2\"], \"last_used_months\": 19}, \"Flask\": {\"project_count\": 1, \"avg_complexity\": 0.6, \"tool_breadth\": [\"flask\"], \"last_used_months\": 10}, \"Python\": {\"project_count\": 1, \"avg_complexity\": 0.88, \"tool_breadth\": [\"flask\"], \"last_used_months\": 4}} AI"
+    },
+    {
+        "user_id": 12593671,
+        "skills": "{\"React\": {\"project_count\": 5, \"avg_complexity\": 0.21, \"tool_breadth\": [\"redux\", \"hooks\"], \"last_used_months\": 8}, \"AWS\": {\"project_count\": 6, \"avg_complexity\": 0.3, \"tool_breadth\": [\"lambda\"], \"last_used_months\": 9}}",
+        "domain": "FinTech",
+        "year": 3,
+        "branch": "CS",
+        "text": "{\"React\": {\"project_count\": 5, \"avg_complexity\": 0.21, \"tool_breadth\": [\"redux\", \"hooks\"], \"last_used_months\": 8}, \"AWS\": {\"project_count\": 6, \"avg_complexity\": 0.3, \"tool_breadth\": [\"lambda\"], \"last_used_months\": 9}} FinTech"
+    },
+    {
+        "user_id": 12346505,
+        "skills": "{\"Deep Learning\": {\"project_count\": 5, \"avg_complexity\": 0.85, \"tool_breadth\": [\"pytorch\"], \"last_used_months\": 19}}",
+        "domain": "FinTech",
+        "year": 2,
+        "branch": "Civil",
+        "text": "{\"Deep Learning\": {\"project_count\": 5, \"avg_complexity\": 0.85, \"tool_breadth\": [\"pytorch\"], \"last_used_months\": 19}} FinTech"
+    },
+    {
+        "user_id": 12434313,
+        "skills": "{\"Java\": {\"project_count\": 5, \"avg_complexity\": 0.28, \"tool_breadth\": [\"spring\"], \"last_used_months\": 10}}",
+        "domain": "AI",
+        "year": 4,
+        "branch": "IT",
+        "text": "{\"Java\": {\"project_count\": 5, \"avg_complexity\": 0.28, \"tool_breadth\": [\"spring\"], \"last_used_months\": 10}} AI"
+    },
+    {
+        "user_id": 12519951,
+        "skills": "{\"UI\/UX\": {\"project_count\": 3, \"avg_complexity\": 0.92, \"tool_breadth\": [\"figma\"], \"last_used_months\": 6}, \"React\": {\"project_count\": 4, \"avg_complexity\": 0.56, \"tool_breadth\": [\"redux\"], \"last_used_months\": 1}, \"NLP\": {\"project_count\": 2, \"avg_complexity\": 0.9, \"tool_breadth\": [\"nltk\"], \"last_used_months\": 4}, \"Deep Learning\": {\"project_count\": 1, \"avg_complexity\": 0.8, \"tool_breadth\": [\"pytorch\", \"tensorflow\"], \"last_used_months\": 3}}",
+        "domain": "AI",
+        "year": 1,
+        "branch": "CS",
+        "text": "{\"UI\/UX\": {\"project_count\": 3, \"avg_complexity\": 0.92, \"tool_breadth\": [\"figma\"], \"last_used_months\": 6}, \"React\": {\"project_count\": 4, \"avg_complexity\": 0.56, \"tool_breadth\": [\"redux\"], \"last_used_months\": 1}, \"NLP\": {\"project_count\": 2, \"avg_complexity\": 0.9, \"tool_breadth\": [\"nltk\"], \"last_used_months\": 4}, \"Deep Learning\": {\"project_count\": 1, \"avg_complexity\": 0.8, \"tool_breadth\": [\"pytorch\", \"tensorflow\"], \"last_used_months\": 3}} AI"
+    },
+    {
+        "user_id": 12360639,
+        "skills": "{\"DevOps\": {\"project_count\": 4, \"avg_complexity\": 0.56, \"tool_breadth\": [\"jenkins\", \"ansible\"], \"last_used_months\": 18}}",
+        "domain": "Web",
+        "year": 2,
+        "branch": "Mech",
+        "text": "{\"DevOps\": {\"project_count\": 4, \"avg_complexity\": 0.56, \"tool_breadth\": [\"jenkins\", \"ansible\"], \"last_used_months\": 18}} Web"
+    },
+    {
+        "user_id": 12424011,
+        "skills": "{\"Java\": {\"project_count\": 3, \"avg_complexity\": 0.42, \"tool_breadth\": [\"spring\"], \"last_used_months\": 17}, \"AWS\": {\"project_count\": 6, \"avg_complexity\": 0.23, \"tool_breadth\": [\"ec2\"], \"last_used_months\": 0}, \"Docker\": {\"project_count\": 3, \"avg_complexity\": 0.34, \"tool_breadth\": [\"docker\"], \"last_used_months\": 18}}",
+        "domain": "HealthTech",
+        "year": 1,
+        "branch": "CS",
+        "text": "{\"Java\": {\"project_count\": 3, \"avg_complexity\": 0.42, \"tool_breadth\": [\"spring\"], \"last_used_months\": 17}, \"AWS\": {\"project_count\": 6, \"avg_complexity\": 0.23, \"tool_breadth\": [\"ec2\"], \"last_used_months\": 0}, \"Docker\": {\"project_count\": 3, \"avg_complexity\": 0.34, \"tool_breadth\": [\"docker\"], \"last_used_months\": 18}} HealthTech"
+    },
+    {
+        "user_id": 12386936,
+        "skills": "{\"UI\/UX\": {\"project_count\": 5, \"avg_complexity\": 0.81, \"tool_breadth\": [\"figma\"], \"last_used_months\": 7}, \"ML\": {\"project_count\": 1, \"avg_complexity\": 0.42, \"tool_breadth\": [\"sklearn\"], \"last_used_months\": 23}, \"React\": {\"project_count\": 4, \"avg_complexity\": 0.56, \"tool_breadth\": [\"hooks\", \"redux\"], \"last_used_months\": 6}}",
+        "domain": "FinTech",
+        "year": 2,
+        "branch": "E&TC",
+        "text": "{\"UI\/UX\": {\"project_count\": 5, \"avg_complexity\": 0.81, \"tool_breadth\": [\"figma\"], \"last_used_months\": 7}, \"ML\": {\"project_count\": 1, \"avg_complexity\": 0.42, \"tool_breadth\": [\"sklearn\"], \"last_used_months\": 23}, \"React\": {\"project_count\": 4, \"avg_complexity\": 0.56, \"tool_breadth\": [\"hooks\", \"redux\"], \"last_used_months\": 6}} FinTech"
+    },
+    {
+        "user_id": 12391190,
+        "skills": "{\"SQL\": {\"project_count\": 2, \"avg_complexity\": 0.56, \"tool_breadth\": [\"postgres\"], \"last_used_months\": 9}, \"Flask\": {\"project_count\": 6, \"avg_complexity\": 0.42, \"tool_breadth\": [\"flask\"], \"last_used_months\": 6}, \"Java\": {\"project_count\": 5, \"avg_complexity\": 0.61, \"tool_breadth\": [\"spring\"], \"last_used_months\": 8}, \"React\": {\"project_count\": 4, \"avg_complexity\": 0.46, \"tool_breadth\": [\"hooks\"], \"last_used_months\": 7}}",
+        "domain": "HealthTech",
+        "year": 3,
+        "branch": "Mech",
+        "text": "{\"SQL\": {\"project_count\": 2, \"avg_complexity\": 0.56, \"tool_breadth\": [\"postgres\"], \"last_used_months\": 9}, \"Flask\": {\"project_count\": 6, \"avg_complexity\": 0.42, \"tool_breadth\": [\"flask\"], \"last_used_months\": 6}, \"Java\": {\"project_count\": 5, \"avg_complexity\": 0.61, \"tool_breadth\": [\"spring\"], \"last_used_months\": 8}, \"React\": {\"project_count\": 4, \"avg_complexity\": 0.46, \"tool_breadth\": [\"hooks\"], \"last_used_months\": 7}} HealthTech"
+    },
+    {
+        "user_id": 12306430,
+        "skills": "{\"NLP\": {\"project_count\": 2, \"avg_complexity\": 0.68, \"tool_breadth\": [\"spacy\", \"nltk\"], \"last_used_months\": 7}}",
+        "domain": "Data",
+        "year": 2,
+        "branch": "Instru",
+        "text": "{\"NLP\": {\"project_count\": 2, \"avg_complexity\": 0.68, \"tool_breadth\": [\"spacy\", \"nltk\"], \"last_used_months\": 7}} Data"
+    },
+    {
+        "user_id": 12228125,
+        "skills": "{\"Python\": {\"project_count\": 3, \"avg_complexity\": 0.24, \"tool_breadth\": [\"numpy\", \"pandas\", \"flask\", \"fastapi\"], \"last_used_months\": 8}, \"Docker\": {\"project_count\": 2, \"avg_complexity\": 0.64, \"tool_breadth\": [\"docker\"], \"last_used_months\": 22}}",
+        "domain": "Data",
+        "year": 3,
+        "branch": "Mech",
+        "text": "{\"Python\": {\"project_count\": 3, \"avg_complexity\": 0.24, \"tool_breadth\": [\"numpy\", \"pandas\", \"flask\", \"fastapi\"], \"last_used_months\": 8}, \"Docker\": {\"project_count\": 2, \"avg_complexity\": 0.64, \"tool_breadth\": [\"docker\"], \"last_used_months\": 22}} Data"
+    },
+    {
+        "user_id": 12319772,
+        "skills": "{\"AWS\": {\"project_count\": 2, \"avg_complexity\": 0.41, \"tool_breadth\": [\"s3\"], \"last_used_months\": 6}, \"NLP\": {\"project_count\": 4, \"avg_complexity\": 0.82, \"tool_breadth\": [\"spacy\"], \"last_used_months\": 8}, \"Django\": {\"project_count\": 2, \"avg_complexity\": 0.92, \"tool_breadth\": [\"django\"], \"last_used_months\": 18}}",
+        "domain": "Security",
+        "year": 4,
+        "branch": "CS(AIML)",
+        "text": "{\"AWS\": {\"project_count\": 2, \"avg_complexity\": 0.41, \"tool_breadth\": [\"s3\"], \"last_used_months\": 6}, \"NLP\": {\"project_count\": 4, \"avg_complexity\": 0.82, \"tool_breadth\": [\"spacy\"], \"last_used_months\": 8}, \"Django\": {\"project_count\": 2, \"avg_complexity\": 0.92, \"tool_breadth\": [\"django\"], \"last_used_months\": 18}} Security"
+    },
+    {
+        "user_id": 12573923,
+        "skills": "{\"AWS\": {\"project_count\": 4, \"avg_complexity\": 0.37, \"tool_breadth\": [\"lambda\"], \"last_used_months\": 7}, \"NLP\": {\"project_count\": 2, \"avg_complexity\": 0.52, \"tool_breadth\": [\"nltk\", \"spacy\"], \"last_used_months\": 7}}",
+        "domain": "HealthTech",
+        "year": 1,
+        "branch": "Mech",
+        "text": "{\"AWS\": {\"project_count\": 4, \"avg_complexity\": 0.37, \"tool_breadth\": [\"lambda\"], \"last_used_months\": 7}, \"NLP\": {\"project_count\": 2, \"avg_complexity\": 0.52, \"tool_breadth\": [\"nltk\", \"spacy\"], \"last_used_months\": 7}} HealthTech"
+    },
+    {
+        "user_id": 12539233,
+        "skills": "{\"UI\/UX\": {\"project_count\": 2, \"avg_complexity\": 0.36, \"tool_breadth\": [\"figma\"], \"last_used_months\": 10}, \"React\": {\"project_count\": 5, \"avg_complexity\": 0.73, \"tool_breadth\": [\"redux\", \"hooks\"], \"last_used_months\": 1}}",
+        "domain": "AI",
+        "year": 2,
+        "branch": "CS(AI)",
+        "text": "{\"UI\/UX\": {\"project_count\": 2, \"avg_complexity\": 0.36, \"tool_breadth\": [\"figma\"], \"last_used_months\": 10}, \"React\": {\"project_count\": 5, \"avg_complexity\": 0.73, \"tool_breadth\": [\"redux\", \"hooks\"], \"last_used_months\": 1}} AI"
+    },
+    {
+        "user_id": 12513281,
+        "skills": "{\"Java\": {\"project_count\": 1, \"avg_complexity\": 0.72, \"tool_breadth\": [\"hibernate\", \"spring\"], \"last_used_months\": 10}, \"Django\": {\"project_count\": 3, \"avg_complexity\": 0.46, \"tool_breadth\": [\"django\"], \"last_used_months\": 6}, \"AWS\": {\"project_count\": 1, \"avg_complexity\": 0.54, \"tool_breadth\": [\"lambda\", \"ec2\"], \"last_used_months\": 19}, \"DevOps\": {\"project_count\": 5, \"avg_complexity\": 0.93, \"tool_breadth\": [\"ansible\", \"jenkins\"], \"last_used_months\": 19}}",
+        "domain": "HealthTech",
+        "year": 3,
+        "branch": "Civil",
+        "text": "{\"Java\": {\"project_count\": 1, \"avg_complexity\": 0.72, \"tool_breadth\": [\"hibernate\", \"spring\"], \"last_used_months\": 10}, \"Django\": {\"project_count\": 3, \"avg_complexity\": 0.46, \"tool_breadth\": [\"django\"], \"last_used_months\": 6}, \"AWS\": {\"project_count\": 1, \"avg_complexity\": 0.54, \"tool_breadth\": [\"lambda\", \"ec2\"], \"last_used_months\": 19}, \"DevOps\": {\"project_count\": 5, \"avg_complexity\": 0.93, \"tool_breadth\": [\"ansible\", \"jenkins\"], \"last_used_months\": 19}} HealthTech"
+    },
+    {
+        "user_id": 12434717,
+        "skills": "{\"Deep Learning\": {\"project_count\": 4, \"avg_complexity\": 0.33, \"tool_breadth\": [\"pytorch\"], \"last_used_months\": 11}, \"AWS\": {\"project_count\": 6, \"avg_complexity\": 0.66, \"tool_breadth\": [\"lambda\", \"ec2\"], \"last_used_months\": 17}, \"UI\/UX\": {\"project_count\": 4, \"avg_complexity\": 0.45, \"tool_breadth\": [\"figma\"], \"last_used_months\": 1}, \"Flask\": {\"project_count\": 5, \"avg_complexity\": 0.83, \"tool_breadth\": [\"flask\"], \"last_used_months\": 21}}",
+        "domain": "AI",
+        "year": 1,
+        "branch": "CS(AI)",
+        "text": "{\"Deep Learning\": {\"project_count\": 4, \"avg_complexity\": 0.33, \"tool_breadth\": [\"pytorch\"], \"last_used_months\": 11}, \"AWS\": {\"project_count\": 6, \"avg_complexity\": 0.66, \"tool_breadth\": [\"lambda\", \"ec2\"], \"last_used_months\": 17}, \"UI\/UX\": {\"project_count\": 4, \"avg_complexity\": 0.45, \"tool_breadth\": [\"figma\"], \"last_used_months\": 1}, \"Flask\": {\"project_count\": 5, \"avg_complexity\": 0.83, \"tool_breadth\": [\"flask\"], \"last_used_months\": 21}} AI"
+    },
+    {
+        "user_id": 12572565,
+        "skills": "{\"UI\/UX\": {\"project_count\": 5, \"avg_complexity\": 0.65, \"tool_breadth\": [\"figma\"], \"last_used_months\": 17}}",
+        "domain": "HealthTech",
+        "year": 2,
+        "branch": "Instru",
+        "text": "{\"UI\/UX\": {\"project_count\": 5, \"avg_complexity\": 0.65, \"tool_breadth\": [\"figma\"], \"last_used_months\": 17}} HealthTech"
+    },
+    {
+        "user_id": 12441659,
+        "skills": "{\"UI\/UX\": {\"project_count\": 1, \"avg_complexity\": 0.68, \"tool_breadth\": [\"figma\"], \"last_used_months\": 15}, \"DevOps\": {\"project_count\": 5, \"avg_complexity\": 0.68, \"tool_breadth\": [\"jenkins\"], \"last_used_months\": 13}, \"NLP\": {\"project_count\": 4, \"avg_complexity\": 0.35, \"tool_breadth\": [\"nltk\", \"spacy\"], \"last_used_months\": 10}}",
+        "domain": "Data",
+        "year": 2,
+        "branch": "Instru",
+        "text": "{\"UI\/UX\": {\"project_count\": 1, \"avg_complexity\": 0.68, \"tool_breadth\": [\"figma\"], \"last_used_months\": 15}, \"DevOps\": {\"project_count\": 5, \"avg_complexity\": 0.68, \"tool_breadth\": [\"jenkins\"], \"last_used_months\": 13}, \"NLP\": {\"project_count\": 4, \"avg_complexity\": 0.35, \"tool_breadth\": [\"nltk\", \"spacy\"], \"last_used_months\": 10}} Data"
+    },
+    {
+        "user_id": 12543068,
+        "skills": "{\"Docker\": {\"project_count\": 6, \"avg_complexity\": 0.82, \"tool_breadth\": [\"docker\"], \"last_used_months\": 24}, \"NLP\": {\"project_count\": 5, \"avg_complexity\": 0.44, \"tool_breadth\": [\"nltk\"], \"last_used_months\": 16}}",
+        "domain": "FinTech",
+        "year": 4,
+        "branch": "Instru",
+        "text": "{\"Docker\": {\"project_count\": 6, \"avg_complexity\": 0.82, \"tool_breadth\": [\"docker\"], \"last_used_months\": 24}, \"NLP\": {\"project_count\": 5, \"avg_complexity\": 0.44, \"tool_breadth\": [\"nltk\"], \"last_used_months\": 16}} FinTech"
+    },
+    {
+        "user_id": 12578359,
+        "skills": "{\"SQL\": {\"project_count\": 2, \"avg_complexity\": 0.22, \"tool_breadth\": [\"mysql\"], \"last_used_months\": 21}}",
+        "domain": "FinTech",
+        "year": 1,
+        "branch": "E&TC",
+        "text": "{\"SQL\": {\"project_count\": 2, \"avg_complexity\": 0.22, \"tool_breadth\": [\"mysql\"], \"last_used_months\": 21}} FinTech"
+    },
+    {
+        "user_id": 12520821,
+        "skills": "{\"Django\": {\"project_count\": 6, \"avg_complexity\": 0.55, \"tool_breadth\": [\"django\"], \"last_used_months\": 5}, \"DevOps\": {\"project_count\": 6, \"avg_complexity\": 0.72, \"tool_breadth\": [\"ansible\", \"jenkins\"], \"last_used_months\": 23}, \"AWS\": {\"project_count\": 5, \"avg_complexity\": 0.65, \"tool_breadth\": [\"ec2\", \"lambda\"], \"last_used_months\": 18}, \"Deep Learning\": {\"project_count\": 6, \"avg_complexity\": 0.71, \"tool_breadth\": [\"tensorflow\"], \"last_used_months\": 22}}",
+        "domain": "Data",
+        "year": 3,
+        "branch": "CS(AIML)",
+        "text": "{\"Django\": {\"project_count\": 6, \"avg_complexity\": 0.55, \"tool_breadth\": [\"django\"], \"last_used_months\": 5}, \"DevOps\": {\"project_count\": 6, \"avg_complexity\": 0.72, \"tool_breadth\": [\"ansible\", \"jenkins\"], \"last_used_months\": 23}, \"AWS\": {\"project_count\": 5, \"avg_complexity\": 0.65, \"tool_breadth\": [\"ec2\", \"lambda\"], \"last_used_months\": 18}, \"Deep Learning\": {\"project_count\": 6, \"avg_complexity\": 0.71, \"tool_breadth\": [\"tensorflow\"], \"last_used_months\": 22}} Data"
+    },
+    {
+        "user_id": 12591632,
+        "skills": "{\"ML\": {\"project_count\": 4, \"avg_complexity\": 0.83, \"tool_breadth\": [\"tensorflow\", \"pytorch\"], \"last_used_months\": 19}}",
+        "domain": "HealthTech",
+        "year": 2,
+        "branch": "Civil",
+        "text": "{\"ML\": {\"project_count\": 4, \"avg_complexity\": 0.83, \"tool_breadth\": [\"tensorflow\", \"pytorch\"], \"last_used_months\": 19}} HealthTech"
+    },
+    {
+        "user_id": 12238615,
+        "skills": "{\"SQL\": {\"project_count\": 5, \"avg_complexity\": 0.29, \"tool_breadth\": [\"mysql\", \"postgres\"], \"last_used_months\": 19}, \"Java\": {\"project_count\": 2, \"avg_complexity\": 0.45, \"tool_breadth\": [\"spring\"], \"last_used_months\": 11}}",
+        "domain": "FinTech",
+        "year": 2,
+        "branch": "E&TC",
+        "text": "{\"SQL\": {\"project_count\": 5, \"avg_complexity\": 0.29, \"tool_breadth\": [\"mysql\", \"postgres\"], \"last_used_months\": 19}, \"Java\": {\"project_count\": 2, \"avg_complexity\": 0.45, \"tool_breadth\": [\"spring\"], \"last_used_months\": 11}} FinTech"
+    },
+    {
+        "user_id": 12234800,
+        "skills": "{\"UI\/UX\": {\"project_count\": 1, \"avg_complexity\": 0.38, \"tool_breadth\": [\"figma\"], \"last_used_months\": 5}, \"Docker\": {\"project_count\": 5, \"avg_complexity\": 0.31, \"tool_breadth\": [\"docker\"], \"last_used_months\": 20}, \"Java\": {\"project_count\": 5, \"avg_complexity\": 0.83, \"tool_breadth\": [\"spring\"], \"last_used_months\": 13}, \"NLP\": {\"project_count\": 5, \"avg_complexity\": 0.6, \"tool_breadth\": [\"nltk\", \"spacy\"], \"last_used_months\": 1}}",
+        "domain": "AI",
+        "year": 1,
+        "branch": "Civil",
+        "text": "{\"UI\/UX\": {\"project_count\": 1, \"avg_complexity\": 0.38, \"tool_breadth\": [\"figma\"], \"last_used_months\": 5}, \"Docker\": {\"project_count\": 5, \"avg_complexity\": 0.31, \"tool_breadth\": [\"docker\"], \"last_used_months\": 20}, \"Java\": {\"project_count\": 5, \"avg_complexity\": 0.83, \"tool_breadth\": [\"spring\"], \"last_used_months\": 13}, \"NLP\": {\"project_count\": 5, \"avg_complexity\": 0.6, \"tool_breadth\": [\"nltk\", \"spacy\"], \"last_used_months\": 1}} AI"
+    },
+    {
+        "user_id": 12518848,
+        "skills": "{\"Java\": {\"project_count\": 5, \"avg_complexity\": 0.7, \"tool_breadth\": [\"hibernate\", \"spring\"], \"last_used_months\": 17}, \"Docker\": {\"project_count\": 4, \"avg_complexity\": 0.35, \"tool_breadth\": [\"docker\"], \"last_used_months\": 7}, \"NLP\": {\"project_count\": 6, \"avg_complexity\": 0.31, \"tool_breadth\": [\"spacy\"], \"last_used_months\": 0}, \"Python\": {\"project_count\": 2, \"avg_complexity\": 0.43, \"tool_breadth\": [\"pandas\", \"flask\", \"fastapi\"], \"last_used_months\": 8}}",
+        "domain": "AI",
+        "year": 3,
+        "branch": "E&TC",
+        "text": "{\"Java\": {\"project_count\": 5, \"avg_complexity\": 0.7, \"tool_breadth\": [\"hibernate\", \"spring\"], \"last_used_months\": 17}, \"Docker\": {\"project_count\": 4, \"avg_complexity\": 0.35, \"tool_breadth\": [\"docker\"], \"last_used_months\": 7}, \"NLP\": {\"project_count\": 6, \"avg_complexity\": 0.31, \"tool_breadth\": [\"spacy\"], \"last_used_months\": 0}, \"Python\": {\"project_count\": 2, \"avg_complexity\": 0.43, \"tool_breadth\": [\"pandas\", \"flask\", \"fastapi\"], \"last_used_months\": 8}} AI"
+    },
+    {
+        "user_id": 12418037,
+        "skills": "{\"DevOps\": {\"project_count\": 4, \"avg_complexity\": 0.22, \"tool_breadth\": [\"ansible\"], \"last_used_months\": 21}}",
+        "domain": "Data",
+        "year": 1,
+        "branch": "E&TC",
+        "text": "{\"DevOps\": {\"project_count\": 4, \"avg_complexity\": 0.22, \"tool_breadth\": [\"ansible\"], \"last_used_months\": 21}} Data"
+    },
+    {
+        "user_id": 12254236,
+        "skills": "{\"Docker\": {\"project_count\": 5, \"avg_complexity\": 0.38, \"tool_breadth\": [\"docker\"], \"last_used_months\": 9}, \"ML\": {\"project_count\": 5, \"avg_complexity\": 0.31, \"tool_breadth\": [\"tensorflow\", \"sklearn\", \"pytorch\"], \"last_used_months\": 12}}",
+        "domain": "Data",
+        "year": 1,
+        "branch": "Mech",
+        "text": "{\"Docker\": {\"project_count\": 5, \"avg_complexity\": 0.38, \"tool_breadth\": [\"docker\"], \"last_used_months\": 9}, \"ML\": {\"project_count\": 5, \"avg_complexity\": 0.31, \"tool_breadth\": [\"tensorflow\", \"sklearn\", \"pytorch\"], \"last_used_months\": 12}} Data"
+    },
+    {
+        "user_id": 12281492,
+        "skills": "{\"Deep Learning\": {\"project_count\": 4, \"avg_complexity\": 0.73, \"tool_breadth\": [\"tensorflow\", \"pytorch\"], \"last_used_months\": 5}, \"DevOps\": {\"project_count\": 4, \"avg_complexity\": 0.52, \"tool_breadth\": [\"jenkins\", \"ansible\"], \"last_used_months\": 23}}",
+        "domain": "AI",
+        "year": 1,
+        "branch": "Mech",
+        "text": "{\"Deep Learning\": {\"project_count\": 4, \"avg_complexity\": 0.73, \"tool_breadth\": [\"tensorflow\", \"pytorch\"], \"last_used_months\": 5}, \"DevOps\": {\"project_count\": 4, \"avg_complexity\": 0.52, \"tool_breadth\": [\"jenkins\", \"ansible\"], \"last_used_months\": 23}} AI"
+    },
+    {
+        "user_id": 12435353,
+        "skills": "{\"ML\": {\"project_count\": 4, \"avg_complexity\": 0.42, \"tool_breadth\": [\"pytorch\"], \"last_used_months\": 13}, \"React\": {\"project_count\": 2, \"avg_complexity\": 0.85, \"tool_breadth\": [\"hooks\"], \"last_used_months\": 8}, \"Docker\": {\"project_count\": 4, \"avg_complexity\": 0.91, \"tool_breadth\": [\"docker\"], \"last_used_months\": 5}}",
+        "domain": "Data",
+        "year": 1,
+        "branch": "CS(AIML)",
+        "text": "{\"ML\": {\"project_count\": 4, \"avg_complexity\": 0.42, \"tool_breadth\": [\"pytorch\"], \"last_used_months\": 13}, \"React\": {\"project_count\": 2, \"avg_complexity\": 0.85, \"tool_breadth\": [\"hooks\"], \"last_used_months\": 8}, \"Docker\": {\"project_count\": 4, \"avg_complexity\": 0.91, \"tool_breadth\": [\"docker\"], \"last_used_months\": 5}} Data"
+    },
+    {
+        "user_id": 12561220,
+        "skills": "{\"NLP\": {\"project_count\": 2, \"avg_complexity\": 0.72, \"tool_breadth\": [\"nltk\", \"spacy\"], \"last_used_months\": 15}}",
+        "domain": "AI",
+        "year": 3,
+        "branch": "CS(AIML)",
+        "text": "{\"NLP\": {\"project_count\": 2, \"avg_complexity\": 0.72, \"tool_breadth\": [\"nltk\", \"spacy\"], \"last_used_months\": 15}} AI"
+    },
+    {
+        "user_id": 12507253,
+        "skills": "{\"Java\": {\"project_count\": 2, \"avg_complexity\": 0.35, \"tool_breadth\": [\"hibernate\"], \"last_used_months\": 22}, \"Docker\": {\"project_count\": 5, \"avg_complexity\": 0.34, \"tool_breadth\": [\"docker\"], \"last_used_months\": 2}}",
+        "domain": "Security",
+        "year": 1,
+        "branch": "Mech",
+        "text": "{\"Java\": {\"project_count\": 2, \"avg_complexity\": 0.35, \"tool_breadth\": [\"hibernate\"], \"last_used_months\": 22}, \"Docker\": {\"project_count\": 5, \"avg_complexity\": 0.34, \"tool_breadth\": [\"docker\"], \"last_used_months\": 2}} Security"
+    },
+    {
+        "user_id": 12340462,
+        "skills": "{\"React\": {\"project_count\": 1, \"avg_complexity\": 0.36, \"tool_breadth\": [\"hooks\", \"redux\"], \"last_used_months\": 9}, \"SQL\": {\"project_count\": 5, \"avg_complexity\": 0.24, \"tool_breadth\": [\"mysql\", \"postgres\"], \"last_used_months\": 15}, \"Django\": {\"project_count\": 1, \"avg_complexity\": 0.81, \"tool_breadth\": [\"django\"], \"last_used_months\": 15}, \"NLP\": {\"project_count\": 6, \"avg_complexity\": 0.9, \"tool_breadth\": [\"spacy\", \"nltk\"], \"last_used_months\": 11}}",
+        "domain": "FinTech",
+        "year": 2,
+        "branch": "CS(AI)",
+        "text": "{\"React\": {\"project_count\": 1, \"avg_complexity\": 0.36, \"tool_breadth\": [\"hooks\", \"redux\"], \"last_used_months\": 9}, \"SQL\": {\"project_count\": 5, \"avg_complexity\": 0.24, \"tool_breadth\": [\"mysql\", \"postgres\"], \"last_used_months\": 15}, \"Django\": {\"project_count\": 1, \"avg_complexity\": 0.81, \"tool_breadth\": [\"django\"], \"last_used_months\": 15}, \"NLP\": {\"project_count\": 6, \"avg_complexity\": 0.9, \"tool_breadth\": [\"spacy\", \"nltk\"], \"last_used_months\": 11}} FinTech"
+    },
+    {
+        "user_id": 12306296,
+        "skills": "{\"Python\": {\"project_count\": 5, \"avg_complexity\": 0.46, \"tool_breadth\": [\"numpy\", \"pandas\", \"flask\"], \"last_used_months\": 22}, \"DevOps\": {\"project_count\": 5, \"avg_complexity\": 0.61, \"tool_breadth\": [\"ansible\", \"jenkins\"], \"last_used_months\": 24}}",
+        "domain": "HealthTech",
+        "year": 3,
+        "branch": "Mech",
+        "text": "{\"Python\": {\"project_count\": 5, \"avg_complexity\": 0.46, \"tool_breadth\": [\"numpy\", \"pandas\", \"flask\"], \"last_used_months\": 22}, \"DevOps\": {\"project_count\": 5, \"avg_complexity\": 0.61, \"tool_breadth\": [\"ansible\", \"jenkins\"], \"last_used_months\": 24}} HealthTech"
+    },
+    {
+        "user_id": 12379518,
+        "skills": "{\"DevOps\": {\"project_count\": 2, \"avg_complexity\": 0.29, \"tool_breadth\": [\"ansible\"], \"last_used_months\": 23}, \"React\": {\"project_count\": 3, \"avg_complexity\": 0.35, \"tool_breadth\": [\"redux\"], \"last_used_months\": 13}, \"ML\": {\"project_count\": 3, \"avg_complexity\": 0.73, \"tool_breadth\": [\"sklearn\", \"tensorflow\"], \"last_used_months\": 14}}",
+        "domain": "Security",
+        "year": 3,
+        "branch": "CS",
+        "text": "{\"DevOps\": {\"project_count\": 2, \"avg_complexity\": 0.29, \"tool_breadth\": [\"ansible\"], \"last_used_months\": 23}, \"React\": {\"project_count\": 3, \"avg_complexity\": 0.35, \"tool_breadth\": [\"redux\"], \"last_used_months\": 13}, \"ML\": {\"project_count\": 3, \"avg_complexity\": 0.73, \"tool_breadth\": [\"sklearn\", \"tensorflow\"], \"last_used_months\": 14}} Security"
+    },
+    {
+        "user_id": 12316606,
+        "skills": "{\"Docker\": {\"project_count\": 1, \"avg_complexity\": 0.74, \"tool_breadth\": [\"docker\"], \"last_used_months\": 15}, \"ML\": {\"project_count\": 6, \"avg_complexity\": 0.71, \"tool_breadth\": [\"pytorch\", \"sklearn\"], \"last_used_months\": 14}, \"SQL\": {\"project_count\": 3, \"avg_complexity\": 0.44, \"tool_breadth\": [\"mysql\", \"postgres\"], \"last_used_months\": 18}, \"Deep Learning\": {\"project_count\": 4, \"avg_complexity\": 0.64, \"tool_breadth\": [\"tensorflow\", \"pytorch\"], \"last_used_months\": 13}}",
+        "domain": "FinTech",
+        "year": 4,
+        "branch": "Civil",
+        "text": "{\"Docker\": {\"project_count\": 1, \"avg_complexity\": 0.74, \"tool_breadth\": [\"docker\"], \"last_used_months\": 15}, \"ML\": {\"project_count\": 6, \"avg_complexity\": 0.71, \"tool_breadth\": [\"pytorch\", \"sklearn\"], \"last_used_months\": 14}, \"SQL\": {\"project_count\": 3, \"avg_complexity\": 0.44, \"tool_breadth\": [\"mysql\", \"postgres\"], \"last_used_months\": 18}, \"Deep Learning\": {\"project_count\": 4, \"avg_complexity\": 0.64, \"tool_breadth\": [\"tensorflow\", \"pytorch\"], \"last_used_months\": 13}} FinTech"
+    },
+    {
+        "user_id": 12446180,
+        "skills": "{\"Python\": {\"project_count\": 6, \"avg_complexity\": 0.63, \"tool_breadth\": [\"numpy\", \"flask\", \"fastapi\", \"pandas\"], \"last_used_months\": 13}}",
+        "domain": "AI",
+        "year": 3,
+        "branch": "IT",
+        "text": "{\"Python\": {\"project_count\": 6, \"avg_complexity\": 0.63, \"tool_breadth\": [\"numpy\", \"flask\", \"fastapi\", \"pandas\"], \"last_used_months\": 13}} AI"
+    },
+    {
+        "user_id": 12435732,
+        "skills": "{\"Docker\": {\"project_count\": 5, \"avg_complexity\": 0.33, \"tool_breadth\": [\"docker\"], \"last_used_months\": 1}}",
+        "domain": "Data",
+        "year": 1,
+        "branch": "Instru",
+        "text": "{\"Docker\": {\"project_count\": 5, \"avg_complexity\": 0.33, \"tool_breadth\": [\"docker\"], \"last_used_months\": 1}} Data"
+    },
+    {
+        "user_id": 12357699,
+        "skills": "{\"UI\/UX\": {\"project_count\": 2, \"avg_complexity\": 0.47, \"tool_breadth\": [\"figma\"], \"last_used_months\": 19}}",
+        "domain": "FinTech",
+        "year": 4,
+        "branch": "CS(AI)",
+        "text": "{\"UI\/UX\": {\"project_count\": 2, \"avg_complexity\": 0.47, \"tool_breadth\": [\"figma\"], \"last_used_months\": 19}} FinTech"
+    },
+    {
+        "user_id": 12353079,
+        "skills": "{\"AWS\": {\"project_count\": 1, \"avg_complexity\": 0.34, \"tool_breadth\": [\"s3\"], \"last_used_months\": 3}, \"Deep Learning\": {\"project_count\": 5, \"avg_complexity\": 0.33, \"tool_breadth\": [\"tensorflow\", \"pytorch\"], \"last_used_months\": 1}, \"ML\": {\"project_count\": 5, \"avg_complexity\": 0.92, \"tool_breadth\": [\"pytorch\"], \"last_used_months\": 0}}",
+        "domain": "Data",
+        "year": 1,
+        "branch": "IT",
+        "text": "{\"AWS\": {\"project_count\": 1, \"avg_complexity\": 0.34, \"tool_breadth\": [\"s3\"], \"last_used_months\": 3}, \"Deep Learning\": {\"project_count\": 5, \"avg_complexity\": 0.33, \"tool_breadth\": [\"tensorflow\", \"pytorch\"], \"last_used_months\": 1}, \"ML\": {\"project_count\": 5, \"avg_complexity\": 0.92, \"tool_breadth\": [\"pytorch\"], \"last_used_months\": 0}} Data"
+    },
+    {
+        "user_id": 12461905,
+        "skills": "{\"Java\": {\"project_count\": 5, \"avg_complexity\": 0.79, \"tool_breadth\": [\"spring\"], \"last_used_months\": 5}, \"NLP\": {\"project_count\": 3, \"avg_complexity\": 0.91, \"tool_breadth\": [\"spacy\"], \"last_used_months\": 4}, \"Django\": {\"project_count\": 4, \"avg_complexity\": 0.69, \"tool_breadth\": [\"django\"], \"last_used_months\": 20}}",
+        "domain": "Data",
+        "year": 2,
+        "branch": "Instru",
+        "text": "{\"Java\": {\"project_count\": 5, \"avg_complexity\": 0.79, \"tool_breadth\": [\"spring\"], \"last_used_months\": 5}, \"NLP\": {\"project_count\": 3, \"avg_complexity\": 0.91, \"tool_breadth\": [\"spacy\"], \"last_used_months\": 4}, \"Django\": {\"project_count\": 4, \"avg_complexity\": 0.69, \"tool_breadth\": [\"django\"], \"last_used_months\": 20}} Data"
+    },
+    {
+        "user_id": 12319797,
+        "skills": "{\"Docker\": {\"project_count\": 1, \"avg_complexity\": 0.51, \"tool_breadth\": [\"docker\"], \"last_used_months\": 20}, \"Django\": {\"project_count\": 5, \"avg_complexity\": 0.45, \"tool_breadth\": [\"django\"], \"last_used_months\": 18}}",
+        "domain": "Web",
+        "year": 3,
+        "branch": "Instru",
+        "text": "{\"Docker\": {\"project_count\": 1, \"avg_complexity\": 0.51, \"tool_breadth\": [\"docker\"], \"last_used_months\": 20}, \"Django\": {\"project_count\": 5, \"avg_complexity\": 0.45, \"tool_breadth\": [\"django\"], \"last_used_months\": 18}} Web"
+    },
+    {
+        "user_id": 12386347,
+        "skills": "{\"NLP\": {\"project_count\": 1, \"avg_complexity\": 0.33, \"tool_breadth\": [\"nltk\"], \"last_used_months\": 6}, \"Deep Learning\": {\"project_count\": 4, \"avg_complexity\": 0.32, \"tool_breadth\": [\"tensorflow\", \"pytorch\"], \"last_used_months\": 7}}",
+        "domain": "FinTech",
+        "year": 3,
+        "branch": "CS",
+        "text": "{\"NLP\": {\"project_count\": 1, \"avg_complexity\": 0.33, \"tool_breadth\": [\"nltk\"], \"last_used_months\": 6}, \"Deep Learning\": {\"project_count\": 4, \"avg_complexity\": 0.32, \"tool_breadth\": [\"tensorflow\", \"pytorch\"], \"last_used_months\": 7}} FinTech"
+    },
+    {
+        "user_id": 12380122,
+        "skills": "{\"Java\": {\"project_count\": 4, \"avg_complexity\": 0.28, \"tool_breadth\": [\"spring\"], \"last_used_months\": 21}, \"React\": {\"project_count\": 2, \"avg_complexity\": 0.42, \"tool_breadth\": [\"hooks\"], \"last_used_months\": 20}, \"Flask\": {\"project_count\": 3, \"avg_complexity\": 0.33, \"tool_breadth\": [\"flask\"], \"last_used_months\": 1}}",
+        "domain": "AI",
+        "year": 3,
+        "branch": "Mech",
+        "text": "{\"Java\": {\"project_count\": 4, \"avg_complexity\": 0.28, \"tool_breadth\": [\"spring\"], \"last_used_months\": 21}, \"React\": {\"project_count\": 2, \"avg_complexity\": 0.42, \"tool_breadth\": [\"hooks\"], \"last_used_months\": 20}, \"Flask\": {\"project_count\": 3, \"avg_complexity\": 0.33, \"tool_breadth\": [\"flask\"], \"last_used_months\": 1}} AI"
+    },
+    {
+        "user_id": 12368557,
+        "skills": "{\"ML\": {\"project_count\": 5, \"avg_complexity\": 0.66, \"tool_breadth\": [\"pytorch\", \"sklearn\"], \"last_used_months\": 7}, \"NLP\": {\"project_count\": 1, \"avg_complexity\": 0.29, \"tool_breadth\": [\"nltk\", \"spacy\"], \"last_used_months\": 8}}",
+        "domain": "Data",
+        "year": 4,
+        "branch": "Mech",
+        "text": "{\"ML\": {\"project_count\": 5, \"avg_complexity\": 0.66, \"tool_breadth\": [\"pytorch\", \"sklearn\"], \"last_used_months\": 7}, \"NLP\": {\"project_count\": 1, \"avg_complexity\": 0.29, \"tool_breadth\": [\"nltk\", \"spacy\"], \"last_used_months\": 8}} Data"
+    },
+    {
+        "user_id": 12473390,
+        "skills": "{\"Deep Learning\": {\"project_count\": 2, \"avg_complexity\": 0.72, \"tool_breadth\": [\"tensorflow\"], \"last_used_months\": 21}}",
+        "domain": "Security",
+        "year": 2,
+        "branch": "CS",
+        "text": "{\"Deep Learning\": {\"project_count\": 2, \"avg_complexity\": 0.72, \"tool_breadth\": [\"tensorflow\"], \"last_used_months\": 21}} Security"
+    },
+    {
+        "user_id": 12226637,
+        "skills": "{\"NLP\": {\"project_count\": 2, \"avg_complexity\": 0.27, \"tool_breadth\": [\"nltk\", \"spacy\"], \"last_used_months\": 10}}",
+        "domain": "Data",
+        "year": 3,
+        "branch": "CS(AI)",
+        "text": "{\"NLP\": {\"project_count\": 2, \"avg_complexity\": 0.27, \"tool_breadth\": [\"nltk\", \"spacy\"], \"last_used_months\": 10}} Data"
+    },
+    {
+        "user_id": 12398032,
+        "skills": "{\"Flask\": {\"project_count\": 6, \"avg_complexity\": 0.81, \"tool_breadth\": [\"flask\"], \"last_used_months\": 4}, \"DevOps\": {\"project_count\": 2, \"avg_complexity\": 0.87, \"tool_breadth\": [\"jenkins\", \"ansible\"], \"last_used_months\": 0}, \"Deep Learning\": {\"project_count\": 3, \"avg_complexity\": 0.21, \"tool_breadth\": [\"tensorflow\"], \"last_used_months\": 0}}",
+        "domain": "AI",
+        "year": 4,
+        "branch": "CS",
+        "text": "{\"Flask\": {\"project_count\": 6, \"avg_complexity\": 0.81, \"tool_breadth\": [\"flask\"], \"last_used_months\": 4}, \"DevOps\": {\"project_count\": 2, \"avg_complexity\": 0.87, \"tool_breadth\": [\"jenkins\", \"ansible\"], \"last_used_months\": 0}, \"Deep Learning\": {\"project_count\": 3, \"avg_complexity\": 0.21, \"tool_breadth\": [\"tensorflow\"], \"last_used_months\": 0}} AI"
+    },
+    {
+        "user_id": 12591413,
+        "skills": "{\"Python\": {\"project_count\": 5, \"avg_complexity\": 0.73, \"tool_breadth\": [\"pandas\", \"flask\", \"fastapi\"], \"last_used_months\": 14}}",
+        "domain": "FinTech",
+        "year": 4,
+        "branch": "CS(AIML)",
+        "text": "{\"Python\": {\"project_count\": 5, \"avg_complexity\": 0.73, \"tool_breadth\": [\"pandas\", \"flask\", \"fastapi\"], \"last_used_months\": 14}} FinTech"
+    },
+    {
+        "user_id": 12337575,
+        "skills": "{\"Django\": {\"project_count\": 1, \"avg_complexity\": 0.32, \"tool_breadth\": [\"django\"], \"last_used_months\": 13}, \"Docker\": {\"project_count\": 5, \"avg_complexity\": 0.76, \"tool_breadth\": [\"docker\"], \"last_used_months\": 15}, \"Deep Learning\": {\"project_count\": 5, \"avg_complexity\": 0.48, \"tool_breadth\": [\"tensorflow\", \"pytorch\"], \"last_used_months\": 4}, \"SQL\": {\"project_count\": 6, \"avg_complexity\": 0.87, \"tool_breadth\": [\"postgres\", \"mysql\"], \"last_used_months\": 21}}",
+        "domain": "Web",
+        "year": 3,
+        "branch": "Instru",
+        "text": "{\"Django\": {\"project_count\": 1, \"avg_complexity\": 0.32, \"tool_breadth\": [\"django\"], \"last_used_months\": 13}, \"Docker\": {\"project_count\": 5, \"avg_complexity\": 0.76, \"tool_breadth\": [\"docker\"], \"last_used_months\": 15}, \"Deep Learning\": {\"project_count\": 5, \"avg_complexity\": 0.48, \"tool_breadth\": [\"tensorflow\", \"pytorch\"], \"last_used_months\": 4}, \"SQL\": {\"project_count\": 6, \"avg_complexity\": 0.87, \"tool_breadth\": [\"postgres\", \"mysql\"], \"last_used_months\": 21}} Web"
+    },
+    {
+        "user_id": 12267694,
+        "skills": "{\"UI\/UX\": {\"project_count\": 6, \"avg_complexity\": 0.7, \"tool_breadth\": [\"figma\"], \"last_used_months\": 22}, \"AWS\": {\"project_count\": 4, \"avg_complexity\": 0.8, \"tool_breadth\": [\"lambda\", \"s3\", \"ec2\"], \"last_used_months\": 24}}",
+        "domain": "FinTech",
+        "year": 4,
+        "branch": "Mech",
+        "text": "{\"UI\/UX\": {\"project_count\": 6, \"avg_complexity\": 0.7, \"tool_breadth\": [\"figma\"], \"last_used_months\": 22}, \"AWS\": {\"project_count\": 4, \"avg_complexity\": 0.8, \"tool_breadth\": [\"lambda\", \"s3\", \"ec2\"], \"last_used_months\": 24}} FinTech"
+    },
+    {
+        "user_id": 12208042,
+        "skills": "{\"Flask\": {\"project_count\": 3, \"avg_complexity\": 0.58, \"tool_breadth\": [\"flask\"], \"last_used_months\": 5}}",
+        "domain": "FinTech",
+        "year": 3,
+        "branch": "Civil",
+        "text": "{\"Flask\": {\"project_count\": 3, \"avg_complexity\": 0.58, \"tool_breadth\": [\"flask\"], \"last_used_months\": 5}} FinTech"
+    },
+    {
+        "user_id": 12569424,
+        "skills": "{\"NLP\": {\"project_count\": 4, \"avg_complexity\": 0.92, \"tool_breadth\": [\"nltk\"], \"last_used_months\": 21}, \"UI\/UX\": {\"project_count\": 4, \"avg_complexity\": 0.52, \"tool_breadth\": [\"figma\"], \"last_used_months\": 21}}",
+        "domain": "Data",
+        "year": 2,
+        "branch": "IT",
+        "text": "{\"NLP\": {\"project_count\": 4, \"avg_complexity\": 0.92, \"tool_breadth\": [\"nltk\"], \"last_used_months\": 21}, \"UI\/UX\": {\"project_count\": 4, \"avg_complexity\": 0.52, \"tool_breadth\": [\"figma\"], \"last_used_months\": 21}} Data"
+    },
+    {
+        "user_id": 12271877,
+        "skills": "{\"ML\": {\"project_count\": 6, \"avg_complexity\": 0.78, \"tool_breadth\": [\"sklearn\", \"tensorflow\"], \"last_used_months\": 22}, \"Docker\": {\"project_count\": 5, \"avg_complexity\": 0.75, \"tool_breadth\": [\"docker\"], \"last_used_months\": 17}, \"Java\": {\"project_count\": 4, \"avg_complexity\": 0.29, \"tool_breadth\": [\"hibernate\", \"spring\"], \"last_used_months\": 2}}",
+        "domain": "Security",
+        "year": 1,
+        "branch": "CS(AIML)",
+        "text": "{\"ML\": {\"project_count\": 6, \"avg_complexity\": 0.78, \"tool_breadth\": [\"sklearn\", \"tensorflow\"], \"last_used_months\": 22}, \"Docker\": {\"project_count\": 5, \"avg_complexity\": 0.75, \"tool_breadth\": [\"docker\"], \"last_used_months\": 17}, \"Java\": {\"project_count\": 4, \"avg_complexity\": 0.29, \"tool_breadth\": [\"hibernate\", \"spring\"], \"last_used_months\": 2}} Security"
+    },
+    {
+        "user_id": 12323492,
+        "skills": "{\"ML\": {\"project_count\": 3, \"avg_complexity\": 0.86, \"tool_breadth\": [\"tensorflow\", \"pytorch\", \"sklearn\"], \"last_used_months\": 1}, \"Python\": {\"project_count\": 4, \"avg_complexity\": 0.88, \"tool_breadth\": [\"fastapi\", \"numpy\"], \"last_used_months\": 23}}",
+        "domain": "Security",
+        "year": 4,
+        "branch": "CS(AI)",
+        "text": "{\"ML\": {\"project_count\": 3, \"avg_complexity\": 0.86, \"tool_breadth\": [\"tensorflow\", \"pytorch\", \"sklearn\"], \"last_used_months\": 1}, \"Python\": {\"project_count\": 4, \"avg_complexity\": 0.88, \"tool_breadth\": [\"fastapi\", \"numpy\"], \"last_used_months\": 23}} Security"
+    },
+    {
+        "user_id": 12547137,
+        "skills": "{\"AWS\": {\"project_count\": 6, \"avg_complexity\": 0.92, \"tool_breadth\": [\"lambda\"], \"last_used_months\": 24}, \"React\": {\"project_count\": 5, \"avg_complexity\": 0.82, \"tool_breadth\": [\"hooks\", \"redux\"], \"last_used_months\": 10}, \"ML\": {\"project_count\": 2, \"avg_complexity\": 0.61, \"tool_breadth\": [\"pytorch\", \"tensorflow\"], \"last_used_months\": 1}, \"Deep Learning\": {\"project_count\": 1, \"avg_complexity\": 0.43, \"tool_breadth\": [\"tensorflow\"], \"last_used_months\": 14}}",
+        "domain": "Web",
+        "year": 4,
+        "branch": "CS(AIML)",
+        "text": "{\"AWS\": {\"project_count\": 6, \"avg_complexity\": 0.92, \"tool_breadth\": [\"lambda\"], \"last_used_months\": 24}, \"React\": {\"project_count\": 5, \"avg_complexity\": 0.82, \"tool_breadth\": [\"hooks\", \"redux\"], \"last_used_months\": 10}, \"ML\": {\"project_count\": 2, \"avg_complexity\": 0.61, \"tool_breadth\": [\"pytorch\", \"tensorflow\"], \"last_used_months\": 1}, \"Deep Learning\": {\"project_count\": 1, \"avg_complexity\": 0.43, \"tool_breadth\": [\"tensorflow\"], \"last_used_months\": 14}} Web"
+    },
+    {
+        "user_id": 12449084,
+        "skills": "{\"Docker\": {\"project_count\": 2, \"avg_complexity\": 0.6, \"tool_breadth\": [\"docker\"], \"last_used_months\": 5}, \"NLP\": {\"project_count\": 6, \"avg_complexity\": 0.64, \"tool_breadth\": [\"spacy\", \"nltk\"], \"last_used_months\": 9}, \"DevOps\": {\"project_count\": 2, \"avg_complexity\": 0.74, \"tool_breadth\": [\"jenkins\", \"ansible\"], \"last_used_months\": 2}, \"Java\": {\"project_count\": 6, \"avg_complexity\": 0.88, \"tool_breadth\": [\"hibernate\", \"spring\"], \"last_used_months\": 11}}",
+        "domain": "Security",
+        "year": 3,
+        "branch": "CS(AIML)",
+        "text": "{\"Docker\": {\"project_count\": 2, \"avg_complexity\": 0.6, \"tool_breadth\": [\"docker\"], \"last_used_months\": 5}, \"NLP\": {\"project_count\": 6, \"avg_complexity\": 0.64, \"tool_breadth\": [\"spacy\", \"nltk\"], \"last_used_months\": 9}, \"DevOps\": {\"project_count\": 2, \"avg_complexity\": 0.74, \"tool_breadth\": [\"jenkins\", \"ansible\"], \"last_used_months\": 2}, \"Java\": {\"project_count\": 6, \"avg_complexity\": 0.88, \"tool_breadth\": [\"hibernate\", \"spring\"], \"last_used_months\": 11}} Security"
+    },
+    {
+        "user_id": 12488236,
+        "skills": "{\"ML\": {\"project_count\": 3, \"avg_complexity\": 0.33, \"tool_breadth\": [\"tensorflow\", \"sklearn\", \"pytorch\"], \"last_used_months\": 20}}",
+        "domain": "FinTech",
+        "year": 4,
+        "branch": "Instru",
+        "text": "{\"ML\": {\"project_count\": 3, \"avg_complexity\": 0.33, \"tool_breadth\": [\"tensorflow\", \"sklearn\", \"pytorch\"], \"last_used_months\": 20}} FinTech"
+    },
+    {
+        "user_id": 12343039,
+        "skills": "{\"NLP\": {\"project_count\": 4, \"avg_complexity\": 0.75, \"tool_breadth\": [\"nltk\"], \"last_used_months\": 7}, \"Python\": {\"project_count\": 3, \"avg_complexity\": 0.52, \"tool_breadth\": [\"pandas\", \"flask\", \"numpy\", \"fastapi\"], \"last_used_months\": 20}, \"Django\": {\"project_count\": 3, \"avg_complexity\": 0.51, \"tool_breadth\": [\"django\"], \"last_used_months\": 1}, \"Docker\": {\"project_count\": 5, \"avg_complexity\": 0.49, \"tool_breadth\": [\"docker\"], \"last_used_months\": 2}}",
+        "domain": "HealthTech",
+        "year": 3,
+        "branch": "CS(AI)",
+        "text": "{\"NLP\": {\"project_count\": 4, \"avg_complexity\": 0.75, \"tool_breadth\": [\"nltk\"], \"last_used_months\": 7}, \"Python\": {\"project_count\": 3, \"avg_complexity\": 0.52, \"tool_breadth\": [\"pandas\", \"flask\", \"numpy\", \"fastapi\"], \"last_used_months\": 20}, \"Django\": {\"project_count\": 3, \"avg_complexity\": 0.51, \"tool_breadth\": [\"django\"], \"last_used_months\": 1}, \"Docker\": {\"project_count\": 5, \"avg_complexity\": 0.49, \"tool_breadth\": [\"docker\"], \"last_used_months\": 2}} HealthTech"
+    },
+    {
+        "user_id": 12584261,
+        "skills": "{\"Python\": {\"project_count\": 2, \"avg_complexity\": 0.85, \"tool_breadth\": [\"fastapi\"], \"last_used_months\": 17}}",
+        "domain": "FinTech",
+        "year": 2,
+        "branch": "Civil",
+        "text": "{\"Python\": {\"project_count\": 2, \"avg_complexity\": 0.85, \"tool_breadth\": [\"fastapi\"], \"last_used_months\": 17}} FinTech"
+    },
+    {
+        "user_id": 12489244,
+        "skills": "{\"DevOps\": {\"project_count\": 2, \"avg_complexity\": 0.9, \"tool_breadth\": [\"jenkins\", \"ansible\"], \"last_used_months\": 22}, \"Flask\": {\"project_count\": 2, \"avg_complexity\": 0.93, \"tool_breadth\": [\"flask\"], \"last_used_months\": 15}}",
+        "domain": "Web",
+        "year": 1,
+        "branch": "CS",
+        "text": "{\"DevOps\": {\"project_count\": 2, \"avg_complexity\": 0.9, \"tool_breadth\": [\"jenkins\", \"ansible\"], \"last_used_months\": 22}, \"Flask\": {\"project_count\": 2, \"avg_complexity\": 0.93, \"tool_breadth\": [\"flask\"], \"last_used_months\": 15}} Web"
+    },
+    {
+        "user_id": 12289459,
+        "skills": "{\"Flask\": {\"project_count\": 2, \"avg_complexity\": 0.38, \"tool_breadth\": [\"flask\"], \"last_used_months\": 9}, \"Deep Learning\": {\"project_count\": 1, \"avg_complexity\": 0.51, \"tool_breadth\": [\"tensorflow\", \"pytorch\"], \"last_used_months\": 15}}",
+        "domain": "Security",
+        "year": 4,
+        "branch": "CS(AIML)",
+        "text": "{\"Flask\": {\"project_count\": 2, \"avg_complexity\": 0.38, \"tool_breadth\": [\"flask\"], \"last_used_months\": 9}, \"Deep Learning\": {\"project_count\": 1, \"avg_complexity\": 0.51, \"tool_breadth\": [\"tensorflow\", \"pytorch\"], \"last_used_months\": 15}} Security"
+    },
+    {
+        "user_id": 12210141,
+        "skills": "{\"Java\": {\"project_count\": 3, \"avg_complexity\": 0.72, \"tool_breadth\": [\"spring\"], \"last_used_months\": 13}}",
+        "domain": "Data",
+        "year": 3,
+        "branch": "Mech",
+        "text": "{\"Java\": {\"project_count\": 3, \"avg_complexity\": 0.72, \"tool_breadth\": [\"spring\"], \"last_used_months\": 13}} Data"
+    },
+    {
+        "user_id": 12310537,
+        "skills": "{\"NLP\": {\"project_count\": 1, \"avg_complexity\": 0.33, \"tool_breadth\": [\"nltk\", \"spacy\"], \"last_used_months\": 7}}",
+        "domain": "Security",
+        "year": 3,
+        "branch": "CS",
+        "text": "{\"NLP\": {\"project_count\": 1, \"avg_complexity\": 0.33, \"tool_breadth\": [\"nltk\", \"spacy\"], \"last_used_months\": 7}} Security"
+    },
+    {
+        "user_id": 12391935,
+        "skills": "{\"AWS\": {\"project_count\": 4, \"avg_complexity\": 0.39, \"tool_breadth\": [\"lambda\", \"s3\", \"ec2\"], \"last_used_months\": 8}, \"Java\": {\"project_count\": 2, \"avg_complexity\": 0.84, \"tool_breadth\": [\"hibernate\", \"spring\"], \"last_used_months\": 17}, \"Django\": {\"project_count\": 2, \"avg_complexity\": 0.45, \"tool_breadth\": [\"django\"], \"last_used_months\": 6}}",
+        "domain": "Data",
+        "year": 2,
+        "branch": "Mech",
+        "text": "{\"AWS\": {\"project_count\": 4, \"avg_complexity\": 0.39, \"tool_breadth\": [\"lambda\", \"s3\", \"ec2\"], \"last_used_months\": 8}, \"Java\": {\"project_count\": 2, \"avg_complexity\": 0.84, \"tool_breadth\": [\"hibernate\", \"spring\"], \"last_used_months\": 17}, \"Django\": {\"project_count\": 2, \"avg_complexity\": 0.45, \"tool_breadth\": [\"django\"], \"last_used_months\": 6}} Data"
+    },
+    {
+        "user_id": 12357713,
+        "skills": "{\"ML\": {\"project_count\": 2, \"avg_complexity\": 0.31, \"tool_breadth\": [\"pytorch\", \"sklearn\"], \"last_used_months\": 11}, \"DevOps\": {\"project_count\": 3, \"avg_complexity\": 0.35, \"tool_breadth\": [\"ansible\", \"jenkins\"], \"last_used_months\": 10}}",
+        "domain": "AI",
+        "year": 2,
+        "branch": "Mech",
+        "text": "{\"ML\": {\"project_count\": 2, \"avg_complexity\": 0.31, \"tool_breadth\": [\"pytorch\", \"sklearn\"], \"last_used_months\": 11}, \"DevOps\": {\"project_count\": 3, \"avg_complexity\": 0.35, \"tool_breadth\": [\"ansible\", \"jenkins\"], \"last_used_months\": 10}} AI"
+    },
+    {
+        "user_id": 12208870,
+        "skills": "{\"NLP\": {\"project_count\": 3, \"avg_complexity\": 0.33, \"tool_breadth\": [\"nltk\", \"spacy\"], \"last_used_months\": 11}, \"AWS\": {\"project_count\": 5, \"avg_complexity\": 0.57, \"tool_breadth\": [\"lambda\"], \"last_used_months\": 12}, \"SQL\": {\"project_count\": 6, \"avg_complexity\": 0.33, \"tool_breadth\": [\"mysql\", \"postgres\"], \"last_used_months\": 3}}",
+        "domain": "Data",
+        "year": 3,
+        "branch": "Mech",
+        "text": "{\"NLP\": {\"project_count\": 3, \"avg_complexity\": 0.33, \"tool_breadth\": [\"nltk\", \"spacy\"], \"last_used_months\": 11}, \"AWS\": {\"project_count\": 5, \"avg_complexity\": 0.57, \"tool_breadth\": [\"lambda\"], \"last_used_months\": 12}, \"SQL\": {\"project_count\": 6, \"avg_complexity\": 0.33, \"tool_breadth\": [\"mysql\", \"postgres\"], \"last_used_months\": 3}} Data"
+    },
+    {
+        "user_id": 12519540,
+        "skills": "{\"React\": {\"project_count\": 5, \"avg_complexity\": 0.74, \"tool_breadth\": [\"redux\"], \"last_used_months\": 16}, \"Django\": {\"project_count\": 2, \"avg_complexity\": 0.32, \"tool_breadth\": [\"django\"], \"last_used_months\": 0}, \"DevOps\": {\"project_count\": 6, \"avg_complexity\": 0.34, \"tool_breadth\": [\"ansible\"], \"last_used_months\": 11}}",
+        "domain": "Data",
+        "year": 3,
+        "branch": "Instru",
+        "text": "{\"React\": {\"project_count\": 5, \"avg_complexity\": 0.74, \"tool_breadth\": [\"redux\"], \"last_used_months\": 16}, \"Django\": {\"project_count\": 2, \"avg_complexity\": 0.32, \"tool_breadth\": [\"django\"], \"last_used_months\": 0}, \"DevOps\": {\"project_count\": 6, \"avg_complexity\": 0.34, \"tool_breadth\": [\"ansible\"], \"last_used_months\": 11}} Data"
+    },
+    {
+        "user_id": 12437325,
+        "skills": "{\"Python\": {\"project_count\": 5, \"avg_complexity\": 0.79, \"tool_breadth\": [\"numpy\", \"fastapi\", \"flask\", \"pandas\"], \"last_used_months\": 10}, \"DevOps\": {\"project_count\": 5, \"avg_complexity\": 0.92, \"tool_breadth\": [\"jenkins\", \"ansible\"], \"last_used_months\": 2}}",
+        "domain": "Web",
+        "year": 4,
+        "branch": "CS(AI)",
+        "text": "{\"Python\": {\"project_count\": 5, \"avg_complexity\": 0.79, \"tool_breadth\": [\"numpy\", \"fastapi\", \"flask\", \"pandas\"], \"last_used_months\": 10}, \"DevOps\": {\"project_count\": 5, \"avg_complexity\": 0.92, \"tool_breadth\": [\"jenkins\", \"ansible\"], \"last_used_months\": 2}} Web"
+    },
+    {
+        "user_id": 12392296,
+        "skills": "{\"React\": {\"project_count\": 4, \"avg_complexity\": 0.82, \"tool_breadth\": [\"redux\"], \"last_used_months\": 3}, \"Deep Learning\": {\"project_count\": 5, \"avg_complexity\": 0.43, \"tool_breadth\": [\"pytorch\", \"tensorflow\"], \"last_used_months\": 2}}",
+        "domain": "FinTech",
+        "year": 3,
+        "branch": "E&TC",
+        "text": "{\"React\": {\"project_count\": 4, \"avg_complexity\": 0.82, \"tool_breadth\": [\"redux\"], \"last_used_months\": 3}, \"Deep Learning\": {\"project_count\": 5, \"avg_complexity\": 0.43, \"tool_breadth\": [\"pytorch\", \"tensorflow\"], \"last_used_months\": 2}} FinTech"
+    },
+    {
+        "user_id": 12450875,
+        "skills": "{\"ML\": {\"project_count\": 1, \"avg_complexity\": 0.35, \"tool_breadth\": [\"tensorflow\", \"pytorch\", \"sklearn\"], \"last_used_months\": 7}}",
+        "domain": "Security",
+        "year": 2,
+        "branch": "Civil",
+        "text": "{\"ML\": {\"project_count\": 1, \"avg_complexity\": 0.35, \"tool_breadth\": [\"tensorflow\", \"pytorch\", \"sklearn\"], \"last_used_months\": 7}} Security"
+    },
+    {
+        "user_id": 12538029,
+        "skills": "{\"Python\": {\"project_count\": 1, \"avg_complexity\": 0.29, \"tool_breadth\": [\"pandas\", \"numpy\"], \"last_used_months\": 20}, \"DevOps\": {\"project_count\": 2, \"avg_complexity\": 0.7, \"tool_breadth\": [\"jenkins\"], \"last_used_months\": 18}}",
+        "domain": "AI",
+        "year": 3,
+        "branch": "CS(AIML)",
+        "text": "{\"Python\": {\"project_count\": 1, \"avg_complexity\": 0.29, \"tool_breadth\": [\"pandas\", \"numpy\"], \"last_used_months\": 20}, \"DevOps\": {\"project_count\": 2, \"avg_complexity\": 0.7, \"tool_breadth\": [\"jenkins\"], \"last_used_months\": 18}} AI"
+    },
+    {
+        "user_id": 12218507,
+        "skills": "{\"UI\/UX\": {\"project_count\": 3, \"avg_complexity\": 0.23, \"tool_breadth\": [\"figma\"], \"last_used_months\": 14}, \"Django\": {\"project_count\": 2, \"avg_complexity\": 0.5, \"tool_breadth\": [\"django\"], \"last_used_months\": 9}, \"Deep Learning\": {\"project_count\": 6, \"avg_complexity\": 0.75, \"tool_breadth\": [\"tensorflow\"], \"last_used_months\": 13}}",
+        "domain": "HealthTech",
+        "year": 3,
+        "branch": "IT",
+        "text": "{\"UI\/UX\": {\"project_count\": 3, \"avg_complexity\": 0.23, \"tool_breadth\": [\"figma\"], \"last_used_months\": 14}, \"Django\": {\"project_count\": 2, \"avg_complexity\": 0.5, \"tool_breadth\": [\"django\"], \"last_used_months\": 9}, \"Deep Learning\": {\"project_count\": 6, \"avg_complexity\": 0.75, \"tool_breadth\": [\"tensorflow\"], \"last_used_months\": 13}} HealthTech"
+    },
+    {
+        "user_id": 12595911,
+        "skills": "{\"Docker\": {\"project_count\": 1, \"avg_complexity\": 0.95, \"tool_breadth\": [\"docker\"], \"last_used_months\": 12}, \"ML\": {\"project_count\": 4, \"avg_complexity\": 0.4, \"tool_breadth\": [\"tensorflow\"], \"last_used_months\": 0}, \"SQL\": {\"project_count\": 3, \"avg_complexity\": 0.79, \"tool_breadth\": [\"postgres\"], \"last_used_months\": 3}}",
+        "domain": "Data",
+        "year": 3,
+        "branch": "Mech",
+        "text": "{\"Docker\": {\"project_count\": 1, \"avg_complexity\": 0.95, \"tool_breadth\": [\"docker\"], \"last_used_months\": 12}, \"ML\": {\"project_count\": 4, \"avg_complexity\": 0.4, \"tool_breadth\": [\"tensorflow\"], \"last_used_months\": 0}, \"SQL\": {\"project_count\": 3, \"avg_complexity\": 0.79, \"tool_breadth\": [\"postgres\"], \"last_used_months\": 3}} Data"
+    },
+    {
+        "user_id": 12436298,
+        "skills": "{\"Flask\": {\"project_count\": 2, \"avg_complexity\": 0.7, \"tool_breadth\": [\"flask\"], \"last_used_months\": 24}, \"ML\": {\"project_count\": 3, \"avg_complexity\": 0.53, \"tool_breadth\": [\"pytorch\", \"sklearn\"], \"last_used_months\": 10}, \"Deep Learning\": {\"project_count\": 2, \"avg_complexity\": 0.81, \"tool_breadth\": [\"pytorch\", \"tensorflow\"], \"last_used_months\": 2}, \"Django\": {\"project_count\": 4, \"avg_complexity\": 0.21, \"tool_breadth\": [\"django\"], \"last_used_months\": 1}}",
+        "domain": "AI",
+        "year": 4,
+        "branch": "IT",
+        "text": "{\"Flask\": {\"project_count\": 2, \"avg_complexity\": 0.7, \"tool_breadth\": [\"flask\"], \"last_used_months\": 24}, \"ML\": {\"project_count\": 3, \"avg_complexity\": 0.53, \"tool_breadth\": [\"pytorch\", \"sklearn\"], \"last_used_months\": 10}, \"Deep Learning\": {\"project_count\": 2, \"avg_complexity\": 0.81, \"tool_breadth\": [\"pytorch\", \"tensorflow\"], \"last_used_months\": 2}, \"Django\": {\"project_count\": 4, \"avg_complexity\": 0.21, \"tool_breadth\": [\"django\"], \"last_used_months\": 1}} AI"
+    },
+    {
+        "user_id": 12270531,
+        "skills": "{\"DevOps\": {\"project_count\": 5, \"avg_complexity\": 0.23, \"tool_breadth\": [\"ansible\"], \"last_used_months\": 13}, \"Docker\": {\"project_count\": 4, \"avg_complexity\": 0.45, \"tool_breadth\": [\"docker\"], \"last_used_months\": 12}, \"Deep Learning\": {\"project_count\": 1, \"avg_complexity\": 0.75, \"tool_breadth\": [\"tensorflow\"], \"last_used_months\": 20}, \"NLP\": {\"project_count\": 1, \"avg_complexity\": 0.61, \"tool_breadth\": [\"spacy\", \"nltk\"], \"last_used_months\": 12}}",
+        "domain": "Web",
+        "year": 4,
+        "branch": "IT",
+        "text": "{\"DevOps\": {\"project_count\": 5, \"avg_complexity\": 0.23, \"tool_breadth\": [\"ansible\"], \"last_used_months\": 13}, \"Docker\": {\"project_count\": 4, \"avg_complexity\": 0.45, \"tool_breadth\": [\"docker\"], \"last_used_months\": 12}, \"Deep Learning\": {\"project_count\": 1, \"avg_complexity\": 0.75, \"tool_breadth\": [\"tensorflow\"], \"last_used_months\": 20}, \"NLP\": {\"project_count\": 1, \"avg_complexity\": 0.61, \"tool_breadth\": [\"spacy\", \"nltk\"], \"last_used_months\": 12}} Web"
+    },
+    {
+        "user_id": 12492179,
+        "skills": "{\"React\": {\"project_count\": 3, \"avg_complexity\": 0.57, \"tool_breadth\": [\"redux\", \"hooks\"], \"last_used_months\": 14}, \"AWS\": {\"project_count\": 5, \"avg_complexity\": 0.93, \"tool_breadth\": [\"s3\", \"ec2\"], \"last_used_months\": 6}}",
+        "domain": "Web",
+        "year": 4,
+        "branch": "CS(AIML)",
+        "text": "{\"React\": {\"project_count\": 3, \"avg_complexity\": 0.57, \"tool_breadth\": [\"redux\", \"hooks\"], \"last_used_months\": 14}, \"AWS\": {\"project_count\": 5, \"avg_complexity\": 0.93, \"tool_breadth\": [\"s3\", \"ec2\"], \"last_used_months\": 6}} Web"
+    },
+    {
+        "user_id": 12521170,
+        "skills": "{\"ML\": {\"project_count\": 3, \"avg_complexity\": 0.24, \"tool_breadth\": [\"sklearn\", \"pytorch\", \"tensorflow\"], \"last_used_months\": 2}, \"Django\": {\"project_count\": 6, \"avg_complexity\": 0.45, \"tool_breadth\": [\"django\"], \"last_used_months\": 21}, \"React\": {\"project_count\": 6, \"avg_complexity\": 0.78, \"tool_breadth\": [\"hooks\"], \"last_used_months\": 13}, \"Java\": {\"project_count\": 1, \"avg_complexity\": 0.9, \"tool_breadth\": [\"hibernate\"], \"last_used_months\": 19}}",
+        "domain": "AI",
+        "year": 2,
+        "branch": "CS(AIML)",
+        "text": "{\"ML\": {\"project_count\": 3, \"avg_complexity\": 0.24, \"tool_breadth\": [\"sklearn\", \"pytorch\", \"tensorflow\"], \"last_used_months\": 2}, \"Django\": {\"project_count\": 6, \"avg_complexity\": 0.45, \"tool_breadth\": [\"django\"], \"last_used_months\": 21}, \"React\": {\"project_count\": 6, \"avg_complexity\": 0.78, \"tool_breadth\": [\"hooks\"], \"last_used_months\": 13}, \"Java\": {\"project_count\": 1, \"avg_complexity\": 0.9, \"tool_breadth\": [\"hibernate\"], \"last_used_months\": 19}} AI"
+    },
+    {
+        "user_id": 12411328,
+        "skills": "{\"Deep Learning\": {\"project_count\": 2, \"avg_complexity\": 0.5, \"tool_breadth\": [\"tensorflow\", \"pytorch\"], \"last_used_months\": 18}, \"SQL\": {\"project_count\": 6, \"avg_complexity\": 0.93, \"tool_breadth\": [\"mysql\"], \"last_used_months\": 15}, \"UI\/UX\": {\"project_count\": 4, \"avg_complexity\": 0.25, \"tool_breadth\": [\"figma\"], \"last_used_months\": 19}}",
+        "domain": "AI",
+        "year": 4,
+        "branch": "IT",
+        "text": "{\"Deep Learning\": {\"project_count\": 2, \"avg_complexity\": 0.5, \"tool_breadth\": [\"tensorflow\", \"pytorch\"], \"last_used_months\": 18}, \"SQL\": {\"project_count\": 6, \"avg_complexity\": 0.93, \"tool_breadth\": [\"mysql\"], \"last_used_months\": 15}, \"UI\/UX\": {\"project_count\": 4, \"avg_complexity\": 0.25, \"tool_breadth\": [\"figma\"], \"last_used_months\": 19}} AI"
+    },
+    {
+        "user_id": 12550394,
+        "skills": "{\"React\": {\"project_count\": 6, \"avg_complexity\": 0.92, \"tool_breadth\": [\"redux\", \"hooks\"], \"last_used_months\": 11}, \"NLP\": {\"project_count\": 5, \"avg_complexity\": 0.66, \"tool_breadth\": [\"spacy\", \"nltk\"], \"last_used_months\": 14}, \"Java\": {\"project_count\": 1, \"avg_complexity\": 0.36, \"tool_breadth\": [\"hibernate\", \"spring\"], \"last_used_months\": 22}}",
+        "domain": "Data",
+        "year": 1,
+        "branch": "CS(AIML)",
+        "text": "{\"React\": {\"project_count\": 6, \"avg_complexity\": 0.92, \"tool_breadth\": [\"redux\", \"hooks\"], \"last_used_months\": 11}, \"NLP\": {\"project_count\": 5, \"avg_complexity\": 0.66, \"tool_breadth\": [\"spacy\", \"nltk\"], \"last_used_months\": 14}, \"Java\": {\"project_count\": 1, \"avg_complexity\": 0.36, \"tool_breadth\": [\"hibernate\", \"spring\"], \"last_used_months\": 22}} Data"
+    },
+    {
+        "user_id": 12558553,
+        "skills": "{\"ML\": {\"project_count\": 1, \"avg_complexity\": 0.48, \"tool_breadth\": [\"pytorch\", \"tensorflow\"], \"last_used_months\": 7}, \"NLP\": {\"project_count\": 4, \"avg_complexity\": 0.45, \"tool_breadth\": [\"nltk\", \"spacy\"], \"last_used_months\": 24}}",
+        "domain": "Data",
+        "year": 4,
+        "branch": "Civil",
+        "text": "{\"ML\": {\"project_count\": 1, \"avg_complexity\": 0.48, \"tool_breadth\": [\"pytorch\", \"tensorflow\"], \"last_used_months\": 7}, \"NLP\": {\"project_count\": 4, \"avg_complexity\": 0.45, \"tool_breadth\": [\"nltk\", \"spacy\"], \"last_used_months\": 24}} Data"
+    },
+    {
+        "user_id": 12499515,
+        "skills": "{\"DevOps\": {\"project_count\": 1, \"avg_complexity\": 0.75, \"tool_breadth\": [\"ansible\", \"jenkins\"], \"last_used_months\": 23}, \"React\": {\"project_count\": 5, \"avg_complexity\": 0.89, \"tool_breadth\": [\"hooks\"], \"last_used_months\": 11}}",
+        "domain": "HealthTech",
+        "year": 4,
+        "branch": "CS(AIML)",
+        "text": "{\"DevOps\": {\"project_count\": 1, \"avg_complexity\": 0.75, \"tool_breadth\": [\"ansible\", \"jenkins\"], \"last_used_months\": 23}, \"React\": {\"project_count\": 5, \"avg_complexity\": 0.89, \"tool_breadth\": [\"hooks\"], \"last_used_months\": 11}} HealthTech"
+    },
+    {
+        "user_id": 12570895,
+        "skills": "{\"Flask\": {\"project_count\": 5, \"avg_complexity\": 0.91, \"tool_breadth\": [\"flask\"], \"last_used_months\": 5}, \"UI\/UX\": {\"project_count\": 4, \"avg_complexity\": 0.39, \"tool_breadth\": [\"figma\"], \"last_used_months\": 24}, \"AWS\": {\"project_count\": 5, \"avg_complexity\": 0.63, \"tool_breadth\": [\"ec2\", \"lambda\", \"s3\"], \"last_used_months\": 23}, \"ML\": {\"project_count\": 4, \"avg_complexity\": 0.75, \"tool_breadth\": [\"sklearn\"], \"last_used_months\": 4}}",
+        "domain": "AI",
+        "year": 3,
+        "branch": "CS",
+        "text": "{\"Flask\": {\"project_count\": 5, \"avg_complexity\": 0.91, \"tool_breadth\": [\"flask\"], \"last_used_months\": 5}, \"UI\/UX\": {\"project_count\": 4, \"avg_complexity\": 0.39, \"tool_breadth\": [\"figma\"], \"last_used_months\": 24}, \"AWS\": {\"project_count\": 5, \"avg_complexity\": 0.63, \"tool_breadth\": [\"ec2\", \"lambda\", \"s3\"], \"last_used_months\": 23}, \"ML\": {\"project_count\": 4, \"avg_complexity\": 0.75, \"tool_breadth\": [\"sklearn\"], \"last_used_months\": 4}} AI"
+    },
+    {
+        "user_id": 12512759,
+        "skills": "{\"Flask\": {\"project_count\": 2, \"avg_complexity\": 0.45, \"tool_breadth\": [\"flask\"], \"last_used_months\": 20}}",
+        "domain": "Data",
+        "year": 3,
+        "branch": "CS",
+        "text": "{\"Flask\": {\"project_count\": 2, \"avg_complexity\": 0.45, \"tool_breadth\": [\"flask\"], \"last_used_months\": 20}} Data"
+    },
+    {
+        "user_id": 12478740,
+        "skills": "{\"UI\/UX\": {\"project_count\": 1, \"avg_complexity\": 0.58, \"tool_breadth\": [\"figma\"], \"last_used_months\": 11}, \"Python\": {\"project_count\": 1, \"avg_complexity\": 0.31, \"tool_breadth\": [\"numpy\", \"fastapi\", \"pandas\", \"flask\"], \"last_used_months\": 4}, \"DevOps\": {\"project_count\": 4, \"avg_complexity\": 0.26, \"tool_breadth\": [\"ansible\"], \"last_used_months\": 23}}",
+        "domain": "Web",
+        "year": 4,
+        "branch": "CS(AI)",
+        "text": "{\"UI\/UX\": {\"project_count\": 1, \"avg_complexity\": 0.58, \"tool_breadth\": [\"figma\"], \"last_used_months\": 11}, \"Python\": {\"project_count\": 1, \"avg_complexity\": 0.31, \"tool_breadth\": [\"numpy\", \"fastapi\", \"pandas\", \"flask\"], \"last_used_months\": 4}, \"DevOps\": {\"project_count\": 4, \"avg_complexity\": 0.26, \"tool_breadth\": [\"ansible\"], \"last_used_months\": 23}} Web"
+    },
+    {
+        "user_id": 12441975,
+        "skills": "{\"Flask\": {\"project_count\": 5, \"avg_complexity\": 0.79, \"tool_breadth\": [\"flask\"], \"last_used_months\": 5}, \"ML\": {\"project_count\": 4, \"avg_complexity\": 0.63, \"tool_breadth\": [\"pytorch\", \"tensorflow\", \"sklearn\"], \"last_used_months\": 18}, \"UI\/UX\": {\"project_count\": 3, \"avg_complexity\": 0.64, \"tool_breadth\": [\"figma\"], \"last_used_months\": 11}, \"Docker\": {\"project_count\": 3, \"avg_complexity\": 0.58, \"tool_breadth\": [\"docker\"], \"last_used_months\": 14}}",
+        "domain": "AI",
+        "year": 3,
+        "branch": "Instru",
+        "text": "{\"Flask\": {\"project_count\": 5, \"avg_complexity\": 0.79, \"tool_breadth\": [\"flask\"], \"last_used_months\": 5}, \"ML\": {\"project_count\": 4, \"avg_complexity\": 0.63, \"tool_breadth\": [\"pytorch\", \"tensorflow\", \"sklearn\"], \"last_used_months\": 18}, \"UI\/UX\": {\"project_count\": 3, \"avg_complexity\": 0.64, \"tool_breadth\": [\"figma\"], \"last_used_months\": 11}, \"Docker\": {\"project_count\": 3, \"avg_complexity\": 0.58, \"tool_breadth\": [\"docker\"], \"last_used_months\": 14}} AI"
+    },
+    {
+        "user_id": 12536392,
+        "skills": "{\"ML\": {\"project_count\": 5, \"avg_complexity\": 0.85, \"tool_breadth\": [\"sklearn\", \"pytorch\", \"tensorflow\"], \"last_used_months\": 22}, \"Deep Learning\": {\"project_count\": 2, \"avg_complexity\": 0.78, \"tool_breadth\": [\"tensorflow\", \"pytorch\"], \"last_used_months\": 24}}",
+        "domain": "Security",
+        "year": 2,
+        "branch": "Civil",
+        "text": "{\"ML\": {\"project_count\": 5, \"avg_complexity\": 0.85, \"tool_breadth\": [\"sklearn\", \"pytorch\", \"tensorflow\"], \"last_used_months\": 22}, \"Deep Learning\": {\"project_count\": 2, \"avg_complexity\": 0.78, \"tool_breadth\": [\"tensorflow\", \"pytorch\"], \"last_used_months\": 24}} Security"
+    },
+    {
+        "user_id": 12443202,
+        "skills": "{\"Deep Learning\": {\"project_count\": 1, \"avg_complexity\": 0.53, \"tool_breadth\": [\"tensorflow\"], \"last_used_months\": 7}, \"NLP\": {\"project_count\": 1, \"avg_complexity\": 0.21, \"tool_breadth\": [\"nltk\"], \"last_used_months\": 24}, \"DevOps\": {\"project_count\": 3, \"avg_complexity\": 0.33, \"tool_breadth\": [\"ansible\", \"jenkins\"], \"last_used_months\": 3}}",
+        "domain": "Web",
+        "year": 1,
+        "branch": "IT",
+        "text": "{\"Deep Learning\": {\"project_count\": 1, \"avg_complexity\": 0.53, \"tool_breadth\": [\"tensorflow\"], \"last_used_months\": 7}, \"NLP\": {\"project_count\": 1, \"avg_complexity\": 0.21, \"tool_breadth\": [\"nltk\"], \"last_used_months\": 24}, \"DevOps\": {\"project_count\": 3, \"avg_complexity\": 0.33, \"tool_breadth\": [\"ansible\", \"jenkins\"], \"last_used_months\": 3}} Web"
+    },
+    {
+        "user_id": 12344990,
+        "skills": "{\"DevOps\": {\"project_count\": 2, \"avg_complexity\": 0.24, \"tool_breadth\": [\"jenkins\", \"ansible\"], \"last_used_months\": 3}, \"Docker\": {\"project_count\": 1, \"avg_complexity\": 0.25, \"tool_breadth\": [\"docker\"], \"last_used_months\": 3}, \"React\": {\"project_count\": 2, \"avg_complexity\": 0.74, \"tool_breadth\": [\"hooks\"], \"last_used_months\": 10}, \"Deep Learning\": {\"project_count\": 2, \"avg_complexity\": 0.83, \"tool_breadth\": [\"tensorflow\"], \"last_used_months\": 8}}",
+        "domain": "AI",
+        "year": 3,
+        "branch": "CS",
+        "text": "{\"DevOps\": {\"project_count\": 2, \"avg_complexity\": 0.24, \"tool_breadth\": [\"jenkins\", \"ansible\"], \"last_used_months\": 3}, \"Docker\": {\"project_count\": 1, \"avg_complexity\": 0.25, \"tool_breadth\": [\"docker\"], \"last_used_months\": 3}, \"React\": {\"project_count\": 2, \"avg_complexity\": 0.74, \"tool_breadth\": [\"hooks\"], \"last_used_months\": 10}, \"Deep Learning\": {\"project_count\": 2, \"avg_complexity\": 0.83, \"tool_breadth\": [\"tensorflow\"], \"last_used_months\": 8}} AI"
+    },
+    {
+        "user_id": 12462635,
+        "skills": "{\"NLP\": {\"project_count\": 5, \"avg_complexity\": 0.66, \"tool_breadth\": [\"spacy\", \"nltk\"], \"last_used_months\": 20}, \"ML\": {\"project_count\": 4, \"avg_complexity\": 0.57, \"tool_breadth\": [\"sklearn\", \"tensorflow\", \"pytorch\"], \"last_used_months\": 21}, \"DevOps\": {\"project_count\": 4, \"avg_complexity\": 0.68, \"tool_breadth\": [\"ansible\"], \"last_used_months\": 16}, \"Python\": {\"project_count\": 5, \"avg_complexity\": 0.57, \"tool_breadth\": [\"pandas\"], \"last_used_months\": 18}}",
+        "domain": "HealthTech",
+        "year": 4,
+        "branch": "CS",
+        "text": "{\"NLP\": {\"project_count\": 5, \"avg_complexity\": 0.66, \"tool_breadth\": [\"spacy\", \"nltk\"], \"last_used_months\": 20}, \"ML\": {\"project_count\": 4, \"avg_complexity\": 0.57, \"tool_breadth\": [\"sklearn\", \"tensorflow\", \"pytorch\"], \"last_used_months\": 21}, \"DevOps\": {\"project_count\": 4, \"avg_complexity\": 0.68, \"tool_breadth\": [\"ansible\"], \"last_used_months\": 16}, \"Python\": {\"project_count\": 5, \"avg_complexity\": 0.57, \"tool_breadth\": [\"pandas\"], \"last_used_months\": 18}} HealthTech"
+    },
+    {
+        "user_id": 12365903,
+        "skills": "{\"Django\": {\"project_count\": 5, \"avg_complexity\": 0.82, \"tool_breadth\": [\"django\"], \"last_used_months\": 17}}",
+        "domain": "HealthTech",
+        "year": 4,
+        "branch": "CS(AIML)",
+        "text": "{\"Django\": {\"project_count\": 5, \"avg_complexity\": 0.82, \"tool_breadth\": [\"django\"], \"last_used_months\": 17}} HealthTech"
+    },
+    {
+        "user_id": 12330760,
+        "skills": "{\"DevOps\": {\"project_count\": 4, \"avg_complexity\": 0.59, \"tool_breadth\": [\"jenkins\"], \"last_used_months\": 1}}",
+        "domain": "AI",
+        "year": 2,
+        "branch": "Mech",
+        "text": "{\"DevOps\": {\"project_count\": 4, \"avg_complexity\": 0.59, \"tool_breadth\": [\"jenkins\"], \"last_used_months\": 1}} AI"
+    },
+    {
+        "user_id": 12390049,
+        "skills": "{\"Python\": {\"project_count\": 3, \"avg_complexity\": 0.69, \"tool_breadth\": [\"flask\", \"fastapi\"], \"last_used_months\": 1}}",
+        "domain": "Security",
+        "year": 4,
+        "branch": "Civil",
+        "text": "{\"Python\": {\"project_count\": 3, \"avg_complexity\": 0.69, \"tool_breadth\": [\"flask\", \"fastapi\"], \"last_used_months\": 1}} Security"
+    },
+    {
+        "user_id": 12484325,
+        "skills": "{\"Flask\": {\"project_count\": 2, \"avg_complexity\": 0.69, \"tool_breadth\": [\"flask\"], \"last_used_months\": 19}, \"UI\/UX\": {\"project_count\": 5, \"avg_complexity\": 0.49, \"tool_breadth\": [\"figma\"], \"last_used_months\": 10}}",
+        "domain": "FinTech",
+        "year": 3,
+        "branch": "Instru",
+        "text": "{\"Flask\": {\"project_count\": 2, \"avg_complexity\": 0.69, \"tool_breadth\": [\"flask\"], \"last_used_months\": 19}, \"UI\/UX\": {\"project_count\": 5, \"avg_complexity\": 0.49, \"tool_breadth\": [\"figma\"], \"last_used_months\": 10}} FinTech"
+    },
+    {
+        "user_id": 12336947,
+        "skills": "{\"DevOps\": {\"project_count\": 1, \"avg_complexity\": 0.33, \"tool_breadth\": [\"ansible\", \"jenkins\"], \"last_used_months\": 0}, \"ML\": {\"project_count\": 6, \"avg_complexity\": 0.71, \"tool_breadth\": [\"sklearn\", \"pytorch\", \"tensorflow\"], \"last_used_months\": 17}, \"NLP\": {\"project_count\": 2, \"avg_complexity\": 0.82, \"tool_breadth\": [\"nltk\"], \"last_used_months\": 4}, \"UI\/UX\": {\"project_count\": 6, \"avg_complexity\": 0.67, \"tool_breadth\": [\"figma\"], \"last_used_months\": 9}}",
+        "domain": "FinTech",
+        "year": 2,
+        "branch": "Mech",
+        "text": "{\"DevOps\": {\"project_count\": 1, \"avg_complexity\": 0.33, \"tool_breadth\": [\"ansible\", \"jenkins\"], \"last_used_months\": 0}, \"ML\": {\"project_count\": 6, \"avg_complexity\": 0.71, \"tool_breadth\": [\"sklearn\", \"pytorch\", \"tensorflow\"], \"last_used_months\": 17}, \"NLP\": {\"project_count\": 2, \"avg_complexity\": 0.82, \"tool_breadth\": [\"nltk\"], \"last_used_months\": 4}, \"UI\/UX\": {\"project_count\": 6, \"avg_complexity\": 0.67, \"tool_breadth\": [\"figma\"], \"last_used_months\": 9}} FinTech"
+    },
+    {
+        "user_id": 12417179,
+        "skills": "{\"DevOps\": {\"project_count\": 6, \"avg_complexity\": 0.86, \"tool_breadth\": [\"ansible\", \"jenkins\"], \"last_used_months\": 8}, \"NLP\": {\"project_count\": 6, \"avg_complexity\": 0.77, \"tool_breadth\": [\"nltk\"], \"last_used_months\": 2}, \"Docker\": {\"project_count\": 3, \"avg_complexity\": 0.35, \"tool_breadth\": [\"docker\"], \"last_used_months\": 15}}",
+        "domain": "FinTech",
+        "year": 3,
+        "branch": "Instru",
+        "text": "{\"DevOps\": {\"project_count\": 6, \"avg_complexity\": 0.86, \"tool_breadth\": [\"ansible\", \"jenkins\"], \"last_used_months\": 8}, \"NLP\": {\"project_count\": 6, \"avg_complexity\": 0.77, \"tool_breadth\": [\"nltk\"], \"last_used_months\": 2}, \"Docker\": {\"project_count\": 3, \"avg_complexity\": 0.35, \"tool_breadth\": [\"docker\"], \"last_used_months\": 15}} FinTech"
+    },
+    {
+        "user_id": 12414890,
+        "skills": "{\"AWS\": {\"project_count\": 1, \"avg_complexity\": 0.55, \"tool_breadth\": [\"lambda\", \"s3\", \"ec2\"], \"last_used_months\": 5}}",
+        "domain": "HealthTech",
+        "year": 3,
+        "branch": "IT",
+        "text": "{\"AWS\": {\"project_count\": 1, \"avg_complexity\": 0.55, \"tool_breadth\": [\"lambda\", \"s3\", \"ec2\"], \"last_used_months\": 5}} HealthTech"
+    },
+    {
+        "user_id": 12423027,
+        "skills": "{\"Deep Learning\": {\"project_count\": 5, \"avg_complexity\": 0.65, \"tool_breadth\": [\"tensorflow\", \"pytorch\"], \"last_used_months\": 12}}",
+        "domain": "FinTech",
+        "year": 2,
+        "branch": "Civil",
+        "text": "{\"Deep Learning\": {\"project_count\": 5, \"avg_complexity\": 0.65, \"tool_breadth\": [\"tensorflow\", \"pytorch\"], \"last_used_months\": 12}} FinTech"
+    },
+    {
+        "user_id": 12514464,
+        "skills": "{\"DevOps\": {\"project_count\": 6, \"avg_complexity\": 0.7, \"tool_breadth\": [\"jenkins\", \"ansible\"], \"last_used_months\": 14}}",
+        "domain": "Web",
+        "year": 3,
+        "branch": "CS(AI)",
+        "text": "{\"DevOps\": {\"project_count\": 6, \"avg_complexity\": 0.7, \"tool_breadth\": [\"jenkins\", \"ansible\"], \"last_used_months\": 14}} Web"
+    },
+    {
+        "user_id": 12312306,
+        "skills": "{\"React\": {\"project_count\": 5, \"avg_complexity\": 0.32, \"tool_breadth\": [\"redux\"], \"last_used_months\": 15}, \"Java\": {\"project_count\": 6, \"avg_complexity\": 0.91, \"tool_breadth\": [\"hibernate\", \"spring\"], \"last_used_months\": 1}, \"AWS\": {\"project_count\": 3, \"avg_complexity\": 0.81, \"tool_breadth\": [\"s3\"], \"last_used_months\": 4}}",
+        "domain": "Security",
+        "year": 4,
+        "branch": "Civil",
+        "text": "{\"React\": {\"project_count\": 5, \"avg_complexity\": 0.32, \"tool_breadth\": [\"redux\"], \"last_used_months\": 15}, \"Java\": {\"project_count\": 6, \"avg_complexity\": 0.91, \"tool_breadth\": [\"hibernate\", \"spring\"], \"last_used_months\": 1}, \"AWS\": {\"project_count\": 3, \"avg_complexity\": 0.81, \"tool_breadth\": [\"s3\"], \"last_used_months\": 4}} Security"
+    },
+    {
+        "user_id": 12353028,
+        "skills": "{\"Python\": {\"project_count\": 6, \"avg_complexity\": 0.74, \"tool_breadth\": [\"numpy\", \"fastapi\", \"flask\"], \"last_used_months\": 14}, \"ML\": {\"project_count\": 3, \"avg_complexity\": 0.22, \"tool_breadth\": [\"sklearn\", \"tensorflow\", \"pytorch\"], \"last_used_months\": 21}, \"Java\": {\"project_count\": 2, \"avg_complexity\": 0.57, \"tool_breadth\": [\"hibernate\", \"spring\"], \"last_used_months\": 7}, \"React\": {\"project_count\": 1, \"avg_complexity\": 0.3, \"tool_breadth\": [\"hooks\", \"redux\"], \"last_used_months\": 11}}",
+        "domain": "FinTech",
+        "year": 2,
+        "branch": "E&TC",
+        "text": "{\"Python\": {\"project_count\": 6, \"avg_complexity\": 0.74, \"tool_breadth\": [\"numpy\", \"fastapi\", \"flask\"], \"last_used_months\": 14}, \"ML\": {\"project_count\": 3, \"avg_complexity\": 0.22, \"tool_breadth\": [\"sklearn\", \"tensorflow\", \"pytorch\"], \"last_used_months\": 21}, \"Java\": {\"project_count\": 2, \"avg_complexity\": 0.57, \"tool_breadth\": [\"hibernate\", \"spring\"], \"last_used_months\": 7}, \"React\": {\"project_count\": 1, \"avg_complexity\": 0.3, \"tool_breadth\": [\"hooks\", \"redux\"], \"last_used_months\": 11}} FinTech"
+    },
+    {
+        "user_id": 12398236,
+        "skills": "{\"Java\": {\"project_count\": 4, \"avg_complexity\": 0.4, \"tool_breadth\": [\"spring\"], \"last_used_months\": 9}, \"ML\": {\"project_count\": 5, \"avg_complexity\": 0.43, \"tool_breadth\": [\"tensorflow\"], \"last_used_months\": 3}}",
+        "domain": "Data",
+        "year": 1,
+        "branch": "Civil",
+        "text": "{\"Java\": {\"project_count\": 4, \"avg_complexity\": 0.4, \"tool_breadth\": [\"spring\"], \"last_used_months\": 9}, \"ML\": {\"project_count\": 5, \"avg_complexity\": 0.43, \"tool_breadth\": [\"tensorflow\"], \"last_used_months\": 3}} Data"
+    },
+    {
+        "user_id": 12562415,
+        "skills": "{\"ML\": {\"project_count\": 1, \"avg_complexity\": 0.31, \"tool_breadth\": [\"sklearn\", \"pytorch\", \"tensorflow\"], \"last_used_months\": 1}, \"Deep Learning\": {\"project_count\": 2, \"avg_complexity\": 0.35, \"tool_breadth\": [\"tensorflow\"], \"last_used_months\": 19}}",
+        "domain": "AI",
+        "year": 4,
+        "branch": "Civil",
+        "text": "{\"ML\": {\"project_count\": 1, \"avg_complexity\": 0.31, \"tool_breadth\": [\"sklearn\", \"pytorch\", \"tensorflow\"], \"last_used_months\": 1}, \"Deep Learning\": {\"project_count\": 2, \"avg_complexity\": 0.35, \"tool_breadth\": [\"tensorflow\"], \"last_used_months\": 19}} AI"
+    },
+    {
+        "user_id": 12531178,
+        "skills": "{\"UI\/UX\": {\"project_count\": 3, \"avg_complexity\": 0.92, \"tool_breadth\": [\"figma\"], \"last_used_months\": 23}, \"Django\": {\"project_count\": 5, \"avg_complexity\": 0.2, \"tool_breadth\": [\"django\"], \"last_used_months\": 16}}",
+        "domain": "FinTech",
+        "year": 3,
+        "branch": "CS(AIML)",
+        "text": "{\"UI\/UX\": {\"project_count\": 3, \"avg_complexity\": 0.92, \"tool_breadth\": [\"figma\"], \"last_used_months\": 23}, \"Django\": {\"project_count\": 5, \"avg_complexity\": 0.2, \"tool_breadth\": [\"django\"], \"last_used_months\": 16}} FinTech"
+    }
+]

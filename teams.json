@@ -1,0 +1,272 @@
+[
+    {
+        "team_id": "TM1",
+        "required_skills": "{\"Python\": 0.83, \"Java\": 0.99, \"AWS\": 0.57, \"NLP\": 0.53, \"SQL\": 0.59}",
+        "domain": "HealthTech",
+        "min_year": 3,
+        "branch": "Civil",
+        "open_slots": 3,
+        "text": "{\"Python\": 0.83, \"Java\": 0.99, \"AWS\": 0.57, \"NLP\": 0.53, \"SQL\": 0.59} HealthTech"
+    },
+    {
+        "team_id": "TM2",
+        "required_skills": "{\"Java\": 0.55, \"Flask\": 0.7, \"Deep Learning\": 0.79}",
+        "domain": "Security",
+        "min_year": 2,
+        "branch": "Any",
+        "open_slots": 3,
+        "text": "{\"Java\": 0.55, \"Flask\": 0.7, \"Deep Learning\": 0.79} Security"
+    },
+    {
+        "team_id": "TM3",
+        "required_skills": "{\"NLP\": 0.55, \"Python\": 0.61}",
+        "domain": "Security",
+        "min_year": 1,
+        "branch": "Any",
+        "open_slots": 4,
+        "text": "{\"NLP\": 0.55, \"Python\": 0.61} Security"
+    },
+    {
+        "team_id": "TM4",
+        "required_skills": "{\"Python\": 0.44, \"SQL\": 0.65}",
+        "domain": "FinTech",
+        "min_year": 1,
+        "branch": "CS(AI)",
+        "open_slots": 4,
+        "text": "{\"Python\": 0.44, \"SQL\": 0.65} FinTech"
+    },
+    {
+        "team_id": "TM5",
+        "required_skills": "{\"React\": 0.53, \"SQL\": 0.93, \"DevOps\": 0.47, \"NLP\": 0.69, \"Java\": 0.69}",
+        "domain": "Security",
+        "min_year": 1,
+        "branch": "Instru",
+        "open_slots": 1,
+        "text": "{\"React\": 0.53, \"SQL\": 0.93, \"DevOps\": 0.47, \"NLP\": 0.69, \"Java\": 0.69} Security"
+    },
+    {
+        "team_id": "TM6",
+        "required_skills": "{\"UI\/UX\": 0.69, \"AWS\": 0.8, \"DevOps\": 0.58, \"ML\": 0.84}",
+        "domain": "AI",
+        "min_year": 3,
+        "branch": "CS(AIML)",
+        "open_slots": 4,
+        "text": "{\"UI\/UX\": 0.69, \"AWS\": 0.8, \"DevOps\": 0.58, \"ML\": 0.84} AI"
+    },
+    {
+        "team_id": "TM7",
+        "required_skills": "{\"SQL\": 0.92, \"Docker\": 0.88, \"React\": 0.82}",
+        "domain": "AI",
+        "min_year": 2,
+        "branch": "CS(AI)",
+        "open_slots": 4,
+        "text": "{\"SQL\": 0.92, \"Docker\": 0.88, \"React\": 0.82} AI"
+    },
+    {
+        "team_id": "TM8",
+        "required_skills": "{\"Java\": 0.63, \"SQL\": 0.92}",
+        "domain": "Security",
+        "min_year": 2,
+        "branch": "CS(AI)",
+        "open_slots": 4,
+        "text": "{\"Java\": 0.63, \"SQL\": 0.92} Security"
+    },
+    {
+        "team_id": "TM9",
+        "required_skills": "{\"AWS\": 0.65, \"ML\": 0.67}",
+        "domain": "Data",
+        "min_year": 2,
+        "branch": "Civil",
+        "open_slots": 1,
+        "text": "{\"AWS\": 0.65, \"ML\": 0.67} Data"
+    },
+    {
+        "team_id": "TM10",
+        "required_skills": "{\"Docker\": 0.58, \"NLP\": 0.5}",
+        "domain": "HealthTech",
+        "min_year": 1,
+        "branch": "Civil",
+        "open_slots": 2,
+        "text": "{\"Docker\": 0.58, \"NLP\": 0.5} HealthTech"
+    },
+    {
+        "team_id": "TM11",
+        "required_skills": "{\"NLP\": 0.51, \"SQL\": 0.47}",
+        "domain": "AI",
+        "min_year": 3,
+        "branch": "Instru",
+        "open_slots": 3,
+        "text": "{\"NLP\": 0.51, \"SQL\": 0.47} AI"
+    },
+    {
+        "team_id": "TM12",
+        "required_skills": "{\"SQL\": 0.88, \"Docker\": 0.4, \"ML\": 0.7}",
+        "domain": "AI",
+        "min_year": 2,
+        "branch": "IT",
+        "open_slots": 1,
+        "text": "{\"SQL\": 0.88, \"Docker\": 0.4, \"ML\": 0.7} AI"
+    },
+    {
+        "team_id": "TM13",
+        "required_skills": "{\"Java\": 0.58, \"ML\": 0.45, \"UI\/UX\": 0.57}",
+        "domain": "Web",
+        "min_year": 1,
+        "branch": "E&TC",
+        "open_slots": 2,
+        "text": "{\"Java\": 0.58, \"ML\": 0.45, \"UI\/UX\": 0.57} Web"
+    },
+    {
+        "team_id": "TM14",
+        "required_skills": "{\"NLP\": 0.83, \"Java\": 0.74, \"Flask\": 0.76, \"ML\": 0.62}",
+        "domain": "HealthTech",
+        "min_year": 3,
+        "branch": "Civil",
+        "open_slots": 4,
+        "text": "{\"NLP\": 0.83, \"Java\": 0.74, \"Flask\": 0.76, \"ML\": 0.62} HealthTech"
+    },
+    {
+        "team_id": "TM15",
+        "required_skills": "{\"SQL\": 0.67, \"Django\": 0.88, \"DevOps\": 0.88}",
+        "domain": "AI",
+        "min_year": 3,
+        "branch": "CS",
+        "open_slots": 4,
+        "text": "{\"SQL\": 0.67, \"Django\": 0.88, \"DevOps\": 0.88} AI"
+    },
+    {
+        "team_id": "TM16",
+        "required_skills": "{\"UI\/UX\": 0.67, \"ML\": 0.42, \"NLP\": 0.94, \"Java\": 0.67, \"DevOps\": 0.9}",
+        "domain": "FinTech",
+        "min_year": 1,
+        "branch": "Mech",
+        "open_slots": 2,
+        "text": "{\"UI\/UX\": 0.67, \"ML\": 0.42, \"NLP\": 0.94, \"Java\": 0.67, \"DevOps\": 0.9} FinTech"
+    },
+    {
+        "team_id": "TM17",
+        "required_skills": "{\"NLP\": 0.57, \"AWS\": 0.68, \"UI\/UX\": 0.97}",
+        "domain": "FinTech",
+        "min_year": 2,
+        "branch": "Civil",
+        "open_slots": 4,
+        "text": "{\"NLP\": 0.57, \"AWS\": 0.68, \"UI\/UX\": 0.97} FinTech"
+    },
+    {
+        "team_id": "TM18",
+        "required_skills": "{\"SQL\": 0.85, \"DevOps\": 0.95, \"Java\": 0.85}",
+        "domain": "FinTech",
+        "min_year": 3,
+        "branch": "E&TC",
+        "open_slots": 1,
+        "text": "{\"SQL\": 0.85, \"DevOps\": 0.95, \"Java\": 0.85} FinTech"
+    },
+    {
+        "team_id": "TM19",
+        "required_skills": "{\"NLP\": 0.5, \"Java\": 0.5, \"AWS\": 0.47, \"SQL\": 0.59, \"UI\/UX\": 0.79}",
+        "domain": "AI",
+        "min_year": 2,
+        "branch": "IT",
+        "open_slots": 1,
+        "text": "{\"NLP\": 0.5, \"Java\": 0.5, \"AWS\": 0.47, \"SQL\": 0.59, \"UI\/UX\": 0.79} AI"
+    },
+    {
+        "team_id": "TM20",
+        "required_skills": "{\"Deep Learning\": 0.82, \"DevOps\": 0.84, \"UI\/UX\": 0.81, \"NLP\": 0.78}",
+        "domain": "FinTech",
+        "min_year": 3,
+        "branch": "CS(AI)",
+        "open_slots": 2,
+        "text": "{\"Deep Learning\": 0.82, \"DevOps\": 0.84, \"UI\/UX\": 0.81, \"NLP\": 0.78} FinTech"
+    },
+    {
+        "team_id": "TM21",
+        "required_skills": "{\"Python\": 0.7, \"UI\/UX\": 0.78, \"Docker\": 0.65, \"AWS\": 0.56, \"Django\": 0.48}",
+        "domain": "Security",
+        "min_year": 2,
+        "branch": "Mech",
+        "open_slots": 3,
+        "text": "{\"Python\": 0.7, \"UI\/UX\": 0.78, \"Docker\": 0.65, \"AWS\": 0.56, \"Django\": 0.48} Security"
+    },
+    {
+        "team_id": "TM22",
+        "required_skills": "{\"Java\": 0.83, \"AWS\": 0.44, \"UI\/UX\": 0.46, \"Docker\": 0.69, \"Python\": 0.72}",
+        "domain": "Web",
+        "min_year": 2,
+        "branch": "IT",
+        "open_slots": 3,
+        "text": "{\"Java\": 0.83, \"AWS\": 0.44, \"UI\/UX\": 0.46, \"Docker\": 0.69, \"Python\": 0.72} Web"
+    },
+    {
+        "team_id": "TM23",
+        "required_skills": "{\"Django\": 0.72, \"AWS\": 0.82, \"DevOps\": 0.48}",
+        "domain": "FinTech",
+        "min_year": 3,
+        "branch": "Civil",
+        "open_slots": 4,
+        "text": "{\"Django\": 0.72, \"AWS\": 0.82, \"DevOps\": 0.48} FinTech"
+    },
+    {
+        "team_id": "TM24",
+        "required_skills": "{\"UI\/UX\": 0.75, \"Docker\": 0.73}",
+        "domain": "Security",
+        "min_year": 3,
+        "branch": "CS",
+        "open_slots": 2,
+        "text": "{\"UI\/UX\": 0.75, \"Docker\": 0.73} Security"
+    },
+    {
+        "team_id": "TM25",
+        "required_skills": "{\"Flask\": 0.61, \"UI\/UX\": 0.69, \"Deep Learning\": 0.54, \"Python\": 0.53, \"DevOps\": 0.9}",
+        "domain": "Security",
+        "min_year": 2,
+        "branch": "Any",
+        "open_slots": 4,
+        "text": "{\"Flask\": 0.61, \"UI\/UX\": 0.69, \"Deep Learning\": 0.54, \"Python\": 0.53, \"DevOps\": 0.9} Security"
+    },
+    {
+        "team_id": "TM26",
+        "required_skills": "{\"ML\": 0.46, \"React\": 0.42, \"Python\": 0.77}",
+        "domain": "Security",
+        "min_year": 3,
+        "branch": "CS",
+        "open_slots": 1,
+        "text": "{\"ML\": 0.46, \"React\": 0.42, \"Python\": 0.77} Security"
+    },
+    {
+        "team_id": "TM27",
+        "required_skills": "{\"NLP\": 0.71, \"Python\": 0.98}",
+        "domain": "Data",
+        "min_year": 2,
+        "branch": "E&TC",
+        "open_slots": 2,
+        "text": "{\"NLP\": 0.71, \"Python\": 0.98} Data"
+    },
+    {
+        "team_id": "TM28",
+        "required_skills": "{\"DevOps\": 0.99, \"Java\": 0.52}",
+        "domain": "Security",
+        "min_year": 3,
+        "branch": "IT",
+        "open_slots": 4,
+        "text": "{\"DevOps\": 0.99, \"Java\": 0.52} Security"
+    },
+    {
+        "team_id": "TM29",
+        "required_skills": "{\"ML\": 0.98, \"Python\": 0.95, \"Flask\": 0.41, \"SQL\": 0.69}",
+        "domain": "Security",
+        "min_year": 2,
+        "branch": "IT",
+        "open_slots": 3,
+        "text": "{\"ML\": 0.98, \"Python\": 0.95, \"Flask\": 0.41, \"SQL\": 0.69} Security"
+    },
+    {
+        "team_id": "TM30",
+        "required_skills": "{\"AWS\": 0.67, \"Python\": 0.46, \"NLP\": 0.62, \"React\": 0.8, \"Java\": 0.83}",
+        "domain": "HealthTech",
+        "min_year": 3,
+        "branch": "CS",
+        "open_slots": 2,
+        "text": "{\"AWS\": 0.67, \"Python\": 0.46, \"NLP\": 0.62, \"React\": 0.8, \"Java\": 0.83} HealthTech"
+    }
+]
