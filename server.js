@@ -8,6 +8,7 @@ import connectDB from './config/database.js';
 // Import routes
 import problemRoutes from './routes/problemRoutes.js';
 import recommendationRoutes from './routes/recommendationRoutes.js';
+import hackathonRoutes from './routes/hackathonRoutes.js';
 
 // Load environment variables
 dotenv.config();
@@ -42,6 +43,7 @@ app.get('/health', (req, res) => {
 // API Routes
 app.use('/api/problems', problemRoutes);
 app.use('/api/recommendations', recommendationRoutes);
+app.use('/api/hackathon', hackathonRoutes);
 
 // Root endpoint – serve simple test UI
 app.get('/', (req, res) => {

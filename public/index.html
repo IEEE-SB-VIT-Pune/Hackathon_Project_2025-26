@@ -16,13 +16,10 @@
       --error: #f97373;
       --success: #22c55e;
     }
-    html {
-      font-size: 16px;
-    }
+    html { font-size: 16px; }
     * {
       box-sizing: border-box;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'SF Pro Text',
-        'Segoe UI', sans-serif;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Segoe UI', sans-serif;
     }
     body {
       margin: 0;
@@ -43,18 +40,14 @@
       gap: 24px;
     }
     @media (max-width: 1024px) {
-      .shell {
-        grid-template-columns: minmax(0, 1fr);
-      }
+      .shell { grid-template-columns: minmax(0, 1fr); }
     }
     .card {
       background: #d9e7fa;
       border-radius: 18px;
       border: 1px solid var(--border);
       padding: 28px 28px 24px;
-      box-shadow:
-        0 18px 45px rgba(4, 56, 115, 0.1),
-        0 0 0 1px rgba(217, 231, 250, 0.9);
+      box-shadow: 0 18px 45px rgba(4, 56, 115, 0.1), 0 0 0 1px rgba(217, 231, 250, 0.9);
       position: relative;
       overflow: hidden;
     }
@@ -115,32 +108,17 @@
       background: #FFFFFF;
       color: #043873;
       outline: none;
-      transition: border-color 0.12s ease, box-shadow 0.12s ease, background 0.12s ease;
+      transition: border-color 0.12s ease, box-shadow 0.12s ease;
     }
-    input::placeholder, textarea::placeholder {
-      color: rgba(4, 56, 115, 0.4);
-    }
+    input::placeholder, textarea::placeholder { color: rgba(4, 56, 115, 0.4); }
     input:focus, textarea:focus {
       border-color: #4f9cf9;
       box-shadow: 0 0 0 1px rgba(79, 156, 249, 0.4), 0 0 0 8px rgba(217, 231, 250, 0.5);
-      background: #FFFFFF;
     }
-    textarea {
-      min-height: 110px;
-      resize: vertical;
-    }
-    .field {
-      margin-bottom: 10px;
-      position: relative;
-      z-index: 1;
-    }
-    .row {
-      display: flex;
-      gap: 8px;
-    }
-    .row > .field {
-      flex: 1 1 0;
-    }
+    textarea { min-height: 110px; resize: vertical; }
+    .field { margin-bottom: 10px; position: relative; z-index: 1; }
+    .row { display: flex; gap: 8px; }
+    .row > .field { flex: 1 1 0; }
     button {
       border-radius: 999px;
       border: 1px solid #4f9cf9;
@@ -159,28 +137,14 @@
     }
     button:hover {
       transform: translateY(-0.5px);
-      box-shadow:
-        0 10px 25px rgba(79, 156, 249, 0.35),
-        0 0 0 1px #ffe492;
+      box-shadow: 0 10px 25px rgba(79, 156, 249, 0.35), 0 0 0 1px #ffe492;
       border-color: #ffe492;
-      background: #4f9cf9;
     }
     button:active {
       transform: translateY(0);
-      box-shadow:
-        0 6px 16px rgba(79, 156, 249, 0.5),
-        0 0 0 1px #ffe492;
+      box-shadow: 0 6px 16px rgba(79, 156, 249, 0.5), 0 0 0 1px #ffe492;
     }
-    button[disabled] {
-      opacity: 0.6;
-      cursor: default;
-      box-shadow: none;
-      transform: none;
-    }
-    .muted {
-      font-size: 0.8125rem;
-      color: rgba(4, 56, 115, 0.6);
-    }
+    button[disabled] { opacity: 0.6; cursor: default; box-shadow: none; transform: none; }
     .badge {
       display: inline-flex;
       align-items: center;
@@ -193,7 +157,7 @@
       color: #043873;
     }
     .log {
-      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
       font-size: 0.8125rem;
       background: #FFFFFF;
       border-radius: 12px;
@@ -205,97 +169,141 @@
       word-break: break-word;
       color: #043873;
     }
-    .log span.key {
-      color: #4f9cf9;
+    .log span.dim { color: rgba(4, 56, 115, 0.45); }
+    .log span.error { color: var(--error); }
+    .log span.success { color: var(--success); }
+    .section-title {
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: rgba(4, 56, 115, 0.6);
+      margin-bottom: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
     }
-    .log span.value {
-      color: #043873;
-    }
-    .log span.dim {
-      color: rgba(4, 56, 115, 0.45);
-    }
-    .log span.error {
-      color: var(--error);
-    }
-    .log span.success {
-      color: var(--success);
-    }
-    .chips {
+    .tiny { font-size: 0.75rem; color: rgba(4, 56, 115, 0.5); }
+
+    /* Skills chips editor */
+    .chips-editor {
       display: flex;
       flex-wrap: wrap;
-      gap: 4px;
-      margin-top: 4px;
+      gap: 6px;
+      background: #FFFFFF;
+      border: 1px solid rgba(4, 56, 115, 0.2);
+      border-radius: 10px;
+      padding: 8px 10px;
+      min-height: 44px;
+      align-items: center;
+      position: relative;
+      z-index: 1;
     }
     .chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
       border-radius: 999px;
       border: 1px solid rgba(4, 56, 115, 0.2);
       padding: 3px 10px;
       font-size: 0.75rem;
       color: #043873;
-      background: #FFFFFF;
+      background: #d9e7fa;
     }
-    .section-title {
+    .chip-remove {
+      cursor: pointer;
+      font-size: 0.7rem;
+      color: rgba(4, 56, 115, 0.5);
+      background: none;
+      border: none;
+      padding: 0 0 0 2px;
+      line-height: 1;
+      min-width: unset;
+      transform: none;
+      box-shadow: none;
+    }
+    .chip-remove:hover { color: var(--error); transform: none; box-shadow: none; border-color: transparent; }
+    .chip-input {
+      border: none;
+      outline: none;
+      font-size: 0.8125rem;
+      color: #043873;
+      background: transparent;
+      padding: 2px 4px;
+      min-width: 100px;
+      flex: 1;
+    }
+    .hackathon-info {
+      background: #FFFFFF;
+      border-radius: 10px;
+      border: 1px solid rgba(4, 56, 115, 0.15);
+      padding: 12px 14px;
+      margin-bottom: 12px;
+      position: relative;
+      z-index: 1;
+    }
+    .hackathon-info .info-title {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #043873;
+      margin-bottom: 4px;
+    }
+    .hackathon-info .info-meta {
+      font-size: 0.75rem;
+      color: rgba(4, 56, 115, 0.6);
+    }
+    .problem-count-badge {
+      display: inline-block;
+      background: #4f9cf9;
+      color: #fff;
+      border-radius: 999px;
+      padding: 2px 10px;
       font-size: 0.75rem;
       font-weight: 600;
-      color: rgba(4, 56, 115, 0.6);
-      margin-bottom: 4px;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-    }
-    .tiny {
-      font-size: 0.75rem;
-      color: rgba(4, 56, 115, 0.5);
+      margin-left: 8px;
     }
   </style>
 </head>
 <body>
   <div class="shell">
-    <!-- Left: Problem creation -->
+
+    <!-- Left: Hackathon fetch + info -->
     <div class="card">
       <div class="card-header">
         <div class="title">
-          Problem Ingest
-          <span class="pill">/api/problems</span>
+          Hackathon Data
+          <span class="pill">/api/hackathon</span>
         </div>
       </div>
       <div class="subtitle">
-        Quickly add a problem statement and see how the AI service ingests and stores metadata + embeddings.
+        Enter a Hackathon ID to load its problem statements and your team automatically.
       </div>
-      <form id="problem-form">
-        <div class="field">
-          <label for="source">Source</label>
-          <input id="source" name="source" value="platform" />
+
+      <div class="field">
+        <label for="hackathonId">Hackathon ID (Mongo ObjectId)</label>
+        <input id="hackathonId" placeholder="64f0d8c0a1b2c3d4e5f67890" />
+      </div>
+
+      <div style="display:flex; align-items:center; gap:10px; margin-bottom:14px; position:relative; z-index:1;">
+        <button id="fetch-hackathon-btn" type="button">Fetch Hackathon Data</button>
+        <span class="badge" id="fetch-status">idle</span>
+      </div>
+
+      <!-- Hackathon info (shown after fetch) -->
+      <div id="hackathon-info-box" style="display:none;">
+        <div class="hackathon-info">
+          <div class="info-title" id="hackathon-title">—</div>
+          <div class="info-meta" id="hackathon-meta">—</div>
         </div>
-        <div class="field">
-          <label for="title">Title</label>
-          <input id="title" name="title" placeholder="AI-Powered Learning Platform" />
+
+        <div class="section-title">
+          Problem Statements
+          <span class="problem-count-badge" id="problem-count">0</span>
         </div>
-        <div class="field">
-          <label for="description">Description</label>
-          <textarea
-            id="description"
-            name="description"
-            placeholder="Describe the problem, including required skills, domains, and tools..."
-          ></textarea>
-        </div>
-        <div style="display:flex; align-items:center; justify-content:space-between; margin-top:6px;">
-          <button type="submit" id="create-problem-btn">
-            <span>Ingest Problem</span>
-          </button>
-          <div class="tiny">
-            The backend will extract skills/domains, generate metadata & embeddings.
-          </div>
-        </div>
-      </form>
-      <div style="margin-top:12px;">
-        <div class="section-title">Last created problem</div>
-        <div class="log" id="problem-log">
-          <span class="dim">No problem created yet.</span>
+        <div class="log" id="problems-log">
+          <span class="dim">No problems loaded.</span>
         </div>
       </div>
     </div>
 
-    <!-- Right: Team + recommendations -->
+    <!-- Right: Team skills + recommendations -->
     <div class="card">
       <div class="card-header">
         <div class="title">
@@ -304,15 +312,12 @@
         </div>
       </div>
       <div class="subtitle">
-        Use an existing <code>teamId</code> from your DB to extract skills and generate ranked problems.
+        After fetching hackathon data, extract your team's skills and generate ranked recommendations.
       </div>
 
       <div class="field">
-        <label for="teamId">Team ID (Mongo ObjectId)</label>
-        <input id="teamId" placeholder="64f0d8c0a1b2c3d4e5f67890" />
-        <div class="tiny">
-          This should be an existing <strong>Team._id</strong> from your main hackathon database.
-        </div>
+        <label>Team (auto-detected from hackathon)</label>
+        <input id="team-display" disabled placeholder="Fetch hackathon data first..." />
       </div>
 
       <div class="row" style="margin-bottom:8px;">
@@ -322,170 +327,507 @@
         </div>
       </div>
 
-      <div class="row" style="margin-bottom:6px;">
-        <button id="extract-btn" type="button">
-          Extract Team Skills
-        </button>
-        <button id="recommend-btn" type="button">
-          Generate Recommendations
-        </button>
+      <div class="row" style="margin-bottom:14px; position:relative; z-index:1;">
+        <button id="extract-btn" type="button" disabled>Extract Team Skills</button>
+        <button id="recommend-btn" type="button" disabled>Generate Recommendations</button>
       </div>
 
-      <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:6px;">
+      <!-- Editable skills section (shown after extract) -->
+      <div id="skills-editor-box" style="display:none; margin-bottom:14px; position:relative; z-index:1;">
+        <div class="section-title">Extracted Skills <span class="tiny">(click × to remove, type + Enter to add)</span></div>
+        <div class="chips-editor" id="skills-chips">
+          <input class="chip-input" id="skill-input" placeholder="Add skill..." />
+        </div>
+        <div style="margin-top:8px; display:flex; gap:8px;">
+          <button id="save-skills-btn" type="button" style="font-size:0.75rem; padding:6px 14px;">Save Skills</button>
+        </div>
+      </div>
+
+      <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:6px; position:relative; z-index:1;">
         <span class="section-title">Output</span>
-        <span class="badge" id="status-pill">
-          idle
-        </span>
+        <span class="badge" id="status-pill">idle</span>
       </div>
 
       <div class="log" id="output-log">
         <span class="dim">Waiting for a request...</span>
       </div>
     </div>
+
   </div>
 
   <script>
+    // ═══════════════════════════════════════════════════════════════════════
+    // MOCK DATA — used when hackathonId = "hack123"
+    // ═══════════════════════════════════════════════════════════════════════
+    const MOCK_DB = {
+      hackathon: {
+        _id: 'hack123',
+        title: 'IEEE Smart India Hackathon 2025',
+        description: 'Build innovative solutions for real-world problems using cutting-edge technology.',
+        status: 'open',
+        startDate: '2025-08-01',
+        endDate: '2025-08-03',
+        prizePool: '₹10,00,000',
+      },
+      team: {
+        _id: 'team123',
+        name: 'CodeCrafters',
+        skills: ['React', 'Node.js', 'MongoDB', 'Machine Learning'],
+      },
+      problems: [
+        {
+          _id: 'prob001',
+          title: 'AI-Powered Crop Disease Detection',
+          description: 'Build a machine learning model to detect crop diseases from images using computer vision and deep learning. The system should work on mobile devices with React Native frontend.',
+          source: 'platform',
+          metadata: { domains: ['AI', 'Agriculture'], requiredSkills: ['Machine Learning', 'Python', 'React Native', 'TensorFlow'], difficulty: 'hard', keywords: ['crop', 'disease', 'detection', 'CNN'] },
+        },
+        {
+          _id: 'prob002',
+          title: 'Smart Traffic Management System',
+          description: 'Develop a real-time traffic monitoring and signal optimization system using IoT sensors and Node.js backend with MongoDB for data storage and a React dashboard.',
+          source: 'platform',
+          metadata: { domains: ['IoT', 'Smart City'], requiredSkills: ['Node.js', 'MongoDB', 'React', 'IoT'], difficulty: 'medium', keywords: ['traffic', 'IoT', 'real-time', 'optimization'] },
+        },
+        {
+          _id: 'prob003',
+          title: 'Personalized E-Learning Platform',
+          description: 'Create an adaptive learning platform using machine learning to personalize content delivery. Built with React frontend, Node.js API, and MongoDB database.',
+          source: 'platform',
+          metadata: { domains: ['EdTech', 'AI'], requiredSkills: ['React', 'Node.js', 'MongoDB', 'Machine Learning'], difficulty: 'medium', keywords: ['learning', 'adaptive', 'personalization', 'education'] },
+        },
+        {
+          _id: 'prob004',
+          title: 'Blockchain-Based Land Registry',
+          description: 'Implement a tamper-proof land registry system using blockchain technology with Solidity smart contracts and a React-based web interface.',
+          source: 'SIH',
+          metadata: { domains: ['Blockchain', 'GovTech'], requiredSkills: ['Solidity', 'React', 'Web3.js', 'Ethereum'], difficulty: 'hard', keywords: ['blockchain', 'land', 'registry', 'smart contract'] },
+        },
+        {
+          _id: 'prob005',
+          title: 'Healthcare Appointment Booking System',
+          description: 'Build a full-stack healthcare appointment management system with React frontend, Node.js REST API, MongoDB database, and real-time notifications.',
+          source: 'platform',
+          metadata: { domains: ['HealthTech', 'Web'], requiredSkills: ['React', 'Node.js', 'MongoDB', 'WebSockets'], difficulty: 'easy', keywords: ['healthcare', 'appointment', 'booking', 'notifications'] },
+        },
+        {
+          _id: 'prob006',
+          title: 'NLP-Based Legal Document Summarizer',
+          description: 'Develop an NLP pipeline to automatically summarize lengthy legal documents using transformer models. Python backend with a React interface for document upload and review.',
+          source: 'SIH',
+          metadata: { domains: ['LegalTech', 'NLP'], requiredSkills: ['Python', 'NLP', 'React', 'Transformers'], difficulty: 'hard', keywords: ['NLP', 'summarization', 'legal', 'transformer'] },
+        },
+        {
+          _id: 'prob007',
+          title: 'Real-Time Disaster Alert System',
+          description: 'Create a disaster management platform that aggregates data from multiple sources, uses machine learning for prediction, and delivers alerts via a Node.js backend with MongoDB.',
+          source: 'platform',
+          metadata: { domains: ['Disaster Management', 'AI'], requiredSkills: ['Node.js', 'MongoDB', 'Machine Learning', 'REST APIs'], difficulty: 'medium', keywords: ['disaster', 'alert', 'prediction', 'real-time'] },
+        },
+        {
+          _id: 'prob008',
+          title: 'Student Mental Health Chatbot',
+          description: 'Build an empathetic AI chatbot for student mental health support using NLP and sentiment analysis. React frontend with a Node.js backend and MongoDB for session storage.',
+          source: 'platform',
+          metadata: { domains: ['HealthTech', 'AI'], requiredSkills: ['React', 'Node.js', 'MongoDB', 'NLP', 'Machine Learning'], difficulty: 'medium', keywords: ['chatbot', 'mental health', 'NLP', 'sentiment'] },
+        },
+        {
+          _id: 'prob009',
+          title: 'Supply Chain Transparency Platform',
+          description: 'Design a supply chain tracking system using QR codes and a React dashboard backed by Node.js and MongoDB to ensure product authenticity and traceability.',
+          source: 'external',
+          metadata: { domains: ['Supply Chain', 'Web'], requiredSkills: ['React', 'Node.js', 'MongoDB', 'QR Codes'], difficulty: 'easy', keywords: ['supply chain', 'tracking', 'QR', 'transparency'] },
+        },
+        {
+          _id: 'prob010',
+          title: 'AI Resume Screening Tool',
+          description: 'Build an automated resume screening system using machine learning and NLP to rank candidates. Node.js backend, MongoDB storage, React frontend for HR dashboard.',
+          source: 'platform',
+          metadata: { domains: ['HRTech', 'AI'], requiredSkills: ['Machine Learning', 'NLP', 'Node.js', 'MongoDB', 'React'], difficulty: 'medium', keywords: ['resume', 'screening', 'NLP', 'ranking', 'HR'] },
+        },
+      ],
+    };
+
+    // ── Lightweight scoring (mirrors backend logic) ──────────────────────────
+    function simpleHash(str) {
+      let hash = 0;
+      for (let i = 0; i < str.length; i++) {
+        const c = str.charCodeAt(i);
+        hash = ((hash << 5) - hash) + c;
+        hash = hash & hash;
+      }
+      return Math.abs(hash);
+    }
+
+    function generateEmbedding(text, dim = 100) {
+      if (!text) return new Array(dim).fill(0);
+      const tokens = text.toLowerCase().replace(/[^a-z0-9 ]/g, '').split(/\s+/).filter(Boolean);
+      const tf = {};
+      tokens.forEach(t => { tf[t] = (tf[t] || 0) + 1; });
+      const vec = new Array(dim).fill(0);
+      Object.keys(tf).forEach(term => {
+        const idx = simpleHash(term) % dim;
+        vec[idx] += tf[term] / tokens.length;
+      });
+      const mag = Math.sqrt(vec.reduce((s, v) => s + v * v, 0));
+      return mag > 0 ? vec.map(v => v / mag) : vec;
+    }
+
+    function cosineSimilarity(a, b) {
+      let dot = 0, m1 = 0, m2 = 0;
+      for (let i = 0; i < a.length; i++) { dot += a[i] * b[i]; m1 += a[i] * a[i]; m2 += b[i] * b[i]; }
+      m1 = Math.sqrt(m1); m2 = Math.sqrt(m2);
+      return (m1 && m2) ? dot / (m1 * m2) : 0;
+    }
+
+    function mockScore(teamSkills, problem) {
+      const pSkills = problem.metadata?.requiredSkills || [];
+      const pDomains = problem.metadata?.domains || [];
+      const teamDomains = ['AI', 'Web', 'FullStack']; // inferred from team skills
+
+      const skillOverlap = teamSkills.filter(s => pSkills.some(ps => ps.toLowerCase() === s.toLowerCase())).length;
+      const skillScore = skillOverlap / Math.max(pSkills.length, 1);
+
+      const domainOverlap = teamDomains.filter(d => pDomains.some(pd => pd.toLowerCase() === d.toLowerCase())).length;
+      const domainScore = domainOverlap / Math.max(pDomains.length, 1);
+
+      const ruleScore = (skillScore * 0.6) + (domainScore * 0.4);
+
+      const teamText = teamSkills.join(' ');
+      const probText = [problem.title, problem.description, ...pSkills].join(' ');
+      const semanticScore = cosineSimilarity(generateEmbedding(teamText), generateEmbedding(probText));
+
+      const matchScore = (ruleScore * 0.4) + (semanticScore * 0.6);
+      return { matchScore, ruleScore, semanticScore };
+    }
+
+    // ── Mock fetch interceptor ───────────────────────────────────────────────
+    // Intercepts known mock IDs; all other URLs fall through to real fetch.
+    const _realFetch = window.fetch.bind(window);
+    window.fetch = function(url, opts) {
+      const path = typeof url === 'string' ? url : url.toString();
+
+      // GET /api/hackathon/hack123
+      if (path.includes('/api/hackathon/hack123') && (!opts || !opts.method || opts.method === 'GET')) {
+        return Promise.resolve({
+          ok: true,
+          json: () => Promise.resolve({
+            success: true,
+            data: {
+              hackathon: MOCK_DB.hackathon,
+              problemStatements: MOCK_DB.problems,
+              teamId: MOCK_DB.team._id,
+              teamName: MOCK_DB.team.name,
+            },
+          }),
+        });
+      }
+
+      // PATCH /api/hackathon/hack123/team-skills
+      if (path.includes('/api/hackathon/hack123/team-skills') && opts?.method === 'PATCH') {
+        const body = JSON.parse(opts.body || '{}');
+        return Promise.resolve({
+          ok: true,
+          json: () => Promise.resolve({ success: true, data: { teamId: 'team123', extractedSkills: body.skills || [] } }),
+        });
+      }
+
+      // POST /api/recommendations/teams/team123/extract-skills
+      if (path.includes('/api/recommendations/teams/team123/extract-skills')) {
+        return Promise.resolve({
+          ok: true,
+          json: () => Promise.resolve({
+            success: true,
+            message: 'Team skills extracted successfully',
+            data: {
+              teamId: 'team123',
+              extractedSkills: MOCK_DB.team.skills,
+              domains: ['AI', 'Web', 'FullStack'],
+              tools: ['VS Code', 'Git', 'Docker'],
+            },
+          }),
+        });
+      }
+
+      // POST /api/recommendations/teams/team123/generate
+      if (path.includes('/api/recommendations/teams/team123/generate')) {
+        const body = JSON.parse(opts?.body || '{}');
+        const topN = body.topN || 5;
+        const skills = MOCK_DB.team.skills;
+
+        const ranked = MOCK_DB.problems
+          .map((p, i) => {
+            const scores = mockScore(skills, p);
+            return { rank: 0, problemId: p._id, ...scores, problem: { title: p.title, description: p.description.slice(0, 120) + '...', source: p.source }, metadata: p.metadata };
+          })
+          .sort((a, b) => b.matchScore - a.matchScore)
+          .slice(0, topN)
+          .map((r, i) => ({ ...r, rank: i + 1, matchScore: +r.matchScore.toFixed(4), ruleScore: +r.ruleScore.toFixed(4), semanticScore: +r.semanticScore.toFixed(4) }));
+
+        return Promise.resolve({
+          ok: true,
+          json: () => Promise.resolve({
+            success: true,
+            message: 'Recommendations generated successfully',
+            count: ranked.length,
+            data: ranked,
+          }),
+        });
+      }
+
+      // All other requests → real network
+      return _realFetch(url, opts);
+    };
+    // ═══════════════════════════════════════════════════════════════════════
+
     const apiBase = '';
 
-    const problemForm = document.getElementById('problem-form');
-    const problemLog = document.getElementById('problem-log');
-    const createProblemBtn = document.getElementById('create-problem-btn');
+    // State
+    let currentTeamId = null;
+    let currentHackathonId = null;
+    let currentSkills = [];
 
-    const teamIdInput = document.getElementById('teamId');
+    // Elements
+    const hackathonIdInput = document.getElementById('hackathonId');
+    const fetchBtn = document.getElementById('fetch-hackathon-btn');
+    const fetchStatus = document.getElementById('fetch-status');
+    const hackathonInfoBox = document.getElementById('hackathon-info-box');
+    const hackathonTitle = document.getElementById('hackathon-title');
+    const hackathonMeta = document.getElementById('hackathon-meta');
+    const problemCount = document.getElementById('problem-count');
+    const problemsLog = document.getElementById('problems-log');
+
+    const teamDisplay = document.getElementById('team-display');
     const topNInput = document.getElementById('topN');
     const extractBtn = document.getElementById('extract-btn');
     const recommendBtn = document.getElementById('recommend-btn');
     const outputLog = document.getElementById('output-log');
     const statusPill = document.getElementById('status-pill');
 
+    const skillsEditorBox = document.getElementById('skills-editor-box');
+    const skillsChips = document.getElementById('skills-chips');
+    const skillInput = document.getElementById('skill-input');
+    const saveSkillsBtn = document.getElementById('save-skills-btn');
+
+    function setFetchStatus(text, tone = 'idle') {
+      fetchStatus.textContent = text;
+      fetchStatus.style.borderColor = tone === 'error' ? '#f97373'
+        : tone === 'success' ? '#22c55e'
+        : tone === 'busy' ? '#4f9cf9'
+        : 'rgba(4,56,115,0.2)';
+      fetchStatus.style.color = tone === 'error' ? '#f97373'
+        : tone === 'success' ? '#22c55e'
+        : tone === 'busy' ? '#4f9cf9'
+        : '#043873';
+    }
+
     function setStatus(text, tone = 'idle') {
       statusPill.textContent = text;
-      const base = 'badge';
-      if (tone === 'error') {
-        statusPill.style.borderColor = '#f97373';
-        statusPill.style.color = '#f97373';
-      } else if (tone === 'success') {
-        statusPill.style.borderColor = '#22c55e';
-        statusPill.style.color = '#22c55e';
-      } else if (tone === 'busy') {
-        statusPill.style.borderColor = '#4f9cf9';
-        statusPill.style.color = '#4f9cf9';
-      } else {
-        statusPill.style.borderColor = 'rgba(4,56,115,0.2)';
-        statusPill.style.color = '#043873';
-      }
+      statusPill.style.borderColor = tone === 'error' ? '#f97373'
+        : tone === 'success' ? '#22c55e'
+        : tone === 'busy' ? '#4f9cf9'
+        : 'rgba(4,56,115,0.2)';
+      statusPill.style.color = tone === 'error' ? '#f97373'
+        : tone === 'success' ? '#22c55e'
+        : tone === 'busy' ? '#4f9cf9'
+        : '#043873';
     }
 
-    function pretty(obj) {
-      return JSON.stringify(obj, null, 2);
-    }
+    function pretty(obj) { return JSON.stringify(obj, null, 2); }
 
-    function renderProblemLog(data) {
-      if (!data?.data) {
-        problemLog.innerHTML = '<span class="error">No response.</span>';
+    // ── Fetch Hackathon Data ──────────────────────────────────────────────────
+    async function fetchHackathonData() {
+      const hackathonId = hackathonIdInput.value.trim();
+      if (!hackathonId) {
+        setFetchStatus('enter an id', 'error');
         return;
       }
-      const p = data.data;
-      problemLog.textContent = JSON.stringify({
-        _id: p._id,
-        source: p.source,
-        title: p.title,
-        createdAt: p.createdAt,
-      }, null, 2);
-    }
-
-    async function createProblem(e) {
-      e.preventDefault();
-      const source = document.getElementById('source').value || 'platform';
-      const title = document.getElementById('title').value || 'Untitled Problem';
-      const description = document.getElementById('description').value || 'Sample problem description with some skills: JavaScript, React, Node.js, MongoDB.';
-
-      createProblemBtn.disabled = true;
-      createProblemBtn.textContent = 'Ingesting...';
-      problemLog.innerHTML = '<span class="dim">Sending request...</span>';
+      currentHackathonId = hackathonId;
+      fetchBtn.disabled = true;
+      setFetchStatus('fetching...', 'busy');
+      hackathonInfoBox.style.display = 'none';
 
       try {
-        const res = await fetch(apiBase + '/api/problems', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ source, title, description }),
-        });
+        const res = await fetch(`${apiBase}/api/hackathon/${encodeURIComponent(hackathonId)}`);
         const json = await res.json();
+
         if (!res.ok) {
-          problemLog.innerHTML = '<span class="error">' + pretty(json) + '</span>';
-        } else {
-          renderProblemLog(json);
+          setFetchStatus('error', 'error');
+          problemsLog.innerHTML = `<span class="error">${pretty(json)}</span>`;
+          hackathonInfoBox.style.display = 'block';
+          return;
         }
+
+        const { hackathon, problemStatements, teamId, teamName } = json.data;
+
+        // Show hackathon info
+        hackathonTitle.textContent = hackathon.title || 'Untitled Hackathon';
+        hackathonMeta.textContent = `Status: ${hackathon.status} · Problems: ${problemStatements.length}`;
+        problemCount.textContent = problemStatements.length;
+
+        if (problemStatements.length === 0) {
+          problemsLog.innerHTML = '<span class="dim">No problem statements linked to this hackathon yet.</span>';
+        } else {
+          problemsLog.textContent = pretty(problemStatements.map(p => ({
+            id: p._id,
+            title: p.title,
+            domains: p.metadata?.domains || [],
+            skills: p.metadata?.requiredSkills || [],
+          })));
+        }
+
+        hackathonInfoBox.style.display = 'block';
+        setFetchStatus('loaded', 'success');
+
+        // Auto-populate team
+        if (teamId) {
+          currentTeamId = teamId;
+          teamDisplay.value = teamName ? `${teamName} (${teamId})` : teamId;
+          extractBtn.disabled = false;
+          recommendBtn.disabled = false;
+        } else {
+          teamDisplay.value = 'No team found for this hackathon';
+          extractBtn.disabled = true;
+          recommendBtn.disabled = true;
+        }
+
       } catch (err) {
-        problemLog.innerHTML = '<span class="error">' + err.message + '</span>';
+        setFetchStatus('network error', 'error');
+        problemsLog.innerHTML = `<span class="error">${err.message}</span>`;
+        hackathonInfoBox.style.display = 'block';
       } finally {
-        createProblemBtn.disabled = false;
-        createProblemBtn.textContent = 'Ingest Problem';
+        fetchBtn.disabled = false;
       }
     }
 
+    // ── Extract Team Skills ───────────────────────────────────────────────────
     async function extractTeamSkills() {
-      const teamId = teamIdInput.value.trim();
-      if (!teamId) {
-        outputLog.innerHTML = '<span class="error">Please enter a teamId first.</span>';
-        return;
-      }
+      if (!currentTeamId) return;
       setStatus('extracting', 'busy');
       outputLog.innerHTML = '<span class="dim">Extracting skills...</span>';
+      extractBtn.disabled = true;
 
       try {
-        const res = await fetch(apiBase + '/api/recommendations/teams/' + encodeURIComponent(teamId) + '/extract-skills', {
+        const res = await fetch(`${apiBase}/api/recommendations/teams/${encodeURIComponent(currentTeamId)}/extract-skills`, {
           method: 'POST',
         });
         const json = await res.json();
+
         if (!res.ok) {
-          outputLog.innerHTML = '<span class="error">' + pretty(json) + '</span>';
+          outputLog.innerHTML = `<span class="error">${pretty(json)}</span>`;
           setStatus('error', 'error');
-        } else {
-          outputLog.textContent = pretty(json);
-          setStatus('skills ready', 'success');
+          return;
         }
+
+        setStatus('skills ready', 'success');
+        outputLog.textContent = pretty(json);
+
+        // Populate editable skills chips
+        currentSkills = json.data?.extractedSkills || [];
+        renderSkillChips(currentSkills);
+        skillsEditorBox.style.display = 'block';
+
       } catch (err) {
-        outputLog.innerHTML = '<span class="error">' + err.message + '</span>';
+        outputLog.innerHTML = `<span class="error">${err.message}</span>`;
         setStatus('network error', 'error');
+      } finally {
+        extractBtn.disabled = false;
       }
     }
 
-    async function generateRecommendations() {
-      const teamId = teamIdInput.value.trim();
-      if (!teamId) {
-        outputLog.innerHTML = '<span class="error">Please enter a teamId first.</span>';
-        return;
+    // ── Skills Chips Editor ───────────────────────────────────────────────────
+    function renderSkillChips(skills) {
+      // Remove all chips except the input
+      skillsChips.querySelectorAll('.chip').forEach(c => c.remove());
+      skills.forEach(skill => addChip(skill));
+    }
+
+    function addChip(skill) {
+      if (!skill.trim()) return;
+      const chip = document.createElement('span');
+      chip.className = 'chip';
+      chip.innerHTML = `${skill} <button class="chip-remove" title="Remove">×</button>`;
+      chip.querySelector('.chip-remove').addEventListener('click', () => {
+        chip.remove();
+        currentSkills = currentSkills.filter(s => s !== skill);
+      });
+      skillsChips.insertBefore(chip, skillInput);
+    }
+
+    skillInput.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ',') {
+        e.preventDefault();
+        const val = skillInput.value.trim().replace(/,$/, '');
+        if (val) {
+          currentSkills.push(val);
+          addChip(val);
+          skillInput.value = '';
+        }
       }
+    });
+
+    async function saveSkills() {
+      if (!currentTeamId || !currentHackathonId) return;
+      saveSkillsBtn.disabled = true;
+      saveSkillsBtn.textContent = 'Saving...';
+
+      try {
+        const res = await fetch(`${apiBase}/api/hackathon/${encodeURIComponent(currentHackathonId)}/team-skills`, {
+          method: 'PATCH',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ teamId: currentTeamId, skills: currentSkills }),
+        });
+        const json = await res.json();
+        if (res.ok) {
+          setStatus('skills saved', 'success');
+        } else {
+          setStatus('save failed', 'error');
+          console.error(json);
+        }
+      } catch (err) {
+        setStatus('network error', 'error');
+      } finally {
+        saveSkillsBtn.disabled = false;
+        saveSkillsBtn.textContent = 'Save Skills';
+      }
+    }
+
+    // ── Generate Recommendations ──────────────────────────────────────────────
+    async function generateRecommendations() {
+      if (!currentTeamId) return;
       const topN = parseInt(topNInput.value || '5', 10);
       setStatus('ranking', 'busy');
       outputLog.innerHTML = '<span class="dim">Generating recommendations...</span>';
+      recommendBtn.disabled = true;
 
       try {
-        const res = await fetch(apiBase + '/api/recommendations/teams/' + encodeURIComponent(teamId) + '/generate', {
+        const res = await fetch(`${apiBase}/api/recommendations/teams/${encodeURIComponent(currentTeamId)}/generate`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ topN }),
         });
         const json = await res.json();
+
         if (!res.ok) {
-          outputLog.innerHTML = '<span class="error">' + pretty(json) + '</span>';
+          outputLog.innerHTML = `<span class="error">${pretty(json)}</span>`;
           setStatus('error', 'error');
         } else {
           outputLog.textContent = pretty(json);
           setStatus('ok', 'success');
         }
       } catch (err) {
-        outputLog.innerHTML = '<span class="error">' + err.message + '</span>';
+        outputLog.innerHTML = `<span class="error">${err.message}</span>`;
         setStatus('network error', 'error');
+      } finally {
+        recommendBtn.disabled = false;
       }
     }
 
-    problemForm.addEventListener('submit', createProblem);
+    // ── Event Listeners ───────────────────────────────────────────────────────
+    fetchBtn.addEventListener('click', fetchHackathonData);
     extractBtn.addEventListener('click', extractTeamSkills);
     recommendBtn.addEventListener('click', generateRecommendations);
+    saveSkillsBtn.addEventListener('click', saveSkills);
   </script>
 </body>
 </html>
-
-

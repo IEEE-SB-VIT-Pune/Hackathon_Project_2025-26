@@ -2,6 +2,11 @@ import mongoose from 'mongoose';
 
 const problemStatementSchema = new mongoose.Schema(
   {
+    hackathonId: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'Hackathon',
+      index: true,
+    },
     source: {
       type: String,
       enum: ['platform', 'SIH', 'external'],
