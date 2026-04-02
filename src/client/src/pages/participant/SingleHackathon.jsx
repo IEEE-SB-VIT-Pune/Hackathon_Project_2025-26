@@ -235,10 +235,25 @@ const SingleHackathon = () => {
 
   // --- DYNAMIC LOGIC HELPERS ---
   const isOngoing = hackathon.status === "ongoing";
+  
+  // Fix: Make status comparison case-insensitive and improve date comparison
+  const currentDate = new Date();
+  const registrationDeadline = hackathon.registrationDeadline ? new Date(hackathon.registrationDeadline) : null;
+  
   const isRegistrationOpen =
-    hackathon.status === "open" &&
-    (!hackathon.registrationDeadline ||
-      new Date() <= new Date(hackathon.registrationDeadline));
+    hackathon.status?.toLowerCase() === "open" &&
+    (!registrationDeadline || currentDate < registrationDeadline);
+  
+  // Debug logging
+  console.log('Registration Debug:', {
+    status: hackathon.status,
+    statusLower: hackathon.status?.toLowerCase(),
+    currentDate: currentDate.toISOString(),
+    registrationDeadline: registrationDeadline?.toISOString(),
+    isRegistrationOpen,
+    comparison: registrationDeadline ? currentDate < registrationDeadline : 'no deadline'
+  });
+    
   const isSubmissionClosed = new Date() > new Date(hackathon.endDate);
 
   // Dynamic Team Size Logic
