@@ -8,7 +8,9 @@ const Footer = () => {
     <footer className="judge-footer">
       <div className="footer-content">
         <div className="footer-column">
-          <h3 className="footer-title">HackHub</h3>
+          <h3 className="footer-title" style={{ display: 'flex', alignItems: 'center', gap: '8px', fontWeight: '800', fontSize: '1.5rem', letterSpacing: '-0.5px' }}>
+            <span style={{ color: '#1e293b' }}>Hack<span style={{ color: '#2563eb' }}>Hub</span></span>
+          </h3>
           <p className="footer-description">
             Connecting innovators through hackathons worldwide.
           </p>

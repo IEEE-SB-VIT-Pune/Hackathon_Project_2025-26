@@ -1,9 +1,13 @@
 import Evaluation from '../models/evaluation.model.js';
 import log from '../utils/logger.js';
+import { calculateRawEvaluationScores, normalizeJudgeEvaluations } from '../services/scoring.service.js';
 
 export const createEvaluation = async (req, res, next) => {
   try {
     log.info('CREATE_EVAL', 'Creating evaluation', { hackathonId: req.params.hackathonId, teamId: req.params.teamId, by: req.user?.email });
+
+    const { criteriaScores, browniePoints, aiScore } = req.body;
+    const rawScores = calculateRawEvaluationScores(criteriaScores, browniePoints, aiScore);
 
     const evaluation = await Evaluation.create({
       ...req.body,
@@ -15,12 +19,22 @@ export const createEvaluation = async (req, res, next) => {
         : req.user.systemRole === 'faculty'
         ? 'faculty'
         : 'judge',
+      rawScoreTotal: rawScores.rawScoreTotal,
+      checkboxScore: rawScores.checkboxScore,
+      aiScore: rawScores.aiScore,
+      totalScore: rawScores.rawScoreTotal // Will be overridden immediately by normalization
     });
+
+    // Run normalization for this judge across all their evaluations
+    await normalizeJudgeEvaluations(req.user._id, req.params.hackathonId);
+    
+    // Fetch the updated evaluation to return accurate finalScore
+    const updatedEval = await Evaluation.findById(evaluation._id);
 
     log.success('CREATE_EVAL', `Evaluation created (id=${evaluation._id})`);
     res.status(201).json({
       success: true,
-      data: evaluation,
+      data: updatedEval,
     });
   } catch (err) {
     log.error('CREATE_EVAL', 'Failed to create evaluation', err);
@@ -45,15 +59,39 @@ export const updateEvaluation = async (req, res, next) => {
       });
     }
 
-    Object.assign(evaluation, req.body);
-    evaluation.lastUpdatedAt = new Date();
+    const { criteriaScores, browniePoints, aiScore } = req.body;
+    
+    // Recalculate raw score if they are provided
+    if (criteriaScores || browniePoints || aiScore !== undefined) {
+      const rawScores = calculateRawEvaluationScores(
+        criteriaScores || evaluation.criteriaScores,
+        browniePoints || evaluation.browniePoints,
+        aiScore !== undefined ? aiScore : evaluation.aiScore
+      );
+      
+      Object.assign(evaluation, {
+        ...req.body,
+        rawScoreTotal: rawScores.rawScoreTotal,
+        checkboxScore: rawScores.checkboxScore,
+        aiScore: rawScores.aiScore,
+      });
+    } else {
+      Object.assign(evaluation, req.body);
+    }
 
+    evaluation.lastUpdatedAt = new Date();
     await evaluation.save();
+
+    // Run normalization
+    await normalizeJudgeEvaluations(evaluation.judgeId, evaluation.hackathonId);
+
+    // Fetch the updated evaluation to return
+    const updatedEval = await Evaluation.findById(evaluation._id);
 
     log.success('UPDATE_EVAL', `Evaluation updated (id=${evaluation._id})`);
     res.status(200).json({
       success: true,
-      data: evaluation,
+      data: updatedEval,
     });
   } catch (err) {
     log.error('UPDATE_EVAL', 'Failed to update evaluation', err);

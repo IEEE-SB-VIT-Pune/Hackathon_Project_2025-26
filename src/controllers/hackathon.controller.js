@@ -137,7 +137,63 @@ export const createHackathon = async (req, res, next) => {
       return next({ statusCode: 400, message: 'At least one prize is required.' });
     }
 
-    // 3. Parse Judges
+    // 3. Parse and Validate judgingCriteria
+    if (hackathonData.judgingCriteria) {
+      try {
+        let parsedCriteria = typeof hackathonData.judgingCriteria === 'string'
+          ? JSON.parse(hackathonData.judgingCriteria)
+          : hackathonData.judgingCriteria;
+
+        if (!Array.isArray(parsedCriteria)) parsedCriteria = [];
+
+        parsedCriteria = parsedCriteria
+          .filter(c => c.name && c.name.trim())
+          .map(c => ({
+            name: c.name.trim(),
+            description: c.description?.trim() || '',
+            weight: Number(c.weight) || 1
+          }));
+
+        if (parsedCriteria.length > 0) {
+          hackathonData.judgingCriteria = parsedCriteria;
+        } else {
+          delete hackathonData.judgingCriteria;
+        }
+      } catch (e) {
+        log.warn('CREATE_HACKATHON', 'Failed to parse judging criteria', e);
+        delete hackathonData.judgingCriteria;
+      }
+    }
+
+    // 4. Parse and Validate browniePoints
+    if (hackathonData.browniePoints) {
+      try {
+        let parsedBrownie = typeof hackathonData.browniePoints === 'string'
+          ? JSON.parse(hackathonData.browniePoints)
+          : hackathonData.browniePoints;
+
+        if (!Array.isArray(parsedBrownie)) parsedBrownie = [];
+
+        parsedBrownie = parsedBrownie
+          .filter(bp => bp.name && bp.name.trim())
+          .map(bp => ({
+            name: bp.name.trim(),
+            description: bp.description?.trim() || '',
+            weight: Number(bp.weight) || 1
+          }));
+
+        if (parsedBrownie.length > 0) {
+          hackathonData.browniePoints = parsedBrownie;
+        } else {
+          delete hackathonData.browniePoints;
+        }
+      } catch (e) {
+        log.warn('CREATE_HACKATHON', 'Failed to parse brownie points', e);
+        delete hackathonData.browniePoints;
+      }
+    }
+
+    // 5. Parse Judges
     let judgeIds = [];
     if (hackathonData.judges) {
       judgeIds = typeof hackathonData.judges === 'string' ? JSON.parse(hackathonData.judges) : hackathonData.judges;
@@ -164,17 +220,17 @@ export const createHackathon = async (req, res, next) => {
       }));
     }
 
-    // 4. Validate Team Sizes
+    // 7. Validate Team Sizes
     if (hackathonData.minTeamSize && hackathonData.maxTeamSize && Number(hackathonData.minTeamSize) > Number(hackathonData.maxTeamSize)) {
       return next({ statusCode: 400, message: "Minimum team size cannot be greater than maximum team size." });
     }
 
     if (req.file) hackathonData.image = req.file.path;
 
-    // 5. Save Hackathon
+    // 8. Save Hackathon
     const hackathon = await Hackathon.create(hackathonData);
 
-    // 6. Sync User Roles
+    // 9. Sync User Roles
     if (judgeIds.length > 0) {
       await User.updateMany({ _id: { $in: judgeIds } }, { $addToSet: { hackathonRoles: { hId: hackathon._id, role: 'judge' } } });
     }
@@ -426,6 +482,8 @@ export const updateHackathon = async (req, res, next) => {
       problemStatements: rawProblemStatements,
       rounds: rawRounds,
       prizes: rawPrizes,
+      judgingCriteria: rawJudgingCriteria,
+      browniePoints: rawBrowniePoints,
       ...updateData
     } = req.body;
 
@@ -538,6 +596,56 @@ export const updateHackathon = async (req, res, next) => {
       } catch (parseError) {
         log.warn('UPDATE_HACKATHON', 'Failed to parse prizes', parseError);
         return next({ statusCode: 400, message: 'Invalid prizes format.' });
+      }
+    }
+
+    // Parse and validate judgingCriteria
+    if (rawJudgingCriteria !== undefined) {
+      try {
+        let parsedCriteria = typeof rawJudgingCriteria === 'string'
+          ? JSON.parse(rawJudgingCriteria)
+          : rawJudgingCriteria;
+
+        if (!Array.isArray(parsedCriteria)) parsedCriteria = [];
+
+        parsedCriteria = parsedCriteria
+          .filter(c => c.name && c.name.trim())
+          .map(c => ({
+            name: c.name.trim(),
+            description: c.description?.trim() || '',
+            weight: Number(c.weight) || 1
+          }));
+
+        if (parsedCriteria.length > 0) {
+          updateData.judgingCriteria = parsedCriteria;
+        }
+      } catch (e) {
+        log.warn('UPDATE_HACKATHON', 'Failed to parse judging criteria', e);
+      }
+    }
+
+    // Parse and validate browniePoints
+    if (rawBrowniePoints !== undefined) {
+      try {
+        let parsedBrownie = typeof rawBrowniePoints === 'string'
+          ? JSON.parse(rawBrowniePoints)
+          : rawBrowniePoints;
+
+        if (!Array.isArray(parsedBrownie)) parsedBrownie = [];
+
+        parsedBrownie = parsedBrownie
+          .filter(bp => bp.name && bp.name.trim())
+          .map(bp => ({
+            name: bp.name.trim(),
+            description: bp.description?.trim() || '',
+            weight: Number(bp.weight) || 1
+          }));
+
+        if (parsedBrownie.length > 0) {
+          updateData.browniePoints = parsedBrownie;
+        }
+      } catch (e) {
+        log.warn('UPDATE_HACKATHON', 'Failed to parse brownie points', e);
       }
     }
 

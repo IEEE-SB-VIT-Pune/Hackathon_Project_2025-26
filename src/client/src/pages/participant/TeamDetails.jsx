@@ -118,7 +118,7 @@ const TeamDetails = () => {
                     <div style={styles.card}>
                         <h2 style={styles.cardTitle}>Team Members</h2>
                         <div style={styles.memberList}>
-                            {team.members.filter(m => m.status === 'accepted').map(member => (
+                            {team.members.filter(m => m.status === 'accepted' && String(m.userId?._id) !== String(team.leader?._id)).map(member => (
                                 <div key={member.userId?._id} style={styles.memberRow}>
                                     <div style={styles.memberAvatar}>
                                         {member.userId?.fullName?.charAt(0).toUpperCase()}

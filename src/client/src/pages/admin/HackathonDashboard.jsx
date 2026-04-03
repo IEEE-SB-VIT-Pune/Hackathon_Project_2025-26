@@ -2,7 +2,8 @@ import { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { useAuth } from '../../context/AuthContext'; 
 import Navbar from '../../components/common/Navbar'; 
-import { getHackathonById } from '../../services/api';
+import Footer from '../../components/common/Footer';
+import { getHackathonById, getHackathonLeaderboard, updateHackathon } from '../../services/api';
 import '../../styles/admin.css';
 
 function HackathonDashboard() {
@@ -11,8 +12,14 @@ function HackathonDashboard() {
   const { user } = useAuth(); 
 
   const [hackathon, setHackathon] = useState(null);
+  const [leaderboard, setLeaderboard] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [saving, setSaving] = useState(false);
   const [error, setError] = useState('');
+
+  const [criteria, setCriteria] = useState([]);
+  const [browniePoints, setBrowniePoints] = useState([]);
+  const [isEditingCriteria, setIsEditingCriteria] = useState(false);
 
   // ─── ROLE-BASED NAVIGATION LOGIC ───
   // If systemRole is 'admin', they get the full Admin Navbar.
@@ -23,8 +30,18 @@ function HackathonDashboard() {
     const fetchHackathon = async () => {
       try {
         setLoading(true);
-        const res = await getHackathonById(id);
-        setHackathon(res.data.data);
+        const [res, lbRes] = await Promise.all([
+          getHackathonById(id),
+          getHackathonLeaderboard(id).catch(() => ({ data: { data: [] } }))
+        ]);
+        const data = res.data.data;
+        setHackathon(data);
+        setLeaderboard(lbRes.data?.data || []);
+        
+        // Setup initial criteria state
+        if (data.judgingCriteria) setCriteria(data.judgingCriteria);
+        if (data.browniePoints) setBrowniePoints(data.browniePoints);
+
       } catch (err) {
         setError('Failed to load hackathon dashboard. Access Denied or Not Found.');
       } finally {
@@ -33,6 +50,37 @@ function HackathonDashboard() {
     };
     fetchHackathon();
   }, [id]);
+
+  const handleSaveCriteria = async () => {
+    try {
+      setSaving(true);
+      const res = await updateHackathon(id, { judgingCriteria: criteria, browniePoints });
+      if (res.data?.success) {
+        setIsEditingCriteria(false);
+        setHackathon(res.data.data);
+      }
+    } catch (err) {
+      alert('Failed to update criteria');
+    } finally {
+      setSaving(false);
+    }
+  };
+
+  const addCriterion = () => setCriteria([...criteria, { name: '', description: '', weight: 1 }]);
+  const removeCriterion = (index) => setCriteria(criteria.filter((_, i) => i !== index));
+  const updateCriterion = (index, field, value) => {
+    const newCriteria = [...criteria];
+    newCriteria[index][field] = value;
+    setCriteria(newCriteria);
+  };
+
+  const addBrowniePoint = () => setBrowniePoints([...browniePoints, { name: '', description: '', weight: 1 }]);
+  const removeBrowniePoint = (index) => setBrowniePoints(browniePoints.filter((_, i) => i !== index));
+  const updateBrowniePoint = (index, field, value) => {
+    const newBrownie = [...browniePoints];
+    newBrownie[index][field] = value;
+    setBrowniePoints(newBrownie);
+  };
 
   if (loading) {
     return (
@@ -312,17 +360,103 @@ function HackathonDashboard() {
                 </div>
               </div>
             ) : (
-              <p style={{ color: '#334155', fontWeight: '600', fontSize: '1.2rem', color: '#059669' }}>{hackathon.prizePool}</p>
+              <p style={{ fontWeight: '600', fontSize: '1.2rem', color: '#059669' }}>{hackathon.prizePool}</p>
             )}
+          </section>
+
+          {/* ─── JUDGING SETUP ─── */}
+          <section className="view-section">
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '15px', borderBottom: '2px solid #e2e8f0', paddingBottom: '10px' }}>
+              <h2 style={{ fontSize: '1.1rem', margin: 0 }}>Judging Criteria & Extra Points</h2>
+              {!isEditingCriteria ? (
+                <button className="btn-secondary" style={{ padding: '6px 14px', fontSize: '0.9rem' }} onClick={() => setIsEditingCriteria(true)}>Edit Setup</button>
+              ) : (
+                <div style={{ display: 'flex', gap: '10px' }}>
+                  <button className="btn-secondary" style={{ padding: '6px 14px', fontSize: '0.9rem' }} onClick={() => setIsEditingCriteria(false)}>Cancel</button>
+                  <button className="btn-primary" style={{ padding: '6px 14px', fontSize: '0.9rem' }} onClick={handleSaveCriteria} disabled={saving}>{saving ? 'Saving...' : 'Save Changes'}</button>
+                </div>
+              )}
+            </div>
+
+            <div style={{ display: 'grid', gridTemplateColumns: 'minmax(0, 1fr) minmax(0, 1fr)', gap: '40px' }}>
+              {/* Main Criteria */}
+              <div>
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '12px' }}>
+                  <h3 style={{ fontSize: '1rem', color: '#1e293b' }}>Main Custom Criteria (R1-R5)</h3>
+                  {isEditingCriteria && <button type="button" onClick={addCriterion} style={{ background: '#e2e8f0', border: 'none', padding: '4px 8px', borderRadius: '4px', cursor: 'pointer', fontSize: '0.8rem' }}>+ Add</button>}
+                </div>
+                {criteria.map((c, i) => (
+                  <div key={i} style={{ background: '#f8fafc', padding: '12px', borderRadius: '8px', marginBottom: '10px', display: 'flex', gap: '10px', border: '1px solid #e2e8f0' }}>
+                    <div style={{ flex: 1, display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                      <input type="text" value={c.name} onChange={(e) => updateCriterion(i, 'name', e.target.value)} disabled={!isEditingCriteria} placeholder="Criterion Name (e.g., Innovation)" style={{ padding: '6px', borderRadius: '4px', border: '1px solid #cbd5e1' }} />
+                      <input type="number" min="1" value={c.weight} onChange={(e) => updateCriterion(i, 'weight', Number(e.target.value))} disabled={!isEditingCriteria} placeholder="Weight" style={{ padding: '6px', borderRadius: '4px', border: '1px solid #cbd5e1' }} />
+                    </div>
+                    {isEditingCriteria && (
+                      <button type="button" onClick={() => removeCriterion(i)} style={{ background: '#fee2e2', color: '#dc2626', border: 'none', padding: '0 10px', borderRadius: '4px', cursor: 'pointer', fontWeight: 'bold' }}>×</button>
+                    )}
+                  </div>
+                ))}
+                {criteria.length === 0 && <p style={{ fontSize: '0.9rem', color: '#64748b' }}>No main criteria set.</p>}
+              </div>
+
+              {/* Brownie Points */}
+              <div>
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '12px' }}>
+                  <h3 style={{ fontSize: '1rem', color: '#1e293b' }}>Brownie Points / Checklists (C1-C8)</h3>
+                  {isEditingCriteria && <button type="button" onClick={addBrowniePoint} style={{ background: '#e2e8f0', border: 'none', padding: '4px 8px', borderRadius: '4px', cursor: 'pointer', fontSize: '0.8rem' }}>+ Add</button>}
+                </div>
+                {browniePoints.map((bp, i) => (
+                  <div key={i} style={{ background: '#f8fafc', padding: '12px', borderRadius: '8px', marginBottom: '10px', display: 'flex', gap: '10px', border: '1px solid #e2e8f0' }}>
+                    <div style={{ flex: 1, display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                      <input type="text" value={bp.name} onChange={(e) => updateBrowniePoint(i, 'name', e.target.value)} disabled={!isEditingCriteria} placeholder="Point Name (e.g., Deployed App)" style={{ padding: '6px', borderRadius: '4px', border: '1px solid #cbd5e1' }} />
+                      <input type="number" min="1" value={bp.weight} onChange={(e) => updateBrowniePoint(i, 'weight', Number(e.target.value))} disabled={!isEditingCriteria} placeholder="Score Weight" style={{ padding: '6px', borderRadius: '4px', border: '1px solid #cbd5e1' }} />
+                    </div>
+                    {isEditingCriteria && (
+                      <button type="button" onClick={() => removeBrowniePoint(i)} style={{ background: '#fee2e2', color: '#dc2626', border: 'none', padding: '0 10px', borderRadius: '4px', cursor: 'pointer', fontWeight: 'bold' }}>×</button>
+                    )}
+                  </div>
+                ))}
+                {browniePoints.length === 0 && <p style={{ fontSize: '0.9rem', color: '#64748b' }}>No brownie points set.</p>}
+              </div>
+            </div>
+          </section>
+
+          {/* ─── LIVE LEADERBOARD ─── */}
+          <section className="view-section">
+            <h2 style={{ fontSize: '1.2rem', borderBottom: '2px solid #e2e8f0', paddingBottom: '10px', marginBottom: '15px' }}>Live Ranking & Leaderboard</h2>
+            <div style={{ overflowX: 'auto', borderRadius: '12px', border: '1px solid #e2e8f0' }}>
+              <table style={{ width: '100%', borderCollapse: 'collapse', textAlign: 'left' }}>
+                <thead style={{ background: '#f8fafc' }}>
+                  <tr>
+                    <th style={{ padding: '16px', borderBottom: '2px solid #e2e8f0', color: '#475569', fontWeight: '600' }}>Rank</th>
+                    <th style={{ padding: '16px', borderBottom: '2px solid #e2e8f0', color: '#475569', fontWeight: '600' }}>Team Name</th>
+                    <th style={{ padding: '16px', borderBottom: '2px solid #e2e8f0', color: '#475569', fontWeight: '600' }}>Judges Evaluated</th>
+                    <th style={{ padding: '16px', borderBottom: '2px solid #e2e8f0', color: '#475569', fontWeight: '600' }}>Final Aggregate Score</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {leaderboard.length === 0 ? (
+                    <tr>
+                      <td colSpan="4" style={{ padding: '24px', textAlign: 'center', color: '#64748b' }}>No team evaluations found for this hackathon yet.</td>
+                    </tr>
+                  ) : (
+                    leaderboard.map((team, index) => (
+                      <tr key={team.teamId} style={{ borderBottom: '1px solid #f1f5f9' }}>
+                        <td style={{ padding: '16px', fontWeight: 'bold', color: index < 3 ? '#d97706' : '#64748b' }}>#{index + 1}</td>
+                        <td style={{ padding: '16px', fontWeight: '600', color: '#0f172a' }}>{team.teamName}</td>
+                        <td style={{ padding: '16px', color: '#475569' }}>{team.judgesCount}</td>
+                        <td style={{ padding: '16px', fontWeight: '800', color: '#059669' }}>{team.finalScore} / 100</td>
+                      </tr>
+                    ))
+                  )}
+                </tbody>
+              </table>
+            </div>
           </section>
         </div>
       </main>
 
-      <footer className="admin-footer" style={{ textAlign: 'center', padding: '30px', borderTop: '1px solid #e2e8f0', color: '#94a3b8', fontSize: '0.8rem' }}>
-        <div className="footer-content">
-          <span>&copy; 2026 HackHub Organizer Suite • Secure Management Session</span>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }

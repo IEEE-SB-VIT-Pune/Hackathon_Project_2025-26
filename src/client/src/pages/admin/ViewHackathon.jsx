@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 
 import AdminNavbar from "../../components/admin/AdminNavbar";
+import Footer from "../../components/common/Footer";
 import { getHackathonById } from "../../services/api";
 
 import "../../styles/admin.css";
@@ -290,12 +291,7 @@ function ViewHackathon() {
         </div>
       </main>
 
-      {/* ================= FOOTER ================= */}
-      <footer className="admin-footer">
-        <div className="footer-content">
-          <span className="footer-brand">HackHub</span>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }

@@ -7,6 +7,7 @@ import {
   getHackathonById,
   searchUsers,
 } from "../../services/api";
+import Footer from '../../components/common/Footer';
 import "../../styles/admin.css";
 
 function CreateHackathon() {
@@ -38,6 +39,27 @@ function CreateHackathon() {
   /* ================= PRIZES STATE ================= */
   const [prizes, setPrizes] = useState([
     { position: '', amount: '' }
+  ]);
+
+  /* ================= JUDGING CRITERIA STATE ================= */
+  const [judgingCriteria, setJudgingCriteria] = useState([
+    { name: 'Innovation', weight: 1, description: '' },
+    { name: 'Technical Implementation', weight: 1, description: '' },
+    { name: 'Problem Relevance', weight: 1, description: '' },
+    { name: 'Presentation', weight: 1, description: '' },
+    { name: 'Feasibility', weight: 1, description: '' },
+  ]);
+
+  /* ================= BROWNIE POINTS STATE ================= */
+  const [browniePoints, setBrowniePoints] = useState([
+    { name: 'C1', weight: 6, description: 'Working Demo' },
+    { name: 'C2', weight: 5, description: 'Open Source Code' },
+    { name: 'C3', weight: 4, description: 'Deployed Application' },
+    { name: 'C4', weight: 4, description: 'Impressive UX/UI' },
+    { name: 'C5', weight: 3, description: 'Scalability' },
+    { name: 'C6', weight: 3, description: 'Use of DeepTech' },
+    { name: 'C7', weight: 2, description: 'Sponsors Track Used' },
+    { name: 'C8', weight: 1, description: 'Good Pitch Deck' },
   ]);
 
   /* ================= FORM ================= */
@@ -104,6 +126,24 @@ function CreateHackathon() {
           setPrizes(data.prizes.map(prize => ({
             position: prize.position || '',
             amount: prize.amount || ''
+          })));
+        }
+
+        // Load existing judging criteria
+        if (data.judgingCriteria && Array.isArray(data.judgingCriteria) && data.judgingCriteria.length > 0) {
+          setJudgingCriteria(data.judgingCriteria.map(c => ({
+            name: c.name || '',
+            weight: c.weight || 1,
+            description: c.description || ''
+          })));
+        }
+
+        // Load existing brownie points
+        if (data.browniePoints && Array.isArray(data.browniePoints) && data.browniePoints.length > 0) {
+          setBrowniePoints(data.browniePoints.map(bp => ({
+            name: bp.name || '',
+            weight: bp.weight || 1,
+            description: bp.description || ''
           })));
         }
 
@@ -230,6 +270,40 @@ function CreateHackathon() {
     }
   };
 
+  /* ================= JUDGING CRITERIA HANDLERS ================= */
+  const handleCriteriaChange = (index, field, value) => {
+    const updated = [...judgingCriteria];
+    updated[index][field] = value;
+    setJudgingCriteria(updated);
+  };
+
+  const handleAddCriteria = () => {
+    setJudgingCriteria([...judgingCriteria, { name: '', weight: 1, description: '' }]);
+  };
+
+  const handleRemoveCriteria = (index) => {
+    if (judgingCriteria.length > 1) {
+      setJudgingCriteria(judgingCriteria.filter((_, i) => i !== index));
+    }
+  };
+
+  /* ================= BROWNIE POINTS HANDLERS ================= */
+  const handleBrowniePointChange = (index, field, value) => {
+    const updated = [...browniePoints];
+    updated[index][field] = value;
+    setBrowniePoints(updated);
+  };
+
+  const handleAddBrowniePoint = () => {
+    setBrowniePoints([...browniePoints, { name: '', weight: 1, description: '' }]);
+  };
+
+  const handleRemoveBrowniePoint = (index) => {
+    if (browniePoints.length > 1) {
+      setBrowniePoints(browniePoints.filter((_, i) => i !== index));
+    }
+  };
+
   /* ================= HANDLERS ================= */
   const handleChange = (e) => {
     const { name, value, type, files } = e.target;
@@ -295,6 +369,17 @@ function CreateHackathon() {
       
       // Add prizes
       payload.append("prizes", JSON.stringify(validPrizes));
+      
+      // Add criteria and brownie points
+      const validCriteria = judgingCriteria.filter(c => c.name.trim());
+      if (validCriteria.length > 0) {
+        payload.append("judgingCriteria", JSON.stringify(validCriteria));
+      }
+
+      const validBrownie = browniePoints.filter(b => b.name.trim());
+      if (validBrownie.length > 0) {
+        payload.append("browniePoints", JSON.stringify(validBrownie));
+      }
       
       // Add rounds (optional)
       if (rounds.length > 0) {
@@ -850,6 +935,76 @@ function CreateHackathon() {
                 )}
               </section>
 
+
+
+              {/* --- Judging Criteria Section --- */}
+              <section className="form-section-card">
+                <div className="form-section-header">
+                  <h2 className="form-section-title-new">Judging Criteria</h2>
+                  <p style={{ fontSize: '0.85rem', color: '#6b7280', marginTop: '5px', marginBottom: 0 }}>
+                    Parameters on which submissions will be evaluated.
+                  </p>
+                </div>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '15px' }}>
+                  {judgingCriteria.map((c, index) => (
+                    <div key={index} style={{
+                      padding: '15px', border: '1px solid #e5e7eb', borderRadius: '8px', backgroundColor: '#f9fafb'
+                    }}>
+                      <div style={{ display: 'grid', gridTemplateColumns: '2fr 1fr auto', gap: '15px', alignItems: 'end' }}>
+                        <div>
+                          <label className="form-label-new">Criteria Name</label>
+                          <input type="text" className="form-input-new" value={c.name} onChange={(e) => handleCriteriaChange(index, 'name', e.target.value)} />
+                        </div>
+                        <div>
+                          <label className="form-label-new">Weight/Points</label>
+                          <input type="number" className="form-input-new" value={c.weight} onChange={(e) => handleCriteriaChange(index, 'weight', e.target.value)} min="1" />
+                        </div>
+                        <button type="button" onClick={() => handleRemoveCriteria(index)} style={{ padding: '10px 15px', background: '#fee2e2', color: '#dc2626', border: '1px solid #fca5a5', borderRadius: '6px', cursor: 'pointer', fontWeight: 'bold' }}>Remove</button>
+                      </div>
+                      <div style={{ marginTop: '10px' }}>
+                        <label className="form-label-new">Description (Optional)</label>
+                        <input type="text" className="form-input-new" value={c.description} onChange={(e) => handleCriteriaChange(index, 'description', e.target.value)} />
+                      </div>
+                    </div>
+                  ))}
+                  <button type="button" onClick={handleAddCriteria} style={{ padding: '10px', background: '#eff6ff', color: '#2563eb', border: '1px dashed #bfdbfe', borderRadius: '8px', cursor: 'pointer', fontWeight: 'bold' }}>+ Add Criteria</button>
+                </div>
+              </section>
+
+              {/* --- Brownie Points Section --- */}
+              <section className="form-section-card">
+                <div className="form-section-header">
+                  <h2 className="form-section-title-new">Brownie Points</h2>
+                  <p style={{ fontSize: '0.85rem', color: '#6b7280', marginTop: '5px', marginBottom: 0 }}>
+                    Additional bonus points (C1-C8) that can be awarded during evaluation.
+                  </p>
+                </div>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '15px' }}>
+                  {browniePoints.map((bp, index) => (
+                    <div key={index} style={{
+                      padding: '15px', border: '1px solid #e5e7eb', borderRadius: '8px', backgroundColor: '#f9fafb'
+                    }}>
+                      <div style={{ display: 'grid', gridTemplateColumns: '1fr 2fr 1fr auto', gap: '15px', alignItems: 'end' }}>
+                        <div>
+                          <label className="form-label-new">Code</label>
+                          <input type="text" className="form-input-new" value={bp.name} onChange={(e) => handleBrowniePointChange(index, 'name', e.target.value)} />
+                        </div>
+                        <div>
+                          <label className="form-label-new">Description</label>
+                          <input type="text" className="form-input-new" value={bp.description} onChange={(e) => handleBrowniePointChange(index, 'description', e.target.value)} />
+                        </div>
+                        <div>
+                          <label className="form-label-new">Points</label>
+                          <input type="number" className="form-input-new" value={bp.weight} onChange={(e) => handleBrowniePointChange(index, 'weight', e.target.value)} min="1" />
+                        </div>
+                        <button type="button" onClick={() => handleRemoveBrowniePoint(index)} style={{ padding: '10px 15px', background: '#fee2e2', color: '#dc2626', border: '1px solid #fca5a5', borderRadius: '6px', cursor: 'pointer', fontWeight: 'bold' }}>Remove</button>
+                      </div>
+                    </div>
+                  ))}
+                  <button type="button" onClick={handleAddBrowniePoint} style={{ padding: '10px', background: '#eff6ff', color: '#2563eb', border: '1px dashed #bfdbfe', borderRadius: '8px', cursor: 'pointer', fontWeight: 'bold' }}>+ Add Brownie Point</button>
+                </div>
+              </section>
+
               {/* NEW: Search & Assign Roles Section */}
               <section className="form-section-card">
                 <div className="form-section-header">
@@ -1172,11 +1327,7 @@ function CreateHackathon() {
           )}
         </div>
       </main>
-      <footer className="admin-footer">
-        <div className="footer-content">
-          <span className="footer-brand">HackHub</span>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }

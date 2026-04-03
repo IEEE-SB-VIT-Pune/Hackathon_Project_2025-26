@@ -62,6 +62,7 @@ export const getAdminHackathons = () => API.get("/admin/hackathons");
 export const getAdminSubmissions = () => API.get("/admin/submissions");
 export const getAdminTeams = () => API.get("/admin/teams");
 export const getHackathonOverview = (id) => API.get(`/admin/hackathons/${id}/overview`);
+export const getHackathonLeaderboard = (id) => API.get(`/admin/hackathons/${id}/leaderboard`);
 export const createHackathon = (data) => API.post("/hackathons", data);
 export const updateHackathon = (id, data) => API.patch(`/hackathons/${id}`, data);
 export const updateHackathonStatus = (id, status) => API.patch(`/hackathons/${id}/status`, { status });

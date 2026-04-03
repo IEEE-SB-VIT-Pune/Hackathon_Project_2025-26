@@ -13,6 +13,7 @@ import {
   getEmailQueueStatus,
   updateUserRole,
   getAdminUsers,
+  getHackathonLeaderboard,
 } from '../controllers/admin.controller.js';
 
 const router = express.Router();
@@ -31,6 +32,7 @@ router.use(auth, adminOnly);
 router.get('/dashboard', getAdminDashboard);
 router.get('/hackathons', getAdminHackathons);
 router.get('/hackathons/:id/overview', getHackathonOverview);
+router.get('/hackathons/:id/leaderboard', getHackathonLeaderboard);
 router.get('/submissions', getAdminSubmissions);
 router.get('/teams', getAdminTeams);
 

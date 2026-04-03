@@ -40,39 +40,58 @@ const evaluationSchema = new mongoose.Schema(
 
     /* ================= CRITERIA-BASED SCORING ================= */
 
-    criteriaScores: {
-      innovation: {
-        score: { type: Number, min: 0, max: 10 },
+    criteriaScores: [
+      {
+        name: { type: String, required: true },
+        score: { type: Number, min: 0, max: 10, default: 0 },
         weight: { type: Number, default: 1 },
-      },
-      technicalImplementation: {
-        score: { type: Number, min: 0, max: 10 },
+      }
+    ],
+
+    browniePoints: [
+      {
+        name: { type: String, required: true },
         weight: { type: Number, default: 1 },
-      },
-      problemRelevance: {
-        score: { type: Number, min: 0, max: 10 },
-        weight: { type: Number, default: 1 },
-      },
-      presentation: {
-        score: { type: Number, min: 0, max: 10 },
-        weight: { type: Number, default: 1 },
-      },
-      feasibility: {
-        score: { type: Number, min: 0, max: 10 },
-        weight: { type: Number, default: 1 },
-      },
-    },
+      }
+    ],
 
     /* ================= AGGREGATED SCORES ================= */
+
+    rawScoreTotal: {
+      type: Number,
+      default: 0,
+    },
+
+    normRawScore: {
+      type: Number,
+      default: 0,
+    },
+
+    checkboxScore: {
+      type: Number,
+      default: 0,
+    },
+
+    aiScore: {
+      type: Number,
+      default: 0,
+    },
 
     totalScore: {
       type: Number,
       required: true,
     },
 
-    normalizedScore: {
-      type: Number, // optional (for judge bias correction later)
-    },
+    scoreHistory: [
+      {
+        evaluatedAt: { type: Date, default: Date.now },
+        rawScoreTotal: Number,
+        normRawScore: Number,
+        checkboxScore: Number,
+        aiScore: Number,
+        totalScore: Number,
+      }
+    ],
 
     /* ================= JUDGE FEEDBACK ================= */
 

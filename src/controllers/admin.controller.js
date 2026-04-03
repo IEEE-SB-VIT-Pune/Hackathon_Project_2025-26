@@ -3,6 +3,7 @@ import Hackathon from '../models/hackathon.model.js';
 import Team from '../models/team.model.js';
 import Submission from '../models/submission.model.js';
 import User from '../models/user.model.js';
+import Evaluation from '../models/evaluation.model.js';
 import log from '../utils/logger.js';
 import { sendEmail, getQueueStatus } from '../utils/email.js';
 
@@ -120,6 +121,61 @@ export const getHackathonOverview = async (req, res, next) => {
     next({
       statusCode: 500,
       message: 'Failed to fetch hackathon overview',
+      error: err.message,
+    });
+  }
+};
+
+/* ================= ADMIN LEADERBOARD ================= */
+export const getHackathonLeaderboard = async (req, res, next) => {
+  try {
+    const { id: hackathonId } = req.params;
+
+    if (!mongoose.isValidObjectId(hackathonId)) {
+      return next({ statusCode: 400, message: 'Invalid hackathon ID' });
+    }
+
+    log.info('ADMIN_LEADERBOARD', 'Fetching hackathon leaderboard', {
+      hackathonId,
+      by: req.user?.email,
+    });
+
+    const evaluations = await Evaluation.find({ hackathonId, status: { $ne: 'draft' } }).populate('teamId', 'name');
+
+    const teamStats = {};
+
+    evaluations.forEach((evalDoc) => {
+      // Some evaluations might have a missing team reference if the team was deleted
+      if (!evalDoc.teamId) return;
+      
+      const teamIdStr = evalDoc.teamId._id.toString();
+      if (!teamStats[teamIdStr]) {
+        teamStats[teamIdStr] = {
+          teamId: teamIdStr,
+          teamName: evalDoc.teamId.name,
+          totalScoreSum: 0,
+          judgesCount: 0,
+        };
+      }
+      teamStats[teamIdStr].totalScoreSum += evalDoc.totalScore || 0;
+      teamStats[teamIdStr].judgesCount += 1;
+    });
+
+    const leaderboard = Object.values(teamStats).map(t => ({
+      ...t,
+      finalScore: Number((t.totalScoreSum / t.judgesCount).toFixed(2))
+    })).sort((a, b) => b.finalScore - a.finalScore);
+
+    log.success('ADMIN_LEADERBOARD', 'Leaderboard generated', { teamsCount: leaderboard.length });
+    res.status(200).json({
+      success: true,
+      data: leaderboard,
+    });
+  } catch (err) {
+    log.error('ADMIN_LEADERBOARD', 'Failed to generate leaderboard', err);
+    next({
+      statusCode: 500,
+      message: 'Failed to generate leaderboard',
       error: err.message,
     });
   }
@@ -552,7 +608,7 @@ export const updateUserRole = async (req, res, next) => {
 
       // Remove any existing role for this hackathon
       targetUser.hackathonRoles = targetUser.hackathonRoles.filter(
-        r => !r.hackathonId.equals(hackathonId)
+        r => r.hackathonId?.toString() !== hackathonId.toString()
       );
       
       // Add new role

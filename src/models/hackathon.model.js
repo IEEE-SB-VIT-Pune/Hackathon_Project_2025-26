@@ -44,6 +44,43 @@ const hackathonSchema = new mongoose.Schema(
       },
     ],
 
+    judgingCriteria: {
+      type: [
+        {
+          name: { type: String, required: true, trim: true },
+          description: { type: String, trim: true },
+          weight: { type: Number, default: 1 },
+        }
+      ],
+      default: [
+        { name: "Innovation", weight: 1 },
+        { name: "Technical Implementation", weight: 1 },
+        { name: "Problem Relevance", weight: 1 },
+        { name: "Presentation", weight: 1 },
+        { name: "Feasibility", weight: 1 }
+      ]
+    },
+
+    browniePoints: {
+      type: [
+        {
+          name: { type: String, required: true, trim: true },
+          description: { type: String, trim: true },
+          weight: { type: Number, default: 1 },
+        }
+      ],
+      default: [
+        { name: "C1", description: "Working Demo", weight: 6 },
+        { name: "C2", description: "Open Source Code", weight: 5 },
+        { name: "C3", description: "Deployed Application", weight: 4 },
+        { name: "C4", description: "Impressive UX/UI", weight: 4 },
+        { name: "C5", description: "Scalability", weight: 3 },
+        { name: "C6", description: "Use of DeepTech", weight: 3 },
+        { name: "C7", description: "Sponsors Track Used", weight: 2 },
+        { name: "C8", description: "Good Pitch Deck", weight: 1 }
+      ]
+    },
+
     image: String, 
     rules: String,
     terms: String,

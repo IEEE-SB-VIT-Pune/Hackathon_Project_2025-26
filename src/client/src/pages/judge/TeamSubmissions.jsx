@@ -3,6 +3,8 @@ import { useParams, useNavigate } from "react-router-dom";
 import Navbar from "../../components/judge/Navbar";
 import Footer from "../../components/judge/Footer";
 import judgeApi from "../../services/judgeApi";
+import { getHackathonById } from "../../services/api";
+import EvaluationModal from "../../components/judge/EvaluationModal";
 import "../../styles/judge.css";
 import "../../styles/judge-additional.css";
 
@@ -18,8 +20,11 @@ const TeamSubmissions = () => {
   const [evaluationFilter, setEvaluationFilter] = useState("All");
   const [currentUser, setCurrentUser] = useState(null);
   const [submitting, setSubmitting] = useState({});
-  // Synchronous guard — prevents double-submit before React re-renders the disabled button
   const submittingRef = useRef({});
+
+  const [criteria, setCriteria] = useState([]);
+  const [browniePoints, setBrowniePoints] = useState([]);
+  const [selectedTeam, setSelectedTeam] = useState(null);
 
   useEffect(() => {
     fetchTeamsAndEvaluations();
@@ -33,6 +38,13 @@ const TeamSubmissions = () => {
       // Get current user
       const userData = await judgeApi.getMe();
       setCurrentUser(userData.data);
+
+      // Fetch hackathon details for criteria
+      const hackathonRes = await getHackathonById(hackathonId);
+      if (hackathonRes.data?.data) {
+        setCriteria(hackathonRes.data.data.judgingCriteria || []);
+        setBrowniePoints(hackathonRes.data.data.browniePoints || []);
+      }
 
       // Get all teams for this hackathon
       const teamsResponse = await judgeApi.getTeamsByHackathon(hackathonId);
@@ -76,13 +88,8 @@ const TeamSubmissions = () => {
               repoLink: team.project?.repoUrl || null,
               demoLink: team.project?.demoUrl || null,
               marks: currentJudgeEvaluation?.totalScore || 0,
-              criteriaScores: currentJudgeEvaluation?.criteriaScores || {
-                innovation: { score: 0, weight: 1 },
-                technicalImplementation: { score: 0, weight: 1 },
-                problemRelevance: { score: 0, weight: 1 },
-                presentation: { score: 0, weight: 1 },
-                feasibility: { score: 0, weight: 1 },
-              },
+              criteriaScores: currentJudgeEvaluation?.criteriaScores || [],
+              browniePointsChecked: currentJudgeEvaluation?.browniePoints || [],
               remarks: currentJudgeEvaluation?.remarks || "",
               submissionStatus: hasSubmission
                 ? currentJudgeEvaluation
@@ -103,13 +110,8 @@ const TeamSubmissions = () => {
               repoLink: null,
               demoLink: null,
               marks: 0,
-              criteriaScores: {
-                innovation: { score: 0, weight: 1 },
-                technicalImplementation: { score: 0, weight: 1 },
-                problemRelevance: { score: 0, weight: 1 },
-                presentation: { score: 0, weight: 1 },
-                feasibility: { score: 0, weight: 1 },
-              },
+              criteriaScores: [],
+              browniePointsChecked: [],
               remarks: "",
               submissionStatus: "Not Submitted",
               evaluated: false,
@@ -129,35 +131,22 @@ const TeamSubmissions = () => {
     }
   };
 
-  const handleCriteriaScoreChange = (teamId, criterion, value) => {
-    const numValue = parseFloat(value) || 0;
-    if (numValue < 0 || numValue > 10) return;
-
+  const handleEvaluationSubmit = (teamId, updatedEvaluation) => {
     setTeams((prevTeams) =>
-      prevTeams.map((team) => {
-        if (team.id === teamId) {
-          const updatedCriteria = {
-            ...team.criteriaScores,
-            [criterion]: {
-              ...team.criteriaScores[criterion],
-              score: numValue,
-            },
-          };
-
-          // Calculate total score
-          const totalScore = Object.values(updatedCriteria).reduce(
-            (sum, criteria) => sum + criteria.score * criteria.weight,
-            0,
-          );
-
-          return {
-            ...team,
-            criteriaScores: updatedCriteria,
-            marks: totalScore,
-          };
-        }
-        return team;
-      }),
+      prevTeams.map((t) =>
+        t.id === teamId
+          ? {
+              ...t,
+              evaluated: true,
+              submissionStatus: "Evaluated",
+              evaluationId: updatedEvaluation._id,
+              criteriaScores: updatedEvaluation.criteriaScores ?? t.criteriaScores,
+              browniePointsChecked: updatedEvaluation.browniePointsChecked ?? t.browniePointsChecked,
+              marks: updatedEvaluation.totalScore ?? t.marks,
+              remarks: updatedEvaluation.remarks ?? t.remarks,
+            }
+          : t
+      )
     );
   };
 
@@ -169,72 +158,7 @@ const TeamSubmissions = () => {
     );
   };
 
-  const handleSubmit = async (teamId) => {
-    // Synchronous guard: prevents double-submit before the re-render disables the button
-    if (submittingRef.current[teamId]) return;
-
-    const team = teams.find((t) => t.id === teamId);
-    if (!team) return;
-
-    submittingRef.current[teamId] = true;
-    setSubmitting((prev) => ({ ...prev, [teamId]: true }));
-
-    try {
-      const evaluationData = {
-        criteriaScores: team.criteriaScores,
-        totalScore: team.marks,
-        remarks: team.remarks,
-        round: "final",
-      };
-
-      let response;
-      if (team.evaluationId) {
-        // Update existing evaluation
-        response = await judgeApi.updateEvaluation(
-          team.evaluationId,
-          evaluationData,
-        );
-      } else {
-        // Create new evaluation
-        response = await judgeApi.createEvaluation(
-          hackathonId,
-          teamId,
-          evaluationData,
-        );
-      }
-
-      if (response.success) {
-        // FIX: Sync all score fields from the server response so the UI
-        // always reflects what was actually persisted, not just the local draft.
-        const saved = response.data;
-        setTeams((prevTeams) =>
-          prevTeams.map((t) =>
-            t.id === teamId
-              ? {
-                  ...t,
-                  evaluated: true,
-                  submissionStatus: "Evaluated",
-                  evaluationId: saved._id,
-                  // Overwrite with server-confirmed values
-                  criteriaScores: saved.criteriaScores ?? t.criteriaScores,
-                  marks: saved.totalScore ?? t.marks,
-                  remarks: saved.remarks ?? t.remarks,
-                }
-              : t,
-          ),
-        );
-        alert("Evaluation submitted successfully!");
-      } else {
-        alert(response.message || "Failed to submit evaluation");
-      }
-    } catch (err) {
-      console.error("Error submitting evaluation:", err);
-      alert(err.message || "Failed to submit evaluation");
-    } finally {
-      submittingRef.current[teamId] = false;
-      setSubmitting((prev) => ({ ...prev, [teamId]: false }));
-    }
-  };
+  // Handled inside EvaluationModal now
 
   const getStatusClass = (status) => {
     switch (status) {
@@ -407,12 +331,7 @@ const TeamSubmissions = () => {
                   <th>Team Name</th>
                   <th>Project Description</th>
                   <th>Links</th>
-                  <th>Innovation (0-10)</th>
-                  <th>Technical (0-10)</th>
-                  <th>Relevance (0-10)</th>
-                  <th>Presentation (0-10)</th>
-                  <th>Feasibility (0-10)</th>
-                  <th>Total Score</th>
+                  <th>Total Raw Score</th>
                   <th>Status</th>
                   <th>Action</th>
                 </tr>
@@ -421,7 +340,7 @@ const TeamSubmissions = () => {
                 {filteredTeams.length === 0 ? (
                   <tr>
                     <td
-                      colSpan="11"
+                      colSpan="6"
                       style={{ textAlign: "center", padding: "20px" }}
                     >
                       No teams found
@@ -487,99 +406,7 @@ const TeamSubmissions = () => {
                         </div>
                       </td>
                       <td>
-                        <input
-                          type="number"
-                          className="marks-input"
-                          min="0"
-                          max="10"
-                          step="0.5"
-                          value={team.criteriaScores.innovation.score}
-                          onChange={(e) =>
-                            handleCriteriaScoreChange(
-                              team.id,
-                              "innovation",
-                              e.target.value,
-                            )
-                          }
-                          disabled={team.evaluated}
-                        />
-                      </td>
-                      <td>
-                        <input
-                          type="number"
-                          className="marks-input"
-                          min="0"
-                          max="10"
-                          step="0.5"
-                          value={
-                            team.criteriaScores.technicalImplementation.score
-                          }
-                          onChange={(e) =>
-                            handleCriteriaScoreChange(
-                              team.id,
-                              "technicalImplementation",
-                              e.target.value,
-                            )
-                          }
-                          disabled={team.evaluated}
-                        />
-                      </td>
-                      <td>
-                        <input
-                          type="number"
-                          className="marks-input"
-                          min="0"
-                          max="10"
-                          step="0.5"
-                          value={team.criteriaScores.problemRelevance.score}
-                          onChange={(e) =>
-                            handleCriteriaScoreChange(
-                              team.id,
-                              "problemRelevance",
-                              e.target.value,
-                            )
-                          }
-                          disabled={team.evaluated}
-                        />
-                      </td>
-                      <td>
-                        <input
-                          type="number"
-                          className="marks-input"
-                          min="0"
-                          max="10"
-                          step="0.5"
-                          value={team.criteriaScores.presentation.score}
-                          onChange={(e) =>
-                            handleCriteriaScoreChange(
-                              team.id,
-                              "presentation",
-                              e.target.value,
-                            )
-                          }
-                          disabled={team.evaluated}
-                        />
-                      </td>
-                      <td>
-                        <input
-                          type="number"
-                          className="marks-input"
-                          min="0"
-                          max="10"
-                          step="0.5"
-                          value={team.criteriaScores.feasibility.score}
-                          onChange={(e) =>
-                            handleCriteriaScoreChange(
-                              team.id,
-                              "feasibility",
-                              e.target.value,
-                            )
-                          }
-                          disabled={team.evaluated}
-                        />
-                      </td>
-                      <td>
-                        <strong>{team.marks.toFixed(1)}</strong>
+                        <strong style={{ fontSize: '1.1rem', color: '#059669' }}>{team.marks ? team.marks.toFixed(1) : 0}</strong>
                       </td>
                       <td>
                         <span
@@ -592,19 +419,31 @@ const TeamSubmissions = () => {
                       </td>
                       <td>
                         {team.evaluated ? (
-                          <button className="btn-submitted" disabled>
-                            Submitted
-                          </button>
+                          <div style={{ display: 'flex', flexDirection: 'column', gap: '5px' }}>
+                            <button 
+                              className="btn-secondary" 
+                              onClick={() => setSelectedTeam(team)}
+                              style={{ padding: '6px 14px', borderRadius: '6px', fontSize: '0.9rem' }}
+                            >
+                              View Eval
+                            </button>
+                            <span style={{ fontSize: '0.8rem', color: '#10b981', textAlign: 'center', fontWeight: 'bold' }}>✓ Evaluated</span>
+                          </div>
                         ) : (
                           <button
-                            className="btn-submit"
-                            onClick={() => handleSubmit(team.id)}
-                            disabled={
-                              team.submissionStatus === "Not Submitted" ||
-                              submitting[team.id]
-                            }
+                            onClick={() => setSelectedTeam(team)}
+                            disabled={team.submissionStatus === "Not Submitted"}
+                            style={{ 
+                              padding: '8px 16px', 
+                              borderRadius: '6px', 
+                              backgroundColor: team.submissionStatus === "Not Submitted" ? '#e2e8f0' : '#2563eb', 
+                              color: team.submissionStatus === "Not Submitted" ? '#94a3b8' : 'white',
+                              border: 'none',
+                              cursor: team.submissionStatus === "Not Submitted" ? 'not-allowed' : 'pointer',
+                              fontWeight: '600'
+                            }}
                           >
-                            {submitting[team.id] ? "Submitting..." : "Submit"}
+                            Rate Project
                           </button>
                         )}
                       </td>
@@ -616,6 +455,16 @@ const TeamSubmissions = () => {
           </div>
         </div>
       </main>
+
+      <EvaluationModal 
+        isOpen={!!selectedTeam}
+        onClose={() => setSelectedTeam(null)}
+        team={selectedTeam}
+        hackathonId={hackathonId}
+        criteria={criteria}
+        browniePoints={browniePoints}
+        onEvaluationSubmit={handleEvaluationSubmit}
+      />
 
       <Footer />
     </div>

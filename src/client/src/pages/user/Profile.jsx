@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import Navbar from "../../components/common/Navbar";
+import Footer from "../../components/common/Footer";
 import ProfileHeader from "../../components/user/ProfileHeader";
 import ProfileTabs from "../../components/user/ProfileTabs";
 import OverviewTab from "../../components/user/tabs/OverviewTab";
@@ -106,18 +107,7 @@ const Profile = () => {
         )}
       </div>
 
-      {/* Footer */}
-      <footer className="profile-footer">
-        <div className="profile-footer__inner">
-          <span className="profile-footer__brand">HackHub</span>
-          <div className="profile-footer__links">
-            <Link to="/about">About</Link>
-            <Link to="/faqs">FAQs</Link>
-            <Link to="/contact">Contact</Link>
-            <Link to="/terms">Terms & Privacy</Link>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 };

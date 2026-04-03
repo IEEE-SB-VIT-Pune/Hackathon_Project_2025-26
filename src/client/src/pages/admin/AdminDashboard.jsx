@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import AdminNavbar from '../../components/admin/AdminNavbar';
+import Footer from '../../components/common/Footer';
 import StatsCard from '../../components/admin/StatsCard';
 import AlertBanner from '../../components/admin/AlertBanner';
 import HackathonCard from '../../components/admin/HackathonCard';
@@ -23,6 +24,9 @@ function AdminDashboard() {
   const [hackathons, setHackathons] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
+  
+  // Tab state
+  const [activeTab, setActiveTab] = useState('overview');
 
   // Broadcast state
   const [broadcastTarget, setBroadcastTarget] = useState('all_users');
@@ -151,8 +155,18 @@ function AdminDashboard() {
             </button>
           </div>
 
+          {/* TAB NAVIGATION */}
+          <div style={{ display: 'flex', gap: '15px', marginBottom: '30px', borderBottom: '2px solid #e5e7eb', paddingBottom: '10px', overflowX: 'auto' }}>
+            <button onClick={() => setActiveTab('overview')} style={{ padding: '10px 20px', cursor: 'pointer', background: 'none', border: 'none', borderBottom: activeTab === 'overview' ? '3px solid #2563eb' : 'none', fontWeight: activeTab === 'overview' ? 'bold' : 'normal', color: activeTab === 'overview' ? '#2563eb' : '#6b7280', fontSize: '1rem', whiteSpace: 'nowrap' }}>Overview</button>
+            <button onClick={() => setActiveTab('hackathons')} style={{ padding: '10px 20px', cursor: 'pointer', background: 'none', border: 'none', borderBottom: activeTab === 'hackathons' ? '3px solid #2563eb' : 'none', fontWeight: activeTab === 'hackathons' ? 'bold' : 'normal', color: activeTab === 'hackathons' ? '#2563eb' : '#6b7280', fontSize: '1rem', whiteSpace: 'nowrap' }}>Hackathons</button>
+            <button onClick={() => setActiveTab('roles')} style={{ padding: '10px 20px', cursor: 'pointer', background: 'none', border: 'none', borderBottom: activeTab === 'roles' ? '3px solid #2563eb' : 'none', fontWeight: activeTab === 'roles' ? 'bold' : 'normal', color: activeTab === 'roles' ? '#2563eb' : '#6b7280', fontSize: '1rem', whiteSpace: 'nowrap' }}>Role Management</button>
+            <button onClick={() => setActiveTab('communication')} style={{ padding: '10px 20px', cursor: 'pointer', background: 'none', border: 'none', borderBottom: activeTab === 'communication' ? '3px solid #2563eb' : 'none', fontWeight: activeTab === 'communication' ? 'bold' : 'normal', color: activeTab === 'communication' ? '#2563eb' : '#6b7280', fontSize: '1rem', whiteSpace: 'nowrap' }}>Communication</button>
+          </div>
+
           {/* OVERVIEW */}
-          <section className="overview-section">
+          {activeTab === 'overview' && (
+            <>
+              <section className="overview-section">
             <h2 className="section-title">Overview</h2>
 
             <div className="stats-grid">
@@ -188,9 +202,12 @@ function AdminDashboard() {
               </div>
             )}
           </section>
+          </>
+          )}
 
           {/* BROADCAST SECTION */}
-          <section className="applications-section" style={{ marginTop: '40px' }}>
+          {activeTab === 'communication' && (
+          <section className="applications-section">
             <h2 className="section-title">Communication & Broadcasts</h2>
             <div style={{ background: '#fff', padding: '25px', borderRadius: '12px', boxShadow: '0 2px 10px rgba(0,0,0,0.05)' }}>
               <form onSubmit={handleBroadcast}>
@@ -254,8 +271,10 @@ function AdminDashboard() {
               </form>
             </div>
           </section>
+          )}
 
           {/* HACKATHONS */}
+          {activeTab === 'hackathons' && (
           <section className="hackathons-section">
             <h2 className="section-title">My Hackathons</h2>
 
@@ -272,27 +291,17 @@ function AdminDashboard() {
               </div>
             )}
           </section>
+          )}
 
           {/* ROLE MANAGEMENT */}
-          <RoleManagement />
+          {activeTab === 'roles' && (
+            <RoleManagement />
+          )}
 
         </div>
       </main>
 
-      {/* FOOTER */}
-      <footer className="admin-footer">
-        <div className="footer-content">
-          <div className="footer-left">
-            <span className="footer-brand">HackHub</span>
-          </div>
-          <div className="footer-right">
-            <a href="#about" className="footer-link">About</a>
-            <a href="#faqs" className="footer-link">FAQs</a>
-            <a href="#contact" className="footer-link">Contact</a>
-            <a href="#terms" className="footer-link">Terms & Privacy</a>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }
