@@ -1,5 +1,6 @@
-import { Link, useLocation } from 'react-router-dom';
-import { useAuth } from '../../context/AuthContext';
+import { Link, useLocation } from "react-router-dom";
+import { useAuth } from "../../context/AuthContext";
+import Icon from "../common/Icon";
 
 function AdminNavbar() {
   const { pathname } = useLocation();
@@ -12,7 +13,19 @@ function AdminNavbar() {
       <div className="navbar-content">
         {/* Left */}
         <div className="navbar-left">
-          <Link to="/" className="navbar-logo" style={{ textDecoration: 'none', color: 'inherit' }}>🚀 HackPlatform</Link>
+          <Link
+            to="/"
+            className="navbar-logo"
+            style={{ textDecoration: "none", color: "inherit" }}
+          >
+            <Icon
+              name="rocket"
+              size={20}
+              className="inline mr-2"
+              style={{ color: "inherit" }}
+            />
+            HackPlatform
+          </Link>
         </div>
 
         {/* Center */}
@@ -24,22 +37,19 @@ function AdminNavbar() {
         <div className="navbar-right">
           <Link
             to="/admin/dashboard"
-            className={`nav-link ${isActive('/admin/dashboard') ? 'active' : ''}`}
+            className={`nav-link ${isActive("/admin/dashboard") ? "active" : ""}`}
           >
             Dashboard
           </Link>
 
           <Link
             to="/admin/hackathons/create"
-            className={`nav-link ${isActive('/admin/hackathons/create') ? 'active' : ''}`}
+            className={`nav-link ${isActive("/admin/hackathons/create") ? "active" : ""}`}
           >
             Create Hackathon
           </Link>
 
-          <button
-            onClick={logout}
-            className="nav-link logout"
-          >
+          <button onClick={logout} className="nav-link logout">
             Logout
           </button>
         </div>

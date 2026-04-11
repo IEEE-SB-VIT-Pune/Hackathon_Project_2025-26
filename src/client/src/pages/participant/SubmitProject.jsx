@@ -1,8 +1,13 @@
-import React, { useState, useEffect } from 'react';
-import { useNavigate, useParams } from 'react-router-dom';
-import API, { getAuthHeaders, getHackathonById, getMe } from '../../services/api';
-import Footer from '../../components/judge/Footer';
-import '../../styles/SubmitProject.css';
+import React, { useState, useEffect } from "react";
+import { useNavigate, useParams } from "react-router-dom";
+import Icon from "../../components/common/Icon";
+import API, {
+  getAuthHeaders,
+  getHackathonById,
+  getMe,
+} from "../../services/api";
+import Footer from "../../components/judge/Footer";
+import "../../styles/SubmitProject.css";
 
 const SubmitProject = () => {
   const navigate = useNavigate();
@@ -10,36 +15,36 @@ const SubmitProject = () => {
 
   const [loading, setLoading] = useState(true);
   const [submitting, setSubmitting] = useState(false);
-  const [error, setError] = useState('');
+  const [error, setError] = useState("");
   const [success, setSuccess] = useState(false);
-  
+
   const [hackathon, setHackathon] = useState(null);
   const [userTeam, setUserTeam] = useState(null); // Stores full team object for criteria check
   const [userTeamId, setUserTeamId] = useState(null);
 
   const [formData, setFormData] = useState({
-    title: '',
-    track: '',
-    description: '',
-    pptLink: '',
-    repoLink: '',
-    demoLink: ''
+    title: "",
+    track: "",
+    description: "",
+    pptLink: "",
+    repoLink: "",
+    demoLink: "",
   });
 
   useEffect(() => {
     const fetchContext = async () => {
       try {
         setLoading(true);
-        
+
         // 1. Get Hackathon Details (includes minTeamSize/maxTeamSize)
         const hackRes = await getHackathonById(hackathonId);
         const hackData = hackRes.data?.data || hackRes.data;
         setHackathon(hackData);
 
         // 2. Immediate Status Check
-        if (hackData.status !== 'ongoing') {
-            setLoading(false);
-            return; 
+        if (hackData.status !== "ongoing") {
+          setLoading(false);
+          return;
         }
 
         // 3. Get Current User Data
@@ -47,12 +52,15 @@ const SubmitProject = () => {
         const userData = userRes.data?.data || userRes.data;
 
         // 4. Find the team where current user is the leader
-        const teamsRes = await API.get(`/hackathons/${hackathonId}/teams`, getAuthHeaders());
+        const teamsRes = await API.get(
+          `/hackathons/${hackathonId}/teams`,
+          getAuthHeaders(),
+        );
         const teams = teamsRes.data?.data || teamsRes.data || [];
-        
-        const myTeam = teams.find(t => {
-            const leaderId = t.leader?._id || t.leader;
-            return String(leaderId) === String(userData._id);
+
+        const myTeam = teams.find((t) => {
+          const leaderId = t.leader?._id || t.leader;
+          return String(leaderId) === String(userData._id);
         });
 
         if (myTeam) {
@@ -61,7 +69,6 @@ const SubmitProject = () => {
         } else {
           setError("Access Denied: Only the Team Leader can submit a project.");
         }
-
       } catch (err) {
         console.error("Submission Context Error:", err);
         setError("Failed to load submission requirements.");
@@ -79,12 +86,12 @@ const SubmitProject = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!userTeamId) {
-        setError("Missing Team Information. Only leaders can submit.");
-        return;
+      setError("Missing Team Information. Only leaders can submit.");
+      return;
     }
 
     setSubmitting(true);
-    setError('');
+    setError("");
 
     try {
       const payload = {
@@ -95,30 +102,42 @@ const SubmitProject = () => {
         pptLink: formData.pptLink,
         repoLink: formData.repoLink,
         demoLink: formData.demoLink,
-        track: formData.track
+        track: formData.track,
       };
 
-      const response = await API.post("/submissions", payload, getAuthHeaders());
+      const response = await API.post(
+        "/submissions",
+        payload,
+        getAuthHeaders(),
+      );
       if (response.data?.success) {
         setSuccess(true);
       }
     } catch (err) {
-      const msg = err.response?.data?.message || "Submission failed. Ensure team meets minimum size and hackathon is ongoing.";
+      const msg =
+        err.response?.data?.message ||
+        "Submission failed. Ensure team meets minimum size and hackathon is ongoing.";
       setError(msg);
     } finally {
       setSubmitting(false);
     }
   };
 
-  if (loading) return <div className="sp-loading"><h2>Initializing Portal...</h2></div>;
+  if (loading)
+    return (
+      <div className="sp-loading">
+        <h2>Initializing Portal...</h2>
+      </div>
+    );
 
   // --- 5. DYNAMIC CRITERIA CHECK ---
   const minRequired = hackathon?.minTeamSize || 1;
-  const acceptedMembers = userTeam?.members?.filter(m => m.status === 'accepted') || [];
+  const acceptedMembers =
+    userTeam?.members?.filter((m) => m.status === "accepted") || [];
   const meetsCriteria = acceptedMembers.length >= minRequired;
 
   // --- LOCKED STATE UI: STATUS CHECK ---
-  if (hackathon && hackathon.status !== 'ongoing') {
+  if (hackathon && hackathon.status !== "ongoing") {
     return (
       <div className="sp-wrapper">
         <div className="sp-container">
@@ -126,10 +145,14 @@ const SubmitProject = () => {
             <div className="locked-icon">🔒</div>
             <h2 className="sp-section-title">Portal Locked</h2>
             <p className="locked-msg">
-              Submissions are only accepted when the status is <strong>'ongoing'</strong>. 
-              Current status of <strong>{hackathon.title}</strong> is <strong>{hackathon.status}</strong>.
+              Submissions are only accepted when the status is{" "}
+              <strong>'ongoing'</strong>. Current status of{" "}
+              <strong>{hackathon.title}</strong> is{" "}
+              <strong>{hackathon.status}</strong>.
             </p>
-            <button className="sp-btn-secondary" onClick={() => navigate(-1)}>Go Back</button>
+            <button className="sp-btn-secondary" onClick={() => navigate(-1)}>
+              Go Back
+            </button>
           </div>
         </div>
         <Footer />
@@ -143,19 +166,33 @@ const SubmitProject = () => {
       <div className="sp-wrapper">
         <div className="sp-container">
           <div className="sp-form-card locked-state">
-            <div className="locked-icon">⚠️</div>
+            <div className="locked-icon">
+              <Icon name="alert-circle" size={48} className="text-orange-500" />
+            </div>
             <h2 className="sp-section-title">Ineligible for Submission</h2>
             <p className="locked-msg">
-              Your team <strong>{userTeam?.name}</strong> does not meet the minimum requirements for this hackathon.
-              <br/><br/>
-              Required: <strong>{minRequired} accepted members</strong>. 
-              <br/>
-              Current: <strong>{acceptedMembers.length} accepted members</strong>.
+              Your team <strong>{userTeam?.name}</strong> does not meet the
+              minimum requirements for this hackathon.
+              <br />
+              <br />
+              Required: <strong>{minRequired} accepted members</strong>.
+              <br />
+              Current:{" "}
+              <strong>{acceptedMembers.length} accepted members</strong>.
             </p>
-            <button className="sp-btn-primary" onClick={() => navigate(`/user/hackathon/${hackathonId}/manage-team`)}>
+            <button
+              className="sp-btn-primary"
+              onClick={() =>
+                navigate(`/user/hackathon/${hackathonId}/manage-team`)
+              }
+            >
               Manage Team Members
             </button>
-            <button className="sp-btn-secondary" style={{marginTop: '10px'}} onClick={() => navigate(-1)}>
+            <button
+              className="sp-btn-secondary"
+              style={{ marginTop: "10px" }}
+              onClick={() => navigate(-1)}
+            >
               Go Back
             </button>
           </div>
@@ -169,12 +206,18 @@ const SubmitProject = () => {
     return (
       <div className="sp-wrapper">
         <div className="sp-success-container">
-          <div className="sp-success-icon">🚀</div>
+          <div className="sp-success-icon">
+            <Icon name="rocket" size={48} className="text-primary-dark" />
+          </div>
           <h1 className="sp-success-title">Submission Received</h1>
           <p className="sp-success-desc">
-            Your project <strong>{formData.title}</strong> has been logged. Judges will review it shortly.
+            Your project <strong>{formData.title}</strong> has been logged.
+            Judges will review it shortly.
           </p>
-          <button className="sp-btn-primary" onClick={() => navigate(`/user/hackathon/${hackathonId}`)}>
+          <button
+            className="sp-btn-primary"
+            onClick={() => navigate(`/user/hackathon/${hackathonId}`)}
+          >
             Return to Dashboard
           </button>
         </div>
@@ -196,20 +239,44 @@ const SubmitProject = () => {
       <div className="sp-container">
         <form className="sp-form-card" onSubmit={handleSubmit}>
           {error && <div className="sp-error-banner">{error}</div>}
-          
+
           <div className="sp-form-section">
             <h3 className="sp-section-title">1. Project Overview</h3>
             <div className="sp-input-group">
-              <label>Project Title <span className="req">*</span></label>
-              <input type="text" name="title" onChange={handleChange} required placeholder="Name of your innovation" />
+              <label>
+                Project Title <span className="req">*</span>
+              </label>
+              <input
+                type="text"
+                name="title"
+                onChange={handleChange}
+                required
+                placeholder="Name of your innovation"
+              />
             </div>
             <div className="sp-input-group">
-              <label>Track / Category <span className="req">*</span></label>
-              <input type="text" name="track" onChange={handleChange} required placeholder="e.g. Fintech, Healthcare" />
+              <label>
+                Track / Category <span className="req">*</span>
+              </label>
+              <input
+                type="text"
+                name="track"
+                onChange={handleChange}
+                required
+                placeholder="e.g. Fintech, Healthcare"
+              />
             </div>
             <div className="sp-input-group">
-              <label>Description <span className="req">*</span></label>
-              <textarea name="description" onChange={handleChange} required rows="4" placeholder="Briefly describe your solution..."></textarea>
+              <label>
+                Description <span className="req">*</span>
+              </label>
+              <textarea
+                name="description"
+                onChange={handleChange}
+                required
+                rows="4"
+                placeholder="Briefly describe your solution..."
+              ></textarea>
             </div>
           </div>
 
@@ -218,23 +285,51 @@ const SubmitProject = () => {
           <div className="sp-form-section">
             <h3 className="sp-section-title">2. Submission Links</h3>
             <div className="sp-input-group">
-              <label>Presentation Link (PPT/PDF) <span className="req">*</span></label>
-              <input type="url" name="pptLink" onChange={handleChange} required placeholder="Google Drive or Canva link" />
+              <label>
+                Presentation Link (PPT/PDF) <span className="req">*</span>
+              </label>
+              <input
+                type="url"
+                name="pptLink"
+                onChange={handleChange}
+                required
+                placeholder="Google Drive or Canva link"
+              />
             </div>
             <div className="sp-input-group">
               <label>GitHub Repository</label>
-              <input type="url" name="repoLink" onChange={handleChange} placeholder="https://github.com/..." />
+              <input
+                type="url"
+                name="repoLink"
+                onChange={handleChange}
+                placeholder="https://github.com/..."
+              />
             </div>
             <div className="sp-input-group">
               <label>Video / Demo Link</label>
-              <input type="url" name="demoLink" onChange={handleChange} placeholder="YouTube or Loom link" />
+              <input
+                type="url"
+                name="demoLink"
+                onChange={handleChange}
+                placeholder="YouTube or Loom link"
+              />
             </div>
           </div>
 
           <div className="sp-form-actions">
-             <button type="button" className="sp-btn-secondary" onClick={() => navigate(-1)}>Cancel</button>
-             <button type="submit" className="sp-btn-primary" disabled={submitting || !!error}>
-              {submitting ? 'Uploading...' : 'Confirm Submission'}
+            <button
+              type="button"
+              className="sp-btn-secondary"
+              onClick={() => navigate(-1)}
+            >
+              Cancel
+            </button>
+            <button
+              type="submit"
+              className="sp-btn-primary"
+              disabled={submitting || !!error}
+            >
+              {submitting ? "Uploading..." : "Confirm Submission"}
             </button>
           </div>
         </form>

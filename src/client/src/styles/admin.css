@@ -145,12 +145,12 @@ body {
 /* ============================================ */
 
 .create-hackathon-btn {
-  background-color: #4f9cf9;
+  background-color: #1076c9;
   color: #ffffff;
   border: none;
-  padding: 12px 24px;
+  padding: 10px 20px;
   border-radius: 8px;
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 600;
   cursor: pointer;
   display: flex;
@@ -160,7 +160,7 @@ body {
 }
 
 .create-hackathon-btn:hover {
-  background-color: #3a87e0;
+  background-color: #0e2872;
 }
 
 .btn-icon {
@@ -173,9 +173,9 @@ body {
 /* ============================================ */
 
 .section-title {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 600;
-  color: #043873;
+  color: #0e2872;
   margin-bottom: 16px;
 }
 
@@ -190,23 +190,24 @@ body {
 }
 
 .stats-card {
-  background-color: #d9e7fa;
-  padding: 24px;
-  border-radius: 12px;
+  background-color: #f0f4ff;
+  padding: 18px 16px;
+  border-radius: 10px;
   text-align: center;
+  border: 1px solid #e0e4f7;
 }
 
 .stats-value {
-  font-size: 36px;
+  font-size: 28px;
   font-weight: 700;
-  color: #043873;
-  margin-bottom: 8px;
+  color: #1076c9;
+  margin-bottom: 6px;
 }
 
 .stats-label {
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 500;
-  color: #5a6c7d;
+  color: #4b5563;
 }
 
 /* ============================================ */
@@ -224,23 +225,24 @@ body {
 }
 
 .alert-banner {
-  background-color: #ffe492;
-  padding: 16px 20px;
+  background-color: #fef3c7;
+  padding: 14px 16px;
   border-radius: 8px;
   display: flex;
   align-items: center;
   gap: 12px;
+  border: 1px solid #fcd34d;
 }
 
 .alert-icon {
-  color: #9d7e1d;
+  color: #d97706;
   flex-shrink: 0;
 }
 
 .alert-message {
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 500;
-  color: #5a4a0f;
+  color: #92400e;
 }
 
 /* ============================================ */
@@ -279,9 +281,9 @@ body {
 }
 
 .hackathon-title {
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 600;
-  color: #043873;
+  color: #0e2872;
 }
 
 .status-badge {
@@ -292,18 +294,18 @@ body {
 }
 
 .status-live {
-  background-color: #4f9cf9;
+  background-color: #1076c9;
   color: #ffffff;
 }
 
 .status-draft {
-  background-color: #ffe492;
-  color: #5a4a0f;
+  background-color: #4ff3f5;
+  color: #0e2872;
 }
 
 .status-closed {
-  background-color: #e0e0e0;
-  color: #5a6c7d;
+  background-color: #e0e4f7;
+  color: #0e2872;
 }
 
 .hackathon-meta {
@@ -612,13 +614,13 @@ body {
 }
 
 .btn-primary {
-  background-color: #4f9cf9;
+  background-color: #1076c9;
   color: #ffffff;
 }
 
 .btn-primary:hover {
-  background-color: #3a87e0;
-  box-shadow: 0 4px 12px rgba(79, 156, 249, 0.3);
+  background-color: #0e2872;
+  box-shadow: 0 4px 12px rgba(16, 118, 201, 0.3);
 }
 
 .btn-primary:active {
@@ -626,19 +628,19 @@ body {
 }
 
 .btn-primary:disabled {
-  background-color: #a0c4f5;
+  background-color: #7db7e8;
   cursor: not-allowed;
   opacity: 0.6;
 }
 
 .btn-secondary {
-  background-color: #f0f0f0;
-  color: #043873;
-  border: 1px solid #d0d0d0;
+  background-color: #f0f4ff;
+  color: #0e2872;
+  border: 1px solid #d0d8f1;
 }
 
 .btn-secondary:hover {
-  background-color: #e0e0e0;
+  background-color: #e0e8f7;
 }
 
 .btn-secondary:active {

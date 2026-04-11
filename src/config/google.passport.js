@@ -20,34 +20,32 @@ const credentialsPresent = googleClientId && googleClientSecret &&
   googleClientId !== 'placeholder_client_id';
 
 if (credentialsPresent) {
-  passport.use(
-    new GoogleStrategy(
-      {
-        clientID: googleClientId,
-        clientSecret: googleClientSecret,
-        callbackURL: `${process.env.BACKEND_URL || 'http://localhost:8080'}/api/oauth/google/callback`,
-      },
-      async (accessToken, refreshToken, profile, done) => {
-        try {
-          let user = await User.findOne({ googleId: profile.id });
+  passport.use('google', new GoogleStrategy(
+    {
+      clientID: googleClientId,
+      clientSecret: googleClientSecret,
+      callbackURL: `${process.env.BACKEND_URL || 'http://localhost:8080'}/api/oauth/google/callback`,
+    },
+    async (accessToken, refreshToken, profile, done) => {
+      try {
+        let user = await User.findOne({ googleId: profile.id });
 
-          if (!user) {
-            user = await User.create({
-              fullName: profile.displayName,
-              email: profile.emails[0].value,
-              googleId: profile.id,
-              authProvider: 'google',
-              systemRole: 'user',
-            });
-          }
-
-          return done(null, user);
-        } catch (err) {
-          return done(err, null);
+        if (!user) {
+          user = await User.create({
+            fullName: profile.displayName,
+            email: profile.emails[0].value,
+            googleId: profile.id,
+            authProvider: 'google',
+            systemRole: 'user',
+          });
         }
+
+        return done(null, user);
+      } catch (err) {
+        return done(err, null);
       }
-    )
-  );
+    }
+  ));
   console.log('✅ Google OAuth strategy registered');
 } else {
   console.warn('⚠️  Google OAuth credentials not set — Google login will be disabled');

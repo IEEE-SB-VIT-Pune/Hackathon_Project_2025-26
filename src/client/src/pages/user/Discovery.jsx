@@ -16,7 +16,7 @@ const Discovery = () => {
   // --- STATE ---
   const [activeFilter, setActiveFilter] = useState("All");
   const [allHackathons, setAllHackathons] = useState([]);
-  const [userRoles, setUserRoles] = useState([]); 
+  const [userRoles, setUserRoles] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [visibleCount, setVisibleCount] = useState(6);
@@ -30,8 +30,10 @@ const Discovery = () => {
     const registrationRecord = userRoles.find((role) => {
       const roleHackathonId = String(role.hId || role.hackathonId || "");
       const currentHackathonId = String(h._id || "");
-      
-      return roleHackathonId === currentHackathonId && role.role === 'participant';
+
+      return (
+        roleHackathonId === currentHackathonId && role.role === "participant"
+      );
     });
 
     const isUserRegistered = !!registrationRecord;
@@ -39,13 +41,14 @@ const Discovery = () => {
     return {
       _id: h._id,
       name: h.title,
-      organization: "HackathonHub", 
+      organization: "HackathonHub",
       description: h.description || "No description provided.",
-      image: h.image || `https://placehold.co/600x300/e2e8f0/475569?text=Hackathon`,
+      image:
+        h.image || `https://placehold.co/600x300/e2e8f0/475569?text=Hackathon`,
       status: h.status,
       isRegistered: isUserRegistered, // This flag controls the button state
       teamSize: h.maxTeamSize ? `1–${h.maxTeamSize}` : "Open",
-      mode: "Online", 
+      mode: "Online",
       deadline: h.registrationDeadline
         ? new Date(h.registrationDeadline).toLocaleDateString("en-US", {
             month: "short",
@@ -88,7 +91,6 @@ const Discovery = () => {
         const hackRes = await API.get(endpoint);
         const raw = hackRes.data?.data ?? [];
         setAllHackathons(raw);
-
       } catch (err) {
         setError(err?.response?.data?.message || "Failed to load hackathons.");
       } finally {
@@ -102,10 +104,10 @@ const Discovery = () => {
   const filteredHackathons = useMemo(() => {
     // Map data only when both roles and hackathons are loaded
     const shaped = allHackathons.map(toCardShape);
-    
+
     if (activeFilter === "All") return shaped;
     return shaped.filter((h) =>
-      h.tags.some((tag) => tag.toLowerCase() === activeFilter.toLowerCase())
+      h.tags.some((tag) => tag.toLowerCase() === activeFilter.toLowerCase()),
     );
   }, [activeFilter, allHackathons, userRoles]);
 
@@ -114,7 +116,7 @@ const Discovery = () => {
 
   const handleFilterChange = (f) => {
     setActiveFilter(f);
-    setVisibleCount(6); 
+    setVisibleCount(6);
   };
 
   return (
@@ -135,8 +137,13 @@ const Discovery = () => {
 
         {!loading && error && (
           <div className="empty-state-message">
-            <p>⚠️ {error}</p>
-            <button className="btn-secondary" onClick={() => window.location.reload()}>
+            <p style={{ display: "flex", alignItems: "center", gap: "8px" }}>
+              <Icon name="alert-circle" size={20} /> {error}
+            </p>
+            <button
+              className="btn-secondary"
+              onClick={() => window.location.reload()}
+            >
               Retry
             </button>
           </div>
@@ -149,12 +156,12 @@ const Discovery = () => {
               key={hackathon._id}
               hackathon={hackathon}
               onRegister={() => {
-                  // Direct registered or ongoing users to the dashboard
-                  if (hackathon.isRegistered || hackathon.status !== 'open') {
-                    navigate(`/user/hackathon/${hackathon._id}`);
-                  } else {
-                    navigate(`/user/hackathon/${hackathon._id}/register`);
-                  }
+                // Direct registered or ongoing users to the dashboard
+                if (hackathon.isRegistered || hackathon.status !== "open") {
+                  navigate(`/user/hackathon/${hackathon._id}`);
+                } else {
+                  navigate(`/user/hackathon/${hackathon._id}/register`);
+                }
               }}
               onViewDetails={() => navigate(`/user/hackathon/${hackathon._id}`)}
             />
@@ -163,7 +170,10 @@ const Discovery = () => {
         {!loading && !error && filteredHackathons.length === 0 && (
           <div className="empty-state-message">
             <p>No hackathons match "{activeFilter}".</p>
-            <button className="btn-secondary" onClick={() => setActiveFilter("All")}>
+            <button
+              className="btn-secondary"
+              onClick={() => setActiveFilter("All")}
+            >
               Show All
             </button>
           </div>
