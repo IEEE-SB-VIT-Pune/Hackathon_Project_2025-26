@@ -8,10 +8,10 @@ import "../../styles/admin.css";
 
 /* ─── Status colour map ─────────────────────────────── */
 const STATUS_CFG = {
-  open: { bg: "#dcfce7", text: "#166534", label: "OPEN", icon: "🟢" },
-  ongoing: { bg: "#dbeafe", text: "#1e40af", label: "ONGOING", icon: "🔵" },
-  completed: { bg: "#f3f4f6", text: "#4b5563", label: "DONE", icon: "⚫" },
-  cancelled: { bg: "#fee2e2", text: "#991b1b", label: "CANCELLED", icon: "🔴" },
+  open: { bg: "#dcfce7", text: "#166534", label: "OPEN", icon: "unlock" },
+  ongoing: { bg: "#dbeafe", text: "#1e40af", label: "ONGOING", icon: "play-circle" },
+  completed: { bg: "#f3f4f6", text: "#4b5563", label: "DONE", icon: "check-circle" },
+  cancelled: { bg: "#fee2e2", text: "#991b1b", label: "CANCELLED", icon: "x-circle" },
 };
 const cfg = (s) => STATUS_CFG[s] || STATUS_CFG.completed;
 
@@ -126,9 +126,12 @@ const HackCard = ({ h, navigate }) => {
             fontSize: "0.72rem",
             fontWeight: "800",
             whiteSpace: "nowrap",
+            display: "flex",
+            alignItems: "center",
+            gap: "4px"
           }}
         >
-          {s.icon} {s.label}
+          <Icon name={s.icon} size={14} /> {s.label}
         </span>
       </div>
 
@@ -424,15 +427,15 @@ function OrganizerDashboard() {
             </div>
             <button
               style={{
-                background: COLORS.secondary.orange,
-                color: "white",
+                background: COLORS.secondary.yellow,
+                color: "#043873",
                 padding: "14px 28px",
                 borderRadius: "12px",
                 border: "none",
                 fontSize: "1rem",
                 fontWeight: "bold",
                 cursor: "pointer",
-                boxShadow: `0 4px 15px ${COLORS.secondary.orange}66`,
+                boxShadow: `0 4px 15px rgba(255, 228, 146, 0.4)`,
                 transition: "transform 0.1s",
               }}
               onClick={() => navigate("/admin/hackathons/create")}
@@ -470,13 +473,13 @@ function OrganizerDashboard() {
               label="Teams Enrolled"
               value={totalTeams}
               iconName="users"
-              color={`${COLORS.secondary.cyan}15`}
+              color={`${COLORS.secondary.lightBlue}15`}
             />
             <StatBox
               label="Submissions"
               value={totalSubmissions}
               iconName="file"
-              color={`${COLORS.secondary.orange}15`}
+              color={`${COLORS.secondary.yellow}15`}
             />
           </div>
 
@@ -507,11 +510,15 @@ function OrganizerDashboard() {
                   fontSize: "0.85rem",
                   textTransform: "capitalize",
                   transition: "all 0.15s",
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "6px"
                 }}
               >
+                {s !== "all" && <Icon name={cfg(s).icon} size={14} />}
                 {s === "all"
                   ? "All"
-                  : cfg(s).icon + " " + s.charAt(0).toUpperCase() + s.slice(1)}
+                  : s.charAt(0).toUpperCase() + s.slice(1)}
                 {s !== "all" && (
                   <span style={{ marginLeft: "6px", opacity: 0.7 }}>
                     ({hackathons.filter((h) => h.status === s).length})
@@ -533,7 +540,9 @@ function OrganizerDashboard() {
                 color: "#9ca3af",
               }}
             >
-              <div style={{ fontSize: "2.5rem", marginBottom: "15px" }}>🏁</div>
+              <div style={{ marginBottom: "15px", color: COLORS.primary.light }}>
+                <Icon name="flag" size={40} className="mx-auto" />
+              </div>
               {totalHackathons === 0 ? (
                 <p style={{ fontSize: "1.1rem", fontWeight: "500" }}>
                   You haven't created any hackathons yet. Click{" "}

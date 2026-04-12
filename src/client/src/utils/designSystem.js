@@ -6,13 +6,13 @@
 export const COLORS = {
   // Primary Colors
   primary: {
-    dark: '#0E2872',      // Main brand color
-    light: '#1076C9',     // Secondary brand blue
+    dark: '#043873',      // Main brand color
+    light: '#4F9CF9',     // Secondary brand blue
   },
   // Secondary Colors
   secondary: {
-    cyan: '#4FF3F5',      // Accent cyan
-    orange: '#FBB03C',    // Accent orange
+    yellow: '#FFE492',    // Accent yellow
+    lightBlue: '#A7CEFC', // Accent light blue
   },
   // Neutral Colors
   neutral: {
@@ -35,10 +35,10 @@ export const COLORS = {
 
 // Tailwind class helpers
 export const BUTTON_STYLES = {
-  primary: 'bg-primary-dark hover:bg-primary-light text-white font-semibold py-3 px-6 rounded-lg transition-all shadow-md hover:shadow-lg',
-  secondary: 'bg-secondary-cyan hover:bg-opacity-90 text-primary-dark font-semibold py-3 px-6 rounded-lg transition-all',
-  outlined: 'border-2 border-primary-dark text-primary-dark hover:bg-primary-dark hover:text-white font-semibold py-3 px-6 rounded-lg transition-all',
-  orange: 'bg-secondary-orange hover:opacity-90 text-primary-dark font-semibold py-3 px-6 rounded-lg transition-all',
+  primary: 'bg-[#043873] hover:bg-[#4F9CF9] text-white font-semibold py-3 px-6 rounded-lg transition-all shadow-md hover:shadow-lg',
+  secondary: 'bg-[#A7CEFC] hover:bg-opacity-90 text-[#043873] font-semibold py-3 px-6 rounded-lg transition-all',
+  outlined: 'border-2 border-[#043873] text-[#043873] hover:bg-[#043873] hover:text-white font-semibold py-3 px-6 rounded-lg transition-all',
+  yellow: 'bg-[#FFE492] hover:opacity-90 text-[#043873] font-semibold py-3 px-6 rounded-lg transition-all',
   small: 'py-2 px-4 text-sm',
 };
 
@@ -98,16 +98,16 @@ export const getIconName = (emoji) => {
  */
 export const getBrandColorClass = (colorKey) => {
   const classMap = {
-    primaryDark: 'text-[#0E2872]',
-    primaryLight: 'text-[#1076C9]',
-    secondaryCyan: 'text-[#4FF3F5]',
-    secondaryOrange: 'text-[#FBB03C]',
+    primaryDark: 'text-[#043873]',
+    primaryLight: 'text-[#4F9CF9]',
+    secondaryYellow: 'text-[#FFE492]',
+    secondaryLightBlue: 'text-[#A7CEFC]',
     white: 'text-white',
-    black: 'text-[#1C1C1C]',
-    bgPrimaryDark: 'bg-[#0E2872]',
-    bgPrimaryLight: 'bg-[#1076C9]',
-    bgSecondaryCyan: 'bg-[#4FF3F5]',
-    bgSecondaryOrange: 'bg-[#FBB03C]',
+    black: 'text-[#212529]',
+    bgPrimaryDark: 'bg-[#043873]',
+    bgPrimaryLight: 'bg-[#4F9CF9]',
+    bgSecondaryYellow: 'bg-[#FFE492]',
+    bgSecondaryLightBlue: 'bg-[#A7CEFC]',
   };
   return classMap[colorKey] || '';
 };
@@ -119,14 +119,14 @@ export const getBrandColorStyle = (colorKey) => {
   const styleMap = {
     primaryDark: { color: COLORS.primary.dark },
     primaryLight: { color: COLORS.primary.light },
-    secondaryCyan: { color: COLORS.secondary.cyan },
-    secondaryOrange: { color: COLORS.secondary.orange },
+    secondaryYellow: { color: COLORS.secondary.yellow },
+    secondaryLightBlue: { color: COLORS.secondary.lightBlue },
     white: { color: COLORS.neutral.white },
-    black: { color: COLORS.neutral.black },
+    black: { color: '#212529' },
     bgPrimaryDark: { backgroundColor: COLORS.primary.dark },
     bgPrimaryLight: { backgroundColor: COLORS.primary.light },
-    bgSecondaryCyan: { backgroundColor: COLORS.secondary.cyan },
-    bgSecondaryOrange: { backgroundColor: COLORS.secondary.orange },
+    bgSecondaryYellow: { backgroundColor: COLORS.secondary.yellow },
+    bgSecondaryLightBlue: { backgroundColor: COLORS.secondary.lightBlue },
   };
   return styleMap[colorKey] || {};
 };

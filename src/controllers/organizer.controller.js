@@ -6,6 +6,24 @@ import Submission from '../models/submission.model.js';
 import log from '../utils/logger.js';
 import mongoose from 'mongoose';
 
+export const getOrganizerApplications = async (req, res, next) => {
+  try {
+    // Return empty array for now since no model exists, preventing 404 on frontend
+    res.status(200).json({ success: true, count: 0, data: [] });
+  } catch (err) {
+    log.error('ORGANIZER_APPLICATIONS', 'Failed', err);
+    next({ statusCode: 500, message: err.message });
+  }
+};
+
+export const reviewOrganizerApplication = async (req, res, next) => {
+  try {
+    res.status(200).json({ success: true, message: 'Reviewed successfully (mock)' });
+  } catch (err) {
+    next({ statusCode: 500, message: err.message });
+  }
+};
+
 
 export const getOrganizerHackathons = async (req, res, next) => {
   try {

@@ -5,16 +5,16 @@
 
 :root {
   /* Primary Colors */
-  --primary-dark: #0E2872;
-  --primary-light: #1076C9;
+  --primary-dark: #043873;
+  --primary-light: #4F9CF9;
   
   /* Secondary Colors */
-  --secondary-cyan: #4FF3F5;
-  --secondary-orange: #FBB03C;
+  --secondary-cyan: #FFE492; /* Actually Yellow */
+  --secondary-orange: #A7CEFC; /* Actually Light Blue */
   
   /* Neutral Colors */
   --neutral-white: #FFFFFF;
-  --neutral-black: #1C1C1C;
+  --neutral-black: #212529;
   
   /* Gray Scale */
   --gray-50: #F9FAFB;

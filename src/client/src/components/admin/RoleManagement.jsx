@@ -280,7 +280,7 @@ export default function RoleManagement() {
               opacity: 0.4,
             }}
           >
-            🔍
+            <Icon name="search" size={16} />
           </span>
           <input
             value={search}
@@ -366,7 +366,7 @@ export default function RoleManagement() {
               flex: "0 0 auto",
             }}
           >
-            ✕ Clear
+            <Icon name="x" size={14} className="mr-1 inline-block" /> Clear
           </button>
         )}
       </div>
@@ -592,7 +592,7 @@ export default function RoleManagement() {
                         style={{
                           padding: "9px 18px",
                           background:
-                            saving === user._id ? "#9ca3af" : "#2563eb",
+                          saving === user._id ? "#9ca3af" : "#043873",
                           color: "white",
                           border: "none",
                           borderRadius: "8px",
@@ -605,11 +605,11 @@ export default function RoleManagement() {
                         }}
                         onMouseOver={(e) => {
                           if (saving !== user._id)
-                            e.currentTarget.style.background = "#1d4ed8";
+                            e.currentTarget.style.background = "#4F9CF9";
                         }}
                         onMouseOut={(e) => {
                           if (saving !== user._id)
-                            e.currentTarget.style.background = "#2563eb";
+                            e.currentTarget.style.background = "#043873";
                         }}
                       >
                         {saving === user._id ? "..." : "Save"}

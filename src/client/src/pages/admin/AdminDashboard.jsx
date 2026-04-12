@@ -198,15 +198,15 @@ function AdminDashboard() {
             </div>
             <button
               style={{
-                background: COLORS.secondary.orange,
-                color: "white",
+                background: COLORS.secondary.yellow,
+                color: "#043873",
                 padding: "15px 30px",
                 borderRadius: "8px",
                 border: "none",
                 fontSize: "1.2rem",
                 fontWeight: "bold",
                 cursor: "pointer",
-                boxShadow: `0 4px 6px ${COLORS.secondary.orange}40`,
+                boxShadow: `0 4px 6px rgba(255, 228, 146, 0.4)`,
               }}
               onClick={() => navigate("/admin/hackathons/create")}
             >
@@ -307,7 +307,9 @@ function AdminDashboard() {
             className="applications-section"
             style={{ marginTop: "40px" }}
           >
-            <h2 className="section-title">📧 Communication & Broadcasts</h2>
+            <h2 className="section-title">
+              <Icon name="mail" size={20} className="mr-2 inline-block" /> Communication & Broadcasts
+            </h2>
             <div
               style={{
                 background: "#fff",
@@ -600,39 +602,24 @@ function AdminDashboard() {
                       </div>
                     </div>
                   ))}
-              </div>
-            )}
-          </section>
-
-          {/* ROLE MANAGEMENT */}
-          <RoleManagement />
+                </div>
+              )}
+            </section>
         </div>
       </main>
 
-      {/* FOOTER */}
       <footer className="admin-footer">
         <div className="footer-content">
-          <div className="footer-left">
-            <span className="footer-brand">HackPlatform</span>
-          </div>
+          <div className="footer-left"><span className="footer-brand">HackPlatform</span></div>
           <div className="footer-right">
-            <a href="#about" className="footer-link">
-              About
-            </a>
-            <a href="#faqs" className="footer-link">
-              FAQs
-            </a>
-            <a href="#contact" className="footer-link">
-              Contact
-            </a>
-            <a href="#terms" className="footer-link">
-              Terms & Privacy
-            </a>
+            <a href="#about" className="footer-link">About</a>
+            <a href="#terms" className="footer-link">Terms & Privacy</a>
           </div>
         </div>
       </footer>
     </div>
   );
 }
+
 
 export default AdminDashboard;
