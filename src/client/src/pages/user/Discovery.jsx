@@ -4,7 +4,7 @@ import Navbar from "../../components/common/Navbar";
 import FilterBar from "../../components/user/FilterBar";
 import HackathonCard from "../../components/user/cards/HackathonCard";
 import Footer from "../../components/common/Footer";
-import API, { getAuthHeaders } from "../../services/api";
+import { API, getAuthHeaders } from "../../services/api";
 import { Search } from 'lucide-react';
 import "../../styles/discovery.css";
 
@@ -16,7 +16,7 @@ const Discovery = () => {
   // --- STATE ---
   const [activeFilter, setActiveFilter] = useState("All");
   const [allHackathons, setAllHackathons] = useState([]);
-  const [userRoles, setUserRoles] = useState([]); 
+  const [userRoles, setUserRoles] = useState([]);
   const [userTeams, setUserTeams] = useState([]); // Track user's teams
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -52,20 +52,20 @@ const Discovery = () => {
     return {
       _id: h._id,
       name: h.title,
-      organization: "HackathonHub", 
+      organization: "HackathonHub",
       description: h.description || "No description provided.",
       image: h.image || `https://placehold.co/600x300/e2e8f0/475569?text=Hackathon`,
       status: displayStatus, // Now the badge will correctly show 'closed'
       isRegistered: isUserRegistered,
       isRegistrationClosed: isRegistrationClosed, // Pass this to shut down the button
       teamSize: h.maxTeamSize ? `1–${h.maxTeamSize}` : "Open",
-      mode: "Online", 
+      mode: "Online",
       deadline: rawDeadline
         ? new Date(rawDeadline).toLocaleDateString("en-US", {
-            month: "short",
-            day: "numeric",
-            year: "numeric",
-          })
+          month: "short",
+          day: "numeric",
+          year: "numeric",
+        })
         : "TBD",
       prizePool: h.prizePool || "TBA",
       tags: [displayStatus], // Now the tags will also show 'closed'
@@ -85,7 +85,7 @@ const Discovery = () => {
           userData = userRes.data?.data || userRes.data;
           setUserRoles(userData?.hackathonRoles || []);
         } catch (authErr) {
-          console.log("Visitor mode: Proceeding without user roles.");
+          console.log("Visitor mode: Proceeding without user roles.", authErr);
         }
 
         // 2. Fetch All Hackathons or Search Results
@@ -103,16 +103,17 @@ const Discovery = () => {
             try {
               const teamsRes = await API.get(`/hackathons/${hackathon._id}/teams`, getAuthHeaders());
               const allTeams = teamsRes.data?.data || [];
-              
+
               // Find if user is in any team for this hackathon
-              const userTeam = allTeams.find(team => 
-                team.members?.some(m => 
+              const userTeam = allTeams.find(team => (
+                team.members?.some(m =>
                   String(m.userId?._id || m.userId) === String(userData._id)
-                )
+                ))
               );
-              
+
               return userTeam ? { hackathonId: hackathon._id, team: userTeam } : null;
             } catch (err) {
+              console.log(err)
               return null;
             }
           });
@@ -135,7 +136,7 @@ const Discovery = () => {
   const filteredHackathons = useMemo(() => {
     // Map data only when both roles, teams, and hackathons are loaded
     const shaped = allHackathons.map(toCardShape);
-    
+
     if (activeFilter === "All") return shaped;
     return shaped.filter((h) =>
       h.tags.some((tag) => tag.toLowerCase() === activeFilter.toLowerCase())
@@ -147,7 +148,7 @@ const Discovery = () => {
 
   const handleFilterChange = (f) => {
     setActiveFilter(f);
-    setVisibleCount(6); 
+    setVisibleCount(6);
   };
 
   const handleSearchClick = () => {
@@ -169,16 +170,16 @@ const Discovery = () => {
       <div className="discovery-header">
         <div className="discovery-header-content">
           <div className="discovery-search-wrapper">
-             <Search size={20} color="#64748b" className="search-icon" />
-             <input 
-               type="text"
-               value={searchInput}
-               onChange={(e) => setSearchInput(e.target.value)}
-               onKeyDown={handleKeyDown}
-               placeholder="Search hackathons, themes, or tech stacks..."
-               className="discovery-search-input"
-             />
-             <button onClick={handleSearchClick} className="discovery-search-btn">Search</button>
+            <Search size={20} color="#64748b" className="search-icon" />
+            <input
+              type="text"
+              value={searchInput}
+              onChange={(e) => setSearchInput(e.target.value)}
+              onKeyDown={handleKeyDown}
+              placeholder="Search hackathons, themes, or tech stacks..."
+              className="discovery-search-input"
+            />
+            <button onClick={handleSearchClick} className="discovery-search-btn">Search</button>
           </div>
           <FilterBar
             activeFilter={activeFilter}
@@ -210,12 +211,12 @@ const Discovery = () => {
               key={hackathon._id}
               hackathon={hackathon}
               onRegister={() => {
-                  // Direct registered or ongoing users to the dashboard
-                  if (hackathon.isRegistered || hackathon.status !== 'open') {
-                    navigate(`/user/hackathon/${hackathon._id}`);
-                  } else {
-                    navigate(`/user/hackathon/${hackathon._id}/register`);
-                  }
+                // Direct registered or ongoing users to the dashboard
+                if (hackathon.isRegistered || hackathon.status !== 'open') {
+                  navigate(`/user/hackathon/${hackathon._id}`);
+                } else {
+                  navigate(`/user/hackathon/${hackathon._id}/register`);
+                }
               }}
               onViewDetails={() => navigate(`/user/hackathon/${hackathon._id}`)}
             />
