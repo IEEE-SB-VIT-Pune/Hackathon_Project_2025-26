@@ -37,15 +37,14 @@ const Footer = () => {
                         <Link to="/about" className="footer-link">
                             <FaArrowRight size={16} /> About Us
                         </Link>
+                        <Link to="/developers" className="footer-link">
+                            <FaArrowRight size={16} /> Developers
+                        </Link>
                         <Link to="/faqs" className="footer-link">
                             <FaArrowRight size={16} /> FAQs
                         </Link>
-                        <Link to="/contact" className="footer-link">
-                            <FaArrowRight size={16} /> Support
-                        </Link>
-                        <Link to="/terms" className="footer-link">
-                            <FaArrowRight size={16} /> Terms & Privacy
-                        </Link>
+                        
+                        
                     </nav>
                 </div>
             </div>

@@ -100,11 +100,11 @@ const Home = () => {
                 gyroControls: false,
                 minHeight: 200.00,
                 minWidth: 200.00,
-                scale: 1.00,
-                scaleMobile: 1.00,
-                points: Math.floor(Math.random() * (22 - 18 + 1)) + 18, 
-                maxDistance: Math.floor(Math.random() * (25 - 20 + 1)) + 20,
-                spacing: Math.floor(Math.random() * (20 - 15 + 1)) + 15,
+                scale: 1.15, // Scales down the rendering resolution slightly to boost FPS
+                scaleMobile: 2.00, // Greatly scales down resolution on mobile for performance
+                points: 12, // Reduced number of points from ~20 to 12. Vanta.net calculates lines exponentially (N^2), so fewer nodes = MASSIVE performance gain
+                maxDistance: 24, // Let nodes link up slightly further away to compensate for fewer nodes
+                spacing: 18, 
                 color: 0x60a5fa,
                 backgroundColor: 0x1e3a8a 
             }));
@@ -139,9 +139,7 @@ const Home = () => {
             {/* ===== HERO ===== */}
             <section className="home-hero" ref={vantaRef}>
                 <div className="hero-content">
-                    <div className="hero-badge">
-                        <span>The Hackathon Hosting Platform</span>
-                    </div>
+                    
 
                     <h1 className="hero-title">
                         Build. Compete.
@@ -178,7 +176,7 @@ const Home = () => {
                     <h2 className="section-title">Everything You Need</h2>
                     <p className="section-subtitle">
                         Jump into any area of the platform. Whether you're here to compete,
-                        judge, or organize — we've got you covered.
+                        judge, or organize ... we've got you covered.
                     </p>
                 </div>
 

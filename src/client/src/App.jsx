@@ -1,5 +1,8 @@
 import { Routes, Route, Navigate } from "react-router-dom";
+/* Public Pages */
 import Home from "./pages/home/Home";
+import AboutUs from "./pages/about/AboutUs";
+import Developers from "./pages/about/Developers";
 import ProtectedRoute from "./components/auth/ProtectedRoute";
 
 import Login from "./pages/auth/Login";
@@ -45,10 +48,11 @@ function App() {
     <Routes>
       {/* ===== PUBLIC ROUTES ===== */}
       <Route path="/" element={<Home />} />
+      <Route path="/about" element={<AboutUs />} />
+      <Route path="/developers" element={<Developers />} />
       <Route path="/login" element={<Login />} />
       <Route path="/signup" element={<Signup />} />
       <Route path="/login-success" element={<LoginSuccess />} />
-      <Route path="/calendar" element={<Calendar />} />
 
       {/* ===== ADMIN-ONLY ROUTES ===== */}
       <Route element={<ProtectedRoute allowedRoles={["admin"]} />}>
@@ -78,6 +82,7 @@ function App() {
         <Route path="/profile" element={<Profile />} />
         <Route path="/profile/:userId" element={<PublicProfile />} />
         <Route path="/discovery" element={<Discovery />} />
+        <Route path="/calendar" element={<Calendar />} />
         <Route path="/apply-organizer" element={<ApplyOrganizer />} />
 
         {/* Hackathon Routes */}

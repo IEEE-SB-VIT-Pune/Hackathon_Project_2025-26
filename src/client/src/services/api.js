@@ -48,6 +48,8 @@ export const signUp = (formData) => API.post("/users/register", formData);
 export const getMe = () => API.get("/users/me");
 export const searchUsers = (query) => API.get(`/users/search?q=${query}`);
 
+export default API;
+
 /* ================= PROFILE APIs ================= */
 export const getMyProfile = () => API.get("/profile/me");
 export const updateMyProfile = (data) => API.put("/users/me", data);

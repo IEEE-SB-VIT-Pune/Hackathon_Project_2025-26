@@ -111,6 +111,14 @@ const Navbar = ({ navigationMode = "user", showBadge = "", title = "" }) => {
                 <Telescope size={16} /> Discovery
               </Link>
               <Link
+                to="/about"
+                className={`nav-item-user ${location.pathname === "/about" ? "active" : ""}`}
+                title="About Us"
+                style={{ display: 'flex', alignItems: 'center', gap: '6px' }}
+              >
+                <Telescope size={16} /> About Us
+              </Link>
+              <Link
                 to="/calendar"
                 className={`nav-item-user ${location.pathname === "/calendar" ? "active" : ""}`}
                 style={{ display: 'flex', alignItems: 'center', gap: '6px' }}
