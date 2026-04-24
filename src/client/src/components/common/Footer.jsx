@@ -43,8 +43,8 @@ const Footer = () => {
                         <Link to="/faqs" className="footer-link">
                             <FaArrowRight size={16} /> FAQs
                         </Link>
-                        
-                        
+
+
                     </nav>
                 </div>
             </div>
@@ -52,9 +52,8 @@ const Footer = () => {
             <div className="footer-bottom">
                 <p>&copy; {new Date().getFullYear()} HackHub. All rights reserved.</p>
                 <div className="social-links">
-                    <a href="#" className="social-icon"><FaGithub size={20} /></a>
-                    <a href="#" className="social-icon"><CiTwitter size={20} /></a>
-                    <a href="#" className="social-icon"><CiLinkedin size={20} /></a>
+                    <a href="https://github.com/IEEE-SB-VIT-Pune" className="social-icon"><FaGithub size={20} /></a>
+                    <a href="https://www.linkedin.com/company/ieee-student-branch-vit-pune/" className="social-icon"><CiLinkedin size={20} /></a>
                     <a href="#" className="social-icon"><CiMail size={20} /></a>
                 </div>
             </div>

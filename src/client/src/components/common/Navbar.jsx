@@ -1,12 +1,12 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import { useAuth } from "../../context/AuthContext";
-import { 
-  Telescope, 
-  Calendar as CalendarIcon, 
-  Settings, 
-  LogOut, 
-  LogIn, 
+import {
+  Telescope,
+  Calendar as CalendarIcon,
+  Settings,
+  LogOut,
+  LogIn,
   UserPlus,
   Shield,
   LayoutDashboard,
@@ -111,6 +111,13 @@ const Navbar = ({ navigationMode = "user", showBadge = "", title = "" }) => {
                 <Telescope size={16} /> Discovery
               </Link>
               <Link
+                to="/calendar"
+                className={`nav-item-user ${location.pathname === "/calendar" ? "active" : ""}`}
+                style={{ display: 'flex', alignItems: 'center', gap: '6px' }}
+              >
+                <CalendarIcon size={16} /> Calendar
+              </Link>
+              <Link
                 to="/about"
                 className={`nav-item-user ${location.pathname === "/about" ? "active" : ""}`}
                 title="About Us"
@@ -118,23 +125,16 @@ const Navbar = ({ navigationMode = "user", showBadge = "", title = "" }) => {
               >
                 <Telescope size={16} /> About Us
               </Link>
-              <Link
-                to="/calendar"
-                className={`nav-item-user ${location.pathname === "/calendar" ? "active" : ""}`}
-                style={{ display: 'flex', alignItems: 'center', gap: '6px' }}
-              >
-                <CalendarIcon size={16} /> Calendar
-              </Link>
               {(user?.systemRole === "mentor" ||
                 user?.systemRole === "admin") && (
-                <Link
-                  to="/organizer/dashboard"
-                  className={`nav-item-user ${location.pathname.startsWith("/organizer") ? "active" : ""}`}
-                  style={{ display: 'flex', alignItems: 'center', gap: '6px' }}
-                >
-                  <Settings size={16} /> My Hackathons
-                </Link>
-              )}
+                  <Link
+                    to="/organizer/dashboard"
+                    className={`nav-item-user ${location.pathname.startsWith("/organizer") ? "active" : ""}`}
+                    style={{ display: 'flex', alignItems: 'center', gap: '6px' }}
+                  >
+                    <Settings size={16} /> My Hackathons
+                  </Link>
+                )}
               {user?.systemRole === "admin" && (
                 <Link
                   to="/admin/dashboard"

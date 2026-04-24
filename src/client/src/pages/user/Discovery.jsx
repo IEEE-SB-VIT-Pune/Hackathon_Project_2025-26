@@ -169,18 +169,35 @@ const Discovery = () => {
 
       <div className="discovery-header">
         <div className="discovery-header-content">
-          <div className="discovery-search-wrapper">
-            <Search size={20} color="#64748b" className="search-icon" />
+          {/* Added 'relative' and 'flex' properties */}
+          <div className="relative flex items-center w-full max-w-2xl mx-auto">
+
+            {/* Icon positioned absolutely to the left */}
+            <Search
+              size={20}
+              className="absolute left-4 text-slate-400 pointer-events-none"
+            />
+
             <input
               type="text"
               value={searchInput}
               onChange={(e) => setSearchInput(e.target.value)}
               onKeyDown={handleKeyDown}
               placeholder="Search hackathons, themes, or tech stacks..."
-              className="discovery-search-input"
+              /* pl-12 (padding-left) ensures text starts after the icon */
+              className="w-full pl-12 pr-24 py-3 bg-white border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 transition-all"
             />
-            <button onClick={handleSearchClick} className="discovery-search-btn">Search</button>
+
+            {/* Button positioned absolutely to the right */}
+            <button
+              onClick={handleSearchClick}
+              className="absolute right-1.5 px-6 py-2 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors"
+            >
+              Search
+            </button>
+
           </div>
+
           <FilterBar
             activeFilter={activeFilter}
             onFilterChange={handleFilterChange}
