@@ -3,6 +3,7 @@ import { Routes, Route, Navigate } from "react-router-dom";
 import Home from "./pages/home/Home";
 import AboutUs from "./pages/about/AboutUs";
 import Developers from "./pages/about/Developers";
+import Faq from "./pages/faq/Faq";
 import ProtectedRoute from "./components/auth/ProtectedRoute";
 
 import Login from "./pages/auth/Login";
@@ -50,6 +51,7 @@ function App() {
       <Route path="/" element={<Home />} />
       <Route path="/about" element={<AboutUs />} />
       <Route path="/developers" element={<Developers />} />
+      <Route path="/faq" element={<Faq />} />
       <Route path="/login" element={<Login />} />
       <Route path="/signup" element={<Signup />} />
       <Route path="/login-success" element={<LoginSuccess />} />

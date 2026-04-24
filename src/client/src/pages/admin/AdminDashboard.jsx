@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 
 import AdminNavbar from '../../components/admin/AdminNavbar';
 import StatsCard from '../../components/admin/StatsCard';
@@ -292,10 +292,9 @@ function AdminDashboard() {
             <span className="footer-brand">HackHub</span>
           </div>
           <div className="footer-right">
-            <a href="#about" className="footer-link">About</a>
-            <a href="#faqs" className="footer-link">FAQs</a>
-            <a href="#contact" className="footer-link">Contact</a>
-            <a href="#terms" className="footer-link">Terms & Privacy</a>
+            <Link to="/about" className="footer-link">About</Link>
+            <Link to="/faq" className="footer-link">FAQs</Link>
+            <Link to="/terms" className="footer-link">Terms & Privacy</Link>
           </div>
         </div>
       </footer>
