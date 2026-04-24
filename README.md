@@ -486,3 +486,22 @@ No
 
 Notes / Dependencies:
 NA
+
+
+### LOG 11
+Changes in project log:
+
+Date: 2026-04-25
+Contributor: Sanika
+
+🔧 Type of Change: added faqs
+Files Modified:
+
+Description:
+1. faq added for all types of user
+
+Database / Schema Changes:
+No
+
+Notes / Dependencies:
+NA
