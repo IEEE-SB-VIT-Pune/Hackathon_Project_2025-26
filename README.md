@@ -526,3 +526,32 @@ No
 
 Notes / Dependencies:
 NA
+
+
+### LOG 13
+Changes in project log: 
+
+Date: 2026-04-25
+Contributor: Ojas
+
+🔧 Type of Change: user page ui fixed in phone view
+
+Files Modified:
+src/client/src/components/auth/AuthLayout.jsx
+src/client/src/pages/participant/TeamDetails.jsx
+src/client/src/styles/SingleHackathon.css
+src/client/src/styles/TeamDetails.css
+src/client/src/styles/auth.css
+src/client/src/styles/discovery.css
+src/client/src/styles/footer.css
+src/client/src/styles/global.css
+src/client/src/styles/home.css
+src/client/src/styles/profile.css
+
+Description:In the latest update, I improved the user dashboard UI. Fixed navbar alignment, made it responsive for mobile devices, and corrected role badge overflow issues. Also updated CSS to remove overlapping elements
+
+Database / Schema Changes:
+No
+
+Notes / Dependencies:
+NA
