@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate, Link } from 'react-router-dom';
 import { API, getAuthHeaders, requestJoinTeam, withdrawJoinRequest, getMe } from '../../services/api';
 import Navbar from '../../components/common/Navbar';
+import '../../styles/TeamDetails.css';
 
 const TeamDetails = () => {
     const { id, teamId } = useParams();
@@ -64,15 +65,15 @@ const TeamDetails = () => {
     const teamSkills = team?.teamSkills || [];
 
     if (loading) return (
-        <div>
+        <div className="team-details-wrapper">
             <Navbar />
-            <div style={styles.loading}>Loading Team Details...</div>
+            <div className="team-details-loading">Loading Team Details...</div>
         </div>
     );
     if (!team) return (
-        <div>
+        <div className="team-details-wrapper">
             <Navbar />
-            <div style={styles.error}>Team not found.</div>
+            <div className="team-details-error">Team not found.</div>
         </div>
     );
 
@@ -81,110 +82,110 @@ const TeamDetails = () => {
     const isFull = team.members.filter(m => m.status === 'accepted').length >= (team.maxSize || 4);
 
     return (
-        <div>
+        <div className="team-details-wrapper">
             <Navbar />
-            <div style={styles.container}>
-            <div style={styles.header}>
-                <button onClick={() => navigate(-1)} style={styles.backBtn}>← Back</button>
-                <div style={styles.titleSection}>
-                    <h1 style={styles.teamName}>{team.name}</h1>
-                    <div style={styles.badgeRow}>
-                        {team.isOpenToJoin ? <span style={styles.openBadge}>Open to Join</span> : <span style={styles.closedBadge}>Closed</span>}
-                        <span style={styles.memberCount}>{team.members.filter(m => m.status === 'accepted').length} / {team.maxSize || 4} Members</span>
+            <div className="team-details-container">
+            <div className="team-details-header">
+                <button onClick={() => navigate(-1)} className="team-details-back-btn">← Back</button>
+                <div className="team-details-title-section">
+                    <h1 className="team-details-team-name">{team.name}</h1>
+                    <div className="team-details-badge-row">
+                        {team.isOpenToJoin ? <span className="team-details-open-badge">Open to Join</span> : <span className="team-details-closed-badge">Closed</span>}
+                        <span className="team-details-member-count">{team.members.filter(m => m.status === 'accepted').length} / {team.maxSize || 4} Members</span>
                     </div>
                 </div>
             </div>
 
-            <div style={styles.contentGrid}>
-                <div style={styles.mainCol}>
-                    <div style={styles.card}>
-                        <h2 style={styles.cardTitle}>Project Idea</h2>
-                        <p style={styles.description}>{team.projectDescription || "No description provided yet."}</p>
+            <div className="team-details-content-grid">
+                <div className="team-details-main-col">
+                    <div className="team-details-card">
+                        <h2 className="team-details-card-title">Project Idea</h2>
+                        <p className="team-details-description">{team.projectDescription || "No description provided yet."}</p>
                     </div>
 
-                    <div style={styles.card}>
-                        <h2 style={styles.cardTitle}>Team Skills</h2>
-                        <div style={styles.skillsWrapper}>
+                    <div className="team-details-card">
+                        <h2 className="team-details-card-title">Team Skills</h2>
+                        <div className="team-details-skills-wrapper">
                             {teamSkills.length > 0 ? (
                                 teamSkills.map(skill => (
-                                    <span key={skill} style={styles.skillTag}>{skill}</span>
+                                    <span key={skill} className="team-details-skill-tag">{skill}</span>
                                 ))
                             ) : (
-                                <p style={styles.noSkills}>No skills specific to this team yet.</p>
+                                <p className="team-details-no-skills">No skills specific to this team yet.</p>
                             )}
                         </div>
                     </div>
 
-                    <div style={styles.card}>
-                        <h2 style={styles.cardTitle}>Team Members</h2>
-                        <div style={styles.memberList}>
+                    <div className="team-details-card">
+                        <h2 className="team-details-card-title">Team Members</h2>
+                        <div className="team-details-member-list">
                             {team.members.filter(m => m.status === 'accepted').map(member => (
-                                <div key={member.userId?._id} style={styles.memberRow}>
-                                    <div style={styles.memberAvatar}>
+                                <div key={member.userId?._id} className="team-details-member-row">
+                                    <div className="team-details-member-avatar">
                                         {member.userId?.fullName?.charAt(0).toUpperCase()}
                                     </div>
-                                    <div style={styles.memberInfo}>
-                                        <div style={styles.memberName}>{member.userId?.fullName}</div>
-                                        <div style={styles.memberRole}>{member.role || "Member"}</div>
-                                        <div style={styles.memberSkills}>
+                                    <div className="team-details-member-info">
+                                        <div className="team-details-member-name">{member.userId?.fullName}</div>
+                                        <div className="team-details-member-role">{member.role || "Member"}</div>
+                                        <div className="team-details-member-skills">
                                             {member.userId?.skills?.slice(0, 3).map(s => (
-                                                <span key={s} style={styles.miniSkill}>{s}</span>
+                                                <span key={s} className="team-details-mini-skill">{s}</span>
                                             ))}
-                                            {member.userId?.skills?.length > 3 && <span style={styles.miniSkill}>+{member.userId.skills.length - 3}</span>}
+                                            {member.userId?.skills?.length > 3 && <span className="team-details-mini-skill">+{member.userId.skills.length - 3}</span>}
                                         </div>
                                     </div>
-                                    <Link to={`/profile/${member.userId?._id}`} style={styles.viewProfileBtn}>View Profile</Link>
+                                    <Link to={`/profile/${member.userId?._id}`} className="team-details-view-profile-btn">View Profile</Link>
                                 </div>
                             ))}
                         </div>
                     </div>
                 </div>
 
-                <div style={styles.sideCol}>
-                    <div style={styles.card}>
-                        <h2 style={styles.cardTitle}>Status</h2>
+                <div className="team-details-side-col">
+                    <div className="team-details-card">
+                        <h2 className="team-details-card-title">Status</h2>
                         {isMember ? (
-                            <div style={styles.statusBox}>You are in this team</div>
+                            <div className="team-details-status-box">You are in this team</div>
                         ) : isPending ? (
-                            <div style={styles.pendingBox}>
+                            <div className="team-details-pending-box">
                                 <p>Your request is pending</p>
-                                <button onClick={handleWithdraw} disabled={requesting} style={styles.withdrawBtn}>
+                                <button onClick={handleWithdraw} disabled={requesting} className="team-details-withdraw-btn">
                                     {requesting ? "Withdrawing..." : "Withdraw Request"}
                                 </button>
                             </div>
                         ) : isFull ? (
-                            <div style={styles.fullBox}>Team is full</div>
+                            <div className="team-details-full-box">Team is full</div>
                         ) : !team.isOpenToJoin ? (
-                          <div style={styles.fullBox}>Not accepting requests</div>
+                          <div className="team-details-full-box">Not accepting requests</div>
                         ) : showJoinForm ? (
-                            <div style={styles.joinForm}>
+                            <div className="team-details-join-form">
                                 <textarea 
-                                    style={styles.textarea}
+                                    className="team-details-textarea"
                                     placeholder="Message to leader (optional)..."
                                     value={joinMessage}
                                     onChange={(e) => setJoinMessage(e.target.value)}
                                 />
-                                <div style={styles.btnRow}>
-                                    <button onClick={() => setShowJoinForm(false)} style={styles.cancelBtn}>Cancel</button>
-                                    <button onClick={handleJoin} disabled={requesting} style={styles.confirmJoinBtn}>
+                                <div className="team-details-btn-row">
+                                    <button onClick={() => setShowJoinForm(false)} className="team-details-cancel-btn">Cancel</button>
+                                    <button onClick={handleJoin} disabled={requesting} className="team-details-confirm-join-btn">
                                         {requesting ? "Sending..." : "Send Request"}
                                     </button>
                                 </div>
                             </div>
                         ) : (
-                            <button onClick={() => setShowJoinForm(true)} style={styles.joinBtn}>Request to Join</button>
+                            <button onClick={() => setShowJoinForm(true)} className="team-details-join-btn">Request to Join</button>
                         )}
                     </div>
 
-                    <div style={styles.card}>
-                        <h2 style={styles.cardTitle}>Team Leader</h2>
-                        <div style={styles.leaderRow}>
-                            <div style={styles.memberAvatar} className="large">
+                    <div className="team-details-card">
+                        <h2 className="team-details-card-title">Team Leader</h2>
+                        <div className="team-details-leader-row">
+                            <div className="team-details-member-avatar large">
                                 {team.leader?.fullName?.charAt(0).toUpperCase()}
                             </div>
-                            <div style={styles.memberInfo}>
-                                <div style={styles.memberName}>{team.leader?.fullName}</div>
-                                <div style={styles.memberRole}>Leader</div>
+                            <div className="team-details-member-info">
+                                <div className="team-details-member-name">{team.leader?.fullName}</div>
+                                <div className="team-details-member-role">Leader</div>
                             </div>
                         </div>
                     </div>
@@ -196,42 +197,7 @@ const TeamDetails = () => {
 };
 
 const styles = {
-    container: { maxWidth: '1000px', margin: '0 auto', padding: '40px 20px', fontFamily: '"Inter", sans-serif', color: '#1e293b' },
-    header: { display: 'flex', alignItems: 'center', gap: '24px', marginBottom: '32px' },
-    backBtn: { padding: '8px 16px', background: '#f1f5f9', border: 'none', borderRadius: '8px', cursor: 'pointer', fontWeight: '600' },
-    teamName: { fontSize: '2rem', fontWeight: '800', margin: 0 },
-    badgeRow: { display: 'flex', gap: '12px', marginTop: '8px', alignItems: 'center' },
-    openBadge: { background: '#dcfce7', color: '#166534', padding: '4px 12px', borderRadius: '20px', fontSize: '0.8rem', fontWeight: '700' },
-    closedBadge: { background: '#f1f5f9', color: '#64748b', padding: '4px 12px', borderRadius: '20px', fontSize: '0.8rem', fontWeight: '700' },
-    memberCount: { fontSize: '0.85rem', color: '#64748b', fontWeight: '600' },
-    contentGrid: { display: 'grid', gridTemplateColumns: '1.5fr 1fr', gap: '24px' },
-    card: { background: '#fff', borderRadius: '16px', padding: '24px', boxShadow: '0 1px 3px rgba(0,0,0,0.1)', marginBottom: '24px' },
-    cardTitle: { fontSize: '1.1rem', fontWeight: '700', marginBottom: '20px', color: '#0f172a' },
-    description: { fontSize: '1rem', color: '#475569', lineHeight: '1.6' },
-    memberList: { display: 'flex', flexDirection: 'column', gap: '16px' },
-    memberRow: { display: 'flex', alignItems: 'center', gap: '12px', padding: '12px', borderRadius: '12px', background: '#f8fafc' },
-    memberAvatar: { width: '40px', height: '40px', borderRadius: '50%', background: '#1d4ed8', color: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: '700' },
-    memberName: { fontSize: '0.95rem', fontWeight: '700' },
-    memberRole: { fontSize: '0.8rem', color: '#64748b' },
-    viewProfileBtn: { marginLeft: 'auto', fontSize: '0.85rem', color: '#1d4ed8', fontWeight: '600', textDecoration: 'none' },
-    statusBox: { padding: '16px', background: '#dcfce7', color: '#166534', borderRadius: '12px', fontWeight: '700', textAlign: 'center' },
-    pendingBox: { padding: '16px', background: '#fef3c7', color: '#92400e', borderRadius: '12px', textAlign: 'center' },
-    fullBox: { padding: '16px', background: '#fee2e2', color: '#b91c1c', borderRadius: '12px', fontWeight: '700', textAlign: 'center' },
-    joinBtn: { width: '100%', padding: '14px', background: '#111827', color: '#fff', border: 'none', borderRadius: '12px', fontWeight: '700', cursor: 'pointer' },
-    withdrawBtn: { marginTop: '12px', width: '100%', padding: '10px', background: '#fff', color: '#b91c1c', border: '1px solid #fee2e2', borderRadius: '8px', fontWeight: '600', cursor: 'pointer' },
-    joinForm: { display: 'flex', flexDirection: 'column', gap: '12px' },
-    textarea: { width: '100%', padding: '12px', borderRadius: '8px', border: '1px solid #e2e8f0', minHeight: '100px', outline: 'none' },
-    btnRow: { display: 'flex', gap: '12px' },
-    cancelBtn: { flex: 1, padding: '10px', background: '#f1f5f9', border: 'none', borderRadius: '8px', fontWeight: '600', cursor: 'pointer' },
-    confirmJoinBtn: { flex: 2, padding: '10px', background: '#111827', color: '#fff', border: 'none', borderRadius: '8px', fontWeight: '600', cursor: 'pointer' },
-    leaderRow: { display: 'flex', alignItems: 'center', gap: '16px' },
-    loading: { display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '300px', fontSize: '1.2rem', color: '#64748b' },
-    error: { textAlign: 'center', padding: '40px', color: '#ef4444' },
-    skillsWrapper: { display: 'flex', flexWrap: 'wrap', gap: '8px' },
-    skillTag: { background: '#eff6ff', color: '#1d4ed8', border: '1px solid #dbeafe', padding: '6px 14px', borderRadius: '50px', fontSize: '0.85rem', fontWeight: '600' },
-    noSkills: { color: '#94a3b8', fontSize: '0.9rem', fontStyle: 'italic' },
-    memberSkills: { display: 'flex', flexWrap: 'wrap', gap: '4px', marginTop: '4px' },
-    miniSkill: { background: '#f1f5f9', color: '#475569', padding: '2px 8px', borderRadius: '4px', fontSize: '0.7rem', fontWeight: '600' }
+    // Removed - now using CSS classes from TeamDetails.css
 };
 
 export default TeamDetails;
