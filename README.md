@@ -489,7 +489,7 @@ NA
 
 
 ### LOG 11
-Changes in project log:
+Changes in project log: 
 
 Date: 2026-04-25
 Contributor: Sanika
@@ -499,6 +499,27 @@ Files Modified:
 
 Description:
 1. faq added for all types of user
+
+Database / Schema Changes:
+No
+
+Notes / Dependencies:
+NA
+
+
+### LOG 12
+Changes in project log: 
+
+Date: 2026-04-25
+Contributor: Ojas
+
+🔧 Type of Change: admin page ui fixed in phone view
+
+Files Modified:
+src/client/src/styles/admin.css
+src/client/src/styles/navbar.css
+
+Description:In the latest update, I improved the admin dashboard UI. Fixed navbar alignment, made it responsive for mobile devices, and corrected role badge overflow issues. Also updated CSS to remove overlapping elements
 
 Database / Schema Changes:
 No
