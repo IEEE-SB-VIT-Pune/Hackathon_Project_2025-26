@@ -14,7 +14,7 @@ const HackathonCard = ({ hackathon, onRegister, onViewDetails }) => {
     if (isRegistered) {
       return (
         <button
-          className="btn-registered"
+          className="btn btn-registered"
           onClick={onViewDetails}
         >
           <span className="tick-icon">✓</span>
@@ -26,7 +26,7 @@ const HackathonCard = ({ hackathon, onRegister, onViewDetails }) => {
     // Case 2: If hackathon is in DRAFT
     if (isDraft) {
       return (
-        <button className="btn-primary btn-disabled" disabled>
+        <button className="btn btn-primary" disabled>
           Coming Soon
         </button>
       );
@@ -35,7 +35,7 @@ const HackathonCard = ({ hackathon, onRegister, onViewDetails }) => {
     // Case 3: If registration is closed (Date passed or Admin closed it)
     if (isOngoing || isClosed || isRegistrationClosed) {
       return (
-        <button className="btn-primary btn-disabled" disabled>
+        <button className="btn btn-primary" disabled>
           {isOngoing ? "Ongoing" : "Registration Closed"}
         </button>
       );
@@ -43,7 +43,7 @@ const HackathonCard = ({ hackathon, onRegister, onViewDetails }) => {
 
     // Default: Registration Open
     return (
-      <button className="btn-primary" onClick={onRegister} style={{ flex: 1 }}>
+      <button className="btn btn-primary" onClick={onRegister}>
         Register Now
       </button>
     );
@@ -51,59 +51,70 @@ const HackathonCard = ({ hackathon, onRegister, onViewDetails }) => {
 
   return (
     <div className="hackathon-card">
+      {/* Card Image Section */}
       <div className="card-image-container">
         <img
           src={hackathon.image}
           alt={hackathon.name}
           className="card-image"
         />
-        <span className={`status-badge status-${hackathon.status}`} style={{ textTransform: 'capitalize' }}>
+        <span className={`status-badge status-${hackathon.status}`}>
           {hackathon.status}
         </span>
       </div>
 
+      {/* Card Content Section */}
       <div className="card-content">
+        {/* Title */}
         <h3 className="card-title">{hackathon.name}</h3>
+        
+        {/* Organizer */}
         <p className="card-org">by {hackathon.organization}</p>
+        
+        {/* Description */}
         <p className="card-description">{hackathon.description}</p>
 
-        <div className="tag-container" style={{ margin: '4px 0 8px 0' }}>
-          {hackathon.tags &&
-            hackathon.tags.map((tag) => (
-              <span key={tag} className={`tag tag-${tag}`} style={{ textTransform: 'capitalize' }}>
+        {/* Tags */}
+        {hackathon.tags && hackathon.tags.length > 0 && (
+          <div className="tag-container">
+            {hackathon.tags.map((tag) => (
+              <span key={tag} className={`tag tag-${tag}`}>
                 {tag}
               </span>
             ))}
-        </div>
+          </div>
+        )}
 
+        {/* Info Grid */}
         <div className="info-grid">
           <div className="info-item">
-            <Users size={10} color="#64748b" /> <span>{hackathon.teamSize}</span>
+            <Users size={16} color="#64748b" />
+            <span>{hackathon.teamSize}</span>
           </div>
           <div className="info-item">
-            <Globe size={10} color="#64748b" /> <span>{hackathon.mode}</span>
+            <Globe size={16} color="#64748b" />
+            <span>{hackathon.mode}</span>
           </div>
           <div className="info-item">
-            <CalendarDays size={10} color="#64748b" /> <span>{hackathon.deadline}</span>
+            <CalendarDays size={16} color="#64748b" />
+            <span>{hackathon.deadline}</span>
           </div>
           <div className="info-item">
-            <Trophy size={10} color="#64748b" /> <span>{hackathon.prizePool}</span>
+            <Trophy size={16} color="#64748b" />
+            <span>{hackathon.prizePool}</span>
           </div>
-          <div className="info-item"></div>
         </div>
       </div>
 
+      {/* Card Actions Section */}
       <div className="card-actions">
         {renderMainButton()}
-        {!isRegistered && (
-          <button
-            className="btn-secondary"
-            onClick={onViewDetails}
-            style={{ flex: 1 }}
-          >
-            Details
-          </button>
-        )}
+        <button
+          className="btn btn-secondary"
+          onClick={onViewDetails}
+        >
+          Details
+        </button>
       </div>
     </div>
   );

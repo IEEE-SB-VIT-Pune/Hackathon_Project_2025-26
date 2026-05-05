@@ -215,7 +215,7 @@ const Discovery = () => {
         {!loading && error && (
           <div className="empty-state-message">
             <p>{error}</p>
-            <button className="btn-secondary" onClick={() => window.location.reload()}>
+            <button className="btn btn-secondary" onClick={() => window.location.reload()}>
               Retry
             </button>
           </div>
@@ -242,7 +242,7 @@ const Discovery = () => {
         {!loading && !error && filteredHackathons.length === 0 && (
           <div className="empty-state-message">
             <p>No hackathons match "{query || activeFilter}".</p>
-            <button className="btn-secondary" onClick={() => {
+            <button className="btn btn-secondary" onClick={() => {
               setActiveFilter("All");
               setSearchInput("");
               setSearchParams({});

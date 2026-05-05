@@ -214,14 +214,25 @@
 
 /* ========== HACKATHON CARD ========== */
 .hackathon-card {
-    background: white;
+    /* Card container */
+    background: #ffffff;
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
+    
+    /* CRITICAL: Proper vertical layout structure */
     display: flex;
     flex-direction: column;
     height: 100%;
+    
+    /* Remove any positioning issues */
+    position: relative;
+    margin: 0;
+    padding: 0;
+    
+    /* Ensure no gaps between image and content */
+    line-height: 0;
 }
 
 .hackathon-card:hover {
@@ -231,17 +242,41 @@
 
 /* ========== CARD IMAGE ========== */
 .card-image-container {
+    /* CRITICAL: Full-width banner/header image */
     position: relative;
-    height: 160px;
+    width: 100%;
+    height: 180px;
     flex-shrink: 0;
     overflow: hidden;
+    
+    /* Remove any spacing/padding */
+    margin: 0;
+    padding: 0;
+    
+    /* Ensure no gaps */
+    display: block;
+    line-height: 0;
 }
 
 .card-image {
+    /* CRITICAL: Full-width cover image */
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center;
+    
+    /* Smooth transition on hover */
     transition: transform 0.3s ease;
+    
+    /* Remove any spacing */
+    display: block;
+    margin: 0;
+    padding: 0;
+    border: none;
+    
+    /* Ensure image fills container */
+    min-width: 100%;
+    min-height: 100%;
 }
 
 .hackathon-card:hover .card-image {
@@ -249,81 +284,157 @@
 }
 
 .status-badge {
+    /* CRITICAL: Badge positioning on full-width image */
     position: absolute;
     top: 12px;
     left: 12px;
-    background-color: rgba(15, 23, 42, 0.75);
+    z-index: 10;
+    
+    /* Badge styling */
+    background-color: rgba(15, 23, 42, 0.85);
     backdrop-filter: blur(8px);
     border: 1px solid rgba(255, 255, 255, 0.2);
-    color: white;
+    color: #ffffff;
+    
+    /* Spacing */
     padding: 6px 12px;
+    margin: 0;
+    
+    /* Visual */
     border-radius: 6px;
     font-size: 0.75rem;
     font-weight: 700;
     text-transform: capitalize;
+    line-height: 1.2;
+    
+    /* Shadow for better visibility */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
 .status-badge.status-open {
     background-color: rgba(16, 185, 129, 0.9);
+    border-color: rgba(16, 185, 129, 0.3);
 }
 
 .status-badge.status-ongoing {
     background-color: rgba(59, 130, 246, 0.9);
+    border-color: rgba(59, 130, 246, 0.3);
 }
 
 .status-badge.status-closed {
     background-color: rgba(100, 116, 139, 0.9);
+    border-color: rgba(100, 116, 139, 0.3);
 }
 
 /* ========== CARD CONTENT ========== */
 .card-content {
+    /* CRITICAL: Proper content structure */
     padding: 16px;
-    flex-grow: 1;
+    flex: 1 1 auto;
     display: flex;
     flex-direction: column;
     gap: 8px;
+    
+    /* Ensure proper alignment */
+    align-items: flex-start;
+    justify-content: flex-start;
+    
+    /* Remove any positioning issues */
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+    
+    /* Restore normal line-height after image */
+    line-height: normal;
 }
 
 .card-title {
+    /* CRITICAL: Title alignment and sizing */
     font-size: 1.125rem;
     font-weight: 700;
     color: #1e293b;
-    margin: 0;
-    line-height: 1.3;
+    line-height: 1.4;
+    
+    /* Proper spacing */
+    margin: 0 0 4px 0;
+    padding: 0;
+    
+    /* Text overflow handling */
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
-    min-height: 2.6em;
+    text-overflow: ellipsis;
+    
+    /* Ensure full width */
+    width: 100%;
+    text-align: left;
+    
+    /* Consistent height */
+    min-height: 2.8em;
+    max-height: 2.8em;
 }
 
 .card-org {
+    /* Organizer text */
     font-size: 0.875rem;
     color: #64748b;
-    margin: 0;
+    font-weight: 500;
+    
+    /* Proper spacing */
+    margin: 0 0 6px 0;
+    padding: 0;
+    
+    /* Alignment */
+    width: 100%;
+    text-align: left;
+    line-height: 1.3;
 }
 
 .card-description {
+    /* Description text */
     font-size: 0.875rem;
     color: #475569;
-    margin: 0;
     line-height: 1.5;
+    
+    /* Proper spacing */
+    margin: 0 0 8px 0;
+    padding: 0;
+    
+    /* Text overflow handling */
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
-    flex-grow: 1;
+    text-overflow: ellipsis;
+    
+    /* Alignment */
+    width: 100%;
+    text-align: left;
+    
+    /* Allow growth */
+    flex: 0 0 auto;
 }
 
 /* ========== TAGS ========== */
 .tag-container {
+    /* Tag layout */
     display: flex;
     flex-wrap: wrap;
     gap: 6px;
-    margin: 8px 0;
+    
+    /* Proper spacing */
+    margin: 0 0 8px 0;
+    padding: 0;
+    
+    /* Alignment */
+    width: 100%;
+    align-items: center;
+    justify-content: flex-start;
 }
 
 .tag {
+    /* Tag styling */
     background-color: #eff6ff;
     color: #3b82f6;
     padding: 4px 10px;
@@ -331,142 +442,97 @@
     font-size: 0.75rem;
     font-weight: 600;
     text-transform: capitalize;
+    line-height: 1.2;
+    
+    /* Remove any spacing issues */
+    margin: 0;
+    white-space: nowrap;
 }
 
 /* ========== INFO GRID ========== */
 .info-grid {
+    /* CRITICAL: Info grid layout */
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 8px;
+    
+    /* Push to bottom of content area */
     margin-top: auto;
-    padding-top: 8px;
+    margin-bottom: 0;
+    padding-top: 12px;
+    
+    /* Visual separator */
     border-top: 1px solid #f1f5f9;
+    
+    /* Ensure full width */
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .info-item {
+    /* Info item layout */
     display: flex;
     align-items: center;
+    justify-content: flex-start;
     gap: 6px;
-    font-size: 0.8rem;
+    
+    /* Typography */
+    font-size: 0.8125rem;
     color: #64748b;
+    font-weight: 500;
+    line-height: 1.3;
+    
+    /* Spacing */
+    margin: 0;
+    padding: 0;
 }
 
 .info-item svg {
+    /* Icon sizing */
     flex-shrink: 0;
+    width: 16px;
+    height: 16px;
+}
+
+.info-item span {
+    /* Text in info item */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 /* ========== CARD ACTIONS ========== */
 .card-actions {
-    display: flex;
-    gap: 8px;
-    padding: 12px 16px;
-    border-top: 1px solid #f1f5f9;
-    background-color: #fafafa;
+  /* CRITICAL: Button container at bottom of card */
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: stretch !important;
+  justify-content: space-between !important;
+  gap: 10px !important;
+  
+  /* Spacing */
+  padding: 14px 16px !important;
+  margin: 0 !important;
+  
+  /* Visual styling */
+  border-top: 1px solid #e2e8f0 !important;
+  background-color: #fafafa !important;
+  
+  /* Positioning */
+  width: 100% !important;
+  box-sizing: border-box !important;
 }
 
-/* ========== BUTTONS ========== */
-.btn-primary {
-    flex: 1;
-    background-color: #3b82f6;
-    color: white;
-    padding: 10px 16px;
-    border-radius: 8px;
-    font-weight: 600;
-    font-size: 0.875rem;
-    text-align: center;
-    border: none;
-    cursor: pointer;
-    transition: all 0.2s ease;
-    white-space: nowrap;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 40px;
+.card-actions .btn {
+  /* CRITICAL: Equal width buttons */
+  flex: 1 1 0 !important;
+  min-width: 0 !important;
+  max-width: none !important;
 }
 
-.btn-primary:hover:not(:disabled) {
-    background-color: #2563eb;
-    transform: translateY(-1px);
-    box-shadow: 0 4px 8px rgba(59, 130, 246, 0.3);
-}
+/* Note: All button sizing is controlled by buttons.css */
 
-.btn-primary:disabled {
-    opacity: 0.6;
-    cursor: not-allowed;
-}
-
-.btn-secondary {
-    flex: 1;
-    background-color: white;
-    color: #3b82f6;
-    padding: 10px 16px;
-    border-radius: 8px;
-    font-weight: 600;
-    font-size: 0.875rem;
-    text-align: center;
-    border: 2px solid #3b82f6;
-    cursor: pointer;
-    transition: all 0.2s ease;
-    white-space: nowrap;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 40px;
-}
-
-.btn-secondary:hover {
-    background-color: #eff6ff;
-    border-color: #2563eb;
-    color: #2563eb;
-    transform: translateY(-1px);
-    box-shadow: 0 4px 8px rgba(59, 130, 246, 0.2);
-}
-
-.btn-registered {
-    flex: 1;
-    background: #ecfdf5;
-    color: #059669;
-    border: 2px solid #10b981;
-    padding: 10px 16px;
-    border-radius: 8px;
-    font-weight: 700;
-    font-size: 0.875rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 6px;
-    cursor: pointer;
-    transition: all 0.2s ease;
-    min-height: 40px;
-}
-
-.btn-registered:hover {
-    background: #d1fae5;
-    border-color: #059669;
-    transform: translateY(-1px);
-    box-shadow: 0 4px 8px rgba(16, 185, 129, 0.3);
-}
-
-.tick-icon {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 18px;
-    height: 18px;
-    background: #10b981;
-    color: white;
-    border-radius: 50%;
-    font-size: 12px;
-    font-weight: 900;
-}
-
-.btn-disabled {
-    background: #f1f5f9 !important;
-    color: #94a3b8 !important;
-    border: 2px solid #e2e8f0 !important;
-    cursor: not-allowed !important;
-    opacity: 0.8;
-}
+/* Note: All button sizing is controlled by buttons.css */
 
 /* ========== LOAD MORE ========== */
 .load-more-container {
@@ -564,40 +630,57 @@
 
     /* Cards */
     .card-image-container {
-        height: 140px;
+        height: 160px;
     }
 
     .card-content {
-        padding: 12px;
+        padding: 14px;
+        gap: 6px;
     }
 
     .card-title {
         font-size: 1rem;
+        min-height: 2.6em;
+        max-height: 2.6em;
+        margin-bottom: 3px;
+    }
+
+    .card-org {
+        font-size: 0.8125rem;
+        margin-bottom: 5px;
     }
 
     .card-description {
         font-size: 0.8125rem;
+        margin-bottom: 6px;
+    }
+
+    .tag-container {
+        margin: 0 0 6px 0;
+    }
+
+    .tag {
+        font-size: 0.6875rem;
+        padding: 3px 8px;
     }
 
     .info-grid {
         gap: 6px;
+        padding-top: 10px;
     }
 
     .info-item {
         font-size: 0.75rem;
     }
 
-    .card-actions {
-        padding: 10px 12px;
-        gap: 6px;
+    .info-item svg {
+        width: 14px;
+        height: 14px;
     }
 
-    .btn-primary,
-    .btn-secondary,
-    .btn-registered {
-        padding: 8px 12px;
-        font-size: 0.8125rem;
-        min-height: 36px;
+    .card-actions {
+        padding: 12px 14px !important;
+        gap: 8px !important;
     }
 }
 
@@ -642,60 +725,87 @@
         padding: 0 12px;
     }
 
-    /* Cards */
+    /* ========== COMPACT MOBILE CARD LAYOUT ========== */
+    .hackathon-card {
+        border-radius: 10px;
+    }
+
     .card-image-container {
         height: 180px;
     }
 
     .card-content {
-        padding: 14px;
-        gap: 10px;
+        padding: 12px;
+        gap: 6px;
     }
 
     .card-title {
-        font-size: 1.0625rem;
+        font-size: 1rem;
+        font-weight: 700;
+        line-height: 1.4;
+        min-height: 2.8em;
+        max-height: 2.8em;
+        margin-bottom: 3px;
     }
 
     .card-org {
         font-size: 0.8125rem;
+        margin-bottom: 4px;
     }
 
     .card-description {
-        font-size: 0.875rem;
-        -webkit-line-clamp: 3;
+        font-size: 0.8125rem;
+        line-height: 1.4;
+        -webkit-line-clamp: 2;
+        margin-bottom: 6px;
     }
 
     .tag-container {
         gap: 6px;
+        margin: 0 0 6px 0;
     }
 
     .tag {
-        font-size: 0.75rem;
-        padding: 4px 8px;
+        font-size: 0.6875rem;
+        padding: 3px 8px;
     }
 
+    /* ========== COMPACT INFO GRID (2x2) ========== */
     .info-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
         gap: 8px;
+        padding-top: 10px;
+        margin-top: 6px;
     }
 
     .info-item {
-        font-size: 0.8125rem;
+        font-size: 0.75rem;
+        gap: 5px;
     }
 
+    .info-item svg {
+        width: 14px;
+        height: 14px;
+    }
+
+    /* ========== MOBILE BUTTON LAYOUT ========== */
     .card-actions {
-        flex-direction: column;
-        padding: 12px 14px;
-        gap: 8px;
+        flex-direction: column !important;
+        padding: 12px !important;
+        gap: 8px !important;
+        background-color: #ffffff !important;
+        border-top: 1px solid #e2e8f0 !important;
     }
 
-    .btn-primary,
-    .btn-secondary,
-    .btn-registered {
-        width: 100%;
-        padding: 10px 16px;
-        font-size: 0.875rem;
-        min-height: 44px;
+    .card-actions .btn,
+    .card-actions button {
+        width: 100% !important;
+        height: 40px !important;
+        min-height: 40px !important;
+        max-height: 40px !important;
+        flex: none !important;
+        font-size: 14px !important;
+        padding: 0 16px !important;
     }
 
     /* Load More */
@@ -706,25 +816,83 @@
 
     /* Filter Bar */
     .filter-tab {
-        font-size: 0.8125rem;
+        font-size: 13px;
         padding: 7px 14px;
     }
 }
 
 /* ========== EXTRA SMALL (< 360px) ========== */
 @media (max-width: 360px) {
+    .hackathon-grid {
+        padding: 0 8px;
+        gap: 12px;
+    }
+
+    .card-image-container {
+        height: 160px;
+    }
+
+    .card-content {
+        padding: 10px;
+        gap: 5px;
+    }
+
     .card-title {
-        font-size: 1rem;
+        font-size: 0.9375rem;
+        min-height: 2.6em;
+        max-height: 2.6em;
+    }
+
+    .card-org {
+        font-size: 0.75rem;
     }
 
     .card-description {
-        font-size: 0.8125rem;
+        font-size: 0.75rem;
     }
 
-    .btn-primary,
-    .btn-secondary,
-    .btn-registered {
-        font-size: 0.8125rem;
-        padding: 9px 14px;
+    .tag {
+        font-size: 0.625rem;
+        padding: 3px 6px;
+    }
+
+    .info-item {
+        font-size: 0.6875rem;
+    }
+
+    .info-item svg {
+        width: 12px;
+        height: 12px;
+    }
+
+    .card-actions {
+        padding: 10px !important;
+        gap: 6px !important;
+    }
+    
+    .card-actions .btn,
+    .card-actions button {
+        font-size: 13px !important;
+        padding: 0 12px !important;
+    }
+}
+
+/* ========== PREVENT HORIZONTAL SCROLL ========== */
+@media (max-width: 768px) {
+    .hackathon-card {
+        max-width: 100%;
+        overflow: hidden;
+    }
+
+    .card-content {
+        overflow: hidden;
+    }
+
+    .card-title,
+    .card-org,
+    .card-description {
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        word-break: break-word;
     }
 }

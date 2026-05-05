@@ -74,15 +74,15 @@ const OverviewTab = ({ user, hackathons, teams, navigate, onUpdate }) => {
                     })
                     : "TBD"}
                 </p>
-                <div className="active-hack-btns">
+                <div className="btn-group">
                   <button
-                    className="btn-view"
+                    className="btn btn-primary"
                     onClick={() => navigate(`/user/hackathon/${h._id}`)}
                   >
                     View Hackathon
                   </button>
                   <button
-                    className="btn-discussion"
+                    className="btn btn-secondary"
                     onClick={() => navigate(`/hackathon/${h._id}/discussion`)}
                   >
                     Discussion

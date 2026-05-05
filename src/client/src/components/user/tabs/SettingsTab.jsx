@@ -242,13 +242,13 @@ const SettingsTab = ({ user, onUpdate }) => {
           <p className="settings-subtitle">Complete your profile to participate in the hackathon</p>
         </div>
         {!isEditing ? (
-          <button className="btn-edit-profile" onClick={() => setIsEditing(true)}>
+          <button className="btn btn-primary" onClick={() => setIsEditing(true)}>
             Edit Profile
           </button>
         ) : (
-          <div style={{ display: 'flex', gap: '10px' }}>
-             <button className="btn-cancel-edit" onClick={() => setIsEditing(false)}>Cancel</button>
-             <button className="btn-save-profile" onClick={handleSave} disabled={saving}>
+          <div className="btn-group">
+             <button className="btn btn-ghost" onClick={() => setIsEditing(false)}>Cancel</button>
+             <button className="btn btn-success" onClick={handleSave} disabled={saving}>
                {saving ? "Saving..." : "Save Changes"}
              </button>
           </div>

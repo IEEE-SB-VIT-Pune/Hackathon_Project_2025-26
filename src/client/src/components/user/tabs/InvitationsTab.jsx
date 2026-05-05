@@ -54,18 +54,18 @@ const InvitationsTab = ({ invitations = [], onUpdate }) => {
             </div>
           </div>
 
-          <div style={{ display: 'flex', gap: '10px' }}>
+          <div className="btn-group">
             <button
+              className={`btn btn-success ${responding === inv.teamId ? 'btn-loading' : ''}`}
               onClick={() => handleRespond(inv.teamId, inv.hackathonId, 'accept')}
               disabled={responding === inv.teamId}
-              style={{ padding: '10px 22px', borderRadius: '10px', background: responding === inv.teamId ? '#9ca3af' : '#10b981', color: 'white', border: 'none', fontWeight: '700', cursor: responding === inv.teamId ? 'not-allowed' : 'pointer', fontSize: '0.95rem', transition: 'background 0.2s' }}
             >
               {responding === inv.teamId ? 'Processing...' : '✓ Accept'}
             </button>
             <button
+              className="btn btn-danger"
               onClick={() => handleRespond(inv.teamId, inv.hackathonId, 'decline')}
               disabled={responding === inv.teamId}
-              style={{ padding: '10px 22px', borderRadius: '10px', background: '#fff', color: '#ef4444', border: '1.5px solid #fca5a5', fontWeight: '700', cursor: responding === inv.teamId ? 'not-allowed' : 'pointer', fontSize: '0.95rem', transition: 'all 0.2s' }}
             >
               ✕ Decline
             </button>
