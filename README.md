@@ -560,7 +560,7 @@ NA
 
 
 
-### LOG 14
+### LOG 15
 Changes in project log: otp integeration done 
 
 Date: 2026-04-25
@@ -639,3 +639,39 @@ yes
 
 Notes / Dependencies:
 yes
+
+
+
+
+
+### LOG 16
+Changes in project log: ui fixed 
+
+Date: 2026-04-25
+Contributor: Ojas
+
+🔧 Type of Change: error fix
+
+Files Modified:
+
+MOBILE_CARD_FIX_SUMMARY.md
+src/client/src/components/user/cards/HackathonCard.jsx
+src/client/src/components/user/tabs/InvitationsTab.jsx
+src/client/src/components/user/tabs/OverviewTab.jsx
+src/client/src/components/user/tabs/SettingsTab.jsx
+src/client/src/main.jsx
+src/client/src/pages/user/Discovery.jsx
+src/client/src/styles/buttons.css
+src/client/src/styles/discovery.css
+src/client/src/styles/profile.css
+
+
+Description: Improved UI and responsiveness of the user dashboard and hackathon pages. Fixed layout issues including navbar alignment, card structure, button consistency, image fitting, and removed horizontal scrolling. Also corrected mobile view spacing and overall design consistency.
+
+All features are production-ready and follow standard authentication best practices.
+
+Database / Schema Changes:
+no
+
+Notes / Dependencies:
+no
