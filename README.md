@@ -555,3 +555,87 @@ No
 
 Notes / Dependencies:
 NA
+
+
+
+
+
+### LOG 14
+Changes in project log: otp integeration done 
+
+Date: 2026-04-25
+Contributor: Ojas
+
+🔧 Type of Change: new feature
+
+Files Modified:
+
+
+env.example
+package-lock.json
+package.json
+src/app.js
+src/client/src/App.jsx
+src/client/src/components/auth/AuthForm.jsx
+src/client/src/components/auth/ForgotPasswordForm.jsx
+src/client/src/components/auth/OTPSignupForm.jsx
+src/client/src/components/common/Input.jsx
+src/client/src/pages/auth/ForgotPassword.jsx
+src/client/src/pages/auth/Signup.jsx
+src/client/src/services/api.js
+src/client/src/styles/auth.css
+src/controllers/otp.controller.js
+src/models/otp.model.js
+src/routes/otp.routes.js
+src/utils/email.js
+src/utils/otp.js
+
+
+Description: ## 🔐 Authentication System Implementation
+
+Implemented a complete production-ready authentication system with OTP-based email verification and password reset.
+
+### 🔹 Features Added
+
+- OTP-based email verification for signup using Nodemailer (IEEE email SMTP)
+- 6-digit numeric OTP with 5-minute expiry and MongoDB TTL auto-deletion
+- Resend OTP functionality with 30-second cooldown
+- Rate limiting (max 5 OTP requests/hour per email)
+- Brute force protection (max 5 verification attempts)
+- Single-use OTPs for enhanced security
+
+### 🔹 Forgot Password System
+
+- Implemented secure password reset via OTP
+- Flow: Email → OTP → New Password → Reset
+- Same security rules applied (expiry, attempts, rate limiting)
+- Email enumeration protection (does not reveal user existence)
+
+### 🔹 Security Enhancements
+
+- Password hashing using bcrypt (10 salt rounds)
+- OTP expiry and automatic cleanup via database TTL
+- Protection against brute force and spam requests
+
+### 🔹 Frontend Improvements
+
+- Two-step authentication flows (Signup & Password Reset)
+- Real-time OTP expiry countdown
+- Resend OTP timer
+- Proper error handling and user feedback
+- Auto-redirect after successful actions
+
+### 🔹 Final Outcome
+
+The system now fully supports:
+- Signup with OTP verification
+- Secure login
+- Password reset via OTP
+
+All features are production-ready and follow standard authentication best practices.
+
+Database / Schema Changes:
+yes
+
+Notes / Dependencies:
+yes
