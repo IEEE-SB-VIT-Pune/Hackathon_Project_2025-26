@@ -2,20 +2,35 @@
    PROFILE PAGE — Complete Stylesheet
    ============================================ */
 
+/* Force full width */
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
 /* ===== Layout ===== */
 .profile-page {
     background: #e8edf3;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    width: 100vw;
+    max-width: 100vw;
+    overflow-x: hidden;
 }
 
 .profile-layout {
     max-width: 1100px;
     margin: 0 auto;
-    padding: 28px 24px 40px;
+    padding: 28px 5vw 40px;
     flex: 1; /* Takes up remaining space */
     width: 100%;
+    box-sizing: border-box;
 }
 
 /* ===== Loading & Error ===== */
@@ -74,17 +89,23 @@
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
     flex-wrap: wrap;
     gap: 20px;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 .profile-header__left {
     display: flex;
     gap: 18px;
     align-items: center;
+    flex: 1;
+    min-width: 0;
 }
 
 .profile-header__avatar {
     width: 72px;
     height: 72px;
+    min-width: 72px;
     border-radius: 50%;
     background: #c7d2e8;
     color: #1e3a5f;
@@ -96,11 +117,18 @@
     flex-shrink: 0;
 }
 
+.profile-header__info {
+    flex: 1;
+    min-width: 0;
+}
+
 .profile-header__info h2 {
     font-size: 22px;
     font-weight: 700;
     color: #1e3a5f;
     margin: 0 0 4px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .profile-header__info p {
@@ -110,11 +138,14 @@
     display: flex;
     align-items: center;
     gap: 6px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .profile-header__info p .icon {
     font-size: 14px;
     opacity: 0.7;
+    flex-shrink: 0;
 }
 
 .profile-header__stats {
@@ -129,6 +160,7 @@
     padding: 14px 22px;
     text-align: center;
     min-width: 140px;
+    flex: 1;
 }
 
 .stat-card__value {
@@ -143,6 +175,7 @@
     color: #64748b;
     margin: 4px 0 0;
     text-transform: capitalize;
+    word-wrap: break-word;
 }
 
 /* ======================================
@@ -154,6 +187,24 @@
     border-bottom: 2px solid #e2e8f0;
     margin: 24px 0 24px;
     background: transparent;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+    width: 100%;
+    max-width: 100%;
+}
+
+.profile-tabs::-webkit-scrollbar {
+    height: 4px;
+}
+
+.profile-tabs::-webkit-scrollbar-track {
+    background: #f1f5f9;
+}
+
+.profile-tabs::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 4px;
 }
 
 .profile-tabs__btn {
@@ -166,6 +217,8 @@
     background: none;
     position: relative;
     transition: color 0.2s;
+    white-space: nowrap;
+    flex-shrink: 0;
 }
 
 .profile-tabs__btn:hover {
@@ -865,39 +918,46 @@
     margin: 2px 0 0;
 }
 
-/* Toggle Switch */
+/* Toggle Switch - IMPROVED DESIGN */
 .toggle-switch {
-    width: 44px;
-    height: 24px;
-    border-radius: 12px;
+    width: 50px;
+    height: 26px;
+    border-radius: 13px;
     border: none;
     cursor: pointer;
     position: relative;
-    transition: background 0.25s;
+    transition: background 0.3s ease;
     flex-shrink: 0;
+    padding: 0;
+    outline: none;
 }
 
 .toggle-switch--on {
-    background: #1e3a5f;
+    background: #22c55e;
 }
 
 .toggle-switch--off {
     background: #cbd5e1;
 }
 
+.toggle-switch:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
 .toggle-switch__knob {
-    width: 18px;
-    height: 18px;
+    width: 20px;
+    height: 20px;
     border-radius: 50%;
     background: #fff;
     position: absolute;
     top: 3px;
-    transition: left 0.25s;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    transition: left 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .toggle-switch--on .toggle-switch__knob {
-    left: 23px;
+    left: 27px;
 }
 
 .toggle-switch--off .toggle-switch__knob {
@@ -1173,4 +1233,370 @@
 
 .profile-footer__links a:hover {
     color: #fff;
+}
+
+/* ============================================
+   MOBILE RESPONSIVE DESIGN
+   ============================================ */
+
+/* Tablet (max-width: 900px) */
+@media (max-width: 900px) {
+    .profile-layout {
+        padding: 24px 4vw 32px;
+    }
+
+    .overview-grid,
+    .teams-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .settings-grid,
+    .settings-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Mobile (max-width: 768px) */
+@media (max-width: 768px) {
+    .profile-layout {
+        padding: 20px 4vw 28px;
+    }
+
+    .profile-header {
+        padding: 20px 20px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .profile-header__left {
+        width: 100%;
+    }
+
+    .profile-header__avatar {
+        width: 60px;
+        height: 60px;
+        min-width: 60px;
+        font-size: 24px;
+    }
+
+    .profile-header__info h2 {
+        font-size: 18px;
+    }
+
+    .profile-header__info p {
+        font-size: 12px;
+    }
+
+    .profile-header__stats {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .stat-card {
+        flex: 1;
+        min-width: 0;
+        padding: 12px 16px;
+    }
+
+    .stat-card__value {
+        font-size: 22px;
+    }
+
+    .stat-card__label {
+        font-size: 10px;
+    }
+
+    .profile-tabs {
+        margin: 20px 0 20px;
+    }
+
+    .profile-tabs__btn {
+        padding: 10px 16px;
+        font-size: 13px;
+    }
+
+    .overview-card,
+    .team-info-card,
+    .settings-card {
+        padding: 20px 16px;
+    }
+
+    .overview-card__title,
+    .team-info-card__title,
+    .settings-card__title {
+        font-size: 15px;
+        margin-bottom: 16px;
+    }
+
+    .active-hack-item h4 {
+        font-size: 14px;
+    }
+
+    .active-hack-btns {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .btn-submit,
+    .btn-view,
+    .btn-discussion {
+        width: 100%;
+        text-align: center;
+    }
+
+    .team-info-card {
+        max-width: 100%;
+    }
+
+    .team-open-toggle {
+        font-size: 12px;
+    }
+
+    .hackathons-table-wrapper,
+    .submissions-table-wrapper {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .hackathons-table,
+    .submissions-table {
+        min-width: 600px;
+    }
+
+    .fields-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+}
+
+/* Small Mobile (max-width: 480px) */
+@media (max-width: 480px) {
+    .profile-layout {
+        padding: 16px 3vw 24px;
+    }
+
+    .profile-header {
+        padding: 16px 14px;
+        gap: 16px;
+    }
+
+    .profile-header__left {
+        gap: 12px;
+    }
+
+    .profile-header__avatar {
+        width: 52px;
+        height: 52px;
+        min-width: 52px;
+        font-size: 20px;
+    }
+
+    .profile-header__info h2 {
+        font-size: 16px;
+    }
+
+    .profile-header__info p {
+        font-size: 11px;
+    }
+
+    .profile-header__stats {
+        gap: 8px;
+    }
+
+    .stat-card {
+        padding: 10px 12px;
+        min-width: 0;
+    }
+
+    .stat-card__value {
+        font-size: 18px;
+    }
+
+    .stat-card__label {
+        font-size: 9px;
+    }
+
+    .profile-tabs {
+        margin: 16px 0 16px;
+    }
+
+    .profile-tabs__btn {
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+
+    .overview-card,
+    .team-info-card,
+    .settings-card {
+        padding: 16px 12px;
+        border-radius: 12px;
+    }
+
+    .overview-card__title,
+    .team-info-card__title,
+    .settings-card__title {
+        font-size: 14px;
+        margin-bottom: 14px;
+    }
+
+    .active-hack-item {
+        margin-bottom: 16px;
+        padding-bottom: 14px;
+    }
+
+    .active-hack-item h4 {
+        font-size: 13px;
+    }
+
+    .active-hack-item .organizer,
+    .active-hack-item .round-info,
+    .active-hack-item .deadline {
+        font-size: 11px;
+    }
+
+    .btn-submit,
+    .btn-view,
+    .btn-discussion {
+        padding: 8px 16px;
+        font-size: 12px;
+    }
+
+    .activity-item {
+        gap: 10px;
+        margin-bottom: 14px;
+    }
+
+    .activity-dot {
+        width: 8px;
+        height: 8px;
+    }
+
+    .activity-content p {
+        font-size: 12px;
+    }
+
+    .activity-content span {
+        font-size: 10px;
+    }
+
+    .team-info-card__header h4 {
+        font-size: 14px;
+    }
+
+    .leader-badge {
+        padding: 3px 8px;
+        font-size: 10px;
+    }
+
+    .team-member-row {
+        font-size: 12px;
+        padding: 5px 0;
+    }
+
+    .team-member-row .role {
+        font-size: 11px;
+    }
+
+    .team-open-toggle {
+        font-size: 11px;
+        margin-top: 12px;
+        padding-top: 10px;
+    }
+
+    .toggle-switch {
+        width: 44px;
+        height: 24px;
+    }
+
+    .toggle-switch__knob {
+        width: 18px;
+        height: 18px;
+    }
+
+    .toggle-switch--on .toggle-switch__knob {
+        left: 23px;
+    }
+
+    .skill-tag {
+        padding: 5px 12px;
+        font-size: 12px;
+    }
+
+    .team-card {
+        padding: 18px 14px;
+    }
+
+    .team-card__name {
+        font-size: 15px;
+    }
+
+    .team-card__hackathon {
+        font-size: 12px;
+    }
+
+    .team-card__meta {
+        font-size: 12px;
+    }
+
+    .settings-field input,
+    .settings-field select,
+    .settings-field textarea {
+        padding: 9px 12px;
+        font-size: 14px;
+    }
+
+    .btn-save {
+        padding: 11px;
+        font-size: 14px;
+    }
+
+    .profile-footer__inner {
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
+        padding: 0 16px;
+    }
+
+    .profile-footer__links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .profile-footer__links a {
+        font-size: 12px;
+    }
+}
+
+/* Extra Small (max-width: 360px) */
+@media (max-width: 360px) {
+    .profile-header__avatar {
+        width: 48px;
+        height: 48px;
+        min-width: 48px;
+        font-size: 18px;
+    }
+
+    .profile-header__info h2 {
+        font-size: 15px;
+    }
+
+    .stat-card__value {
+        font-size: 16px;
+    }
+
+    .stat-card__label {
+        font-size: 8px;
+    }
+
+    .profile-tabs__btn {
+        padding: 8px 10px;
+        font-size: 11px;
+    }
+
+    .overview-card,
+    .team-info-card,
+    .settings-card {
+        padding: 14px 10px;
+    }
 }

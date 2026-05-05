@@ -1,12 +1,47 @@
-/* --- Global Wrapper --- */
+/* ============================================ */
+/* CRITICAL: FULL WIDTH FIX - NO CONTENT CUTTING */
+/* ============================================ */
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+/* Force full width for this page - override any parent constraints */
+body:has(.sh-wrapper) {
+  overflow-x: hidden !important;
+}
+
+#root:has(.sh-wrapper) {
+  width: 100vw !important;
+  max-width: 100vw !important;
+  overflow-x: hidden !important;
+}
+
+/* --- Global Wrapper - FULL WIDTH --- */
 .sh-wrapper {
-  background-color: #F2F2F2; /* Standard background */
+  background-color: #F2F2F2;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   flex: 1;
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   color: #1E293B;
+  width: 100vw !important;
+  max-width: 100vw !important;
+  overflow-x: hidden !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  position: relative;
+  left: 0;
+  right: 0;
 }
 
 /* Remove ugly black outline on click globally for this component */
@@ -19,12 +54,13 @@
 
 /* --- Top Bar & Back Button --- */
 .sh-topbar {
-  max-width: 1200px;
-  width: 100%;
-  margin: 0 auto;
-  padding: 24px 24px 0;
-  display: flex; /* Ensures alignment */
+  width: 100vw;
+  max-width: 100vw;
+  margin: 0;
+  padding: 20px 5vw 0;
+  display: flex;
   align-items: center;
+  box-sizing: border-box;
 }
 
 .sh-back-btn {
@@ -48,33 +84,40 @@
 
 /* --- Hero Section --- */
 .sh-hero-container {
-  max-width: 1200px;
-  width: 100%;
-  margin: 20px auto; 
-  padding: 0 24px;
+  width: 100vw;
+  max-width: 100vw;
+  margin: 20px 0;
+  padding: 0 5vw;
+  box-sizing: border-box;
 }
 
 .sh-hero-card {
   background: #FFFFFF;
   border-radius: 16px;
-  padding: 40px;
+  padding: 32px 24px;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
   border: 1px solid #E2E8F0;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .sh-badges {
   display: flex;
-  gap: 12px;
+  flex-wrap: wrap;
+  gap: 8px;
   margin-bottom: 16px;
 }
 
 .sh-badge {
-  padding: 6px 14px;
+  padding: 6px 12px;
   border-radius: 20px;
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   font-weight: 700;
   text-transform: capitalize;
   letter-spacing: 0.3px;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .sh-badge.status-open, .sh-badge.status-ongoing {
@@ -88,30 +131,35 @@
 }
 
 .sh-title {
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 800;
-  color: #0B3C6F; /* Dark navy */
+  color: #0B3C6F;
   margin: 0 0 10px 0;
   letter-spacing: -0.5px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .sh-subtitle {
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: #64748B;
   margin: 0;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 /* --- Layout --- */
 .sh-layout {
-  max-width: 1200px;
-  width: 100%;
-  margin: 0 auto;
-  padding: 0 24px;
+  width: 100vw;
+  max-width: 100vw;
+  margin: 0;
+  padding: 0 5vw;
   display: grid;
   grid-template-columns: 2.5fr 1fr;
   gap: 24px;
   align-items: start;
-  flex: 1; /* Pushes footer down naturally */
+  flex: 1;
+  box-sizing: border-box;
 }
 
 @media (max-width: 900px) {
@@ -126,6 +174,9 @@
   flex-direction: column;
   gap: 0; /* Remove gap, use margin on cards instead */
   position: relative; /* Establish positioning context */
+  width: 100%;
+  max-width: 100%;
+  min-width: 0; /* Allow flex item to shrink below content size */
 }
 
 /* Ensure content wrapper doesn't overlap with tabs */
@@ -137,22 +188,42 @@
 /* Profile-Style Tabs - FIXED TO PREVENT OVERLAP */
 .sh-tabs-container {
   display: flex;
-  gap: 24px;
+  gap: 16px;
   border-bottom: 2px solid #E2E8F0;
-  padding: 20px 0 20px;
+  padding: 16px 0;
   position: sticky;
   top: 72px;
-  background: #F2F2F2; 
+  background: #F2F2F2;
   z-index: 999;
-  margin-bottom: 80px; /* INCREASED: More physical space below tabs */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
-  min-height: 65px;
+  margin-bottom: 24px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  min-height: 60px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.sh-tabs-container::-webkit-scrollbar {
+  height: 4px;
+}
+
+.sh-tabs-container::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+.sh-tabs-container::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
 }
 
 .sh-tab {
   background: none;
   border: none;
-  font-size: 1rem;
+  font-size: 0.95rem;
   font-weight: 600;
   color: #64748B;
   padding: 10px 4px;
@@ -160,6 +231,7 @@
   border-bottom: 3px solid transparent;
   transition: all 0.2s ease-in-out;
   white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .sh-tab:hover {
@@ -174,13 +246,19 @@
 /* Content Cards - CRITICAL: Prevent overlap with tabs */
 .sh-content-card {
   background: #FFFFFF;
-  border-radius: 16px;
-  padding: 36px;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  border-radius: 12px;
+  padding: 24px 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
   border: 1px solid #E2E8F0;
-  scroll-margin-top: 240px; /* INCREASED: navbar (72px) + tabs (65px) + margin (80px) + buffer (23px) */
+  scroll-margin-top: 160px;
   margin-top: 0;
-  margin-bottom: 24px;
+  margin-bottom: 16px;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  overflow: hidden;
 }
 
 /* Ensure all sections with IDs have proper scroll offset */
@@ -191,33 +269,41 @@
 #Teams,
 div[id="Problem Statements"],
 div[id="Rounds"] {
-  scroll-margin-top: 240px; /* Match content card offset */
+  scroll-margin-top: 160px;
 }
 
-/* First content card needs significant top spacing to clear tabs */
+/* First content card needs spacing to clear tabs */
 .sh-content-card:first-of-type {
-  margin-top: 50px;
+  margin-top: 20px;
 }
 
 /* Last content card */
 .sh-content-card:last-of-type {
-  margin-bottom: 40px;
+  margin-bottom: 24px;
 }
 
 .sh-card-title {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   font-weight: 800;
   color: #0F172A;
-  margin: 0 0 24px 0;
+  margin: 0 0 16px 0;
   padding-bottom: 12px;
   border-bottom: 1px solid #F1F5F9;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  width: 100%;
+  max-width: 100%;
 }
 
 .about-text {
   color: #475569;
-  line-height: 1.8;
-  font-size: 1.05rem;
+  line-height: 1.7;
+  font-size: 0.95rem;
   white-space: pre-line;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  width: 100%;
+  max-width: 100%;
 }
 
 /* --- NEW MODERN TIMELINE (Vertical Stepper) --- */
@@ -332,6 +418,8 @@ div[id="Rounds"] {
   display: flex;
   flex-direction: column;
   gap: 16px;
+  width: 100%;
+  max-width: 100%;
 }
 
 .sh-rules-list li {
@@ -340,6 +428,10 @@ div[id="Rounds"] {
   color: #475569;
   line-height: 1.6;
   font-size: 1rem;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  width: 100%;
+  max-width: 100%;
 }
 
 .sh-rules-list li::before {
@@ -852,4 +944,561 @@ input:checked + .slider:before { transform: translateX(20px); }
   border-left: 6px solid transparent;
   border-right: 6px solid transparent;
   border-top: 6px solid #0f172a;
+}
+
+
+/* ============================================ */
+/* RESPONSIVE DESIGN - MOBILE FIXES */
+/* ============================================ */
+
+/* Tablet (768px - 1024px) */
+@media (max-width: 1024px) {
+  .sh-layout {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .sh-sidebar {
+    position: static;
+    top: auto;
+  }
+}
+
+/* Mobile (480px - 768px) */
+@media (max-width: 768px) {
+  .sh-topbar {
+    padding: 16px 4vw 0;
+  }
+
+  .sh-hero-container {
+    padding: 0 4vw;
+  }
+
+  .sh-hero-card {
+    padding: 24px 16px;
+  }
+
+  .sh-title {
+    font-size: 1.625rem;
+  }
+
+  .sh-subtitle {
+    font-size: 0.9375rem;
+  }
+
+  .sh-badge {
+    font-size: 0.75rem;
+    padding: 5px 10px;
+  }
+
+  .sh-layout {
+    padding: 0 4vw;
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .sh-tabs-container {
+    top: 56px;
+    padding: 12px 0;
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+
+  .sh-tab {
+    font-size: 0.875rem;
+    padding: 8px 4px;
+  }
+
+  .sh-content-card {
+    padding: 20px 14px;
+    margin-bottom: 14px;
+    scroll-margin-top: 140px;
+  }
+
+  .sh-card-title {
+    font-size: 1.125rem;
+    margin-bottom: 14px;
+  }
+
+  .about-text {
+    font-size: 0.875rem;
+    line-height: 1.6;
+  }
+
+  .modern-timeline {
+    padding-left: 24px;
+  }
+
+  .timeline-indicator {
+    left: -24px;
+    width: 16px;
+    height: 16px;
+    border-width: 3px;
+  }
+
+  .timeline-date {
+    font-size: 1rem;
+  }
+
+  .timeline-event {
+    font-size: 0.875rem;
+  }
+
+  .prize-banner {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+    gap: 16px;
+  }
+
+  .prize-amount {
+    font-size: 1.875rem;
+  }
+
+  .sh-rules-list li {
+    font-size: 0.9375rem;
+    padding-left: 20px;
+  }
+
+  .time-blocks {
+    gap: 8px;
+  }
+
+  .time-block {
+    padding: 12px 0;
+  }
+
+  .time-block span {
+    font-size: 1.25rem;
+  }
+
+  .time-block small {
+    font-size: 0.65rem;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    padding: 14px;
+    font-size: 1rem;
+  }
+
+  .ai-assistant-btn {
+    bottom: 20px;
+    right: 20px;
+    width: 56px;
+    height: 56px;
+  }
+
+  .ai-modal {
+    padding: 24px;
+    width: 95%;
+  }
+}
+
+/* Small Mobile (< 480px) */
+@media (max-width: 480px) {
+  .sh-topbar {
+    padding: 12px 3vw 0;
+  }
+
+  .sh-back-btn {
+    font-size: 0.9375rem;
+  }
+
+  .sh-hero-container {
+    padding: 0 3vw;
+    margin: 16px 0;
+  }
+
+  .sh-hero-card {
+    padding: 20px 14px;
+    border-radius: 12px;
+  }
+
+  .sh-badges {
+    gap: 6px;
+  }
+
+  .sh-badge {
+    font-size: 0.7rem;
+    padding: 4px 8px;
+  }
+
+  .sh-title {
+    font-size: 1.375rem;
+    margin-bottom: 8px;
+  }
+
+  .sh-subtitle {
+    font-size: 0.875rem;
+  }
+
+  .sh-layout {
+    padding: 0 3vw;
+    gap: 14px;
+  }
+
+  .sh-tabs-container {
+    top: 52px;
+    padding: 10px 0;
+    gap: 10px;
+    margin-bottom: 14px;
+    min-height: 50px;
+  }
+
+  .sh-tab {
+    font-size: 0.8125rem;
+    padding: 6px 4px;
+  }
+
+  .sh-content-card {
+    padding: 16px 12px;
+    margin-bottom: 12px;
+    border-radius: 10px;
+    scroll-margin-top: 130px;
+  }
+
+  .sh-card-title {
+    font-size: 1.0625rem;
+    margin-bottom: 12px;
+    padding-bottom: 10px;
+  }
+
+  .about-text {
+    font-size: 0.8125rem;
+    line-height: 1.5;
+  }
+
+  /* Problem Statements & Rounds */
+  .sh-content-card > div[style*="display: flex"] {
+    gap: 14px !important;
+  }
+
+  .sh-content-card > div[style*="display: flex"] > div {
+    padding: 16px !important;
+    border-radius: 10px !important;
+  }
+
+  .sh-content-card > div[style*="display: flex"] h3 {
+    font-size: 1rem !important;
+    margin-bottom: 10px !important;
+  }
+
+  .sh-content-card > div[style*="display: flex"] p {
+    font-size: 0.8125rem !important;
+    line-height: 1.5 !important;
+  }
+
+  /* Timeline */
+  .modern-timeline {
+    padding-left: 20px;
+  }
+
+  .modern-timeline::before {
+    left: 7px;
+  }
+
+  .timeline-indicator {
+    left: -20px;
+    width: 14px;
+    height: 14px;
+    border-width: 3px;
+  }
+
+  .timeline-step {
+    padding-bottom: 24px;
+  }
+
+  .timeline-date {
+    font-size: 0.9375rem;
+  }
+
+  .timeline-event {
+    font-size: 0.8125rem;
+  }
+
+  /* Prizes */
+  .prize-banner {
+    padding: 16px;
+    gap: 12px;
+  }
+
+  .prize-icon {
+    font-size: 2.5rem;
+  }
+
+  .prize-label {
+    font-size: 0.8125rem;
+  }
+
+  .prize-amount {
+    font-size: 1.625rem;
+  }
+
+  /* Rules */
+  .sh-rules-list {
+    gap: 12px;
+  }
+
+  .sh-rules-list li {
+    font-size: 0.875rem;
+    padding-left: 18px;
+  }
+
+  .sh-rules-list li::before {
+    font-size: 1.25rem;
+    top: -4px;
+  }
+
+  /* Teams Grid */
+  .sh-teams-grid > div[style*="display: grid"] {
+    grid-template-columns: 1fr !important;
+    gap: 14px !important;
+  }
+
+  /* Sidebar */
+  .sh-sidebar-card {
+    padding: 20px 16px;
+  }
+
+  .dashboard-title {
+    font-size: 1.25rem;
+  }
+
+  .registered-badge-pill {
+    font-size: 0.75rem;
+    padding: 5px 12px;
+  }
+
+  .countdown-text {
+    font-size: 0.875rem;
+  }
+
+  .time-blocks {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 6px;
+  }
+
+  .time-block {
+    padding: 10px 0;
+  }
+
+  .time-block span {
+    font-size: 1.125rem;
+  }
+
+  .time-block small {
+    font-size: 0.625rem;
+  }
+
+  .btn-primary,
+  .btn-secondary,
+  .btn-disabled {
+    padding: 12px;
+    font-size: 0.9375rem;
+  }
+
+  .detail-row {
+    padding: 12px 0;
+  }
+
+  .detail-label,
+  .detail-value {
+    font-size: 0.875rem;
+  }
+
+  /* AI Button */
+  .ai-assistant-btn {
+    bottom: 16px;
+    right: 16px;
+    width: 52px;
+    height: 52px;
+  }
+
+  .ai-assistant-btn svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .ai-modal {
+    padding: 20px;
+    width: 96%;
+    max-height: 85vh;
+  }
+
+  .ai-modal-title {
+    font-size: 1.25rem;
+  }
+
+  .ai-modal-title svg {
+    width: 28px;
+    height: 28px;
+  }
+
+  .ai-problem-title {
+    font-size: 1.125rem;
+  }
+
+  .ai-problem-description {
+    font-size: 0.9375rem;
+  }
+
+  .ai-insights {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+}
+
+/* Extra Small (< 360px) */
+@media (max-width: 360px) {
+  .sh-title {
+    font-size: 1.25rem;
+  }
+
+  .sh-subtitle {
+    font-size: 0.8125rem;
+  }
+
+  .sh-badge {
+    font-size: 0.65rem;
+    padding: 4px 7px;
+  }
+
+  .sh-tab {
+    font-size: 0.75rem;
+  }
+
+  .sh-card-title {
+    font-size: 1rem;
+  }
+
+  .about-text {
+    font-size: 0.75rem;
+  }
+
+  .time-block span {
+    font-size: 1rem;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    font-size: 0.875rem;
+    padding: 11px;
+  }
+}
+
+/* Fix for images and media */
+.sh-content-card img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Ensure all inline styles don't cause overflow */
+.sh-content-card > div {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* Fix for any grid layouts inside cards */
+.sh-content-card > div[style*="display: grid"] {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+/* ============================================ */
+/* ADDITIONAL FULL-WIDTH FIXES */
+/* ============================================ */
+
+/* Ensure all problem statements and rounds cards don't overflow */
+.sh-content-card > div[style*="display: flex"],
+.sh-content-card > div[style*="display: grid"] {
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+  overflow: hidden !important;
+}
+
+/* Fix for nested divs with inline styles */
+.sh-content-card > div > div {
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+  word-wrap: break-word !important;
+  overflow-wrap: break-word !important;
+  overflow: hidden !important;
+}
+
+/* Fix for all paragraphs and headings */
+.sh-content-card h3,
+.sh-content-card p,
+.sh-content-card div {
+  word-wrap: break-word !important;
+  overflow-wrap: break-word !important;
+  max-width: 100% !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis;
+}
+
+/* Specific fix for problem statement and round descriptions */
+.sh-content-card p[style*="whiteSpace: pre-wrap"],
+.sh-content-card p[style*="white-space: pre-wrap"] {
+  white-space: pre-wrap !important;
+  word-break: break-word !important;
+  overflow-wrap: anywhere !important;
+}
+
+/* Teams grid fix */
+.sh-teams-grid {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.sh-team-card-alt {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* Empty teams message */
+.sh-empty-teams {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.sh-empty-teams p {
+  margin-bottom: 20px;
+  color: #64748b;
+}
+
+/* Prize details fix */
+.prize-details {
+  flex: 1;
+  min-width: 0;
+}
+
+/* Ensure buttons don't overflow */
+.btn-primary,
+.btn-secondary,
+.btn-disabled,
+.btn-link {
+  max-width: 100%;
+  box-sizing: border-box;
+  white-space: normal;
+  word-wrap: break-word;
+}
+
+/* Fix for detail rows */
+.detail-value {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  max-width: 60%;
+}
+
+/* Aggressive text wrapping for all content */
+.sh-content-card * {
+  max-width: 100%;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }

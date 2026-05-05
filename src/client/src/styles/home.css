@@ -1,5 +1,10 @@
 /* ================= HOME PAGE STYLES ================= */
 
+/* Global fixes for centering */
+* {
+  box-sizing: border-box;
+}
+
 /* Hero Section */
 .home-hero {
   position: relative;
@@ -9,6 +14,7 @@
   justify-content: center;
   text-align: center;
   overflow: hidden;
+  padding: 2rem;
   /* Reduced hardcoded blue so Vanta handles the background */
   background: #0f172a;
 }
@@ -38,6 +44,7 @@
   position: relative;
   z-index: 2;
   max-width: 900px;
+  width: 100%;
   padding: 4rem 3rem 4.5rem;
   background: rgba(255, 255, 255, 0.06);
   backdrop-filter: blur(12px);
@@ -45,6 +52,7 @@
   border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 24px;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  margin: 0 auto;
 }
 
 .hero-badge {
@@ -64,14 +72,15 @@
 }
 
 .hero-title {
-  font-size: clamp(4rem, 8vw, 6.5rem);
+  font-size: clamp(3rem, 8vw, 6.5rem);
   font-weight: 900;
   line-height: 1.1;
   color: #fff;
-  margin-bottom: 1.25rem;
+  margin: 0 auto 1.25rem;
   letter-spacing: -0.02em;
   text-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
   animation: fadeSlideUp 0.6s ease-out 0.1s both;
+  max-width: 100%;
 }
 
 .hero-title .gradient-text {
@@ -79,10 +88,11 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  display: inline-block;
 }
 
 .hero-subtitle {
-  font-size: clamp(1.4rem, 3vw, 1.7rem);
+  font-size: clamp(1.1rem, 3vw, 1.7rem);
   color: rgba(255, 255, 255, 0.95);
   max-width: 800px;
   margin: 0 auto 2.5rem;
@@ -95,18 +105,20 @@
   display: flex;
   gap: 1rem;
   justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
   animation: fadeSlideUp 0.6s ease-out 0.3s both;
-  margin: 18px;
+  margin: 0 auto;
+  max-width: 100%;
 }
 
 .btn-hero-primary {
-  padding: 0.875rem 2.25rem;
+  padding: 1rem 2.5rem;
   border-radius: 12px;
   background: linear-gradient(135deg, #3b82f6, #6366f1);
   color: #fff;
   font-weight: 600;
-  font-size: 1rem;
+  font-size: 1.05rem;
   border: none;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -114,7 +126,9 @@
   text-decoration: none;
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 0.5rem;
+  white-space: nowrap;
 }
 
 .btn-hero-primary:hover {
@@ -123,20 +137,22 @@
 }
 
 .btn-hero-secondary {
-  padding: 0.875rem 2.25rem;
+  padding: 1rem 2.5rem;
   border-radius: 12px;
   background: rgba(255, 255, 255, 0.06);
   border: 1px solid rgba(255, 255, 255, 0.15);
   color: #fff;
   font-weight: 600;
-  font-size: 1rem;
+  font-size: 1.05rem;
   cursor: pointer;
   transition: all 0.3s ease;
   backdrop-filter: blur(10px);
   text-decoration: none;
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 0.5rem;
+  white-space: nowrap;
 }
 
 .btn-hero-secondary:hover {
@@ -149,11 +165,13 @@
 .gateway-section {
   padding: 5rem 2rem;
   background: #f8fafc;
+  width: 100%;
 }
 
 .section-header {
   text-align: center;
-  margin-bottom: 3.5rem;
+  margin: 0 auto 3.5rem;
+  max-width: 800px;
 }
 
 .section-label {
@@ -170,23 +188,25 @@
   font-size: clamp(1.75rem, 4vw, 2.5rem);
   font-weight: 800;
   color: #0f172a;
-  margin-bottom: 0.75rem;
+  margin: 0 auto 0.75rem;
   letter-spacing: -0.02em;
 }
 
 .section-subtitle {
   font-size: 1.05rem;
   color: #64748b;
-  max-width: 500px;
+  max-width: 600px;
   margin: 0 auto;
+  line-height: 1.6;
 }
 
 .gateway-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 1.5rem;
-  max-width: 1100px;
+  max-width: 1200px;
   margin: 0 auto;
+  padding: 0 1rem;
 }
 
 .gateway-card {
@@ -202,6 +222,7 @@
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
+  min-height: 200px;
 }
 
 .gateway-card::before {
@@ -241,12 +262,14 @@
   font-size: 1.15rem;
   font-weight: 700;
   color: #0f172a;
+  margin: 0;
 }
 
 .card-desc {
   font-size: 0.9rem;
   color: #64748b;
   line-height: 1.6;
+  flex: 1;
 }
 
 .card-arrow {
@@ -271,81 +294,93 @@
 .how-section {
   padding: 5rem 2rem;
   background: #fff;
+  width: 100%;
 }
 
 .steps-row {
   display: flex;
   justify-content: center;
+  align-items: flex-start;
   gap: 3rem;
-  max-width: 900px;
+  max-width: 1000px;
   margin: 0 auto;
   flex-wrap: wrap;
 }
 
 .step-item {
   text-align: center;
-  max-width: 250px;
+  max-width: 280px;
   flex: 1;
-  min-width: 200px;
+  min-width: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .step-number {
-  width: 56px;
-  height: 56px;
+  width: 64px;
+  height: 64px;
   border-radius: 16px;
   background: linear-gradient(135deg, #ede9fe, #e0e7ff);
   color: #4f46e5;
-  font-size: 1.25rem;
+  font-size: 1.4rem;
   font-weight: 800;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 auto 1rem;
+  margin: 0 auto 1.25rem;
+  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.15);
 }
 
 .step-title {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   font-weight: 700;
   color: #0f172a;
-  margin-bottom: 0.5rem;
+  margin: 0 0 0.75rem 0;
 }
 
 .step-desc {
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   color: #64748b;
   line-height: 1.65;
+  margin: 0;
 }
 
 /* ================= Stats Section ================= */
 .stats-section {
   padding: 4rem 2rem;
   background: #f8fafc;
+  width: 100%;
 }
 
 .stats-row {
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 4rem;
-  max-width: 800px;
+  max-width: 1000px;
   margin: 0 auto;
   flex-wrap: wrap;
 }
 
 .stat-item {
   text-align: center;
+  min-width: 150px;
 }
 
 .stat-number {
-  font-size: clamp(2rem, 5vw, 3rem);
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
   font-weight: 800;
   color: #0f172a;
-  margin-bottom: 0.25rem;
+  margin: 0 0 0.5rem 0;
+  line-height: 1;
 }
 
 .stat-label {
   font-size: 1rem;
   color: #64748b;
   font-weight: 600;
+  margin: 0;
 }
 
 /* ================= CTA Section ================= */
@@ -353,10 +388,11 @@
   padding: 5rem 2rem;
   text-align: center;
   background: #f8fafc;
+  width: 100%;
 }
 
 .cta-box {
-  max-width: 650px;
+  max-width: 700px;
   margin: 0 auto;
   padding: 3.5rem 2.5rem;
   border-radius: 24px;
@@ -376,33 +412,35 @@
 
 .cta-title {
   position: relative;
-  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
   font-weight: 800;
   color: #fff;
-  margin-bottom: 0.75rem;
+  margin: 0 auto 0.75rem;
 }
 
 .cta-subtitle {
   position: relative;
-  font-size: 1rem;
+  font-size: 1.05rem;
   color: rgba(255, 255, 255, 0.65);
-  margin-bottom: 2rem;
+  margin: 0 auto 2rem;
+  max-width: 500px;
 }
 
 .btn-cta {
   position: relative;
-  padding: 0.875rem 2.5rem;
+  padding: 1rem 2.75rem;
   border-radius: 12px;
   background: #fff;
   color: #312e81;
   font-weight: 700;
-  font-size: 1rem;
+  font-size: 1.05rem;
   border: none;
   cursor: pointer;
   transition: all 0.3s;
   text-decoration: none;
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 0.5rem;
 }
 
@@ -425,25 +463,161 @@
 }
 
 /* ================= Responsive ================= */
+@media (max-width: 900px) {
+  .gateway-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+}
+
 @media (max-width: 768px) {
   .home-hero {
-    min-height: 80vh;
+    min-height: 90vh;
+    padding: 1.5rem;
+  }
+
+  .hero-content {
+    padding: 3rem 2rem 3.5rem;
+  }
+
+  .hero-title {
+    font-size: clamp(2.5rem, 10vw, 4rem);
+    margin-bottom: 1rem;
+  }
+
+  .hero-subtitle {
+    font-size: clamp(1rem, 4vw, 1.3rem);
+    margin-bottom: 2rem;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    gap: 0.75rem;
+    width: 100%;
+  }
+
+  .btn-hero-primary,
+  .btn-hero-secondary {
+    width: 100%;
+    max-width: 300px;
+    padding: 0.875rem 2rem;
+    font-size: 1rem;
+  }
+
+  .gateway-section,
+  .how-section,
+  .stats-section,
+  .cta-section {
+    padding: 3.5rem 1.5rem;
+  }
+
+  .section-header {
+    margin-bottom: 2.5rem;
+  }
+
+  .section-title {
+    font-size: clamp(1.5rem, 6vw, 2rem);
+  }
+
+  .section-subtitle {
+    font-size: 0.95rem;
   }
 
   .gateway-grid {
     grid-template-columns: 1fr;
+    gap: 1.25rem;
+    padding: 0;
+  }
+
+  .gateway-card {
+    padding: 1.75rem;
   }
 
   .steps-row {
     flex-direction: column;
     align-items: center;
+    gap: 2.5rem;
+  }
+
+  .step-item {
+    max-width: 100%;
   }
 
   .stats-row {
-    gap: 2rem;
+    gap: 2.5rem;
+  }
+
+  .stat-item {
+    min-width: 120px;
   }
 
   .cta-box {
-    padding: 2.5rem 1.5rem;
+    padding: 2.5rem 1.75rem;
+  }
+
+  .cta-title {
+    font-size: clamp(1.5rem, 5vw, 2rem);
+  }
+
+  .cta-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .btn-cta {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-hero {
+    padding: 1rem;
+  }
+
+  .hero-content {
+    padding: 2.5rem 1.5rem 3rem;
+  }
+
+  .hero-title {
+    font-size: clamp(2rem, 12vw, 3rem);
+  }
+
+  .hero-subtitle {
+    font-size: clamp(0.9rem, 4vw, 1.1rem);
+  }
+
+  .btn-hero-primary,
+  .btn-hero-secondary {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.95rem;
+  }
+
+  .gateway-card {
+    padding: 1.5rem;
+  }
+
+  .step-number {
+    width: 56px;
+    height: 56px;
+    font-size: 1.2rem;
+  }
+
+  .step-title {
+    font-size: 1.1rem;
+  }
+
+  .step-desc {
+    font-size: 0.875rem;
+  }
+
+  .stat-number {
+    font-size: clamp(2rem, 8vw, 2.5rem);
+  }
+
+  .stat-label {
+    font-size: 0.9rem;
+  }
+
+  .cta-box {
+    padding: 2rem 1.25rem;
   }
 }
