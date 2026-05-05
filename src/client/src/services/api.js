@@ -48,6 +48,15 @@ export const signUp = (formData) => API.post("/users/register", formData);
 export const getMe = () => API.get("/users/me");
 export const searchUsers = (query) => API.get(`/users/search?q=${query}`);
 
+/* ================= OTP APIs ================= */
+export const sendOTP = (data) => API.post("/auth/send-otp", data);
+export const verifyOTP = (data) => API.post("/auth/verify-otp", data);
+export const resendOTP = (data) => API.post("/auth/resend-otp", data);
+
+/* ================= PASSWORD RESET APIs ================= */
+export const sendResetOTP = (data) => API.post("/auth/send-reset-otp", data);
+export const resetPassword = (data) => API.post("/auth/reset-password", data);
+
 export default API;
 
 /* ================= PROFILE APIs ================= */

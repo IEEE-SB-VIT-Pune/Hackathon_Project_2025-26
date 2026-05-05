@@ -8,6 +8,7 @@ import ProtectedRoute from "./components/auth/ProtectedRoute";
 
 import Login from "./pages/auth/Login";
 import Signup from "./pages/auth/Signup";
+import ForgotPassword from "./pages/auth/ForgotPassword";
 import LoginSuccess from "./components/auth/LoginSuccess"; // Check path
 /* Judge Pages */
 import AssignedHackathons from "./pages/judge/AssignedHackathons";
@@ -54,6 +55,7 @@ function App() {
       <Route path="/faq" element={<Faq />} />
       <Route path="/login" element={<Login />} />
       <Route path="/signup" element={<Signup />} />
+      <Route path="/forgot-password" element={<ForgotPassword />} />
       <Route path="/login-success" element={<LoginSuccess />} />
 
       {/* ===== ADMIN-ONLY ROUTES ===== */}

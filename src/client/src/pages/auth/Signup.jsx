@@ -1,11 +1,11 @@
 import React from 'react';
 import AuthLayout from '../../components/auth/AuthLayout';
-import AuthForm from '../../components/auth/AuthForm';
+import OTPSignupForm from '../../components/auth/OTPSignupForm';
 
 const Signup = () => {
   return (
     <AuthLayout>
-      <AuthForm type="signup" />
+      <OTPSignupForm />
     </AuthLayout>
   );
 };

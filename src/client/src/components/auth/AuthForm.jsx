@@ -98,7 +98,9 @@ const AuthForm = ({ type }) => {
 
         {!isSignup && (
           <div className="forgot-password-wrapper">
-            <span className="forgot-password">Forgot your password?</span>
+            <Link to="/forgot-password" className="forgot-password-link">
+              Forgot your password?
+            </Link>
           </div>
         )}
 

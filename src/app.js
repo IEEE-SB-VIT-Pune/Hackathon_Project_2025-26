@@ -25,6 +25,7 @@ import submissionRoutes from './routes/submission.routes.js';
 import evaluationRoutes from './routes/evaluation.routes.js';
 import oauthRoutes from './routes/oauth.routes.js';
 import calendarRoutes from './routes/calendar.routes.js';
+import otpRoutes from './routes/otp.routes.js';
 
 // Search & Recommendation Routes
 import searchRoutes from './routes/search.routes.js';
@@ -89,6 +90,7 @@ app.use('/api/submissions', submissionRoutes);
 app.use('/api/evaluations', evaluationRoutes);
 app.use('/api/oauth', oauthRoutes);
 app.use('/api/calendar', calendarRoutes);
+app.use('/api/auth', otpRoutes);
 
 // Search & Recommendation Routes
 app.use('/api/search', searchRoutes);

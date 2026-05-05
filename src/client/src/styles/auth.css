@@ -190,6 +190,19 @@ body {
   text-decoration: none;
 }
 
+.forgot-password-link {
+  font-size: 14px;
+  color: #4f9cf9;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.forgot-password-link:hover {
+  color: #3b82f6;
+  text-decoration: underline;
+}
+
 /* ===== BUTTON ===== */
 .primary-button {
   width: 100%;

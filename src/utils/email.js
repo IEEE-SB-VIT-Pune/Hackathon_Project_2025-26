@@ -90,3 +90,250 @@ export const getQueueStatus = () => ({
   isProcessing,
   smtpConfigured: EMAIL_CONFIGURED,
 });
+
+/**
+ * Send OTP verification email
+ * @param {string} email - Recipient email
+ * @param {string} otp - 6-digit OTP
+ */
+export const sendOTPEmail = async (email, otp) => {
+  const subject = 'OTP Verification - HackHub';
+  const html = `
+    <!DOCTYPE html>
+    <html>
+    <head>
+      <style>
+        body {
+          font-family: Arial, sans-serif;
+          background-color: #f4f4f4;
+          margin: 0;
+          padding: 0;
+        }
+        .container {
+          max-width: 600px;
+          margin: 50px auto;
+          background-color: #ffffff;
+          border-radius: 8px;
+          box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+          overflow: hidden;
+        }
+        .header {
+          background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+          color: #ffffff;
+          padding: 30px;
+          text-align: center;
+        }
+        .header h1 {
+          margin: 0;
+          font-size: 28px;
+        }
+        .content {
+          padding: 40px 30px;
+          text-align: center;
+        }
+        .content p {
+          color: #333333;
+          font-size: 16px;
+          line-height: 1.6;
+          margin-bottom: 20px;
+        }
+        .otp-box {
+          background-color: #f8f9fa;
+          border: 2px dashed #667eea;
+          border-radius: 8px;
+          padding: 20px;
+          margin: 30px 0;
+        }
+        .otp-code {
+          font-size: 36px;
+          font-weight: bold;
+          color: #667eea;
+          letter-spacing: 8px;
+          margin: 10px 0;
+        }
+        .expiry {
+          color: #dc3545;
+          font-size: 14px;
+          font-weight: 600;
+          margin-top: 10px;
+        }
+        .footer {
+          background-color: #f8f9fa;
+          padding: 20px;
+          text-align: center;
+          color: #6c757d;
+          font-size: 14px;
+        }
+        .warning {
+          background-color: #fff3cd;
+          border-left: 4px solid #ffc107;
+          padding: 15px;
+          margin: 20px 0;
+          text-align: left;
+        }
+        .warning p {
+          margin: 0;
+          color: #856404;
+          font-size: 14px;
+        }
+      </style>
+    </head>
+    <body>
+      <div class="container">
+        <div class="header">
+          <h1>🔐 Email Verification</h1>
+        </div>
+        <div class="content">
+          <p>Hello!</p>
+          <p>Thank you for signing up with <strong>HackHub</strong>. To complete your registration, please verify your email address using the OTP below:</p>
+          
+          <div class="otp-box">
+            <p style="margin: 0; color: #666; font-size: 14px;">Your One-Time Password</p>
+            <div class="otp-code">${otp}</div>
+            <p class="expiry">⏰ This OTP will expire in 5 minutes</p>
+          </div>
+
+          <p>Enter this OTP in the verification form to activate your account.</p>
+
+          <div class="warning">
+            <p><strong>⚠️ Security Notice:</strong></p>
+            <p>• Never share this OTP with anyone</p>
+            <p>• HackHub will never ask for your OTP via phone or email</p>
+            <p>• If you didn't request this, please ignore this email</p>
+          </div>
+        </div>
+        <div class="footer">
+          <p>This is an automated email. Please do not reply.</p>
+          <p>&copy; ${new Date().getFullYear()} HackHub. All rights reserved.</p>
+        </div>
+      </div>
+    </body>
+    </html>
+  `;
+
+  return sendEmail({ to: email, subject, html });
+};
+
+/**
+ * Send password reset OTP email
+ * @param {string} email - Recipient email
+ * @param {string} otp - 6-digit OTP
+ */
+export const sendPasswordResetEmail = async (email, otp) => {
+  const subject = 'Password Reset OTP - HackHub';
+  const html = `
+    <!DOCTYPE html>
+    <html>
+    <head>
+      <style>
+        body {
+          font-family: Arial, sans-serif;
+          background-color: #f4f4f4;
+          margin: 0;
+          padding: 0;
+        }
+        .container {
+          max-width: 600px;
+          margin: 50px auto;
+          background-color: #ffffff;
+          border-radius: 8px;
+          box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+          overflow: hidden;
+        }
+        .header {
+          background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+          color: #ffffff;
+          padding: 30px;
+          text-align: center;
+        }
+        .header h1 {
+          margin: 0;
+          font-size: 28px;
+        }
+        .content {
+          padding: 40px 30px;
+          text-align: center;
+        }
+        .content p {
+          color: #333333;
+          font-size: 16px;
+          line-height: 1.6;
+          margin-bottom: 20px;
+        }
+        .otp-box {
+          background-color: #fff5f5;
+          border: 2px dashed #f5576c;
+          border-radius: 8px;
+          padding: 20px;
+          margin: 30px 0;
+        }
+        .otp-code {
+          font-size: 36px;
+          font-weight: bold;
+          color: #f5576c;
+          letter-spacing: 8px;
+          margin: 10px 0;
+        }
+        .expiry {
+          color: #dc3545;
+          font-size: 14px;
+          font-weight: 600;
+          margin-top: 10px;
+        }
+        .footer {
+          background-color: #f8f9fa;
+          padding: 20px;
+          text-align: center;
+          color: #6c757d;
+          font-size: 14px;
+        }
+        .warning {
+          background-color: #fff3cd;
+          border-left: 4px solid #ffc107;
+          padding: 15px;
+          margin: 20px 0;
+          text-align: left;
+        }
+        .warning p {
+          margin: 0;
+          color: #856404;
+          font-size: 14px;
+        }
+      </style>
+    </head>
+    <body>
+      <div class="container">
+        <div class="header">
+          <h1>🔑 Password Reset</h1>
+        </div>
+        <div class="content">
+          <p>Hello!</p>
+          <p>We received a request to reset your password for your <strong>HackHub</strong> account. Use the OTP below to reset your password:</p>
+          
+          <div class="otp-box">
+            <p style="margin: 0; color: #666; font-size: 14px;">Your One-Time Password</p>
+            <div class="otp-code">${otp}</div>
+            <p class="expiry">⏰ This OTP will expire in 5 minutes</p>
+          </div>
+
+          <p>Enter this OTP on the password reset page to set your new password.</p>
+
+          <div class="warning">
+            <p><strong>⚠️ Security Notice:</strong></p>
+            <p>• Never share this OTP with anyone</p>
+            <p>• HackHub will never ask for your OTP via phone or email</p>
+            <p>• If you didn't request this password reset, please ignore this email</p>
+            <p>• Your password will remain unchanged if you don't use this OTP</p>
+          </div>
+        </div>
+        <div class="footer">
+          <p>This is an automated email. Please do not reply.</p>
+          <p>&copy; ${new Date().getFullYear()} HackHub. All rights reserved.</p>
+        </div>
+      </div>
+    </body>
+    </html>
+  `;
+
+  return sendEmail({ to: email, subject, html });
+};

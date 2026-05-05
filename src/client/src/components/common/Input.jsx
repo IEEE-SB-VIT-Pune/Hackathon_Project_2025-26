@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const Input = ({ label, type = 'text', placeholder, name, required = false }) => {
+const Input = ({ label, type = 'text', placeholder, name, required = false, value, onChange, ...rest }) => {
   const [showPassword, setShowPassword] = useState(false);
   const isPassword = type === 'password';
 
@@ -19,6 +19,9 @@ const Input = ({ label, type = 'text', placeholder, name, required = false }) =>
           placeholder={placeholder}
           className="input-field"
           required={required}
+          value={value}
+          onChange={onChange}
+          {...rest}
         />
 
         {isPassword && (
