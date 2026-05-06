@@ -1502,3 +1502,98 @@ input:checked + .slider:before { transform: translateX(20px); }
   word-wrap: break-word;
   overflow-wrap: break-word;
 }
+
+/* ============================================ */
+/* MOBILE RESPONSIVE — SINGLE HACKATHON         */
+/* ============================================ */
+
+/* Prize banner — stack on mobile */
+@media (max-width: 600px) {
+  .prize-banner {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 16px 20px;
+    gap: 12px;
+  }
+
+  .prize-amount {
+    font-size: 1.8rem;
+  }
+
+  .time-blocks {
+    gap: 6px;
+  }
+
+  .time-block span {
+    font-size: 1.2rem;
+  }
+
+  .sh-title {
+    font-size: 1.5rem;
+  }
+
+  .sh-tabs-container {
+    gap: 8px;
+    padding: 10px 0;
+  }
+
+  .sh-tab {
+    font-size: 0.85rem;
+    padding: 8px 2px;
+  }
+}
+
+/* Sidebar moves below main on mobile (already handled by grid at 900px)
+   but ensure proper spacing */
+@media (max-width: 900px) {
+  .sh-sidebar {
+    position: static; /* un-stick on mobile */
+    top: auto;
+    width: 100%;
+  }
+
+  .sh-layout {
+    padding: 0 4vw;
+  }
+
+  .sh-topbar {
+    padding: 16px 4vw 0;
+  }
+
+  .sh-hero-container {
+    padding: 0 4vw;
+    margin: 16px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .sh-layout {
+    padding: 0 3vw;
+  }
+
+  .sh-hero-card {
+    padding: 20px 16px;
+  }
+
+  .sh-sidebar-card {
+    padding: 16px;
+  }
+
+  .sh-content-card {
+    padding: 16px 14px;
+  }
+
+  .ai-assistant-btn {
+    width: 52px;
+    height: 52px;
+    bottom: 20px;
+    right: 16px;
+  }
+
+  .ai-modal {
+    padding: 24px 16px;
+    width: 95%;
+    max-height: 90vh;
+  }
+}
+

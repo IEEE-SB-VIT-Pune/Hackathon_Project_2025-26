@@ -248,14 +248,36 @@
 }
 
 .card-icon {
-  width: 48px;
-  height: 48px;
-  border-radius: 12px;
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.4rem;
   background: var(--card-bg);
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+}
+
+.gateway-card:hover .card-icon {
+  transform: scale(1.1) rotate(-4deg);
+}
+
+.step-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #ede9fe, #e0e7ff);
+  color: #4f46e5;
+  margin: 0 auto 1rem;
+  transition: transform 0.3s ease;
+}
+
+.step-item:hover .step-icon {
+  transform: scale(1.1) rotate(-4deg);
 }
 
 .card-title {

@@ -21,7 +21,7 @@ const TYPE_LABELS = {
 const ALL_TYPES = Object.keys(TYPE_LABELS);
 const ALL_STATUSES = ['upcoming', 'past'];
 
-// ── Refresh notification banner ────────────────────────────────────────────
+// ── Real-time update banner ──────────────────────────────────────────────────
 const RefreshBanner = ({ visible }) => (
     <div
         style={{
@@ -45,7 +45,7 @@ const RefreshBanner = ({ visible }) => (
             zIndex: 9999,
         }}
     >
-        Calendar updated in real time
+        📅 Calendar updated in real time
     </div>
 );
 
@@ -53,11 +53,10 @@ const Calendar = () => {
     const [events, setEvents] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
-    const [showAll, setShowAll] = useState(false); // false = my events, true = all hackathons
+    const [showAll, setShowAll] = useState(false);
     const [bannerVisible, setBannerVisible] = useState(false);
     const bannerTimer = useRef(null);
 
-    // Open on the real current month — not a hardcoded date
     const [currentDate, setCurrentDate] = useState(new Date());
 
     const [filters, setFilters] = useState({
@@ -67,15 +66,14 @@ const Calendar = () => {
     const [selectedEvent, setSelectedEvent] = useState(null);
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [viewMode, setViewMode] = useState('month'); // 'month' | 'list'
+    const [sidebarOpen, setSidebarOpen] = useState(false);  // mobile filter drawer
 
-    // ── Fetch events ──────────────────────────────────────────────────────
+    // ── Fetch ─────────────────────────────────────────────────────────────
     const fetchEvents = useCallback(async (silent = false) => {
         try {
             if (!silent) setLoading(true);
             setError(null);
 
-            // showAll → public calendar (all hackathon dates, no auth needed)
-            // !showAll → personal calendar (only hackathons user is registered for)
             const response = showAll
                 ? await getCalendarEvents()
                 : await getMyCalendarEvents();
@@ -102,30 +100,19 @@ const Calendar = () => {
         }
     }, [showAll]);
 
-    // Initial fetch whenever showAll changes
-    useEffect(() => {
-        fetchEvents(false);
-    }, [fetchEvents]);
+    useEffect(() => { fetchEvents(false); }, [fetchEvents]);
 
-    // ── Socket.IO — real-time calendar updates ────────────────────────────
+    // ── Socket.IO ─────────────────────────────────────────────────────────
     useEffect(() => {
         const socket = getSocket();
-
-        const handleCalendarUpdate = (payload) => {
-            console.log('Real-time calendar update received:', payload);
-
-            // Silently re-fetch so the calendar reflects the new hackathon dates
+        const handleCalendarUpdate = () => {
             fetchEvents(true).then(() => {
-                // Show the "updated" banner for 3 seconds
                 setBannerVisible(true);
                 clearTimeout(bannerTimer.current);
                 bannerTimer.current = setTimeout(() => setBannerVisible(false), 3000);
             });
         };
-
         socket.on('calendar:update', handleCalendarUpdate);
-
-        // Cleanup on unmount
         return () => {
             socket.off('calendar:update', handleCalendarUpdate);
             clearTimeout(bannerTimer.current);
@@ -137,7 +124,6 @@ const Calendar = () => {
         setFilters(prev => {
             if (category === 'reset') return { status: [...ALL_STATUSES], type: [...ALL_TYPES] };
             if (category === 'clear') return { status: [], type: [] };
-
             const current = prev[category];
             const next = current.includes(value)
                 ? current.filter(item => item !== value)
@@ -146,41 +132,32 @@ const Calendar = () => {
         });
     };
 
-    const handleEventClick = (event) => {
-        setSelectedEvent(event);
-        setIsModalOpen(true);
-    };
-
-    const closeModal = () => {
-        setIsModalOpen(false);
-        setSelectedEvent(null);
-    };
+    const handleEventClick = (event) => { setSelectedEvent(event); setIsModalOpen(true); };
+    const closeModal = () => { setIsModalOpen(false); setSelectedEvent(null); };
 
     const filteredEvents = useMemo(() =>
         events.filter(event => {
-            const statusMatch =
-                filters.status.length === 0 ||
-                filters.status.includes(event.status?.toLowerCase());
-            const typeMatch =
-                filters.type.length === 0 ||
-                filters.type.includes(event.type);
+            const statusMatch = filters.status.length === 0 || filters.status.includes(event.status?.toLowerCase());
+            const typeMatch = filters.type.length === 0 || filters.type.includes(event.type);
             return statusMatch && typeMatch;
         }),
         [events, filters]);
 
     const onNavigateMonth = (direction) => {
+        if (direction === 0) { setCurrentDate(new Date()); return; }
         const next = new Date(currentDate);
         next.setMonth(currentDate.getMonth() + direction);
         setCurrentDate(next);
     };
 
-    // ── Render ────────────────────────────────────────────────────────────
+    // ── Loading state ──────────────────────────────────────────────────────
     if (loading) {
         return (
             <div className="calendar-page">
                 <Navbar />
-                <div className="loading-container" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '60vh' }}>
-                    <div className="loader">Loading calendar…</div>
+                <div className="cal-loading">
+                    <div className="cal-spinner" />
+                    <p>Loading calendar…</p>
                 </div>
                 <Footer />
             </div>
@@ -191,72 +168,122 @@ const Calendar = () => {
         <div className="calendar-page">
             <Navbar />
 
-            {/* Real-time update notification */}
             <RefreshBanner visible={bannerVisible} />
 
+            {/* ── Top Control Bar ── */}
             <div className="calendar-top-bar">
-                {/* View mode: Month / List */}
-                <div className="view-mode-toggles">
-                    <span>View:</span>
-                    <button
-                        className={`view-btn ${viewMode === 'month' ? 'active' : ''}`}
-                        onClick={() => setViewMode('month')}
+
+                {/* View mode — toggle buttons (desktop) + select (mobile) */}
+                <div className="cal-control-group">
+                    <span className="cal-control-label">View</span>
+
+                    {/* Desktop toggle buttons */}
+                    <div className="view-mode-toggles cal-desktop-only">
+                        <button
+                            className={`view-btn ${viewMode === 'month' ? 'active' : ''}`}
+                            onClick={() => setViewMode('month')}
+                        >
+                            Month
+                        </button>
+                        <button
+                            className={`view-btn ${viewMode === 'list' ? 'active' : ''}`}
+                            onClick={() => setViewMode('list')}
+                        >
+                            List
+                        </button>
+                    </div>
+
+                    {/* Mobile select */}
+                    <select
+                        className="cal-select cal-mobile-only"
+                        value={viewMode}
+                        onChange={e => setViewMode(e.target.value)}
+                        aria-label="View mode"
                     >
-                        Month
-                    </button>
-                    <button
-                        className={`view-btn ${viewMode === 'list' ? 'active' : ''}`}
-                        onClick={() => setViewMode('list')}
-                    >
-                        List
-                    </button>
+                        <option value="month">Month</option>
+                        <option value="list">List</option>
+                    </select>
                 </div>
 
-                {/* Data source toggle: My Events / All Hackathons */}
-                <div className="view-mode-toggles" style={{ marginLeft: 'auto' }}>
-                    <span>Show:</span>
-                    <button
-                        className={`view-btn ${!showAll ? 'active' : ''}`}
-                        onClick={() => setShowAll(false)}
-                        title="Only hackathons you are registered for"
+                {/* Data source — toggle buttons (desktop) + select (mobile) */}
+                <div className="cal-control-group">
+                    <span className="cal-control-label">Show</span>
+
+                    {/* Desktop toggle buttons */}
+                    <div className="view-mode-toggles cal-desktop-only">
+                        <button
+                            className={`view-btn ${!showAll ? 'active' : ''}`}
+                            onClick={() => setShowAll(false)}
+                            title="Only hackathons you are registered for"
+                        >
+                            My Events
+                        </button>
+                        <button
+                            className={`view-btn ${showAll ? 'active' : ''}`}
+                            onClick={() => setShowAll(true)}
+                            title="All open / ongoing hackathons"
+                        >
+                            All Hackathons
+                        </button>
+                    </div>
+
+                    {/* Mobile select */}
+                    <select
+                        className="cal-select cal-mobile-only"
+                        value={showAll ? 'all' : 'mine'}
+                        onChange={e => setShowAll(e.target.value === 'all')}
+                        aria-label="Event source"
                     >
-                        My Events
-                    </button>
-                    <button
-                        className={`view-btn ${showAll ? 'active' : ''}`}
-                        onClick={() => setShowAll(true)}
-                        title="All open / ongoing hackathons"
-                    >
-                        All Hackathons
-                    </button>
+                        <option value="mine">My Events</option>
+                        <option value="all">All Hackathons</option>
+                    </select>
                 </div>
+
+                {/* Mobile filter toggle — only visible on mobile */}
+                <button
+                    className="cal-filter-toggle-btn cal-mobile-only"
+                    onClick={() => setSidebarOpen(true)}
+                    aria-label="Open filters"
+                >
+                    Filters
+                    {(filters.status.length < ALL_STATUSES.length || filters.type.length < ALL_TYPES.length) && (
+                        <span className="cal-filter-badge" />
+                    )}
+                </button>
             </div>
 
+            {/* ── Error & Empty States ── */}
             {error && (
-                <div style={{
-                    textAlign: 'center', padding: '1rem',
-                    color: '#dc2626', background: '#fef2f2',
-                    margin: '0.5rem 1rem', borderRadius: '8px'
-                }}>
-                    {error}
-                </div>
+                <div className="cal-error-banner">{error}</div>
             )}
 
             {!error && events.length === 0 && (
-                <div style={{ textAlign: 'center', padding: '2rem', color: '#6b7280' }}>
-                    <p>No hackathon events found.</p>
+                <div className="cal-empty-state">
+                    <p>📭 No hackathon events found.</p>
                     {showAll
                         ? <p>No open hackathons have been created yet.</p>
-                        : <p>Register for a hackathon to see its schedule here, or switch to <strong>All Hackathons</strong>.</p>
+                        : <p>Register for a hackathon to see its schedule, or switch to <strong>All Hackathons</strong>.</p>
                     }
                 </div>
             )}
 
+            {/* ── Main Calendar Layout ── */}
             <main className="calendar-container">
+                {/* Mobile sidebar backdrop */}
+                {sidebarOpen && (
+                    <div
+                        className="cal-sidebar-backdrop"
+                        onClick={() => setSidebarOpen(false)}
+                        aria-hidden="true"
+                    />
+                )}
+
                 <CalendarSidebar
                     filters={filters}
                     onFilterChange={handleFilterChange}
                     typeLabels={TYPE_LABELS}
+                    isOpen={sidebarOpen}
+                    onClose={() => setSidebarOpen(false)}
                 />
 
                 <section className="calendar-main-content">

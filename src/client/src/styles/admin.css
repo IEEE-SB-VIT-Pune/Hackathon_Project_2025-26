@@ -194,6 +194,27 @@ body {
   gap: 16px;
 }
 
+@media (max-width: 1024px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .stats-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+
+  .stat-card {
+    padding: 20px 16px !important;
+  }
+
+  .stat-card h2 {
+    font-size: 28px !important;
+  }
+}
+
 .stat-card {
   background: #F2F2F2 !important;
   padding: 32px 24px !important;
@@ -1234,7 +1255,7 @@ body {
 .hero-content {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 24px;
+  padding: 12px 24px;
 }
 
 .hero-header {

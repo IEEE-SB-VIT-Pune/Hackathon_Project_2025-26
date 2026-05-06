@@ -195,6 +195,14 @@ const Discovery = () => {
             >
               Search
             </button>
+            <button
+              onClick={handleSearchClick}
+              className="absolute right-1.5 px-6 py-2 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors serarch-button hidden"
+            >
+              <Search
+                size={20}
+              />
+            </button>
 
           </div>
 

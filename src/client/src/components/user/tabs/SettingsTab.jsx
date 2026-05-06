@@ -237,22 +237,24 @@ const SettingsTab = ({ user, onUpdate }) => {
   return (
     <div className="settings-container">
       <div className="settings-header">
-        <div>
+        <div className="settings-header__text">
           <h2 className="settings-title">Your Profile</h2>
           <p className="settings-subtitle">Complete your profile to participate in the hackathon</p>
         </div>
-        {!isEditing ? (
-          <button className="btn btn-primary" onClick={() => setIsEditing(true)}>
-            Edit Profile
-          </button>
-        ) : (
-          <div className="btn-group">
-             <button className="btn btn-ghost" onClick={() => setIsEditing(false)}>Cancel</button>
-             <button className="btn btn-success" onClick={handleSave} disabled={saving}>
-               {saving ? "Saving..." : "Save Changes"}
-             </button>
-          </div>
-        )}
+        <div className="settings-header__actions">
+          {!isEditing ? (
+            <button className="btn btn-primary" onClick={() => setIsEditing(true)}>
+              ✏️ Edit Profile
+            </button>
+          ) : (
+            <div className="btn-group">
+              <button className="btn btn-ghost" onClick={() => setIsEditing(false)}>Cancel</button>
+              <button className="btn btn-success" onClick={handleSave} disabled={saving}>
+                {saving ? "Saving..." : "Save Changes"}
+              </button>
+            </div>
+          )}
+        </div>
       </div>
 
       <div className="settings-content">
@@ -642,7 +644,7 @@ const SettingsTab = ({ user, onUpdate }) => {
         <div className="settings-card shadow-sm">
           <h3 className="settings-card__title">Privacy</h3>
           {[
-            ["Public Profile", "Allow others to see your profile", "publicProfile"],
+            ["Public Profile", "Allow others to see your profile", "showCollege"],
             ["Allow Team Invites", "Others can invite you to teams", "allowInvites"],
           ].map(([title, desc, key]) => (
             <div key={key} className="toggle-row">

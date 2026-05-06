@@ -915,3 +915,54 @@ body {
     padding: 0 16px;
   }
 }
+
+@media (max-width: 480px) {
+  .page-title {
+    font-size: 22px;
+  }
+
+  .overview-title {
+    font-size: 18px;
+  }
+
+  .page-main {
+    padding: 20px 0;
+  }
+
+  .page-container,
+  .overview-container {
+    padding: 0 12px;
+  }
+
+  .summary-pill {
+    padding: 12px 16px;
+    width: 100%;
+  }
+
+  .hackathon-card {
+    padding: 20px 16px;
+  }
+
+  .overview-card {
+    padding: 20px 16px;
+  }
+
+  .deadline-card {
+    padding: 16px;
+  }
+
+  .btn-primary {
+    padding: 12px 20px;
+    font-size: 14px;
+  }
+
+  .marks-input {
+    width: 60px;
+  }
+
+  .submissions-table th:nth-child(n+4),
+  .submissions-table td:nth-child(n+4) {
+    display: none;
+  }
+}
+

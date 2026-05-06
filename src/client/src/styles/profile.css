@@ -81,13 +81,12 @@ body {
 .profile-header {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     background: #fff;
     border-radius: 14px;
-    padding: 28px 32px;
+    padding: 24px 28px;
     margin-bottom: 0;
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
-    flex-wrap: wrap;
     gap: 20px;
     width: 100%;
     max-width: 100%;
@@ -96,25 +95,26 @@ body {
 
 .profile-header__left {
     display: flex;
-    gap: 18px;
-    align-items: center;
+    gap: 16px;
+    align-items: flex-start;
     flex: 1;
     min-width: 0;
 }
 
 .profile-header__avatar {
-    width: 72px;
-    height: 72px;
-    min-width: 72px;
+    width: 64px;
+    height: 64px;
+    min-width: 64px;
     border-radius: 50%;
-    background: #c7d2e8;
+    background: linear-gradient(135deg, #c7d2e8, #a5b4d0);
     color: #1e3a5f;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 28px;
+    font-size: 24px;
     font-weight: 700;
     flex-shrink: 0;
+    margin-top: 2px;
 }
 
 .profile-header__info {
@@ -123,12 +123,13 @@ body {
 }
 
 .profile-header__info h2 {
-    font-size: 22px;
+    font-size: 20px;
     font-weight: 700;
     color: #1e3a5f;
     margin: 0 0 4px;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .profile-header__info p {
@@ -137,45 +138,53 @@ body {
     margin: 2px 0;
     display: flex;
     align-items: center;
-    gap: 6px;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
+    gap: 5px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .profile-header__info p .icon {
-    font-size: 14px;
+    font-size: 13px;
     opacity: 0.7;
     flex-shrink: 0;
 }
 
+/* Stat cards — right side */
 .profile-header__stats {
     display: flex;
-    gap: 14px;
-    flex-wrap: wrap;
+    gap: 10px;
+    flex-shrink: 0;
+    align-items: stretch;
 }
 
 .stat-card {
     background: #eef3ff;
     border-radius: 10px;
-    padding: 14px 22px;
+    padding: 10px 16px;
     text-align: center;
-    min-width: 140px;
+    min-width: 100px;
+    max-width: 140px;
     flex: 1;
+    border: 1px solid #dbeafe;
 }
 
 .stat-card__value {
-    font-size: 26px;
+    font-size: 22px;
     font-weight: 800;
     color: #1d4ed8;
     margin: 0;
+    line-height: 1.2;
 }
 
 .stat-card__label {
-    font-size: 11px;
+    font-size: 10px;
     color: #64748b;
     margin: 4px 0 0;
-    text-transform: capitalize;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
     word-wrap: break-word;
+    line-height: 1.3;
 }
 
 /* ======================================
@@ -373,72 +382,174 @@ body {
 /* Team Info Card (overview) */
 .team-info-card {
     background: #fff;
-    border-radius: 14px;
-    padding: 24px;
+    border-radius: 16px;
+    padding: 24px 28px;
     margin-top: 20px;
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
-    max-width: 540px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
+    border: 1px solid #e8edf5;
+}
+
+/* Title row: "Team Information" + hackathon chip */
+.team-info-card__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    flex-wrap: wrap;
+    gap: 8px;
 }
 
 .team-info-card__title {
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 700;
     color: #1d4ed8;
-    margin: 0 0 14px;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
 }
 
+.team-info-card__hackathon {
+    font-size: 11px;
+    font-weight: 600;
+    color: #6366f1;
+    background: #eef2ff;
+    padding: 3px 10px;
+    border-radius: 20px;
+    white-space: nowrap;
+}
+
+/* Header: team name + member count + Leader badge */
 .team-info-card__header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 14px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.team-info-card__name-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
 }
 
 .team-info-card__header h4 {
-    font-size: 15px;
-    font-weight: 700;
+    font-size: 17px;
+    font-weight: 800;
     color: #1e3a5f;
     margin: 0;
 }
 
-.leader-badge {
-    padding: 3px 10px;
-    background: #22c55e;
-    color: #fff;
-    border-radius: 6px;
+.team-member-count {
     font-size: 11px;
     font-weight: 600;
+    color: #64748b;
+    background: #f1f5f9;
+    padding: 2px 8px;
+    border-radius: 20px;
+}
+
+.leader-badge {
+    padding: 4px 12px;
+    background: linear-gradient(135deg, #22c55e, #16a34a);
+    color: #fff;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    box-shadow: 0 2px 6px rgba(34, 197, 94, 0.3);
+    flex-shrink: 0;
+}
+
+/* Member list */
+.team-members-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    margin-bottom: 4px;
 }
 
 .team-member-row {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 6px 0;
-    font-size: 13px;
-    color: #475569;
+    gap: 12px;
+    padding: 8px 10px;
+    border-radius: 10px;
+    transition: background 0.15s;
+}
+
+.team-member-row:hover {
+    background: #f8fafc;
+}
+
+/* Colored avatar circle */
+.member-avatar {
+    width: 32px;
+    height: 32px;
+    min-width: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    font-weight: 700;
+    color: #fff;
+    flex-shrink: 0;
 }
 
 .team-member-row .name {
-    display: flex;
-    align-items: center;
-    gap: 6px;
+    flex: 1;
+    font-size: 13px;
+    font-weight: 600;
+    color: #334155;
 }
 
 .team-member-row .role {
-    color: #94a3b8;
-    font-size: 12px;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 2px 8px;
+    border-radius: 20px;
+    letter-spacing: 0.02em;
 }
 
+.role--leader {
+    background: #dcfce7;
+    color: #16a34a;
+}
+
+.role--member {
+    background: #f1f5f9;
+    color: #64748b;
+}
+
+/* "Looking for members" toggle row */
 .team-open-toggle {
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-top: 16px;
-    padding-top: 12px;
-    border-top: 1px solid #f0f0f0;
+    padding-top: 14px;
+    border-top: 1px solid #f0f4f8;
+    gap: 12px;
+}
+
+.team-open-toggle__info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.team-open-toggle__label {
     font-size: 13px;
-    color: #475569;
+    font-weight: 600;
+    color: #334155;
+}
+
+.team-open-toggle__sub {
+    font-size: 11px;
+    color: #94a3b8;
 }
 
 /* ======================================
@@ -851,18 +962,23 @@ body {
     margin: 2px 0 0;
 }
 
-/* Toggle Switch - IMPROVED DESIGN */
+/* Toggle Switch - FIXED: override global button min-height */
 .toggle-switch {
-    width: 50px;
-    height: 26px;
-    border-radius: 13px;
+    width: 52px !important;
+    height: 28px !important;
+    min-height: 28px !important;
+    min-width: 52px !important;
+    border-radius: 14px;
     border: none;
     cursor: pointer;
     position: relative;
-    transition: background 0.3s ease;
+    transition: background 0.28s ease;
     flex-shrink: 0;
-    padding: 0;
+    padding: 0 !important;
     outline: none;
+    display: inline-block;
+    vertical-align: middle;
+    box-sizing: border-box;
 }
 
 .toggle-switch--on {
@@ -874,19 +990,20 @@ body {
 }
 
 .toggle-switch:disabled {
-    opacity: 0.6;
+    opacity: 0.55;
     cursor: not-allowed;
 }
 
 .toggle-switch__knob {
-    width: 20px;
-    height: 20px;
+    width: 22px;
+    height: 22px;
     border-radius: 50%;
     background: #fff;
     position: absolute;
     top: 3px;
-    transition: left 0.3s ease;
+    transition: left 0.28s ease;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    pointer-events: none;
 }
 
 .toggle-switch--on .toggle-switch__knob {
@@ -938,12 +1055,16 @@ body {
    ====================================== */
 .settings-container {
     display: grid;
-    grid-template-columns: 1fr 340px;
-    gap: 24px;
+    grid-template-columns: 1fr 300px;
+    gap: 20px;
     align-items: start;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 900px) {
     .settings-container {
         grid-template-columns: 1fr;
     }
@@ -955,10 +1076,26 @@ body {
     justify-content: space-between;
     align-items: center;
     background: #fff;
-    padding: 24px 32px;
-    border-radius: 12px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-    margin-bottom: 8px;
+    padding: 18px 24px;
+    border-radius: 14px;
+    box-shadow: 0 1px 6px rgba(0,0,0,0.08);
+    margin-bottom: 4px;
+    gap: 16px;
+    flex-wrap: wrap;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.settings-header__text {
+    flex: 1;
+    min-width: 0;
+}
+
+.settings-header__actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
 }
 
 .settings-title {
@@ -980,13 +1117,18 @@ body {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    min-width: 0;
+    overflow: hidden;
 }
 
 .settings-section {
     background: #fff;
-    padding: 28px 32px;
+    padding: 24px;
     border-radius: 12px;
     box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
 }
 
 .section-title {
@@ -1004,6 +1146,15 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px 24px;
+}
+
+@media (max-width: 640px) {
+    .fields-grid {
+        grid-template-columns: 1fr;
+    }
+    .profile-field.full-width {
+        grid-column: 1;
+    }
 }
 
 .profile-field {
@@ -1049,6 +1200,9 @@ body {
     outline: none;
     font-family: inherit;
     transition: border-color 0.2s;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 .profile-field input:focus,
@@ -1101,16 +1255,30 @@ body {
 
 .success-message {
     color: #16a34a;
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 600;
     margin-top: 12px;
+    padding: 10px 16px;
+    background: #f0fdf4;
+    border: 1px solid #bbf7d0;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
 }
 
 .error-message {
     color: #dc2626;
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 600;
     margin-top: 12px;
+    padding: 10px 16px;
+    background: #fef2f2;
+    border: 1px solid #fecaca;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
 }
 
 .profile-footer__links {

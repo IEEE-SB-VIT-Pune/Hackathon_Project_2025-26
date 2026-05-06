@@ -2,53 +2,52 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ==========================================
+   GLOBAL MOBILE-FIRST BASE STYLES
+   ========================================== */
 
-
-
-/* @layer base {
-  body {
-    @apply bg-slate-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100;
-  }
-}  */
-
-@layer utilities {
-  .animate-fadeIn {
-    animation: fadeIn 0.35s ease-in-out;
-  }
-
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translateY(8px);
-    }
-
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-}
-
-
-
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light;
-  color: #213547;
-  background-color: #F2F2F2;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* Prevent horizontal overflow app-wide */
+*, *::before, *::after {
+  box-sizing: border-box;
 }
 
 html {
   height: 100%;
   margin: 0;
+  -webkit-text-size-adjust: 100%; /* prevent font scaling on orientation change */
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #F2F2F2;
+  overflow-x: hidden;
+  /* Improve touch scrolling on iOS */
+  -webkit-overflow-scrolling: touch;
+}
+
+#root {
+  min-height: 100vh;
+  min-height: 100dvh; /* dynamic viewport — handles iOS toolbar */
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light;
+  color: #213547;
+  background-color: #F2F2F2;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 a {
@@ -57,23 +56,7 @@ a {
   text-decoration: inherit;
 }
 
-a:hover {
-  color: #535bf2;
-}
-
-body {
-  margin: 0;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  background-color: #F2F2F2;
-}
-
-#root {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
+a:hover { color: #535bf2; }
 
 main, .sh-wrapper {
   flex: 1;
@@ -88,6 +71,16 @@ h1 {
   line-height: 1.1;
 }
 
+/* Better touch targets for mobile — all interactive elements */
+button, a, input, select, textarea {
+  touch-action: manipulation;
+}
+
+/* Remove 300ms tap delay on mobile */
+button, a {
+  -webkit-tap-highlight-color: transparent;
+}
+
 button {
   border-radius: 8px;
   border: 1px solid transparent;
@@ -96,29 +89,75 @@ button {
   font-weight: 500;
   font-family: inherit;
   background-color: transparent;
-  /* Changed from #1a1a1a */
   cursor: pointer;
   transition: all 0.25s;
+  /* Minimum touch target size */
+  min-height: 44px;
 }
 
-button:hover {
-  border-color: #646cff;
-}
+button:hover { border-color: #646cff; }
 
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-/* Light-mode overrides — background kept consistent (#F2F2F2) to
-   avoid white bleed on :root during overscroll or uncovered gaps. */
+/* Inputs: prevent iOS zoom on focus (font-size must be >= 16px) */
+input, select, textarea {
+  font-size: 16px;
+}
+
+/* Images are responsive by default */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* ==========================================
+   ANIMATIONS
+   ========================================== */
+@layer utilities {
+  .animate-fadeIn {
+    animation: fadeIn 0.35s ease-in-out;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(8px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+/* ==========================================
+   LIGHT-MODE OVERRIDES
+   ========================================== */
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
     background-color: #F2F2F2;
   }
 
-  a:hover {
-    color: #747bff;
-  }
+  a:hover { color: #747bff; }
+}
+
+/* ==========================================
+   SAFE AREA INSETS (notch, home indicator)
+   ========================================== */
+.navbar-user {
+  padding-left: max(1.5rem, env(safe-area-inset-left));
+  padding-right: max(1.5rem, env(safe-area-inset-right));
+}
+
+footer, .footer {
+  padding-bottom: max(1.5rem, env(safe-area-inset-bottom));
 }

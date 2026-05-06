@@ -122,39 +122,7 @@ const OverviewTab = ({ user, hackathons, teams, navigate, onUpdate }) => {
         </div>
       </div>
 
-      {/* Team Info */}
-      {primaryTeam && (
-        <div className="team-info-card">
-          <h3 className="team-info-card__title">Team Information</h3>
-
-          <div className="team-info-card__header">
-            <h4>{primaryTeam.name}</h4>
-            {primaryTeam.isLeader && (
-              <span className="leader-badge">Leader</span>
-            )}
-          </div>
-
-          {(primaryTeam.members || [])
-            .filter((m) => m.status === "accepted")
-            .map((m, i) => (
-              <div key={i} className="team-member-row">
-                <span className="name">{m.name}</span>
-                <span className="role">{m.role}</span>
-              </div>
-            ))}
-
-          <div className="team-open-toggle">
-            <span>Looking for members</span>
-            <ToggleSwitch 
-              enabled={primaryTeam.isOpenToJoin} 
-              readOnly={!primaryTeam.isLeader} 
-              onClick={handleToggleJoin}
-            />
-          </div>
-        </div>
-      )}
-
-      {/* Skills & Interests Display */}
+{/* Skills & Interests Display */}
       <div className="overview-grid" style={{ marginTop: '20px' }}>
         <div className="overview-card">
           <h3 className="overview-card__title">Skills</h3>
@@ -184,6 +152,64 @@ const OverviewTab = ({ user, hackathons, teams, navigate, onUpdate }) => {
           </div>
         </div>
       </div>
+
+      {/* Team Info */}
+      {primaryTeam && (
+        <div className="team-info-card">
+          <div className="team-info-card__top">
+            <h3 className="team-info-card__title">Team Information</h3>
+            {primaryTeam.hackathonTitle && (
+              <span className="team-info-card__hackathon">{primaryTeam.hackathonTitle}</span>
+            )}
+          </div>
+
+          <div className="team-info-card__header">
+            <div className="team-info-card__name-group">
+              <h4>{primaryTeam.name}</h4>
+              {(() => {
+                const count = (primaryTeam.members || []).filter(m => m.status === 'accepted').length;
+                return count > 0 ? (
+                  <span className="team-member-count">{count} member{count !== 1 ? 's' : ''}</span>
+                ) : null;
+              })()}
+            </div>
+            {primaryTeam.isLeader && (
+              <span className="leader-badge">Leader</span>
+            )}
+          </div>
+
+          <div className="team-members-list">
+            {(primaryTeam.members || [])
+              .filter((m) => m.status === "accepted")
+              .map((m, i) => {
+                const initials = (m.name || '?').split(' ').map(w => w[0]).slice(0,2).join('').toUpperCase();
+                const colors = ['#3b82f6','#8b5cf6','#06b6d4','#f59e0b','#10b981','#ef4444'];
+                const color = colors[i % colors.length];
+                return (
+                  <div key={i} className="team-member-row">
+                    <div className="member-avatar" style={{ background: color }}>{initials}</div>
+                    <span className="name">{m.name}</span>
+                    <span className={`role role--${(m.role || 'member').toLowerCase()}`}>{m.role || 'Member'}</span>
+                  </div>
+                );
+              })}
+          </div>
+
+          <div className="team-open-toggle">
+            <div className="team-open-toggle__info">
+              <span className="team-open-toggle__label">Looking for members</span>
+              <span className="team-open-toggle__sub">
+                {primaryTeam.isOpenToJoin ? 'Open to new members' : 'Team is closed'}
+              </span>
+            </div>
+            <ToggleSwitch 
+              enabled={primaryTeam.isOpenToJoin} 
+              readOnly={!primaryTeam.isLeader} 
+              onClick={handleToggleJoin}
+            />
+          </div>
+        </div>
+      )}
     </>
   );
 };

@@ -6,6 +6,7 @@ import { useAuth } from "../../context/AuthContext";
 import CountUp from 'react-countup';
 import * as THREE from 'three';
 import NET from 'vanta/dist/vanta.net.min';
+import { Compass, CalendarDays, UserCircle2, Gavel, LayoutDashboard, ShieldCheck, UserPlus, Hammer, Trophy } from 'lucide-react';
 import "../../styles/home.css";
 
 /* =============== GATEWAY CARD DATA =============== */
@@ -16,6 +17,7 @@ const gateways = [
         to: "/discovery",
         accent: "#3b82f6",
         bg: "#eff6ff",
+        Icon: Compass,
     },
     {
         title: "Calendar",
@@ -23,6 +25,7 @@ const gateways = [
         to: "/calendar",
         accent: "#8b5cf6",
         bg: "#f5f3ff",
+        Icon: CalendarDays,
     },
     {
         title: "My Profile",
@@ -30,6 +33,7 @@ const gateways = [
         to: "/profile",
         accent: "#06b6d4",
         bg: "#ecfeff",
+        Icon: UserCircle2,
     },
     {
         title: "Judge Panel",
@@ -37,6 +41,7 @@ const gateways = [
         to: "/judge/hackathons",
         accent: "#f59e0b",
         bg: "#fffbeb",
+        Icon: Gavel,
     },
     {
         title: "Organizer Dashboard",
@@ -44,6 +49,7 @@ const gateways = [
         to: "/organizer/dashboard",
         accent: "#047857",
         bg: "#ecfdf5",
+        Icon: LayoutDashboard,
     },
     {
         title: "Admin Dashboard",
@@ -51,6 +57,7 @@ const gateways = [
         to: "/admin/dashboard",
         accent: "#ef4444",
         bg: "#fef2f2",
+        Icon: ShieldCheck,
         roleRequired: "admin"
     }
 ];
@@ -61,16 +68,19 @@ const steps = [
         num: "01",
         title: "Register",
         desc: "Create your account, browse hackathons, and form or join a team.",
+        Icon: UserPlus,
     },
     {
         num: "02",
         title: "Build",
         desc: "Collaborate with your team, submit prototypes, and iterate on your project.",
+        Icon: Hammer,
     },
     {
         num: "03",
         title: "Win",
         desc: "Present to judges, get scored with transparent rubrics, and claim your prizes.",
+        Icon: Trophy,
     },
 ];
 
@@ -192,6 +202,9 @@ const Home = () => {
                                 cursor: 'pointer'
                             }}
                         >
+                            <div className="card-icon" style={{ color: g.accent }}>
+                                <g.Icon size={32} strokeWidth={1.75} />
+                            </div>
                             <div className="card-title">{g.title}</div>
                             <div className="card-desc">{g.desc}</div>
                             <div className="card-arrow">
@@ -216,6 +229,9 @@ const Home = () => {
                     {steps.map((s, i) => (
                         <div key={i} className="step-item">
                             <div className="step-number">{s.num}</div>
+                            <div className="step-icon">
+                                <s.Icon size={28} strokeWidth={1.75} />
+                            </div>
                             <div className="step-title">{s.title}</div>
                             <div className="step-desc">{s.desc}</div>
                         </div>

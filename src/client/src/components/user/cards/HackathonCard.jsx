@@ -67,23 +67,12 @@ const HackathonCard = ({ hackathon, onRegister, onViewDetails }) => {
       <div className="card-content">
         {/* Title */}
         <h3 className="card-title">{hackathon.name}</h3>
-        
+
         {/* Organizer */}
         <p className="card-org">by {hackathon.organization}</p>
-        
+
         {/* Description */}
         <p className="card-description">{hackathon.description}</p>
-
-        {/* Tags */}
-        {hackathon.tags && hackathon.tags.length > 0 && (
-          <div className="tag-container">
-            {hackathon.tags.map((tag) => (
-              <span key={tag} className={`tag tag-${tag}`}>
-                {tag}
-              </span>
-            ))}
-          </div>
-        )}
 
         {/* Info Grid */}
         <div className="info-grid">
@@ -103,6 +92,7 @@ const HackathonCard = ({ hackathon, onRegister, onViewDetails }) => {
             <Trophy size={16} color="#64748b" />
             <span>{hackathon.prizePool}</span>
           </div>
+          <div className="info-item"></div>
         </div>
       </div>
 
