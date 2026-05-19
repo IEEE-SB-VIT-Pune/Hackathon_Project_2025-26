@@ -5,7 +5,9 @@
 .discussion-panel {
   display: flex;
   flex-direction: column;
-  height: 600px;
+  height: calc(100vh - 200px); 
+  min-height: 400px; 
+  max-height: 700px;
   background: #FFFFFF;
   border-radius: 12px;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
@@ -319,6 +321,7 @@
   padding: 12px;
   border-top: 1px solid #E2E8F0;
   background-color: #F8FAFC;
+  align-items: flex-end;
 }
 
 .discussion-input {
@@ -331,6 +334,10 @@
   color: #1E293B;
   background-color: #FFFFFF;
   transition: all 0.2s ease;
+  resize: none;
+  min-height: 44px;
+  max-height: 120px;
+  overflow-y: auto;
 }
 
 .discussion-input:focus {
@@ -363,6 +370,7 @@
   justify-content: center;
   transition: all 0.2s ease;
   flex-shrink: 0;
+  margin-bottom: 2px;
 }
 
 .discussion-send-btn:hover:not(:disabled) {

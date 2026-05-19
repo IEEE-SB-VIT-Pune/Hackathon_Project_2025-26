@@ -59,7 +59,7 @@ const DiscussionPanel = ({ hackathonId, currentUser }) => {
   }, [hackathonId]);
 
   const handleSendMessage = (e) => {
-    e.preventDefault();
+    if (e) e.preventDefault();
     
     if (!newMessage.trim()) {
       return;
@@ -159,13 +159,20 @@ const DiscussionPanel = ({ hackathonId, currentUser }) => {
 
       {/* Message Input */}
       <form onSubmit={handleSendMessage} className="discussion-input-form">
-        <input
-          type="text"
+        <textarea
           placeholder="Share your thoughts..."
           value={newMessage}
           onChange={(e) => setNewMessage(e.target.value)}
+          onKeyDown={(e) => {
+            // Submit on Enter, allow new lines with Shift+Enter
+            if (e.key === 'Enter' && !e.shiftKey) {
+              e.preventDefault();
+              handleSendMessage(e);
+            }
+          }}
           className="discussion-input"
           disabled={loading}
+          rows="2"
         />
         <button
           type="submit"
