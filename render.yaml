@@ -30,8 +30,9 @@ services:
       - key: CLOUDINARY_API_SECRET
         sync: false
 
-  - type: static
+  - type: web
     name: hackathon-frontend
+    runtime: static
     buildCommand: cd src/client && npm install && npm run build
     staticPublishPath: src/client/dist
     routes:
