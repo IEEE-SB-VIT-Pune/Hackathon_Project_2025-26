@@ -1,7 +1,6 @@
 import { io } from 'socket.io-client';
 import { getAuthToken } from './api';
-
-const BACKEND_URL = 'http://localhost:8080';
+import BACKEND_URL from '../config';
 
 // Lazy singleton — created once, reused everywhere
 let socket = null;

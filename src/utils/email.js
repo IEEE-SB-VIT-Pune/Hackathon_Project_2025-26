@@ -13,10 +13,22 @@ if (!EMAIL_CONFIGURED) {
 // Build the transporter only when credentials exist
 const transporter = EMAIL_CONFIGURED
   ? nodemailer.createTransport({
-      service: 'gmail',
+      host: 'smtp.gmail.com',
+      port: 465,
+      secure: true, // Use SSL/TLS
       auth: { user: EMAIL_USER, pass: EMAIL_PASS },
     })
   : null;
+
+if (transporter) {
+  transporter.verify((error, success) => {
+    if (error) {
+      log.error('EMAIL_SERVICE', `❌ SMTP Connection Error: ${error.message}`);
+    } else {
+      log.success('EMAIL_SERVICE', '✅ SMTP Server is ready to take our messages');
+    }
+  });
+}
 
 /* ==================== BACKGROUND JOB QUEUE ==================== */
 // A simple in-memory queue with a configurable batch size & interval.
@@ -44,10 +56,12 @@ async function processQueue() {
   for (const job of batch) {
     try {
       const info = await transporter.sendMail({
-        from: `"Hackathon Platform" <${EMAIL_USER}>`,
+        from:    `"HackHub" <${EMAIL_USER}>`,
         to:      job.to,
+        replyTo: EMAIL_USER,
         subject: job.subject,
         html:    job.html,
+        text:    job.text || 'Your OTP code is ' + job.otp, 
       });
       log.success('EMAIL_QUEUE', `✅ Sent to ${job.to} — messageId: ${info.messageId}`);
       job.resolve(info);
@@ -97,7 +111,8 @@ export const getQueueStatus = () => ({
  * @param {string} otp - 6-digit OTP
  */
 export const sendOTPEmail = async (email, otp) => {
-  const subject = 'OTP Verification - HackHub';
+  const subject = `Your HackHub OTP: ${otp}`;
+  const text = `Hello! Your OTP for HackHub is: ${otp}. It will expire in 5 minutes.`;
   const html = `
     <!DOCTYPE html>
     <html>

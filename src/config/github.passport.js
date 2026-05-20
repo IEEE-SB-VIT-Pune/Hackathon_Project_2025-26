@@ -15,7 +15,7 @@ if (credentialsPresent) {
     {
       clientID: githubClientId,
       clientSecret: githubClientSecret,
-      callbackURL: 'http://localhost:8080/api/oauth/github/callback',
+      callbackURL: `${process.env.BACKEND_URL || 'http://localhost:8080'}/api/oauth/github/callback`,
       scope: ['user:email'], // Required to fetch the user's email from GitHub
     },
     async (accessToken, refreshToken, profile, done) => {

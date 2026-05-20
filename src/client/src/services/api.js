@@ -1,11 +1,12 @@
 import axios from "axios";
+import BACKEND_URL from "../config";
 
 /* ================= 1. UNIFIED AXIOS INSTANCE ================= */
 // Using Port 8080 (Standardizing on your working backend)
 
 
 export const API = axios.create({
-  baseURL: "http://localhost:8080/api",
+  baseURL: `${BACKEND_URL}/api`,
   withCredentials: true,
 });
 

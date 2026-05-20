@@ -46,9 +46,18 @@ const __dirname = path.dirname(__filename);
 const app = express();
 
 /* ================= CORS ================= */
+const allowedOrigins = (process.env.ALLOWED_ORIGIN || 'http://localhost:5173').split(',');
 app.use(
   cors({
-    origin: process.env.ALLOWED_ORIGIN || 'http://localhost:5173',
+    origin: function (origin, callback) {
+      // allow requests with no origin (like mobile apps or curl requests)
+      if (!origin || allowedOrigins.includes('*')) return callback(null, true);
+      if (allowedOrigins.indexOf(origin) === -1) {
+        var msg = 'The CORS policy for this site does not allow access from the specified Origin.';
+        return callback(new Error(msg), false);
+      }
+      return callback(null, true);
+    },
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH'],
     credentials: true,
   })
@@ -110,11 +119,16 @@ app.get('/test', (req, res) => {
 });
 
 // Root Endpoint (Serve React/HTML frontend)
-app.get('/', (req, res) => {
+// This MUST be the last route to handle SPA routing (client-side routes)
+app.get('*path', (req, res) => {
+  // If the request starts with /api, it's a 404 (handled by the next middleware)
+  if (req.path.startsWith('/api')) {
+    return res.status(404).json({ success: false, message: 'API Route not found' });
+  }
   res.sendFile(path.join(__dirname, '../public', 'index.html'));
 });
 
-// 404 Handler
+// 404 Handler (This will now only be hit for /api routes not caught above)
 app.use((req, res) => {
   res.status(404).json({ success: false, message: 'Route not found' });
 });

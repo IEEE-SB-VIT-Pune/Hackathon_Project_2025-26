@@ -11,9 +11,13 @@ let io = null;
  * Should only be called once, from index.js.
  */
 export const initSocket = (httpServer, allowedOrigin) => {
+    const origin = (allowedOrigin || 'http://localhost:5173').includes(',')
+        ? allowedOrigin.split(',')
+        : allowedOrigin || 'http://localhost:5173';
+
     io = new Server(httpServer, {
         cors: {
-            origin: allowedOrigin || 'http://localhost:5173',
+            origin: origin,
             methods: ['GET', 'POST'],
             credentials: true,
         },
